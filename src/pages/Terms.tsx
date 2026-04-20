@@ -138,13 +138,6 @@ const Terms = () => {
                 <strong>ahmed.aidev.app@gmail.com</strong>
               </a>
             </p>
-            <p className="mt-4">
-              The authoritative hosted copy of these Terms may be published at{" "}
-              <a href="https://vitaflow-app.com/terms" target="_blank" rel="noopener noreferrer">
-                <strong>https://vitaflow-app.com/terms</strong>
-              </a>{" "}
-              (if different from this file, the website version controls for users accessing that URL).
-            </p>
           </section>
         </div>
       </article>
