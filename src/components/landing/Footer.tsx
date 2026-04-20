@@ -1,4 +1,14 @@
 import { Activity } from "lucide-react";
+import { Link } from "react-router-dom";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+
+const SUPPORT_EMAIL = "ahmed.aidev.app@gmail.com";
 
 const Footer = () => {
   return (
@@ -14,9 +24,32 @@ const Footer = () => {
           © {new Date().getFullYear()} VitaFlow. Educational insights for personal wellness.
         </p>
         <div className="flex items-center gap-5 text-sm font-medium text-slate3">
-          <a href="#" className="hover:text-navy transition-smooth">Privacy</a>
+          <Link to="/privacy" className="hover:text-navy transition-smooth">Privacy</Link>
           <a href="#" className="hover:text-navy transition-smooth">Terms</a>
-          <a href="#" className="hover:text-navy transition-smooth">Contact</a>
+          <Dialog>
+            <DialogTrigger asChild>
+              <button
+                type="button"
+                className="hover:text-navy transition-smooth bg-transparent p-0 border-0 font-medium text-inherit cursor-pointer"
+              >
+                Contact
+              </button>
+            </DialogTrigger>
+            <DialogContent className="sm:max-w-md">
+              <DialogHeader>
+                <DialogTitle className="text-navy">Contact</DialogTitle>
+              </DialogHeader>
+              <p className="text-slate2 text-base leading-relaxed pt-1">
+                Support:{" "}
+                <a
+                  href={`mailto:${SUPPORT_EMAIL}`}
+                  className="text-primary-dark font-medium underline underline-offset-2 hover:text-primary"
+                >
+                  {SUPPORT_EMAIL}
+                </a>
+              </p>
+            </DialogContent>
+          </Dialog>
         </div>
       </div>
     </footer>

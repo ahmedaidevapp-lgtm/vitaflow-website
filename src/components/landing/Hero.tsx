@@ -1,5 +1,5 @@
 import AppStoreBadge from "@/components/landing/AppStoreBadge";
-import { ShieldCheck, TrendingUp, Sparkles, Droplet } from "lucide-react";
+import { ShieldCheck, TrendingUp, Sparkles } from "lucide-react";
 
 const Hero = () => {
   return (
@@ -31,62 +31,21 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Phone mockup */}
+          {/* App screenshot */}
           <div className="lg:col-span-5 animate-fade-up" style={{ animationDelay: "120ms" }}>
             <div className="relative mx-auto max-w-sm">
               <div className="absolute -inset-6 bg-gradient-brand opacity-20 blur-3xl rounded-full" aria-hidden />
               <div className="relative animate-float">
-                <div className="rounded-[2.5rem] bg-navy p-3 shadow-elevated">
-                  <div className="rounded-[2rem] bg-background overflow-hidden border border-border">
-                    {/* Phone status bar */}
-                    <div className="flex justify-between items-center px-6 pt-3 pb-2 text-[11px] font-semibold text-navy">
-                      <span>9:41</span>
-                      <span>•••</span>
-                    </div>
-                    {/* App content */}
-                    <div className="px-5 pb-6 pt-2">
-                      <div className="flex items-center justify-between mb-5">
-                        <div>
-                          <p className="text-xs font-medium text-slate3">Latest report</p>
-                          <h3 className="text-lg font-bold text-navy">Hello, Sarah</h3>
-                        </div>
-                        <div className="w-10 h-10 rounded-full bg-primary-light grid place-items-center">
-                          <Droplet className="w-4 h-4 text-primary-dark" />
-                        </div>
-                      </div>
-
-                      {/* Score card */}
-                      <div className="rounded-2xl bg-gradient-brand p-5 text-primary-foreground mb-4">
-                        <p className="text-xs font-semibold opacity-90">Wellness Score</p>
-                        <p className="text-4xl font-extrabold mt-1">87<span className="text-xl opacity-80">/100</span></p>
-                        <p className="text-xs mt-2 opacity-90 font-medium">↑ 6 points since last visit</p>
-                      </div>
-
-                      {/* Markers */}
-                      <div className="space-y-2.5">
-                        {[
-                          { name: "Vitamin D", val: "42 ng/mL", status: "Optimal", color: "primary" },
-                          { name: "Cholesterol", val: "188 mg/dL", status: "Good", color: "info" },
-                          { name: "Iron", val: "Low", status: "Watch", color: "warning" },
-                        ].map((m) => (
-                          <div key={m.name} className="flex items-center justify-between p-3 rounded-xl bg-muted">
-                            <div>
-                              <p className="text-sm font-semibold text-navy">{m.name}</p>
-                              <p className="text-xs text-slate3 font-medium">{m.val}</p>
-                            </div>
-                            <span className={`text-[10px] font-bold uppercase tracking-wide px-2.5 py-1 rounded-full ${
-                              m.color === "primary" ? "bg-primary-light text-primary-dark" :
-                              m.color === "info" ? "bg-info/15 text-info" :
-                              "bg-warning/15 text-warning"
-                            }`}>
-                              {m.status}
-                            </span>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <img
+                  src="/hero-dashboard.png"
+                  alt="VitaFlow dashboard: welcome summary, report stats, and latest lab report with out-of-range markers."
+                  width={908}
+                  height={1004}
+                  className="w-full h-auto rounded-[1.75rem] shadow-elevated ring-1 ring-border/50 bg-background select-none"
+                  loading="eager"
+                  decoding="async"
+                  draggable={false}
+                />
               </div>
             </div>
           </div>
