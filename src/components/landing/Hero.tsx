@@ -45,9 +45,9 @@ const Hero = () => {
                       <div className="overflow-hidden rounded-[1.25rem] ring-1 ring-slate-900/[0.05]">
                         <img
                           src="/hero-dashboard.png"
-                          alt="VitaFlow dashboard: welcome summary, report stats, and latest lab report with out-of-range markers."
-                          width={908}
-                          height={1004}
+                          alt="VitaFlow+ home: welcome back, report summaries, and latest lab report with out-of-range markers."
+                          width={1198}
+                          height={1531}
                           className="block h-auto w-full select-none bg-white"
                           loading="eager"
                           decoding="async"
