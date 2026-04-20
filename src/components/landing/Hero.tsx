@@ -1,5 +1,5 @@
-import { Button } from "@/components/ui/button";
-import { ArrowRight, ShieldCheck, TrendingUp, Sparkles, Droplet } from "lucide-react";
+import AppStoreBadge from "@/components/landing/AppStoreBadge";
+import { ShieldCheck, TrendingUp, Sparkles, Droplet } from "lucide-react";
 
 const Hero = () => {
   return (
@@ -16,23 +16,14 @@ const Hero = () => {
               AI-powered lab insights
             </span>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-navy leading-[1.05] tracking-tight">
-              Understand your health better,{" "}
-              <span className="bg-gradient-brand bg-clip-text text-transparent">
-                one blood test at a time.
-              </span>
+              Understand your health better, and set your improvement plan in one place.
             </h1>
             <p className="mt-6 text-lg md:text-xl text-slate3 max-w-2xl leading-relaxed font-normal">
               VitaFlow transforms complex lab reports into clear, educational insights so you can
               track trends, understand what changed, and take smarter next steps for your wellness.
             </p>
-            <div className="mt-9 flex flex-wrap items-center gap-3">
-              <Button variant="hero" size="xl" className="group">
-                Get Started
-                <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-              </Button>
-              <Button variant="outline" size="xl">
-                I already have an account
-              </Button>
+            <div className="mt-9">
+              <AppStoreBadge />
             </div>
             <div className="mt-10 flex flex-wrap gap-x-8 gap-y-3 text-sm font-medium text-slate2">
               <span className="inline-flex items-center gap-2"><ShieldCheck className="w-4 h-4 text-primary" /> Encrypted, private by default</span>

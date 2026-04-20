@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button";
+import AppStoreBadge from "@/components/landing/AppStoreBadge";
 import { Activity } from "lucide-react";
 
 const Navbar = () => {
@@ -16,9 +16,8 @@ const Navbar = () => {
           <a href="#how" className="hover:text-navy transition-smooth">How it works</a>
           <a href="#trust" className="hover:text-navy transition-smooth">Privacy</a>
         </div>
-        <div className="flex items-center gap-2">
-          <Button variant="ghost" size="sm" className="hidden sm:inline-flex">Sign in</Button>
-          <Button variant="hero" size="sm">Get Started</Button>
+        <div className="flex items-center">
+          <AppStoreBadge className="inline-flex [&_img]:h-9 sm:[&_img]:h-10" />
         </div>
       </nav>
     </header>

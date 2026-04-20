@@ -1,5 +1,4 @@
-import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import AppStoreBadge from "@/components/landing/AppStoreBadge";
 
 const FinalCTA = () => {
   return (
@@ -16,14 +15,8 @@ const FinalCTA = () => {
             <p className="mt-5 text-lg text-primary-foreground/90 font-normal">
               Start tracking with VitaFlow today.
             </p>
-            <div className="mt-9 flex flex-wrap items-center justify-center gap-3">
-              <Button size="xl" className="bg-background text-primary-dark hover:bg-background/90 font-bold group">
-                Get Started
-                <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-              </Button>
-              <Button size="xl" variant="ghost" className="text-primary-foreground hover:bg-primary-foreground/10 font-semibold">
-                I already have an account
-              </Button>
+            <div className="mt-9 flex justify-center">
+              <AppStoreBadge className="inline-flex rounded-lg bg-background/95 p-1.5 shadow-soft ring-1 ring-primary-foreground/10" />
             </div>
           </div>
         </div>
