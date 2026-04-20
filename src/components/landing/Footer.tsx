@@ -25,7 +25,7 @@ const Footer = () => {
         </p>
         <div className="flex items-center gap-5 text-sm font-medium text-slate3">
           <Link to="/privacy" className="hover:text-navy transition-smooth">Privacy</Link>
-          <a href="#" className="hover:text-navy transition-smooth">Terms</a>
+          <Link to="/terms" className="hover:text-navy transition-smooth">Terms</Link>
           <Dialog>
             <DialogTrigger asChild>
               <button
