@@ -31,21 +31,32 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* App screenshot */}
+          {/* App screenshot — layered frame + matte */}
           <div className="lg:col-span-5 animate-fade-up" style={{ animationDelay: "120ms" }}>
             <div className="relative mx-auto max-w-sm">
-              <div className="absolute -inset-6 bg-gradient-brand opacity-20 blur-3xl rounded-full" aria-hidden />
+              <div
+                className="pointer-events-none absolute -inset-[12%] rounded-[2.75rem] bg-[radial-gradient(ellipse_at_50%_40%,hsl(160_84%_39%/0.14),transparent_62%)] blur-2xl"
+                aria-hidden
+              />
               <div className="relative animate-float">
-                <img
-                  src="/hero-dashboard.png"
-                  alt="VitaFlow dashboard: welcome summary, report stats, and latest lab report with out-of-range markers."
-                  width={908}
-                  height={1004}
-                  className="w-full h-auto rounded-[1.75rem] shadow-elevated ring-1 ring-border/50 bg-background select-none"
-                  loading="eager"
-                  decoding="async"
-                  draggable={false}
-                />
+                <div className="relative rounded-[2rem] bg-gradient-to-br from-slate-300/90 via-slate-100/95 to-slate-200/90 p-px shadow-[0_36px_72px_-24px_rgba(15,23,42,0.22),0_12px_28px_-12px_rgba(15,23,42,0.1),0_0_0_1px_rgba(15,23,42,0.04)]">
+                  <div className="rounded-[1.9375rem] bg-gradient-to-b from-white via-white to-slate-50/90 p-2.5 sm:p-3 ring-1 ring-inset ring-white/80">
+                    <div className="overflow-hidden rounded-[1.375rem] border border-slate-200/95 bg-slate-50/40 shadow-[inset_0_1px_0_rgba(255,255,255,0.95),inset_0_0_0_1px_rgba(15,23,42,0.03)]">
+                      <div className="overflow-hidden rounded-[1.25rem] ring-1 ring-slate-900/[0.05]">
+                        <img
+                          src="/hero-dashboard.png"
+                          alt="VitaFlow dashboard: welcome summary, report stats, and latest lab report with out-of-range markers."
+                          width={908}
+                          height={1004}
+                          className="block h-auto w-full select-none bg-white"
+                          loading="eager"
+                          decoding="async"
+                          draggable={false}
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
