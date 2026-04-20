@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* VitaFlow Design System
+   All colors MUST be HSL.
+   System fonts (SF Pro on iOS, Roboto on Android, system stack on web).
+*/
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222 47% 11%; /* #111827-ish deep ink */
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    /* Brand greens */
+    --primary: 160 84% 39%; /* #10B981 */
+    --primary-foreground: 0 0% 100%;
+    --primary-dark: 160 84% 31%; /* #059669 */
+    --primary-light: 152 76% 90%; /* #D1FAE5 */
+
+    --secondary: 210 40% 98%; /* #F8FAFC */
+    --secondary-foreground: 222 47% 11%;
+
+    --muted: 210 20% 98%; /* #F9FAFB */
+    --muted-foreground: 220 9% 46%; /* #6B7280 */
+
+    --accent: 152 76% 90%;
+    --accent-foreground: 160 84% 25%;
+
+    --destructive: 0 73% 51%; /* #DC2626 */
+    --destructive-foreground: 0 0% 100%;
+
+    --warning: 38 92% 50%; /* #F59E0B */
+    --warning-foreground: 26 83% 14%;
+
+    --info: 217 91% 60%; /* #3B82F6 */
+    --info-foreground: 0 0% 100%;
+
+    --border: 220 13% 91%; /* #E5E7EB */
+    --input: 220 14% 96%; /* #F9FAFB */
+    --ring: 160 84% 39%;
+
+    --navy: 222 47% 11%; /* #0F172A */
+    --slate-1: 215 25% 27%; /* #334155 */
+    --slate-2: 215 19% 35%; /* #475569 */
+    --slate-3: 215 14% 47%; /* #64748B */
+    --inactive: 220 9% 65%; /* #9CA3AF */
+
+    --radius: 0.875rem;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(210 40% 98%) 0%, hsl(231 100% 96%) 50%, hsl(150 100% 96%) 100%);
+    --gradient-brand: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary-dark)) 100%);
+    --gradient-soft: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(210 40% 98%) 100%);
+
+    /* Shadows */
+    --shadow-soft: 0 1px 2px 0 hsl(222 47% 11% / 0.04), 0 1px 3px 0 hsl(222 47% 11% / 0.06);
+    --shadow-card: 0 4px 12px -2px hsl(222 47% 11% / 0.06), 0 2px 6px -1px hsl(222 47% 11% / 0.04);
+    --shadow-elevated: 0 20px 40px -12px hsl(160 84% 39% / 0.18), 0 8px 16px -8px hsl(222 47% 11% / 0.08);
+    --shadow-glow: 0 0 60px hsl(160 84% 39% / 0.25);
+
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text",
+      "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "ss01", "cv01", "cv11";
+  }
+
+  h1, h2, h3, h4 {
+    letter-spacing: -0.02em;
+  }
+}
+
+@layer utilities {
+  .bg-gradient-hero { background: var(--gradient-hero); }
+  .bg-gradient-brand { background: var(--gradient-brand); }
+  .bg-gradient-soft { background: var(--gradient-soft); }
+  .shadow-soft { box-shadow: var(--shadow-soft); }
+  .shadow-card { box-shadow: var(--shadow-card); }
+  .shadow-elevated { box-shadow: var(--shadow-elevated); }
+  .shadow-glow { box-shadow: var(--shadow-glow); }
+  .transition-smooth { transition: var(--transition-smooth); }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-12px); }
+  }
+  @keyframes fade-up {
+    from { opacity: 0; transform: translateY(16px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes pulse-ring {
+    0% { transform: scale(0.95); opacity: 0.7; }
+    100% { transform: scale(1.4); opacity: 0; }
+  }
+  .animate-float { animation: float 6s ease-in-out infinite; }
+  .animate-fade-up { animation: fade-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) both; }
+  .animate-pulse-ring { animation: pulse-ring 2.4s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+}
