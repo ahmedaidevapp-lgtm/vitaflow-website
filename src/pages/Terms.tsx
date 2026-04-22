@@ -19,7 +19,7 @@ const Terms = () => {
           Last updated: 20 April 2026
         </p>
 
-        <div className="mt-12 space-y-10 text-[15px] md:text-base leading-relaxed text-slate2 [&_h2]:text-navy [&_h2]:text-xl [&_h2]:font-bold [&_h2]:tracking-tight [&_h2]:mb-3 [&_strong]:text-navy [&_strong]:font-semibold [&_ul]:list-disc [&_ul]:pl-5 [&_ul]:space-y-2 [&_a]:text-primary-dark [&_a]:underline [&_a]:underline-offset-2 hover:[&_a]:text-primary">
+        <div className="mt-12 space-y-10 text-[15px] md:text-base leading-relaxed text-slate2 [&_h2]:text-navy [&_h2]:text-xl [&_h2]:font-bold [&_h2]:tracking-tight [&_h2]:mb-3 [&_h3]:text-navy [&_h3]:text-base [&_h3]:font-semibold [&_h3]:mt-6 [&_h3]:mb-2 [&_strong]:text-navy [&_strong]:font-semibold [&_ul]:list-disc [&_ul]:pl-5 [&_ul]:space-y-2 [&_a]:text-primary-dark [&_a]:underline [&_a]:underline-offset-2 hover:[&_a]:text-primary">
           <p>
             These Terms of Service (&quot;Terms&quot;) govern your use of the VitaFlow mobile application and related
             services (collectively, the &quot;Service&quot;) offered by Amandev Technologies (&quot;we,&quot;
@@ -83,9 +83,54 @@ const Terms = () => {
           <section>
             <h2>6. Subscriptions and payments</h2>
             <p>
-              If you purchase a subscription through the App Store or Google Play, billing and renewal are handled by the
-              platform under its terms. Features and pricing are as shown in-app and in the store listing at the time of
-              purchase.
+              Certain features require a paid auto-renewable subscription.
+            </p>
+
+            <h3>6.1 Subscription plans</h3>
+            <p>
+              Available plans, durations, and prices are shown in-app at checkout and in the applicable store listing.
+              Prices may vary by country/region and applicable taxes.
+            </p>
+
+            <h3>6.2 Billing and auto-renewal</h3>
+            <p>If you subscribe through Apple&apos;s App Store:</p>
+            <ul>
+              <li>Payment is charged to your Apple ID account at confirmation of purchase.</li>
+              <li>
+                The subscription renews automatically unless auto-renew is turned off at least 24 hours before the end
+                of the current billing period.
+              </li>
+              <li>
+                Your account is charged for renewal within 24 hours before the end of the current billing period.
+              </li>
+              <li>
+                You can manage or turn off auto-renewal in your Apple ID account settings after purchase.
+              </li>
+            </ul>
+            <p className="mt-4">
+              If you subscribe through Google Play, billing and renewal are handled under Google Play&apos;s
+              subscription terms and your Google account settings.
+            </p>
+
+            <h3>6.3 Free trials and promotional offers</h3>
+            <p>
+              If a free trial or promotional price is offered, eligibility, duration, and conversion terms are presented
+              at signup. Unless canceled before the trial ends, your subscription will begin and the applicable
+              recurring fee will be charged.
+            </p>
+
+            <h3>6.4 Cancellation and refunds</h3>
+            <p>
+              You can cancel at any time through the account settings of the platform used for purchase (App Store or
+              Google Play). Cancellation prevents future renewals, and access remains active until the end of the
+              current paid period. Refund requests are handled by the platform provider according to its refund
+              policies.
+            </p>
+
+            <h3>6.5 Price changes</h3>
+            <p>
+              We may change subscription prices from time to time where permitted by law. Any changes are communicated
+              and applied by the platform provider under its rules.
             </p>
           </section>
 
@@ -136,6 +181,12 @@ const Terms = () => {
               Questions about these Terms:{" "}
               <a href="mailto:ahmed.aidev.app@gmail.com">
                 <strong>ahmed.aidev.app@gmail.com</strong>
+              </a>
+            </p>
+            <p className="mt-4">
+              Current Terms of Service are available at:{" "}
+              <a href="https://vitaflow-app.com/terms" target="_blank" rel="noopener noreferrer">
+                <strong>https://vitaflow-app.com/terms</strong>
               </a>
             </p>
           </section>
