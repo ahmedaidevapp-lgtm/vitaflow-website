@@ -12,7 +12,7 @@ const Privacy = () => {
             ← Back to home
           </Link>
         </p>
-        <h1 className="text-3xl md:text-4xl font-extrabold text-navy tracking-tight">VitaFlow — Privacy Policy</h1>
+        <h1 className="text-3xl md:text-4xl font-extrabold text-navy tracking-tight">VitaFlow - Privacy Policy</h1>
         <p className="mt-4 text-sm text-slate3">
           Effective date: 15 April 2026
           <br />
@@ -166,8 +166,19 @@ const Privacy = () => {
 
             <h3>6.2 AI Processing Provider (OpenAI)</h3>
             <p>
-              For lab extraction and certain optional language features, we may send relevant content (for example
-              extracted report text, page images, marker context, and localization text) to OpenAI API services.
+              For lab extraction and certain optional language features, we may send limited data to OpenAI API
+              services, including:
+            </p>
+            <ul>
+              <li>Lab report text extracted from your uploaded PDF/image</li>
+              <li>Relevant report page image regions needed for OCR/extraction</li>
+              <li>Marker context (for example marker names, values, units, ranges, and report date)</li>
+              <li>Optional prompt context needed to generate educational summaries in your selected language</li>
+            </ul>
+            <p className="mt-4">
+              Before any personal or health-related report content is sent to OpenAI, VitaFlow presents an in-app
+              disclosure and requests your permission. You can choose not to allow this processing. If you decline,
+              AI-dependent features will be unavailable, but other non-AI app functions remain accessible.
             </p>
             <p className="mt-4">References:</p>
             <ul>
@@ -267,6 +278,20 @@ const Privacy = () => {
             <p className="mt-4">
               For help, contact:{" "}
               <a href="mailto:ahmed.aidev.app@gmail.com">ahmed.aidev.app@gmail.com</a>
+            </p>
+          </section>
+
+          <section>
+            <h2>10.1 In-App Consent for Third-Party AI Processing</h2>
+            <p>When a feature requires third-party AI processing, VitaFlow shows an in-app notice that:</p>
+            <ul>
+              <li>Explains what data will be sent (report text/images and related marker context)</li>
+              <li>Identifies the recipient (OpenAI API services)</li>
+              <li>Requests your permission before transmission</li>
+            </ul>
+            <p className="mt-4">
+              If you do not grant permission, AI-dependent features remain unavailable and no report content is sent to
+              OpenAI.
             </p>
           </section>
 
