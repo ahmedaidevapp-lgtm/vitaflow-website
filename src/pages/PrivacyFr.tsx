@@ -34,9 +34,9 @@ const PrivacyFr = () => {
             <p>
               <strong>Responsable du traitement :</strong> Amandev Technologies
               <br />
-              <strong>Contact confidentialité :</strong> ahmed.aidev.app@gmail.com
+              <strong>Contact confidentialité :</strong> privacy@amandevtech.com
               <br />
-              <strong>Contact support :</strong> ahmed.aidev.app@gmail.com
+              <strong>Contact support :</strong> support@amandevtech.com
             </p>
             <p className="mt-4">
               VitaFlow (&quot;nous&quot;, &quot;notre&quot;, ou le &quot;Service&quot;) est une application mobile qui aide les utilisateurs à organiser,
@@ -396,7 +396,7 @@ const PrivacyFr = () => {
             </p>
             <p className="mt-4">
               Pour toute aide :{" "}
-              <a href="mailto:ahmed.aidev.app@gmail.com">ahmed.aidev.app@gmail.com</a>
+              <a href="mailto:support@amandevtech.com">support@amandevtech.com</a>
             </p>
           </section>
 
@@ -452,7 +452,7 @@ const PrivacyFr = () => {
               <li>Nous ne vendons pas les données personnelles et ne les partageons pas pour de la publicité comportementale inter-contextes</li>
               <li>
                 Vous pouvez exercer vos droits éligibles en nous contactant :{" "}
-                <a href="mailto:ahmed.aidev.app@gmail.com">ahmed.aidev.app@gmail.com</a>
+                <a href="mailto:privacy@amandevtech.com">privacy@amandevtech.com</a>
               </li>
             </ul>
           </section>
@@ -473,7 +473,7 @@ const PrivacyFr = () => {
               Les utilisateurs situés au Maroc peuvent demander l&apos;accès, la correction, la mise à jour ou la suppression de leurs données
               personnelles, <strong>y compris lorsque les données sont organisées en profils de santé distincts sous un même compte</strong>, et exercer les
               autres droits prévus par la loi applicable, en contactant :{" "}
-              <a href="mailto:ahmed.aidev.app@gmail.com">ahmed.aidev.app@gmail.com</a>.
+              <a href="mailto:privacy@amandevtech.com">privacy@amandevtech.com</a>.
             </p>
             <p className="mt-4">
               Lorsque des données personnelles sont transférées hors du Maroc (y compris vers des prestataires utilisés pour l&apos;hébergement,
@@ -495,8 +495,11 @@ const PrivacyFr = () => {
           <section>
             <h2>16. Contact</h2>
             <p>
-              Demandes confidentialité et support :{" "}
-              <a href="mailto:ahmed.aidev.app@gmail.com">ahmed.aidev.app@gmail.com</a>
+              Demandes de confidentialité :{" "}
+              <a href="mailto:privacy@amandevtech.com">privacy@amandevtech.com</a>
+              <br />
+              Support :{" "}
+              <a href="mailto:support@amandevtech.com">support@amandevtech.com</a>
             </p>
           </section>
         </div>
