@@ -6,7 +6,7 @@ const Privacy = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
-      <article className="container max-w-3xl pt-28 pb-16 md:pt-32 md:pb-24">
+      <article lang="en" className="container max-w-3xl pt-28 pb-16 md:pt-32 md:pb-24">
         <p className="text-sm font-medium text-primary-dark mb-2">
           <Link to="/" className="text-slate2 hover:text-navy transition-smooth">
             ← Back to home
@@ -16,7 +16,14 @@ const Privacy = () => {
         <p className="mt-4 text-sm text-slate3">
           Effective date: 15 April 2026
           <br />
-          Last updated: 15 April 2026
+          Last updated: 12 May 2026
+        </p>
+        <p className="mt-3 text-sm text-slate3">
+          <span className="font-medium text-navy">English</span>
+          {" · "}
+          <Link to="/privacy/fr" className="text-primary-dark underline underline-offset-2 hover:text-primary font-medium">
+            Français
+          </Link>
         </p>
 
         <div className="mt-12 space-y-10 text-[15px] md:text-base leading-relaxed text-slate2 [&_h2]:text-navy [&_h2]:text-xl [&_h2]:font-bold [&_h2]:tracking-tight [&_h2]:mb-3 [&_h3]:text-navy [&_h3]:text-base [&_h3]:font-semibold [&_h3]:mt-6 [&_h3]:mb-2 [&_strong]:text-navy [&_strong]:font-semibold [&_ul]:list-disc [&_ul]:pl-5 [&_ul]:space-y-2 [&_a]:text-primary-dark [&_a]:underline [&_a]:underline-offset-2 hover:[&_a]:text-primary [&_code]:rounded [&_code]:bg-muted [&_code]:px-1.5 [&_code]:py-0.5 [&_code]:text-sm [&_code]:font-mono [&_code]:text-navy">
@@ -83,8 +90,31 @@ const Privacy = () => {
               <li>Preferred language/locale (for example English, French, Arabic)</li>
             </ul>
 
+            <h3>3.1.1 Health profiles (multi-profile)</h3>
+            <p>
+              Your <strong>account</strong> (sign-in identity) is separate from <strong>health profiles</strong> inside the app.
+            </p>
+            <ul className="mt-4">
+              <li>
+                You can maintain <strong>up to eight active health profiles</strong> on one account—for example yourself plus
+                family members you help track. Each profile has a display label, an optional relationship category (such
+                as yourself or a dependent), and optional presentation settings used only in the app.
+              </li>
+              <li>
+                <strong>Lab reports, structured marker data, health log entries, progress narratives, and related wellness content are stored under exactly one profile.</strong> Data does not merge across profiles, even within the same account.
+              </li>
+              <li>
+                When you create a profile for someone other than yourself, the app asks you to <strong>confirm you have appropriate authority</strong> to enter and manage that person&apos;s information on your account, and we record that attestation for auditability.
+              </li>
+              <li>
+                After sign-in, the app sends an <strong>active profile identifier</strong> with API requests so the backend can load and save the correct compartment of data.
+              </li>
+            </ul>
+
             <h3>3.2 Health and Wellness-Related Information</h3>
-            <p>When you use core app features, we may process:</p>
+            <p>
+              When you use core app features <strong>for a given health profile</strong>, we may process:
+            </p>
             <ul>
               <li>Lab report files you upload (PDFs/images), including personal or clinical details visible in those files</li>
               <li>
@@ -160,25 +190,54 @@ const Privacy = () => {
             <h3>6.1 Infrastructure and Service Providers</h3>
             <ul>
               <li>Cloud/API hosting and database providers</li>
+              <li>Managed Redis infrastructure for technical queueing and rate-limiting storage</li>
               <li>File storage providers used for encrypted upload storage</li>
               <li>Security and operational tooling providers (for example TLS, DNS, backups, logs)</li>
             </ul>
 
-            <h3>6.2 AI Processing Provider (OpenAI)</h3>
+            <h3>6.2 AI processing providers (OpenAI and/or Microsoft Azure OpenAI)</h3>
             <p>
-              For lab extraction and certain optional language features, we may send limited data to OpenAI API
-              services, including:
+              Depending on configuration, VitaFlow uses <strong>OpenAI&apos;s API</strong> and/or{" "}
+              <strong>Microsoft Azure OpenAI Service</strong> (hosted large language models) for the same categories of processing.
+              References below include both providers&apos; commercial terms where applicable.
+            </p>
+            <p className="mt-4">
+              When enabled for your account and <strong>only after you grant permission for the active health profile</strong>, we may send limited data for:
             </p>
             <ul>
-              <li>Lab report text extracted from your uploaded PDF/image</li>
-              <li>Relevant report page image regions needed for OCR/extraction</li>
-              <li>Marker context (for example marker names, values, units, ranges, and report date)</li>
-              <li>Optional prompt context needed to generate educational summaries in your selected language</li>
+              <li>
+                <strong>Lab extraction</strong> — text extracted from your uploaded PDF/image and relevant page image regions needed for
+                OCR / structured marker extraction
+              </li>
+              <li>
+                <strong>Educational summaries</strong> — marker context (names, values, units, ranges, report date) and optional profile
+                context for plain-language summaries and checklists
+              </li>
+              <li>
+                <strong>Personalized report summaries</strong> — structured marker results and optional personalization fields you provided
+              </li>
+              <li>
+                <strong>Progress narratives</strong> — comparison of marker values between two reports for wellness-oriented explanations
+              </li>
+              <li>
+                <strong>Stacked-pattern explanations</strong> — grouped marker-pattern context for educational copy
+              </li>
+              <li>
+                <strong>Localization</strong> — when your app language is not English, short batches of already-generated English strings
+                (which may quote marker names, values, units, and cautious explanatory text) may be sent for machine translation into your
+                selected language
+              </li>
             </ul>
             <p className="mt-4">
-              Before any personal or health-related report content is sent to OpenAI, VitaFlow presents an in-app
-              disclosure and requests your permission. You can choose not to allow this processing. If you decline,
-              AI-dependent features will be unavailable, but other non-AI app functions remain accessible.
+              By default, <strong>OpenAI API</strong> content is not used to train OpenAI&apos;s consumer models; <strong>Azure OpenAI</strong> is governed by
+              Microsoft&apos;s enterprise data handling for the service configuration we use. We use API-based processing (not consumer chat
+              products), enable <code>store: false</code> where the API supports it, and minimize what is sent per request.
+            </p>
+            <p className="mt-4">
+              Before any personal or health-related content is sent to these providers, VitaFlow presents an in-app disclosure and requests
+              your permission. <strong>That choice is stored per health profile</strong> (and recorded on our servers for auditability when the app is
+              online): if you use several profiles, you may accept or decline separately for each. If you decline for the active profile,
+              AI-dependent features for that profile will be unavailable, but other non-AI app functions remain accessible.
             </p>
             <p className="mt-4">References:</p>
             <ul>
@@ -190,6 +249,20 @@ const Privacy = () => {
               <li>
                 <a href="https://openai.com/policies/privacy-policy" target="_blank" rel="noopener noreferrer">
                   https://openai.com/policies/privacy-policy
+                </a>
+              </li>
+              <li>
+                <a href="https://platform.openai.com/docs/guides/your-data" target="_blank" rel="noopener noreferrer">
+                  https://platform.openai.com/docs/guides/your-data
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://learn.microsoft.com/legal/cognitive-services/openai/data-privacy"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  https://learn.microsoft.com/legal/cognitive-services/openai/data-privacy
                 </a>
               </li>
             </ul>
@@ -229,9 +302,19 @@ const Privacy = () => {
           <section>
             <h2>7. International Transfers</h2>
             <p>
-              Your data may be processed in jurisdictions where our providers operate, including the United States (for
-              example via OpenAI and cloud infrastructure). Where legally required, we apply appropriate transfer
-              safeguards, including contractual protections where applicable.
+              Your data may be processed in jurisdictions where our providers operate, including the <strong>United States</strong> and other
+              regions where our hosting, database, queue, or AI vendors run infrastructure.
+            </p>
+            <p className="mt-4">
+              For users in <strong>Morocco</strong>, the <strong>Law 09-08</strong> framework treats certain transfers of personal data (including
+              health-related data) outside the Kingdom as subject to <strong>prior authorization or adequacy requirements</strong> (notably Articles{" "}
+              <strong>43</strong> and <strong>44</strong>) in addition to technical and contractual safeguards. Cross-border processing is described in our{" "}
+              <strong>CNDP prior-authorization file</strong> and subprocessor register; we do not rely on generic wording alone where stricter rules apply.
+            </p>
+            <p className="mt-4">
+              For all users, we apply <strong>technical safeguards</strong> (encryption in transit, application-layer encryption at rest where configured) and{" "}
+              <strong>contractual measures</strong> with subprocessors where available. The identity of principal providers and their roles is listed in this
+              Policy (Section 6) and in our CNDP annexes.
             </p>
           </section>
 
@@ -240,7 +323,11 @@ const Privacy = () => {
             <p>We retain data only as long as needed for the purposes above, including:</p>
             <ul>
               <li>Account data: while your account is active</li>
-              <li>Uploaded files and related records: until deleted by you, your account is deleted, or retention is no longer required</li>
+              <li>
+                Health data tied to a profile: until you delete that profile (where the app offers deletion), delete the underlying records,
+                delete your account, or retention is no longer required
+              </li>
+              <li>Uploaded files and related records: same as health data above (scoped to the profile that owns them)</li>
               <li>Operational/security logs: for a limited period necessary for security and compliance</li>
               <li>Legal hold exceptions: longer retention where legally required</li>
             </ul>
@@ -252,9 +339,18 @@ const Privacy = () => {
             <ul>
               <li>HTTPS/TLS for data in transit</li>
               <li>Strong password hashing (no plaintext password storage)</li>
-              <li>Application-layer encryption at rest (including uploaded files and designated sensitive fields) where configured in production</li>
-              <li>Scoped access controls and authenticated user isolation</li>
+              <li>
+                <strong>Application-layer encryption at rest</strong> for uploaded lab files and designated sensitive database fields using{" "}
+                <strong>AES-256-GCM</strong> with a dedicated server-side key — <strong>required in our production environment</strong>; local development may run without the key for engineering convenience only
+              </li>
+              <li>A strict encryption posture for health-related and other sensitive categories</li>
+              <li>
+                Scoped access controls, authenticated <strong>account</strong> isolation, and <strong>separate health-data compartments per profile</strong> (server-enforced)
+              </li>
               <li>Blind-index techniques for certain lookup operations when encryption is enabled</li>
+              <li>
+                Operational logging, anomaly-oriented monitoring, and <strong>audit trails</strong> for sensitive actions (including profile switches and consent events) within retention limits described in Section 8
+              </li>
             </ul>
             <p className="mt-4">No system is 100% secure. You are responsible for keeping your device and credentials secure.</p>
           </section>
@@ -272,8 +368,7 @@ const Privacy = () => {
               <li>Lodge a complaint with a supervisory authority</li>
             </ul>
             <p className="mt-4">
-              VitaFlow supports account deletion and data export through authenticated account features and/or by
-              contacting support.
+              VitaFlow supports <strong>deleting individual health profiles</strong>, <strong>account deletion</strong>, and data export through authenticated features and/or by contacting support. If you track others under your account, requests may require clarifying whether they concern one profile or the whole account.
             </p>
             <p className="mt-4">
               For help, contact:{" "}
@@ -285,13 +380,17 @@ const Privacy = () => {
             <h2>10.1 In-App Consent for Third-Party AI Processing</h2>
             <p>When a feature requires third-party AI processing, VitaFlow shows an in-app notice that:</p>
             <ul>
-              <li>Explains what data will be sent (report text/images and related marker context)</li>
-              <li>Identifies the recipient (OpenAI API services)</li>
-              <li>Requests your permission before transmission</li>
+              <li>
+                Explains what categories of data may be sent (report text/images, marker context, optional profile personalization, and — for
+                non-English languages — short batches of English UI or insight strings derived from your results for translation)
+              </li>
+              <li>
+                Identifies the recipient (<strong>OpenAI API services and/or Microsoft Azure OpenAI</strong>, depending on our deployment configuration)
+              </li>
+              <li>Requests your <strong>explicit</strong> permission before transmission</li>
             </ul>
             <p className="mt-4">
-              If you do not grant permission, AI-dependent features remain unavailable and no report content is sent to
-              OpenAI.
+              The notice applies to <strong>the health profile that is active when you upload or start the feature</strong>. If you do not grant permission for that profile, AI-dependent features remain unavailable for that profile and <strong>no</strong> health-report payload is sent to those providers for it. A <strong>server-side consent audit record</strong> is written when you submit your choice while signed in (best-effort if the network fails after you have already saved your preference locally).
             </p>
           </section>
 
@@ -306,8 +405,7 @@ const Privacy = () => {
           <section>
             <h2>12. Automated Processing</h2>
             <p>
-              VitaFlow uses automated processing (including machine-learning-based parsing) to structure uploaded lab
-              information and generate educational summaries. This does not constitute medical diagnosis or treatment.
+              VitaFlow uses automated processing (including machine-learning-based parsing, optional translation, and narrative helpers described in Section 6.2) to structure uploaded lab information and generate educational summaries. This does not constitute medical diagnosis or treatment.
             </p>
             <p className="mt-4">
               We do not use solely automated decision-making that produces legal or similarly significant effects in the
@@ -341,14 +439,17 @@ const Privacy = () => {
               requested by the user.
             </p>
             <p className="mt-4">
-              Users in Morocco may request access, correction, updating, or deletion of their personal data, and may
+              Users in Morocco may request access, correction, updating, or deletion of their personal data,{" "}
+              <strong>including where data is organized in separate health profiles under one account</strong>, and may
               exercise other rights available under applicable law, by contacting:{" "}
               <a href="mailto:ahmed.aidev.app@gmail.com">ahmed.aidev.app@gmail.com</a>.
             </p>
             <p className="mt-4">
               Where personal data is transferred outside Morocco (including to service providers used for hosting,
-              infrastructure, or AI processing), such transfers are carried out under applicable legal safeguards and
-              compliance requirements.
+              infrastructure, or AI processing), we combine <strong>technical and contractual safeguards</strong> with{" "}
+              <strong>regulatory steps</strong> appropriate to sensitive and health-related data — including, where required,{" "}
+              <strong>prior authorization or notification to the CNDP</strong> and documentation in our authorization dossier (Articles{" "}
+              <strong>43–44</strong> of Law 09-08 and implementing practice).
             </p>
           </section>
 
