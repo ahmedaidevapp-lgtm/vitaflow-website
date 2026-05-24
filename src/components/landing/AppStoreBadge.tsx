@@ -1,4 +1,5 @@
-const APP_STORE_HREF = "https://apps.apple.com/";
+const APP_STORE_HREF =
+  "https://apps.apple.com/us/app/vitaflow-health/id6762191392#information";
 
 type AppStoreBadgeProps = {
   className?: string;
