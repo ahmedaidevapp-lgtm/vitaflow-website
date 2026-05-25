@@ -179,8 +179,8 @@ const Terms = () => {
             <h2>11. Contact</h2>
             <p>
               Questions about these Terms:{" "}
-              <a href="mailto:support@amandevtech.com">
-                <strong>support@amandevtech.com</strong>
+              <a href="mailto:ahmed@amantechdev.com">
+                <strong>ahmed@amantechdev.com</strong>
               </a>
             </p>
             <p className="mt-4">

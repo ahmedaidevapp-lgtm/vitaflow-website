@@ -32,9 +32,9 @@ const Privacy = () => {
             <p>
               <strong>Data controller:</strong> Amandev Technologies
               <br />
-              <strong>Privacy contact:</strong> privacy@amandevtech.com
+              <strong>Privacy contact:</strong> ahmed@amantechdev.com
               <br />
-              <strong>Support contact:</strong> support@amandevtech.com
+              <strong>Support contact:</strong> ahmed@amantechdev.com
             </p>
             <p className="mt-4">
               VitaFlow (&quot;we,&quot; &quot;us,&quot; or &quot;the Service&quot;) is a mobile application that helps users organize,
@@ -372,7 +372,7 @@ const Privacy = () => {
             </p>
             <p className="mt-4">
               For help, contact:{" "}
-              <a href="mailto:support@amandevtech.com">support@amandevtech.com</a>
+              <a href="mailto:ahmed@amantechdev.com">ahmed@amantechdev.com</a>
             </p>
           </section>
 
@@ -421,7 +421,7 @@ const Privacy = () => {
               <li>We do not sell personal information or share it for cross-context behavioral advertising</li>
               <li>
                 You may exercise eligible rights by contacting:{" "}
-                <a href="mailto:privacy@amandevtech.com">privacy@amandevtech.com</a>
+                <a href="mailto:ahmed@amantechdev.com">ahmed@amantechdev.com</a>
               </li>
             </ul>
           </section>
@@ -442,7 +442,7 @@ const Privacy = () => {
               Users in Morocco may request access, correction, updating, or deletion of their personal data,{" "}
               <strong>including where data is organized in separate health profiles under one account</strong>, and may
               exercise other rights available under applicable law, by contacting:{" "}
-              <a href="mailto:privacy@amandevtech.com">privacy@amandevtech.com</a>.
+              <a href="mailto:ahmed@amantechdev.com">ahmed@amantechdev.com</a>.
             </p>
             <p className="mt-4">
               Where personal data is transferred outside Morocco (including to service providers used for hosting,
@@ -466,10 +466,10 @@ const Privacy = () => {
             <h2>16. Contact</h2>
             <p>
               Privacy requests:{" "}
-              <a href="mailto:privacy@amandevtech.com">privacy@amandevtech.com</a>
+              <a href="mailto:ahmed@amantechdev.com">ahmed@amantechdev.com</a>
               <br />
               Support:{" "}
-              <a href="mailto:support@amandevtech.com">support@amandevtech.com</a>
+              <a href="mailto:ahmed@amantechdev.com">ahmed@amantechdev.com</a>
             </p>
           </section>
         </div>

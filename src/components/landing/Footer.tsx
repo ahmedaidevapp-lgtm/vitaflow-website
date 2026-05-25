@@ -8,7 +8,7 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 
-const SUPPORT_EMAIL = "support@amandevtech.com";
+const SUPPORT_EMAIL = "ahmed@amantechdev.com";
 
 const Footer = () => {
   return (
