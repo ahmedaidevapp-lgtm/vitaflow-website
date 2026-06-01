@@ -561,8 +561,7 @@ function buildHtml(
   <!-- Navigation -->
   <nav class="nav">
     <a href="${esc(SITE_DOMAIN)}" class="nav-logo">
-      <img src="/favicon.svg" alt="VitaFlow logo">
-      Vita<span>Flow</span>
+      <img src="/favicon.svg" alt="VitaFlow logo">Vita<span>Flow</span>
     </a>
     <div class="nav-links">
       <a href="${esc(SITE_DOMAIN)}/biomarkers">Lab Tests</a>
