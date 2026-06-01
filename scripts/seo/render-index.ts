@@ -112,7 +112,8 @@ function buildIndexHtml(published: MarkerEntry[]): string {
     .nav { background: ${COLORS.navy}; padding: 0 1.5rem; display: flex; align-items: center; justify-content: space-between; height: 60px; position: sticky; top: 0; z-index: 100; }
     .nav-logo { color: ${COLORS.white}; font-weight: 700; font-size: 1.2rem; letter-spacing: -0.02em; display: flex; align-items: center; gap: 0.6rem; }
     .nav-logo img { width: 30px; height: 30px; border-radius: 7px; }
-    .nav-logo span { color: ${COLORS.primary}; }
+    .nav-wordmark { display: inline; }
+    .nav-wordmark span { color: ${COLORS.primary}; }
     .nav-links { display: flex; gap: 1.5rem; align-items: center; }
     .nav-links a { color: #94A3B8; font-size: 0.9rem; }
     .nav-links a:hover { color: ${COLORS.white}; text-decoration: none; }
@@ -145,7 +146,7 @@ function buildIndexHtml(published: MarkerEntry[]): string {
 
   <nav class="nav">
     <a href="${SITE_DOMAIN}" class="nav-logo">
-      <img src="/favicon.svg" alt="VitaFlow logo">Vita<span>Flow</span>
+      <img src="/favicon.svg" alt="VitaFlow logo"><span class="nav-wordmark">Vita<span>Flow</span></span>
     </a>
     <div class="nav-links">
       <a href="${SITE_DOMAIN}">Home</a>
