@@ -1,0 +1,134 @@
+{
+  "markerSlug": "ferritin",
+  "markerName": "Ferritin",
+  "alternateNames": ["serum ferritin", "ferritin level", "ferritin blood test"],
+  "whatItMeasures": "Ferritin is a protein that stores iron inside cells; measuring it in the blood reflects the body's total iron stores and is the most sensitive single test for diagnosing iron deficiency.",
+  "whatItMeasuresSource": "MedlinePlus, National Library of Medicine. https://medlineplus.gov/lab-tests/ferritin-blood-test/",
+  "referenceRanges": [
+    {
+      "population": "Adult males (≥18 years)",
+      "min": 12,
+      "max": 300,
+      "unit": "ng/mL",
+      "source": "Mayo Clinic Laboratories",
+      "sourceUrl": "https://www.mayocliniclabs.com/test-catalog/overview/8188"
+    },
+    {
+      "population": "Adult females (≥18 years, premenopausal)",
+      "min": 12,
+      "max": 150,
+      "unit": "ng/mL",
+      "source": "Mayo Clinic Laboratories",
+      "sourceUrl": "https://www.mayocliniclabs.com/test-catalog/overview/8188"
+    },
+    {
+      "population": "Adult females (≥18 years, postmenopausal)",
+      "min": 12,
+      "max": 263,
+      "unit": "ng/mL",
+      "source": "Mayo Clinic Laboratories",
+      "sourceUrl": "https://www.mayocliniclabs.com/test-catalog/overview/8188"
+    },
+    {
+      "population": "Children 1–5 years",
+      "min": 6,
+      "max": 24,
+      "unit": "ng/mL",
+      "source": "Mayo Clinic Laboratories",
+      "sourceUrl": "https://www.mayocliniclabs.com/test-catalog/overview/8188"
+    },
+    {
+      "population": "Children 6–9 years",
+      "min": 10,
+      "max": 55,
+      "unit": "ng/mL",
+      "source": "Mayo Clinic Laboratories",
+      "sourceUrl": "https://www.mayocliniclabs.com/test-catalog/overview/8188"
+    }
+  ],
+  "causesOfHigh": [
+    "Hereditary hemochromatosis (genetic iron overload disorder)",
+    "Liver disease, including hepatitis, cirrhosis, and nonalcoholic fatty liver disease (NAFLD)",
+    "Inflammatory conditions such as rheumatoid arthritis, lupus, and other autoimmune diseases",
+    "Infection or sepsis (ferritin is an acute-phase reactant that rises with inflammation)",
+    "Metabolic syndrome and obesity",
+    "Alcohol use disorder",
+    "Hyperthyroidism",
+    "Certain cancers, including lymphoma and leukemia",
+    "Frequent blood transfusions",
+    "Adult-onset Still's disease"
+  ],
+  "causesOfHighSource": "NHS. Haemochromatosis. https://www.nhs.uk/conditions/haemochromatosis/; MedlinePlus. Ferritin Blood Test. https://medlineplus.gov/lab-tests/ferritin-blood-test/",
+  "causesOfLow": [
+    "Iron deficiency (most common cause of low ferritin worldwide)",
+    "Iron deficiency anemia",
+    "Malabsorption disorders such as celiac disease and Crohn's disease",
+    "Inadequate dietary iron intake (common in vegetarian and vegan diets without supplementation)",
+    "Pregnancy (increased iron demand)",
+    "Heavy or prolonged menstrual bleeding",
+    "Chronic gastrointestinal blood loss (e.g., ulcers, polyps)",
+    "Hookworm infestation (common cause globally)"
+  ],
+  "causesOfLowSource": "World Health Organization. Iron Deficiency Anaemia: Assessment, Prevention, and Control. 2001. https://www.who.int/publications/i/item/9241547014",
+  "symptoms": {
+    "high": [
+      "Often asymptomatic in early stages",
+      "Joint pain, particularly in the knuckles",
+      "Fatigue and weakness",
+      "Abdominal pain",
+      "Darkening or bronzing of the skin (in advanced hemochromatosis)",
+      "Reduced sex drive",
+      "Irregular heartbeat (in severe cases)"
+    ],
+    "low": [
+      "Fatigue and persistent tiredness",
+      "Shortness of breath with minimal exertion",
+      "Pale skin, pale gums, or pale inner eyelids",
+      "Brittle nails and hair loss or thinning",
+      "Restless leg syndrome",
+      "Brain fog and difficulty concentrating",
+      "Cold hands and feet",
+      "Frequent headaches",
+      "Sore or swollen tongue (glossitis)",
+      "Pica (craving non-food items such as ice, dirt, or clay)"
+    ]
+  },
+  "symptomsSource": "National Heart, Lung, and Blood Institute. Iron-Deficiency Anemia. https://www.nhlbi.nih.gov/health/anemia/iron-deficiency-anemia",
+  "citations": [
+    {
+      "id": 1,
+      "title": "Ferritin Blood Test",
+      "source": "MedlinePlus, National Library of Medicine",
+      "url": "https://medlineplus.gov/lab-tests/ferritin-blood-test/",
+      "year": 2023
+    },
+    {
+      "id": 2,
+      "title": "Ferritin — Test Catalog",
+      "source": "Mayo Clinic Laboratories",
+      "url": "https://www.mayocliniclabs.com/test-catalog/overview/8188",
+      "year": 2024
+    },
+    {
+      "id": 3,
+      "title": "Iron-Deficiency Anemia",
+      "source": "National Heart, Lung, and Blood Institute (NHLBI)",
+      "url": "https://www.nhlbi.nih.gov/health/anemia/iron-deficiency-anemia",
+      "year": 2023
+    },
+    {
+      "id": 4,
+      "title": "Iron Deficiency Anaemia: Assessment, Prevention, and Control",
+      "source": "World Health Organization (WHO)",
+      "url": "https://www.who.int/publications/i/item/9241547014",
+      "year": 2001
+    },
+    {
+      "id": 5,
+      "title": "Haemochromatosis",
+      "source": "NHS (National Health Service, UK)",
+      "url": "https://www.nhs.uk/conditions/haemochromatosis/",
+      "year": 2023
+    }
+  ]
+}

@@ -12,6 +12,11 @@ dist
 dist-ssr
 *.local
 
+# SEO pipeline
+.env
+.env.local
+scripts/seo/output/pending/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

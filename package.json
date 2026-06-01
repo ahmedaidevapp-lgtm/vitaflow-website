@@ -10,7 +10,13 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "seo:generate": "npx tsx scripts/seo/generate.ts",
+    "seo:check": "npx tsx scripts/seo/quality-gate.ts",
+    "seo:check:all": "npx tsx scripts/seo/quality-gate.ts --all",
+    "seo:render": "npx tsx scripts/seo/render.ts",
+    "seo:approve": "npx tsx scripts/seo/approve.ts",
+    "seo:list": "npx tsx scripts/seo/approve.ts --list"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
@@ -61,9 +67,11 @@
     "tailwind-merge": "^2.6.0",
     "tailwindcss-animate": "^1.0.7",
     "vaul": "^0.9.9",
-    "zod": "^3.25.76"
+    "zod": "^3.25.76",
+    "@anthropic-ai/sdk": "^0.55.0"
   },
   "devDependencies": {
+    "tsx": "^4.19.0",
     "@eslint/js": "^9.32.0",
     "@tailwindcss/typography": "^0.5.16",
     "@testing-library/jest-dom": "^6.6.0",

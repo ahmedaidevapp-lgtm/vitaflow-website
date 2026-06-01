@@ -1,0 +1,561 @@
+[
+  {
+    "slug": "ferritin",
+    "name": "Ferritin",
+    "category": "Iron / Anemia",
+    "relatedMarkers": ["serum-iron", "tibc", "hemoglobin", "hematocrit"],
+    "targetQueries": [
+      { "type": "meaning", "searchQuery": "what is ferritin blood test" },
+      { "type": "normal-range", "searchQuery": "ferritin normal range" },
+      { "type": "high", "searchQuery": "what does high ferritin mean" },
+      { "type": "low", "searchQuery": "low ferritin symptoms" },
+      { "type": "symptoms", "searchQuery": "ferritin deficiency symptoms" }
+    ]
+  },
+  {
+    "slug": "hemoglobin",
+    "name": "Hemoglobin",
+    "category": "Iron / Anemia",
+    "relatedMarkers": ["hematocrit", "ferritin", "serum-iron", "mcv"],
+    "targetQueries": [
+      { "type": "meaning", "searchQuery": "what is hemoglobin blood test" },
+      { "type": "normal-range", "searchQuery": "hemoglobin normal range" },
+      { "type": "low", "searchQuery": "low hemoglobin symptoms" },
+      { "type": "high", "searchQuery": "high hemoglobin causes" },
+      { "type": "symptoms", "searchQuery": "low hemoglobin symptoms in adults" }
+    ]
+  },
+  {
+    "slug": "hematocrit",
+    "name": "Hematocrit",
+    "category": "Iron / Anemia",
+    "relatedMarkers": ["hemoglobin", "ferritin", "rbc", "mcv"],
+    "targetQueries": [
+      { "type": "meaning", "searchQuery": "what is hematocrit blood test" },
+      { "type": "normal-range", "searchQuery": "hematocrit normal range" },
+      { "type": "low", "searchQuery": "low hematocrit causes" },
+      { "type": "high", "searchQuery": "high hematocrit meaning" },
+      { "type": "symptoms", "searchQuery": "low hematocrit symptoms" }
+    ]
+  },
+  {
+    "slug": "serum-iron",
+    "name": "Serum Iron",
+    "category": "Iron / Anemia",
+    "relatedMarkers": ["ferritin", "tibc", "hemoglobin"],
+    "targetQueries": [
+      { "type": "meaning", "searchQuery": "what is serum iron test" },
+      { "type": "normal-range", "searchQuery": "serum iron normal range" },
+      { "type": "low", "searchQuery": "low serum iron causes" },
+      { "type": "high", "searchQuery": "high serum iron meaning" },
+      { "type": "symptoms", "searchQuery": "low iron blood test symptoms" }
+    ]
+  },
+  {
+    "slug": "tibc",
+    "name": "TIBC (Total Iron-Binding Capacity)",
+    "category": "Iron / Anemia",
+    "relatedMarkers": ["ferritin", "serum-iron", "hemoglobin"],
+    "targetQueries": [
+      { "type": "meaning", "searchQuery": "what is TIBC blood test" },
+      { "type": "normal-range", "searchQuery": "TIBC normal range" },
+      { "type": "high", "searchQuery": "high TIBC meaning" },
+      { "type": "low", "searchQuery": "low TIBC meaning" },
+      { "type": "symptoms", "searchQuery": "TIBC iron deficiency" }
+    ]
+  },
+  {
+    "slug": "tsh",
+    "name": "TSH (Thyroid-Stimulating Hormone)",
+    "category": "Thyroid",
+    "relatedMarkers": ["free-t4", "free-t3", "tpo-antibodies"],
+    "targetQueries": [
+      { "type": "meaning", "searchQuery": "what is TSH blood test" },
+      { "type": "normal-range", "searchQuery": "TSH normal range" },
+      { "type": "high", "searchQuery": "high TSH meaning hypothyroidism" },
+      { "type": "low", "searchQuery": "low TSH symptoms" },
+      { "type": "symptoms", "searchQuery": "abnormal TSH symptoms" }
+    ]
+  },
+  {
+    "slug": "free-t4",
+    "name": "Free T4 (Free Thyroxine)",
+    "category": "Thyroid",
+    "relatedMarkers": ["tsh", "free-t3", "tpo-antibodies"],
+    "targetQueries": [
+      { "type": "meaning", "searchQuery": "what is free T4 blood test" },
+      { "type": "normal-range", "searchQuery": "free T4 normal range" },
+      { "type": "low", "searchQuery": "low free T4 causes" },
+      { "type": "high", "searchQuery": "high free T4 meaning" },
+      { "type": "symptoms", "searchQuery": "low T4 symptoms" }
+    ]
+  },
+  {
+    "slug": "free-t3",
+    "name": "Free T3 (Free Triiodothyronine)",
+    "category": "Thyroid",
+    "relatedMarkers": ["tsh", "free-t4", "tpo-antibodies"],
+    "targetQueries": [
+      { "type": "meaning", "searchQuery": "what is free T3 blood test" },
+      { "type": "normal-range", "searchQuery": "free T3 normal range" },
+      { "type": "low", "searchQuery": "low free T3 causes" },
+      { "type": "high", "searchQuery": "high free T3 meaning" },
+      { "type": "symptoms", "searchQuery": "low T3 symptoms" }
+    ]
+  },
+  {
+    "slug": "alt",
+    "name": "ALT (Alanine Aminotransferase)",
+    "category": "Liver",
+    "relatedMarkers": ["ast", "ggt", "alkaline-phosphatase", "bilirubin-total"],
+    "targetQueries": [
+      { "type": "meaning", "searchQuery": "what does ALT mean in blood test" },
+      { "type": "normal-range", "searchQuery": "ALT normal range" },
+      { "type": "high", "searchQuery": "what does high ALT mean" },
+      { "type": "low", "searchQuery": "low ALT liver" },
+      { "type": "symptoms", "searchQuery": "elevated ALT symptoms" }
+    ]
+  },
+  {
+    "slug": "ast",
+    "name": "AST (Aspartate Aminotransferase)",
+    "category": "Liver",
+    "relatedMarkers": ["alt", "ggt", "alkaline-phosphatase", "bilirubin-total"],
+    "targetQueries": [
+      { "type": "meaning", "searchQuery": "what is AST blood test" },
+      { "type": "normal-range", "searchQuery": "AST normal range" },
+      { "type": "high", "searchQuery": "high AST causes" },
+      { "type": "low", "searchQuery": "low AST meaning" },
+      { "type": "symptoms", "searchQuery": "elevated AST symptoms" }
+    ]
+  },
+  {
+    "slug": "ggt",
+    "name": "GGT (Gamma-Glutamyl Transferase)",
+    "category": "Liver",
+    "relatedMarkers": ["alt", "ast", "alkaline-phosphatase"],
+    "targetQueries": [
+      { "type": "meaning", "searchQuery": "what is GGT blood test" },
+      { "type": "normal-range", "searchQuery": "GGT normal range" },
+      { "type": "high", "searchQuery": "high GGT causes" },
+      { "type": "low", "searchQuery": "low GGT meaning" },
+      { "type": "symptoms", "searchQuery": "elevated GGT alcohol liver" }
+    ]
+  },
+  {
+    "slug": "alkaline-phosphatase",
+    "name": "Alkaline Phosphatase (ALP)",
+    "category": "Liver",
+    "relatedMarkers": ["alt", "ast", "ggt", "bilirubin-total"],
+    "targetQueries": [
+      { "type": "meaning", "searchQuery": "what is alkaline phosphatase blood test" },
+      { "type": "normal-range", "searchQuery": "alkaline phosphatase normal range" },
+      { "type": "high", "searchQuery": "high alkaline phosphatase causes" },
+      { "type": "low", "searchQuery": "low alkaline phosphatase meaning" },
+      { "type": "symptoms", "searchQuery": "elevated alkaline phosphatase symptoms" }
+    ]
+  },
+  {
+    "slug": "bilirubin-total",
+    "name": "Total Bilirubin",
+    "category": "Liver",
+    "relatedMarkers": ["alt", "ast", "alkaline-phosphatase", "albumin"],
+    "targetQueries": [
+      { "type": "meaning", "searchQuery": "what is bilirubin blood test" },
+      { "type": "normal-range", "searchQuery": "bilirubin normal range" },
+      { "type": "high", "searchQuery": "high bilirubin causes" },
+      { "type": "low", "searchQuery": "low bilirubin meaning" },
+      { "type": "symptoms", "searchQuery": "high bilirubin symptoms jaundice" }
+    ]
+  },
+  {
+    "slug": "albumin",
+    "name": "Albumin",
+    "category": "Liver",
+    "relatedMarkers": ["alt", "ast", "bilirubin-total"],
+    "targetQueries": [
+      { "type": "meaning", "searchQuery": "what is albumin blood test" },
+      { "type": "normal-range", "searchQuery": "albumin normal range" },
+      { "type": "low", "searchQuery": "low albumin causes" },
+      { "type": "high", "searchQuery": "high albumin meaning" },
+      { "type": "symptoms", "searchQuery": "low albumin symptoms" }
+    ]
+  },
+  {
+    "slug": "creatinine",
+    "name": "Creatinine",
+    "category": "Kidney",
+    "relatedMarkers": ["bun", "egfr", "uric-acid"],
+    "targetQueries": [
+      { "type": "meaning", "searchQuery": "what is creatinine blood test" },
+      { "type": "normal-range", "searchQuery": "creatinine normal range" },
+      { "type": "high", "searchQuery": "high creatinine causes" },
+      { "type": "low", "searchQuery": "low creatinine meaning" },
+      { "type": "symptoms", "searchQuery": "high creatinine symptoms kidney" }
+    ]
+  },
+  {
+    "slug": "bun",
+    "name": "BUN (Blood Urea Nitrogen)",
+    "category": "Kidney",
+    "relatedMarkers": ["creatinine", "egfr", "uric-acid"],
+    "targetQueries": [
+      { "type": "meaning", "searchQuery": "what is BUN blood test" },
+      { "type": "normal-range", "searchQuery": "BUN normal range" },
+      { "type": "high", "searchQuery": "high BUN causes" },
+      { "type": "low", "searchQuery": "low BUN meaning" },
+      { "type": "symptoms", "searchQuery": "elevated BUN symptoms" }
+    ]
+  },
+  {
+    "slug": "egfr",
+    "name": "eGFR (Estimated Glomerular Filtration Rate)",
+    "category": "Kidney",
+    "relatedMarkers": ["creatinine", "bun"],
+    "targetQueries": [
+      { "type": "meaning", "searchQuery": "what is eGFR blood test" },
+      { "type": "normal-range", "searchQuery": "eGFR normal range" },
+      { "type": "low", "searchQuery": "low eGFR meaning kidney disease" },
+      { "type": "high", "searchQuery": "high eGFR meaning" },
+      { "type": "symptoms", "searchQuery": "low eGFR symptoms" }
+    ]
+  },
+  {
+    "slug": "uric-acid",
+    "name": "Uric Acid",
+    "category": "Kidney",
+    "relatedMarkers": ["creatinine", "bun", "egfr"],
+    "targetQueries": [
+      { "type": "meaning", "searchQuery": "what is uric acid blood test" },
+      { "type": "normal-range", "searchQuery": "uric acid normal range" },
+      { "type": "high", "searchQuery": "high uric acid causes gout" },
+      { "type": "low", "searchQuery": "low uric acid meaning" },
+      { "type": "symptoms", "searchQuery": "high uric acid symptoms" }
+    ]
+  },
+  {
+    "slug": "glucose",
+    "name": "Fasting Glucose",
+    "category": "Metabolic",
+    "relatedMarkers": ["hba1c", "insulin", "triglycerides"],
+    "targetQueries": [
+      { "type": "meaning", "searchQuery": "what is fasting glucose blood test" },
+      { "type": "normal-range", "searchQuery": "fasting glucose normal range" },
+      { "type": "high", "searchQuery": "high fasting glucose prediabetes" },
+      { "type": "low", "searchQuery": "low fasting glucose hypoglycemia" },
+      { "type": "symptoms", "searchQuery": "high blood sugar symptoms" }
+    ]
+  },
+  {
+    "slug": "hba1c",
+    "name": "HbA1c (Hemoglobin A1c)",
+    "category": "Metabolic",
+    "relatedMarkers": ["glucose", "insulin"],
+    "targetQueries": [
+      { "type": "meaning", "searchQuery": "what is HbA1c blood test" },
+      { "type": "normal-range", "searchQuery": "HbA1c normal range" },
+      { "type": "high", "searchQuery": "high HbA1c diabetes" },
+      { "type": "low", "searchQuery": "low HbA1c causes" },
+      { "type": "symptoms", "searchQuery": "elevated HbA1c symptoms" }
+    ]
+  },
+  {
+    "slug": "total-cholesterol",
+    "name": "Total Cholesterol",
+    "category": "Lipid Panel",
+    "relatedMarkers": ["ldl-cholesterol", "hdl-cholesterol", "triglycerides"],
+    "targetQueries": [
+      { "type": "meaning", "searchQuery": "what is total cholesterol blood test" },
+      { "type": "normal-range", "searchQuery": "total cholesterol normal range" },
+      { "type": "high", "searchQuery": "high cholesterol causes" },
+      { "type": "low", "searchQuery": "low cholesterol meaning" },
+      { "type": "symptoms", "searchQuery": "high cholesterol symptoms" }
+    ]
+  },
+  {
+    "slug": "ldl-cholesterol",
+    "name": "LDL Cholesterol",
+    "category": "Lipid Panel",
+    "relatedMarkers": ["total-cholesterol", "hdl-cholesterol", "triglycerides"],
+    "targetQueries": [
+      { "type": "meaning", "searchQuery": "what is LDL cholesterol blood test" },
+      { "type": "normal-range", "searchQuery": "LDL cholesterol normal range" },
+      { "type": "high", "searchQuery": "high LDL cholesterol causes" },
+      { "type": "low", "searchQuery": "low LDL cholesterol meaning" },
+      { "type": "symptoms", "searchQuery": "high LDL symptoms" }
+    ]
+  },
+  {
+    "slug": "hdl-cholesterol",
+    "name": "HDL Cholesterol",
+    "category": "Lipid Panel",
+    "relatedMarkers": ["total-cholesterol", "ldl-cholesterol", "triglycerides"],
+    "targetQueries": [
+      { "type": "meaning", "searchQuery": "what is HDL cholesterol blood test" },
+      { "type": "normal-range", "searchQuery": "HDL cholesterol normal range" },
+      { "type": "low", "searchQuery": "low HDL cholesterol causes" },
+      { "type": "high", "searchQuery": "high HDL cholesterol meaning" },
+      { "type": "symptoms", "searchQuery": "low good cholesterol symptoms" }
+    ]
+  },
+  {
+    "slug": "triglycerides",
+    "name": "Triglycerides",
+    "category": "Lipid Panel",
+    "relatedMarkers": ["total-cholesterol", "ldl-cholesterol", "hdl-cholesterol", "glucose"],
+    "targetQueries": [
+      { "type": "meaning", "searchQuery": "what is triglycerides blood test" },
+      { "type": "normal-range", "searchQuery": "triglycerides normal range" },
+      { "type": "high", "searchQuery": "high triglycerides causes" },
+      { "type": "low", "searchQuery": "low triglycerides meaning" },
+      { "type": "symptoms", "searchQuery": "high triglycerides symptoms" }
+    ]
+  },
+  {
+    "slug": "wbc",
+    "name": "WBC (White Blood Cell Count)",
+    "category": "CBC",
+    "relatedMarkers": ["rbc", "platelets", "neutrophils", "lymphocytes"],
+    "targetQueries": [
+      { "type": "meaning", "searchQuery": "what is WBC blood test" },
+      { "type": "normal-range", "searchQuery": "WBC normal range" },
+      { "type": "high", "searchQuery": "high white blood cell count causes" },
+      { "type": "low", "searchQuery": "low WBC count causes" },
+      { "type": "symptoms", "searchQuery": "high white blood cell count symptoms" }
+    ]
+  },
+  {
+    "slug": "rbc",
+    "name": "RBC (Red Blood Cell Count)",
+    "category": "CBC",
+    "relatedMarkers": ["hemoglobin", "hematocrit", "mcv", "ferritin"],
+    "targetQueries": [
+      { "type": "meaning", "searchQuery": "what is RBC blood test" },
+      { "type": "normal-range", "searchQuery": "RBC normal range" },
+      { "type": "low", "searchQuery": "low red blood cell count causes" },
+      { "type": "high", "searchQuery": "high RBC count meaning" },
+      { "type": "symptoms", "searchQuery": "low red blood cell count symptoms" }
+    ]
+  },
+  {
+    "slug": "platelets",
+    "name": "Platelet Count",
+    "category": "CBC",
+    "relatedMarkers": ["wbc", "rbc"],
+    "targetQueries": [
+      { "type": "meaning", "searchQuery": "what is platelet count blood test" },
+      { "type": "normal-range", "searchQuery": "platelet count normal range" },
+      { "type": "low", "searchQuery": "low platelet count causes" },
+      { "type": "high", "searchQuery": "high platelet count meaning" },
+      { "type": "symptoms", "searchQuery": "low platelets symptoms thrombocytopenia" }
+    ]
+  },
+  {
+    "slug": "mcv",
+    "name": "MCV (Mean Corpuscular Volume)",
+    "category": "CBC",
+    "relatedMarkers": ["hemoglobin", "hematocrit", "rbc", "vitamin-b12", "ferritin"],
+    "targetQueries": [
+      { "type": "meaning", "searchQuery": "what is MCV blood test" },
+      { "type": "normal-range", "searchQuery": "MCV normal range" },
+      { "type": "high", "searchQuery": "high MCV causes macrocytosis" },
+      { "type": "low", "searchQuery": "low MCV causes microcytic anemia" },
+      { "type": "symptoms", "searchQuery": "abnormal MCV symptoms" }
+    ]
+  },
+  {
+    "slug": "neutrophils",
+    "name": "Neutrophils",
+    "category": "CBC",
+    "relatedMarkers": ["wbc", "lymphocytes"],
+    "targetQueries": [
+      { "type": "meaning", "searchQuery": "what are neutrophils blood test" },
+      { "type": "normal-range", "searchQuery": "neutrophils normal range" },
+      { "type": "high", "searchQuery": "high neutrophils causes" },
+      { "type": "low", "searchQuery": "low neutrophils neutropenia" },
+      { "type": "symptoms", "searchQuery": "low neutrophils symptoms" }
+    ]
+  },
+  {
+    "slug": "lymphocytes",
+    "name": "Lymphocytes",
+    "category": "CBC",
+    "relatedMarkers": ["wbc", "neutrophils"],
+    "targetQueries": [
+      { "type": "meaning", "searchQuery": "what are lymphocytes blood test" },
+      { "type": "normal-range", "searchQuery": "lymphocytes normal range" },
+      { "type": "high", "searchQuery": "high lymphocytes causes" },
+      { "type": "low", "searchQuery": "low lymphocytes meaning" },
+      { "type": "symptoms", "searchQuery": "high lymphocytes symptoms" }
+    ]
+  },
+  {
+    "slug": "vitamin-d",
+    "name": "Vitamin D (25-hydroxyvitamin D)",
+    "category": "Vitamins / Minerals",
+    "relatedMarkers": ["calcium", "magnesium"],
+    "targetQueries": [
+      { "type": "meaning", "searchQuery": "what is vitamin D blood test" },
+      { "type": "normal-range", "searchQuery": "vitamin D normal range" },
+      { "type": "low", "searchQuery": "low vitamin D symptoms" },
+      { "type": "high", "searchQuery": "high vitamin D toxicity" },
+      { "type": "symptoms", "searchQuery": "vitamin D deficiency symptoms" }
+    ]
+  },
+  {
+    "slug": "vitamin-b12",
+    "name": "Vitamin B12",
+    "category": "Vitamins / Minerals",
+    "relatedMarkers": ["folate", "mcv", "hemoglobin"],
+    "targetQueries": [
+      { "type": "meaning", "searchQuery": "what is vitamin B12 blood test" },
+      { "type": "normal-range", "searchQuery": "vitamin B12 normal range" },
+      { "type": "low", "searchQuery": "low vitamin B12 symptoms" },
+      { "type": "high", "searchQuery": "high vitamin B12 meaning" },
+      { "type": "symptoms", "searchQuery": "vitamin B12 deficiency symptoms" }
+    ]
+  },
+  {
+    "slug": "folate",
+    "name": "Folate (Folic Acid)",
+    "category": "Vitamins / Minerals",
+    "relatedMarkers": ["vitamin-b12", "mcv", "hemoglobin"],
+    "targetQueries": [
+      { "type": "meaning", "searchQuery": "what is folate blood test" },
+      { "type": "normal-range", "searchQuery": "folate normal range" },
+      { "type": "low", "searchQuery": "low folate symptoms" },
+      { "type": "high", "searchQuery": "high folate causes" },
+      { "type": "symptoms", "searchQuery": "folate deficiency symptoms" }
+    ]
+  },
+  {
+    "slug": "magnesium",
+    "name": "Magnesium",
+    "category": "Vitamins / Minerals",
+    "relatedMarkers": ["calcium", "vitamin-d"],
+    "targetQueries": [
+      { "type": "meaning", "searchQuery": "what is magnesium blood test" },
+      { "type": "normal-range", "searchQuery": "magnesium normal range" },
+      { "type": "low", "searchQuery": "low magnesium symptoms" },
+      { "type": "high", "searchQuery": "high magnesium causes hypermagnesemia" },
+      { "type": "symptoms", "searchQuery": "magnesium deficiency symptoms" }
+    ]
+  },
+  {
+    "slug": "calcium",
+    "name": "Calcium",
+    "category": "Vitamins / Minerals",
+    "relatedMarkers": ["vitamin-d", "magnesium", "albumin"],
+    "targetQueries": [
+      { "type": "meaning", "searchQuery": "what is calcium blood test" },
+      { "type": "normal-range", "searchQuery": "calcium normal range" },
+      { "type": "high", "searchQuery": "high calcium causes hypercalcemia" },
+      { "type": "low", "searchQuery": "low calcium symptoms hypocalcemia" },
+      { "type": "symptoms", "searchQuery": "abnormal calcium blood test symptoms" }
+    ]
+  },
+  {
+    "slug": "crp",
+    "name": "CRP (C-Reactive Protein)",
+    "category": "Inflammation",
+    "relatedMarkers": ["esr", "wbc"],
+    "targetQueries": [
+      { "type": "meaning", "searchQuery": "what is CRP blood test" },
+      { "type": "normal-range", "searchQuery": "CRP normal range" },
+      { "type": "high", "searchQuery": "high CRP causes inflammation" },
+      { "type": "low", "searchQuery": "low CRP meaning" },
+      { "type": "symptoms", "searchQuery": "elevated CRP symptoms" }
+    ]
+  },
+  {
+    "slug": "esr",
+    "name": "ESR (Erythrocyte Sedimentation Rate)",
+    "category": "Inflammation",
+    "relatedMarkers": ["crp", "wbc"],
+    "targetQueries": [
+      { "type": "meaning", "searchQuery": "what is ESR blood test" },
+      { "type": "normal-range", "searchQuery": "ESR normal range" },
+      { "type": "high", "searchQuery": "high ESR causes" },
+      { "type": "low", "searchQuery": "low ESR meaning" },
+      { "type": "symptoms", "searchQuery": "elevated ESR symptoms" }
+    ]
+  },
+  {
+    "slug": "cortisol",
+    "name": "Cortisol",
+    "category": "Hormones",
+    "relatedMarkers": ["dhea-s", "glucose"],
+    "targetQueries": [
+      { "type": "meaning", "searchQuery": "what is cortisol blood test" },
+      { "type": "normal-range", "searchQuery": "cortisol normal range morning" },
+      { "type": "high", "searchQuery": "high cortisol causes Cushing" },
+      { "type": "low", "searchQuery": "low cortisol symptoms Addison" },
+      { "type": "symptoms", "searchQuery": "high cortisol symptoms" }
+    ]
+  },
+  {
+    "slug": "testosterone",
+    "name": "Testosterone (Total)",
+    "category": "Hormones",
+    "relatedMarkers": ["dhea-s", "estradiol", "shbg"],
+    "targetQueries": [
+      { "type": "meaning", "searchQuery": "what is testosterone blood test" },
+      { "type": "normal-range", "searchQuery": "testosterone normal range men" },
+      { "type": "low", "searchQuery": "low testosterone symptoms men" },
+      { "type": "high", "searchQuery": "high testosterone women causes" },
+      { "type": "symptoms", "searchQuery": "low testosterone symptoms" }
+    ]
+  },
+  {
+    "slug": "estradiol",
+    "name": "Estradiol (E2)",
+    "category": "Hormones",
+    "relatedMarkers": ["testosterone", "fsh", "lh"],
+    "targetQueries": [
+      { "type": "meaning", "searchQuery": "what is estradiol blood test" },
+      { "type": "normal-range", "searchQuery": "estradiol normal range women" },
+      { "type": "low", "searchQuery": "low estradiol symptoms" },
+      { "type": "high", "searchQuery": "high estradiol causes" },
+      { "type": "symptoms", "searchQuery": "estradiol deficiency symptoms" }
+    ]
+  },
+  {
+    "slug": "dhea-s",
+    "name": "DHEA-S (Dehydroepiandrosterone Sulfate)",
+    "category": "Hormones",
+    "relatedMarkers": ["cortisol", "testosterone"],
+    "targetQueries": [
+      { "type": "meaning", "searchQuery": "what is DHEA-S blood test" },
+      { "type": "normal-range", "searchQuery": "DHEA-S normal range" },
+      { "type": "low", "searchQuery": "low DHEA-S causes" },
+      { "type": "high", "searchQuery": "high DHEA-S meaning" },
+      { "type": "symptoms", "searchQuery": "low DHEA symptoms" }
+    ]
+  },
+  {
+    "slug": "insulin",
+    "name": "Fasting Insulin",
+    "category": "Metabolic",
+    "relatedMarkers": ["glucose", "hba1c"],
+    "targetQueries": [
+      { "type": "meaning", "searchQuery": "what is fasting insulin blood test" },
+      { "type": "normal-range", "searchQuery": "fasting insulin normal range" },
+      { "type": "high", "searchQuery": "high fasting insulin insulin resistance" },
+      { "type": "low", "searchQuery": "low insulin meaning" },
+      { "type": "symptoms", "searchQuery": "insulin resistance symptoms" }
+    ]
+  },
+  {
+    "slug": "homocysteine",
+    "name": "Homocysteine",
+    "category": "Cardiovascular",
+    "relatedMarkers": ["vitamin-b12", "folate", "crp"],
+    "targetQueries": [
+      { "type": "meaning", "searchQuery": "what is homocysteine blood test" },
+      { "type": "normal-range", "searchQuery": "homocysteine normal range" },
+      { "type": "high", "searchQuery": "high homocysteine causes heart disease" },
+      { "type": "low", "searchQuery": "low homocysteine meaning" },
+      { "type": "symptoms", "searchQuery": "elevated homocysteine symptoms" }
+    ]
+  }
+]
