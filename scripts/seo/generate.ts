@@ -46,7 +46,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const DATA_DIR = join(__dirname, 'data');
 const PENDING_DIR = join(__dirname, 'output', 'pending');
 
-const GENERATION_MODEL = 'claude-opus-4-8';
+const GENERATION_MODEL = 'claude-sonnet-4-6';
 const MIN_INTRO_WORDS = 80;
 const MIN_EXPLANATION_WORDS = 200;
 const MIN_FAQ_WORDS = 60;
