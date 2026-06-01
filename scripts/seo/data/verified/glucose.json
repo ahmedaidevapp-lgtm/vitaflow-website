@@ -1,0 +1,63 @@
+{
+  "markerSlug": "glucose",
+  "markerName": "Fasting Glucose",
+  "alternateNames": ["fasting blood sugar", "FBS", "fasting plasma glucose", "blood glucose"],
+  "whatItMeasures": "Fasting glucose measures the concentration of glucose (sugar) in the blood after at least 8 hours without eating; it is used to screen for, diagnose, and monitor diabetes and prediabetes.",
+  "whatItMeasuresSource": "American Diabetes Association. Standards of Care in Diabetes. https://diabetesjournals.org/care/article/46/Supplement_1/S1/148054",
+  "referenceRanges": [
+    { "population": "Normal (adults)", "min": 70, "max": 99, "unit": "mg/dL", "source": "American Diabetes Association. Diagnosis and Classification of Diabetes. 2024.", "sourceUrl": "https://diabetesjournals.org/care/article/46/Supplement_1/S1/148054" },
+    { "population": "Prediabetes (adults)", "min": 100, "max": 125, "unit": "mg/dL", "source": "American Diabetes Association. Diagnosis and Classification of Diabetes. 2024.", "sourceUrl": "https://diabetesjournals.org/care/article/46/Supplement_1/S1/148054" },
+    { "population": "Diabetes (adults) — diagnostic threshold", "min": 126, "max": null, "unit": "mg/dL", "source": "American Diabetes Association. Diagnosis and Classification of Diabetes. 2024.", "sourceUrl": "https://diabetesjournals.org/care/article/46/Supplement_1/S1/148054" }
+  ],
+  "causesOfHigh": [
+    "Type 2 diabetes (most common)",
+    "Type 1 diabetes",
+    "Prediabetes and insulin resistance",
+    "Gestational diabetes",
+    "Cushing's syndrome (excess cortisol raises blood sugar)",
+    "Pancreatitis or pancreatic disease (reduced insulin production)",
+    "Polycystic ovary syndrome (PCOS)",
+    "Certain medications (corticosteroids, antipsychotics, thiazide diuretics)",
+    "Stress or acute illness (counterregulatory hormones raise glucose)"
+  ],
+  "causesOfHighSource": "NHS. Type 2 diabetes — causes. https://www.nhs.uk/conditions/type-2-diabetes/causes/",
+  "causesOfLow": [
+    "Excess insulin (insulin medication overdose or insulinoma)",
+    "Skipping or delaying meals",
+    "Intense or prolonged exercise without adequate carbohydrate intake",
+    "Alcohol consumption (especially without food — alcohol blocks glucose release from the liver)",
+    "Certain oral diabetes medications (sulphonylureas)",
+    "Liver disease (impaired glucose production)",
+    "Adrenal insufficiency (Addison's disease)",
+    "Reactive hypoglycemia (blood sugar drops 2–4 hours after eating)"
+  ],
+  "causesOfLowSource": "NHS. Hypoglycaemia. https://www.nhs.uk/conditions/low-blood-sugar-hypoglycaemia/",
+  "symptoms": {
+    "high": [
+      "Increased thirst (polydipsia)",
+      "Frequent urination (polyuria)",
+      "Blurred vision",
+      "Fatigue and weakness",
+      "Slow-healing wounds or infections",
+      "Unintentional weight loss (in type 1 diabetes)",
+      "Numbness or tingling in hands and feet (in chronic hyperglycaemia)"
+    ],
+    "low": [
+      "Shakiness and trembling",
+      "Sweating",
+      "Rapid heartbeat",
+      "Hunger",
+      "Dizziness and lightheadedness",
+      "Irritability or anxiety",
+      "Confusion and difficulty concentrating",
+      "Pale skin",
+      "Seizures or loss of consciousness (in severe hypoglycaemia)"
+    ]
+  },
+  "symptomsSource": "NHS. Type 2 diabetes symptoms. https://www.nhs.uk/conditions/type-2-diabetes/symptoms/; NHS. Hypoglycaemia symptoms. https://www.nhs.uk/conditions/low-blood-sugar-hypoglycaemia/symptoms/",
+  "citations": [
+    { "id": 1, "title": "Standards of Care in Diabetes", "source": "American Diabetes Association", "url": "https://diabetesjournals.org/care/article/46/Supplement_1/S1/148054", "year": 2024 },
+    { "id": 2, "title": "Type 2 diabetes", "source": "NHS (National Health Service, UK)", "url": "https://www.nhs.uk/conditions/type-2-diabetes/", "year": 2023 },
+    { "id": 3, "title": "Low blood sugar (hypoglycaemia)", "source": "NHS (National Health Service, UK)", "url": "https://www.nhs.uk/conditions/low-blood-sugar-hypoglycaemia/", "year": 2023 }
+  ]
+}

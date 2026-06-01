@@ -1,0 +1,59 @@
+{
+  "markerSlug": "cortisol",
+  "markerName": "Cortisol",
+  "alternateNames": ["cortisol", "serum cortisol", "plasma cortisol", "cortisol level", "stress hormone test"],
+  "whatItMeasures": "Cortisol is the primary glucocorticoid hormone produced by the adrenal glands in response to stress and low blood sugar; it regulates metabolism, immune response, blood pressure, and the sleep-wake cycle. A morning blood draw captures peak cortisol levels due to natural diurnal variation.",
+  "whatItMeasuresSource": "MedlinePlus, National Library of Medicine. https://medlineplus.gov/lab-tests/cortisol-test/",
+  "referenceRanges": [
+    { "population": "Adults — morning (7–9 AM)", "min": 6, "max": 23, "unit": "mcg/dL", "source": "Mayo Clinic Laboratories", "sourceUrl": "https://www.mayocliniclabs.com/test-catalog/overview/8545" },
+    { "population": "Adults — afternoon (3–5 PM)", "min": 3, "max": 16, "unit": "mcg/dL", "source": "Mayo Clinic Laboratories", "sourceUrl": "https://www.mayocliniclabs.com/test-catalog/overview/8545" }
+  ],
+  "causesOfHigh": [
+    "Cushing's syndrome — excess cortisol from a pituitary tumour (Cushing's disease), adrenal tumour, or long-term corticosteroid use",
+    "Physical or psychological stress",
+    "Depression and anxiety disorders",
+    "Obesity",
+    "Alcoholism",
+    "Poorly controlled diabetes",
+    "Pregnancy (cortisol rises in the third trimester)",
+    "Oral contraceptive use (raises cortisol-binding protein)"
+  ],
+  "causesOfHighSource": "NHLBI. Cushing Syndrome. https://www.nhlbi.nih.gov/health/cushing-syndrome",
+  "causesOfLow": [
+    "Addison's disease (primary adrenal insufficiency — adrenal glands do not produce enough cortisol)",
+    "Secondary adrenal insufficiency (pituitary fails to produce ACTH)",
+    "Abrupt withdrawal of long-term corticosteroid medication (suppresses the adrenal axis)",
+    "Hypothyroidism",
+    "Hypopituitarism"
+  ],
+  "causesOfLowSource": "NHS. Addison's disease. https://www.nhs.uk/conditions/addisons-disease/",
+  "symptoms": {
+    "high": [
+      "Weight gain, particularly in the abdomen and face (moon face, buffalo hump)",
+      "Purple or pink stretch marks on the skin",
+      "Thin, fragile skin that bruises easily",
+      "Muscle weakness, especially in the thighs and upper arms",
+      "High blood pressure",
+      "High blood sugar (glucose intolerance)",
+      "Mood changes: depression, anxiety, irritability",
+      "Reduced libido and irregular periods in women",
+      "Osteoporosis"
+    ],
+    "low": [
+      "Fatigue and weakness",
+      "Weight loss and poor appetite",
+      "Nausea, vomiting, and abdominal pain",
+      "Low blood pressure (dizziness on standing)",
+      "Salt craving",
+      "Darkening of the skin (hyperpigmentation) in Addison's disease",
+      "Depression and irritability",
+      "Adrenal crisis (life-threatening): severe vomiting, low blood pressure, loss of consciousness"
+    ]
+  },
+  "symptomsSource": "NHS. Addison's disease — symptoms. https://www.nhs.uk/conditions/addisons-disease/symptoms/; NHLBI. Cushing Syndrome — symptoms. https://www.nhlbi.nih.gov/health/cushing-syndrome/symptoms",
+  "citations": [
+    { "id": 1, "title": "Cortisol Test", "source": "MedlinePlus, National Library of Medicine", "url": "https://medlineplus.gov/lab-tests/cortisol-test/", "year": 2023 },
+    { "id": 2, "title": "Cushing Syndrome", "source": "National Heart, Lung, and Blood Institute (NHLBI)", "url": "https://www.nhlbi.nih.gov/health/cushing-syndrome", "year": 2023 },
+    { "id": 3, "title": "Addison's disease", "source": "NHS (National Health Service, UK)", "url": "https://www.nhs.uk/conditions/addisons-disease/", "year": 2023 }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "markerSlug": "insulin",
+  "markerName": "Fasting Insulin",
+  "alternateNames": ["fasting insulin", "serum insulin", "insulin level", "insulin resistance test"],
+  "whatItMeasures": "Fasting insulin measures the level of insulin — the hormone that allows glucose to enter cells — in the blood after at least 8 hours without eating; when interpreted alongside fasting glucose, it helps assess insulin sensitivity and detect insulin resistance before blood sugar becomes abnormal.",
+  "whatItMeasuresSource": "MedlinePlus, National Library of Medicine. https://medlineplus.gov/lab-tests/insulin-in-blood/",
+  "referenceRanges": [
+    { "population": "Adults — fasting (general reference)", "min": 2, "max": 25, "unit": "µIU/mL", "source": "Mayo Clinic Laboratories", "sourceUrl": "https://www.mayocliniclabs.com/test-catalog/overview/8664" }
+  ],
+  "causesOfHigh": [
+    "Insulin resistance and prediabetes (pancreas overproduces insulin to compensate)",
+    "Type 2 diabetes in early stages (before beta cell exhaustion)",
+    "Obesity, especially central adiposity",
+    "Polycystic ovary syndrome (PCOS)",
+    "Metabolic syndrome",
+    "Insulinoma (rare insulin-secreting pancreatic tumour)",
+    "Acromegaly (excess growth hormone promotes insulin resistance)",
+    "Cushing's syndrome (excess cortisol causes insulin resistance)"
+  ],
+  "causesOfHighSource": "MedlinePlus. Insulin in Blood. https://medlineplus.gov/lab-tests/insulin-in-blood/",
+  "causesOfLow": [
+    "Type 1 diabetes (autoimmune destruction of insulin-producing beta cells)",
+    "Late-stage type 2 diabetes (beta cell exhaustion)",
+    "Pancreatitis or pancreatic surgery",
+    "Prolonged fasting or very low carbohydrate intake",
+    "Hypopituitarism"
+  ],
+  "causesOfLowSource": "MedlinePlus. Insulin in Blood. https://medlineplus.gov/lab-tests/insulin-in-blood/",
+  "symptoms": {
+    "high": [
+      "High fasting insulin often causes no direct symptoms",
+      "Weight gain, particularly around the abdomen",
+      "Fatigue",
+      "Acanthosis nigricans (dark, velvety patches of skin in body folds — a sign of insulin resistance)",
+      "Sugar cravings and difficulty losing weight",
+      "Brain fog",
+      "High blood pressure"
+    ],
+    "low": [
+      "Low insulin (as in type 1 diabetes): extreme thirst, frequent urination, unintentional weight loss, fatigue, blurred vision",
+      "Diabetic ketoacidosis (DKA) in type 1 diabetes: nausea, vomiting, abdominal pain, fruity breath, confusion — a medical emergency"
+    ]
+  },
+  "symptomsSource": "NHS. Type 1 diabetes — symptoms. https://www.nhs.uk/conditions/type-1-diabetes/symptoms/",
+  "citations": [
+    { "id": 1, "title": "Insulin in Blood", "source": "MedlinePlus, National Library of Medicine", "url": "https://medlineplus.gov/lab-tests/insulin-in-blood/", "year": 2023 },
+    { "id": 2, "title": "Type 1 diabetes", "source": "NHS (National Health Service, UK)", "url": "https://www.nhs.uk/conditions/type-1-diabetes/", "year": 2023 }
+  ]
+}

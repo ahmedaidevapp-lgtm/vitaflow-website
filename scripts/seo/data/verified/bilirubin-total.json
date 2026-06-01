@@ -1,0 +1,45 @@
+{
+  "markerSlug": "bilirubin-total",
+  "markerName": "Total Bilirubin",
+  "alternateNames": ["total bilirubin", "bilirubin", "serum bilirubin", "T. bili"],
+  "whatItMeasures": "Total bilirubin measures the combined level of direct (conjugated) and indirect (unconjugated) bilirubin in the blood; bilirubin is a yellow pigment produced when red blood cells break down, and elevated levels cause jaundice.",
+  "whatItMeasuresSource": "MedlinePlus, National Library of Medicine. https://medlineplus.gov/lab-tests/bilirubin-blood-test/",
+  "referenceRanges": [
+    { "population": "Adults (≥18 years)", "min": 0.2, "max": 1.2, "unit": "mg/dL", "source": "Mayo Clinic Laboratories", "sourceUrl": "https://www.mayocliniclabs.com/test-catalog/overview/8378" },
+    { "population": "Newborns (jaundice threshold varies by age in hours — specialist assessment required)", "min": null, "max": null, "unit": "mg/dL", "source": "AAP. Management of Hyperbilirubinemia in the Newborn Infant. 2004.", "sourceUrl": "https://publications.aap.org/pediatrics/article/114/1/297/67381" }
+  ],
+  "causesOfHigh": [
+    "Liver disease (hepatitis, cirrhosis, alcoholic liver disease)",
+    "Bile duct obstruction (gallstones, cholangitis, pancreatic cancer)",
+    "Hemolytic anemia (rapid red cell destruction releases excess bilirubin)",
+    "Gilbert's syndrome (benign genetic variant causing mildly elevated indirect bilirubin)",
+    "Crigler-Najjar syndrome (rare)",
+    "Blood transfusion reactions",
+    "Sickle cell disease",
+    "Certain medications (rifampicin, sulfonamides)"
+  ],
+  "causesOfHighSource": "NHS. Jaundice. https://www.nhs.uk/conditions/jaundice/",
+  "causesOfLow": [
+    "Low bilirubin is not clinically significant"
+  ],
+  "causesOfLowSource": "MedlinePlus. Bilirubin Blood Test. https://medlineplus.gov/lab-tests/bilirubin-blood-test/",
+  "symptoms": {
+    "high": [
+      "Jaundice — yellowing of the skin and whites of the eyes",
+      "Dark amber or brown urine",
+      "Pale or clay-coloured stools",
+      "Itchy skin (pruritus)",
+      "Fatigue",
+      "Nausea and vomiting",
+      "Abdominal pain (particularly in bile duct obstruction)"
+    ],
+    "low": [
+      "Low bilirubin causes no symptoms"
+    ]
+  },
+  "symptomsSource": "NHS. Jaundice — symptoms. https://www.nhs.uk/conditions/jaundice/symptoms/",
+  "citations": [
+    { "id": 1, "title": "Bilirubin Blood Test", "source": "MedlinePlus, National Library of Medicine", "url": "https://medlineplus.gov/lab-tests/bilirubin-blood-test/", "year": 2023 },
+    { "id": 2, "title": "Jaundice", "source": "NHS (National Health Service, UK)", "url": "https://www.nhs.uk/conditions/jaundice/", "year": 2023 }
+  ]
+}

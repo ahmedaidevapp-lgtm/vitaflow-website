@@ -1,0 +1,47 @@
+{
+  "markerSlug": "folate",
+  "markerName": "Folate (Folic Acid)",
+  "alternateNames": ["folate", "folic acid", "serum folate", "vitamin B9", "folate level"],
+  "whatItMeasures": "Folate (vitamin B9) is essential for DNA synthesis, cell division, and the formation of red blood cells; this test measures folate in the blood (serum or plasma) and is used to diagnose folate deficiency anaemia and monitor folate status.",
+  "whatItMeasuresSource": "MedlinePlus, National Library of Medicine. https://medlineplus.gov/lab-tests/folate-folic-acid-in-blood/",
+  "referenceRanges": [
+    { "population": "Adults — serum folate", "min": 2.7, "max": 17.0, "unit": "ng/mL", "source": "Mayo Clinic Laboratories", "sourceUrl": "https://www.mayocliniclabs.com/test-catalog/overview/8244" }
+  ],
+  "causesOfHigh": [
+    "Folic acid supplementation (most common cause)",
+    "Diet very high in folate-rich foods (leafy greens, legumes)",
+    "Vitamin B12 deficiency can cause serum folate to appear elevated (folate cannot enter cells without B12)"
+  ],
+  "causesOfHighSource": "MedlinePlus. Folate Test. https://medlineplus.gov/lab-tests/folate-folic-acid-in-blood/",
+  "causesOfLow": [
+    "Poor dietary intake (low consumption of leafy greens, legumes, fortified foods)",
+    "Alcohol use disorder (alcohol impairs folate absorption and increases excretion)",
+    "Malabsorption disorders (celiac disease, Crohn's disease)",
+    "Pregnancy (increased folate demand — low folate is associated with neural tube defects in the foetus)",
+    "Certain medications (methotrexate, phenytoin, trimethoprim, sulfasalazine)",
+    "Haemolytic anaemia (increased folate consumption)",
+    "Chronic dialysis"
+  ],
+  "causesOfLowSource": "NHS. Vitamin B12 or folate deficiency anaemia. https://www.nhs.uk/conditions/vitamin-b12-or-folate-deficiency-anaemia/",
+  "symptoms": {
+    "high": [
+      "High folate from supplementation causes no symptoms",
+      "Very high supplemental folate can mask vitamin B12 deficiency neurological symptoms"
+    ],
+    "low": [
+      "Fatigue and weakness",
+      "Pale skin",
+      "Shortness of breath and rapid heartbeat (megaloblastic anaemia)",
+      "Sore, red, and inflamed tongue (glossitis)",
+      "Mouth ulcers",
+      "Pins and needles (paraesthesia)",
+      "Irritability and difficulty concentrating",
+      "Neural tube defects in the newborn if deficient in early pregnancy"
+    ]
+  },
+  "symptomsSource": "NHS. Vitamin B12 or folate deficiency anaemia — symptoms. https://www.nhs.uk/conditions/vitamin-b12-or-folate-deficiency-anaemia/symptoms/",
+  "citations": [
+    { "id": 1, "title": "Folate (Folic Acid) in Blood", "source": "MedlinePlus, National Library of Medicine", "url": "https://medlineplus.gov/lab-tests/folate-folic-acid-in-blood/", "year": 2023 },
+    { "id": 2, "title": "Vitamin B12 or folate deficiency anaemia", "source": "NHS (National Health Service, UK)", "url": "https://www.nhs.uk/conditions/vitamin-b12-or-folate-deficiency-anaemia/", "year": 2023 }
+  ]
+}

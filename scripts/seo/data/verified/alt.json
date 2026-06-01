@@ -1,0 +1,51 @@
+{
+  "markerSlug": "alt",
+  "markerName": "ALT (Alanine Aminotransferase)",
+  "alternateNames": ["ALT", "alanine aminotransferase", "SGPT", "serum glutamic pyruvic transaminase"],
+  "whatItMeasures": "ALT is an enzyme found primarily in liver cells; when liver cells are damaged or inflamed, they release ALT into the bloodstream, making it the most specific blood marker for detecting liver injury.",
+  "whatItMeasuresSource": "MedlinePlus, National Library of Medicine. https://medlineplus.gov/lab-tests/alanine-aminotransferase-alt-blood-test/",
+  "referenceRanges": [
+    { "population": "Adult males (≥18 years)", "min": 7, "max": 56, "unit": "U/L", "source": "Mayo Clinic Laboratories", "sourceUrl": "https://www.mayocliniclabs.com/test-catalog/overview/8360" },
+    { "population": "Adult females (≥18 years)", "min": 7, "max": 45, "unit": "U/L", "source": "Mayo Clinic Laboratories", "sourceUrl": "https://www.mayocliniclabs.com/test-catalog/overview/8360" }
+  ],
+  "causesOfHigh": [
+    "Nonalcoholic fatty liver disease (NAFLD) — most common cause of mildly elevated ALT in developed countries",
+    "Alcoholic liver disease",
+    "Viral hepatitis (hepatitis A, B, or C)",
+    "Autoimmune hepatitis",
+    "Drug-induced liver injury (statins, acetaminophen/paracetamol, NSAIDs, antibiotics)",
+    "Celiac disease",
+    "Thyroid disorders (hypothyroidism)",
+    "Strenuous exercise (muscle contains small amounts of ALT)",
+    "Liver cirrhosis",
+    "Hemochromatosis"
+  ],
+  "causesOfHighSource": "NHS. Liver blood tests. https://www.nhs.uk/conditions/liver-disease/diagnosis/",
+  "causesOfLow": [
+    "Low ALT is generally not clinically significant",
+    "Chronic kidney disease on dialysis (muscle wasting reduces ALT)",
+    "Vitamin B6 deficiency (ALT requires B6 as a cofactor)",
+    "Regular aerobic exercise training over time"
+  ],
+  "causesOfLowSource": "MedlinePlus. ALT Blood Test. https://medlineplus.gov/lab-tests/alanine-aminotransferase-alt-blood-test/",
+  "symptoms": {
+    "high": [
+      "Often no symptoms when mildly elevated",
+      "Fatigue and loss of energy",
+      "Nausea or loss of appetite",
+      "Pain or discomfort in the upper right abdomen",
+      "Jaundice (yellowing of skin or eyes) in more severe cases",
+      "Dark urine and pale stools",
+      "Itchy skin"
+    ],
+    "low": [
+      "Low ALT typically causes no symptoms"
+    ]
+  },
+  "symptomsSource": "NHS. Liver disease — symptoms. https://www.nhs.uk/conditions/liver-disease/symptoms/",
+  "citations": [
+    { "id": 1, "title": "Alanine Aminotransferase (ALT) Blood Test", "source": "MedlinePlus, National Library of Medicine", "url": "https://medlineplus.gov/lab-tests/alanine-aminotransferase-alt-blood-test/", "year": 2023 },
+    { "id": 2, "title": "Liver disease", "source": "NHS (National Health Service, UK)", "url": "https://www.nhs.uk/conditions/liver-disease/", "year": 2023 },
+    { "id": 3, "title": "Liver Blood Tests", "source": "NHS (National Health Service, UK)", "url": "https://www.nhs.uk/conditions/liver-disease/diagnosis/", "year": 2023 }
+  ]
+}

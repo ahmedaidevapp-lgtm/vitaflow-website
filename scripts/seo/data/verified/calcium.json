@@ -1,0 +1,56 @@
+{
+  "markerSlug": "calcium",
+  "markerName": "Calcium",
+  "alternateNames": ["serum calcium", "calcium level", "total calcium", "blood calcium", "Ca"],
+  "whatItMeasures": "Serum calcium measures the total amount of calcium in the blood; calcium is essential for bone structure, muscle contraction, nerve signalling, and blood clotting, and blood levels are tightly regulated by parathyroid hormone (PTH) and vitamin D.",
+  "whatItMeasuresSource": "MedlinePlus, National Library of Medicine. https://medlineplus.gov/lab-tests/calcium-blood-test/",
+  "referenceRanges": [
+    { "population": "Adults (≥18 years)", "min": 8.5, "max": 10.2, "unit": "mg/dL", "source": "Mayo Clinic Laboratories", "sourceUrl": "https://www.mayocliniclabs.com/test-catalog/overview/8462" }
+  ],
+  "causesOfHigh": [
+    "Primary hyperparathyroidism (most common cause of persistent hypercalcaemia — overactive parathyroid glands)",
+    "Cancer (bone metastases, multiple myeloma, PTHrP-secreting tumours)",
+    "Granulomatous diseases (sarcoidosis, tuberculosis)",
+    "Vitamin D toxicity (excess supplementation)",
+    "Prolonged immobilisation (bone breakdown releases calcium)",
+    "Thiazide diuretics",
+    "Milk-alkali syndrome (excessive calcium and antacid intake)"
+  ],
+  "causesOfHighSource": "NHS. Hypercalcaemia. https://www.nhs.uk/conditions/hypercalcaemia/",
+  "causesOfLow": [
+    "Hypoparathyroidism (low PTH — often after thyroid or neck surgery)",
+    "Vitamin D deficiency (impairs calcium absorption from gut)",
+    "Chronic kidney disease (impaired vitamin D activation and phosphate retention lower calcium)",
+    "Malabsorption (celiac disease, Crohn's disease)",
+    "Hypomagnesaemia (low magnesium impairs PTH release)",
+    "Pancreatitis",
+    "Certain medications (bisphosphonates, denosumab, loop diuretics)"
+  ],
+  "causesOfLowSource": "NHS. Hypocalcaemia. https://www.nhs.uk/conditions/hypocalcaemia/",
+  "symptoms": {
+    "high": [
+      "Fatigue and weakness",
+      "Nausea, vomiting, and constipation (bones, groans, stones, psychic moans — classic mnemonic)",
+      "Increased thirst and frequent urination",
+      "Kidney stones",
+      "Bone pain",
+      "Depression and cognitive difficulties",
+      "Abdominal pain"
+    ],
+    "low": [
+      "Muscle cramps and spasms, particularly in the face, hands, and feet",
+      "Numbness and tingling around the mouth and in the fingers (paraesthesia)",
+      "Muscle twitching (tetany)",
+      "Seizures in severe cases",
+      "Dry skin, brittle nails, and coarse hair",
+      "Depression and anxiety",
+      "Irregular heartbeat"
+    ]
+  },
+  "symptomsSource": "NHS. Hypocalcaemia — symptoms. https://www.nhs.uk/conditions/hypocalcaemia/symptoms/; NHS. Hypercalcaemia — symptoms. https://www.nhs.uk/conditions/hypercalcaemia/symptoms/",
+  "citations": [
+    { "id": 1, "title": "Calcium Blood Test", "source": "MedlinePlus, National Library of Medicine", "url": "https://medlineplus.gov/lab-tests/calcium-blood-test/", "year": 2023 },
+    { "id": 2, "title": "Hypercalcaemia", "source": "NHS (National Health Service, UK)", "url": "https://www.nhs.uk/conditions/hypercalcaemia/", "year": 2023 },
+    { "id": 3, "title": "Hypocalcaemia", "source": "NHS (National Health Service, UK)", "url": "https://www.nhs.uk/conditions/hypocalcaemia/", "year": 2023 }
+  ]
+}

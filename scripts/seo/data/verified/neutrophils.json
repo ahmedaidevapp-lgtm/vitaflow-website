@@ -1,0 +1,51 @@
+{
+  "markerSlug": "neutrophils",
+  "markerName": "Neutrophils",
+  "alternateNames": ["neutrophils", "neutrophil count", "absolute neutrophil count", "ANC", "segs", "polys"],
+  "whatItMeasures": "Neutrophils are the most abundant type of white blood cell and the first responders to bacterial infection and tissue injury; the neutrophil count (reported as an absolute number or percentage of total WBC) reflects the state of the innate immune system.",
+  "whatItMeasuresSource": "MedlinePlus, National Library of Medicine. https://medlineplus.gov/lab-tests/differential-blood-count/",
+  "referenceRanges": [
+    { "population": "Adults (≥18 years) — absolute count", "min": 1.8, "max": 7.7, "unit": "×10³/µL", "source": "Mayo Clinic Laboratories", "sourceUrl": "https://www.mayocliniclabs.com/test-catalog/overview/9234" },
+    { "population": "Adults — percentage of WBC", "min": 40, "max": 70, "unit": "%", "source": "Mayo Clinic Laboratories", "sourceUrl": "https://www.mayocliniclabs.com/test-catalog/overview/9234" }
+  ],
+  "causesOfHigh": [
+    "Bacterial infection (neutrophilia is the hallmark response)",
+    "Physical stress (surgery, trauma, burns, heart attack)",
+    "Corticosteroid medications (demarginate stored neutrophils)",
+    "Inflammatory conditions (gout, rheumatoid arthritis)",
+    "Smoking",
+    "Strenuous exercise",
+    "Chronic myeloid leukaemia (very high counts)",
+    "Pregnancy"
+  ],
+  "causesOfHighSource": "MedlinePlus. Differential Blood Count. https://medlineplus.gov/lab-tests/differential-blood-count/",
+  "causesOfLow": [
+    "Viral infections (influenza, HIV, hepatitis)",
+    "Chemotherapy and radiation",
+    "Certain medications (clozapine, carbimazole, some antibiotics)",
+    "Bone marrow failure (aplastic anaemia)",
+    "Autoimmune neutropenia (antibodies destroy neutrophils)",
+    "Severe bacterial infection (can deplete neutrophils)",
+    "Vitamin B12 or folate deficiency",
+    "Felty's syndrome (rheumatoid arthritis + enlarged spleen)"
+  ],
+  "causesOfLowSource": "NHLBI. Aplastic Anemia. https://www.nhlbi.nih.gov/health/aplastic-anemia",
+  "symptoms": {
+    "high": [
+      "Symptoms of the underlying cause: fever, pain, and swelling in infection",
+      "High neutrophils alone do not cause specific symptoms"
+    ],
+    "low": [
+      "Frequent or severe bacterial or fungal infections",
+      "Mouth ulcers (aphthous ulcers)",
+      "Skin infections and slow-healing wounds",
+      "Fever without obvious source",
+      "Fatigue"
+    ]
+  },
+  "symptomsSource": "NHLBI. Aplastic Anemia — Symptoms. https://www.nhlbi.nih.gov/health/aplastic-anemia/symptoms",
+  "citations": [
+    { "id": 1, "title": "Differential Blood Count", "source": "MedlinePlus, National Library of Medicine", "url": "https://medlineplus.gov/lab-tests/differential-blood-count/", "year": 2023 },
+    { "id": 2, "title": "Aplastic Anemia", "source": "National Heart, Lung, and Blood Institute (NHLBI)", "url": "https://www.nhlbi.nih.gov/health/aplastic-anemia", "year": 2023 }
+  ]
+}

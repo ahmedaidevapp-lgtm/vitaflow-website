@@ -1,0 +1,47 @@
+{
+  "markerSlug": "ast",
+  "markerName": "AST (Aspartate Aminotransferase)",
+  "alternateNames": ["AST", "aspartate aminotransferase", "SGOT", "serum glutamic oxaloacetic transaminase"],
+  "whatItMeasures": "AST is an enzyme found in the liver, heart, muscles, kidneys, and red blood cells; elevated blood levels indicate cell damage in one or more of these tissues, and it is most commonly measured alongside ALT to assess liver health.",
+  "whatItMeasuresSource": "MedlinePlus, National Library of Medicine. https://medlineplus.gov/lab-tests/aspartate-aminotransferase-ast-test/",
+  "referenceRanges": [
+    { "population": "Adult males (≥18 years)", "min": 10, "max": 40, "unit": "U/L", "source": "Mayo Clinic Laboratories", "sourceUrl": "https://www.mayocliniclabs.com/test-catalog/overview/8362" },
+    { "population": "Adult females (≥18 years)", "min": 10, "max": 35, "unit": "U/L", "source": "Mayo Clinic Laboratories", "sourceUrl": "https://www.mayocliniclabs.com/test-catalog/overview/8362" }
+  ],
+  "causesOfHigh": [
+    "Liver disease (hepatitis, cirrhosis, NAFLD, alcoholic liver disease)",
+    "Heart attack (myocardial infarction — heart muscle releases AST)",
+    "Strenuous exercise or muscle injury (skeletal muscle is rich in AST)",
+    "Drug-induced liver injury (acetaminophen, statins)",
+    "Hemolytic anemia (red cell destruction releases AST)",
+    "Pancreatitis",
+    "Thyroid disease",
+    "Celiac disease"
+  ],
+  "causesOfHighSource": "NHS. Liver blood tests. https://www.nhs.uk/conditions/liver-disease/diagnosis/",
+  "causesOfLow": [
+    "Low AST is generally not clinically significant",
+    "Vitamin B6 deficiency (B6 is a cofactor for AST)",
+    "Uremia (advanced kidney disease)"
+  ],
+  "causesOfLowSource": "MedlinePlus. AST Test. https://medlineplus.gov/lab-tests/aspartate-aminotransferase-ast-test/",
+  "symptoms": {
+    "high": [
+      "Often asymptomatic when mildly elevated",
+      "Fatigue and weakness",
+      "Nausea and loss of appetite",
+      "Right upper abdominal discomfort",
+      "Jaundice in more severe liver disease",
+      "Dark urine",
+      "Chest pain (if elevated due to a cardiac event)"
+    ],
+    "low": [
+      "Low AST typically causes no symptoms"
+    ]
+  },
+  "symptomsSource": "NHS. Liver disease — symptoms. https://www.nhs.uk/conditions/liver-disease/symptoms/",
+  "citations": [
+    { "id": 1, "title": "Aspartate Aminotransferase (AST) Test", "source": "MedlinePlus, National Library of Medicine", "url": "https://medlineplus.gov/lab-tests/aspartate-aminotransferase-ast-test/", "year": 2023 },
+    { "id": 2, "title": "Liver disease", "source": "NHS (National Health Service, UK)", "url": "https://www.nhs.uk/conditions/liver-disease/", "year": 2023 }
+  ]
+}

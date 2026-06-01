@@ -1,0 +1,50 @@
+{
+  "markerSlug": "uric-acid",
+  "markerName": "Uric Acid",
+  "alternateNames": ["serum uric acid", "urate", "uric acid level", "gout test"],
+  "whatItMeasures": "Uric acid is a waste product formed when the body breaks down purines — substances found in certain foods and in cells; it is filtered by the kidneys and excreted in urine, and elevated blood levels can lead to crystal deposits in joints, causing gout.",
+  "whatItMeasuresSource": "MedlinePlus, National Library of Medicine. https://medlineplus.gov/lab-tests/uric-acid-test/",
+  "referenceRanges": [
+    { "population": "Adult males (≥18 years)", "min": 3.4, "max": 7.0, "unit": "mg/dL", "source": "Mayo Clinic Laboratories", "sourceUrl": "https://www.mayocliniclabs.com/test-catalog/overview/8519" },
+    { "population": "Adult females (≥18 years)", "min": 2.4, "max": 6.0, "unit": "mg/dL", "source": "Mayo Clinic Laboratories", "sourceUrl": "https://www.mayocliniclabs.com/test-catalog/overview/8519" }
+  ],
+  "causesOfHigh": [
+    "Gout (uric acid crystals depositing in joints)",
+    "High-purine diet (red meat, organ meats, shellfish, sardines, anchovies)",
+    "Alcohol consumption, especially beer",
+    "Fructose-sweetened drinks",
+    "Kidney disease (reduced uric acid excretion)",
+    "Diuretic medications (thiazides, loop diuretics)",
+    "Metabolic syndrome and obesity",
+    "Rapid cell turnover (cancer, chemotherapy, psoriasis)",
+    "Hypothyroidism",
+    "Lead exposure"
+  ],
+  "causesOfHighSource": "NHS. Gout. https://www.nhs.uk/conditions/gout/",
+  "causesOfLow": [
+    "Low-purine diet",
+    "Certain medications (allopurinol, febuxostat, losartan, high-dose aspirin)",
+    "Fanconi syndrome (kidney tubule disorder causing excess uric acid excretion)",
+    "Liver disease (reduced uric acid production)",
+    "Wilson's disease"
+  ],
+  "causesOfLowSource": "MedlinePlus. Uric Acid Test. https://medlineplus.gov/lab-tests/uric-acid-test/",
+  "symptoms": {
+    "high": [
+      "Sudden, severe joint pain, most commonly in the big toe (hallux), ankle, or knee (gout attack)",
+      "Swelling, redness, and warmth over the affected joint",
+      "Joint stiffness",
+      "Tophi — hard lumps of uric acid crystals under the skin (in chronic gout)",
+      "Kidney stones (uric acid stones)"
+    ],
+    "low": [
+      "Low uric acid typically causes no symptoms",
+      "In rare cases, neurological symptoms associated with the underlying condition (e.g., Wilson's disease)"
+    ]
+  },
+  "symptomsSource": "NHS. Gout — symptoms. https://www.nhs.uk/conditions/gout/symptoms/",
+  "citations": [
+    { "id": 1, "title": "Uric Acid Test", "source": "MedlinePlus, National Library of Medicine", "url": "https://medlineplus.gov/lab-tests/uric-acid-test/", "year": 2023 },
+    { "id": 2, "title": "Gout", "source": "NHS (National Health Service, UK)", "url": "https://www.nhs.uk/conditions/gout/", "year": 2023 }
+  ]
+}

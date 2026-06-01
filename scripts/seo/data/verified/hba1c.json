@@ -1,0 +1,50 @@
+{
+  "markerSlug": "hba1c",
+  "markerName": "HbA1c (Hemoglobin A1c)",
+  "alternateNames": ["HbA1c", "A1c", "glycated haemoglobin", "glycohemoglobin", "haemoglobin A1c"],
+  "whatItMeasures": "HbA1c measures the percentage of haemoglobin in red blood cells that has glucose attached to it; because red blood cells live approximately 2–3 months, HbA1c reflects average blood sugar control over the preceding 2–3 months and is used to diagnose and monitor diabetes.",
+  "whatItMeasuresSource": "American Diabetes Association. Standards of Care in Diabetes. https://diabetesjournals.org/care/article/46/Supplement_1/S1/148054",
+  "referenceRanges": [
+    { "population": "Normal (no diabetes)", "min": null, "max": 5.6, "unit": "%", "source": "American Diabetes Association. Standards of Care in Diabetes. 2024.", "sourceUrl": "https://diabetesjournals.org/care/article/46/Supplement_1/S1/148054" },
+    { "population": "Prediabetes", "min": 5.7, "max": 6.4, "unit": "%", "source": "American Diabetes Association. Standards of Care in Diabetes. 2024.", "sourceUrl": "https://diabetesjournals.org/care/article/46/Supplement_1/S1/148054" },
+    { "population": "Diabetes — diagnostic threshold", "min": 6.5, "max": null, "unit": "%", "source": "American Diabetes Association. Standards of Care in Diabetes. 2024.", "sourceUrl": "https://diabetesjournals.org/care/article/46/Supplement_1/S1/148054" },
+    { "population": "Typical treatment target in people with established diabetes", "min": null, "max": 7.0, "unit": "%", "source": "American Diabetes Association. Standards of Care in Diabetes. 2024.", "sourceUrl": "https://diabetesjournals.org/care/article/46/Supplement_1/S1/148054" }
+  ],
+  "causesOfHigh": [
+    "Type 2 diabetes (most common)",
+    "Type 1 diabetes",
+    "Prediabetes with inadequate lifestyle or medication management",
+    "Iron deficiency anemia (can falsely elevate HbA1c)",
+    "Chronic kidney disease (red cell lifespan is altered)"
+  ],
+  "causesOfHighSource": "NHS. Type 2 diabetes. https://www.nhs.uk/conditions/type-2-diabetes/",
+  "causesOfLow": [
+    "Haemolytic anemia or other conditions shortening red cell lifespan (red cells are replaced faster, lowering HbA1c artificially)",
+    "Recent blood transfusion (new donated red cells have no glucose attached)",
+    "Sickle cell disease and other haemoglobinopathies (can give falsely low or unreliable readings)",
+    "Iron supplementation (increases red cell turnover)",
+    "Hypoglycaemia-prone states"
+  ],
+  "causesOfLowSource": "MedlinePlus. Hemoglobin A1c Test. https://medlineplus.gov/lab-tests/hemoglobin-a1c-hba1c-test/",
+  "symptoms": {
+    "high": [
+      "Increased thirst and frequent urination",
+      "Fatigue",
+      "Blurred vision",
+      "Slow-healing wounds",
+      "Frequent infections",
+      "Numbness or tingling in the feet or hands",
+      "Often no symptoms in early or mild elevation"
+    ],
+    "low": [
+      "Abnormally low HbA1c typically does not cause direct symptoms",
+      "Symptoms of the underlying cause (e.g., anaemia: fatigue, pallor, shortness of breath)"
+    ]
+  },
+  "symptomsSource": "NHS. Type 2 diabetes — symptoms. https://www.nhs.uk/conditions/type-2-diabetes/symptoms/",
+  "citations": [
+    { "id": 1, "title": "Hemoglobin A1c (HbA1c) Test", "source": "MedlinePlus, National Library of Medicine", "url": "https://medlineplus.gov/lab-tests/hemoglobin-a1c-hba1c-test/", "year": 2023 },
+    { "id": 2, "title": "Standards of Care in Diabetes", "source": "American Diabetes Association", "url": "https://diabetesjournals.org/care/article/46/Supplement_1/S1/148054", "year": 2024 },
+    { "id": 3, "title": "Type 2 diabetes", "source": "NHS (National Health Service, UK)", "url": "https://www.nhs.uk/conditions/type-2-diabetes/", "year": 2023 }
+  ]
+}

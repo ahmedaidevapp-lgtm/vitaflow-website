@@ -1,0 +1,59 @@
+{
+  "markerSlug": "hematocrit",
+  "markerName": "Hematocrit",
+  "alternateNames": ["HCT", "packed cell volume", "PCV", "hematocrit level"],
+  "whatItMeasures": "Hematocrit measures the percentage of total blood volume that is made up of red blood cells; it is a key indicator of anemia and polycythemia.",
+  "whatItMeasuresSource": "MedlinePlus, National Library of Medicine. https://medlineplus.gov/lab-tests/hematocrit-test/",
+  "referenceRanges": [
+    { "population": "Adult males (≥18 years)", "min": 41, "max": 53, "unit": "%", "source": "Mayo Clinic Laboratories", "sourceUrl": "https://www.mayocliniclabs.com/test-catalog/overview/9290" },
+    { "population": "Adult females (≥18 years, non-pregnant)", "min": 36, "max": 46, "unit": "%", "source": "Mayo Clinic Laboratories", "sourceUrl": "https://www.mayocliniclabs.com/test-catalog/overview/9290" },
+    { "population": "Pregnant women (1st trimester)", "min": 31, "max": 41, "unit": "%", "source": "NHS. Blood tests in pregnancy. https://www.nhs.uk/pregnancy/", "year": 2023, "sourceUrl": "https://www.nhs.uk/pregnancy/" },
+    { "population": "Children 6–12 years", "min": 35, "max": 45, "unit": "%", "source": "Mayo Clinic Laboratories", "sourceUrl": "https://www.mayocliniclabs.com/test-catalog/overview/9290" }
+  ],
+  "causesOfHigh": [
+    "Dehydration (most common cause of a mildly elevated result)",
+    "Polycythemia vera (bone marrow overproduces red blood cells)",
+    "Living at high altitude",
+    "Chronic lung disease (COPD, emphysema)",
+    "Heavy smoking",
+    "Congenital heart disease with right-to-left shunting",
+    "Sleep apnea"
+  ],
+  "causesOfHighSource": "NHLBI. Polycythemia Vera. https://www.nhlbi.nih.gov/health/polycythemia-vera",
+  "causesOfLow": [
+    "Iron deficiency anemia",
+    "Vitamin B12 or folate deficiency",
+    "Acute or chronic blood loss",
+    "Bone marrow failure (aplastic anemia)",
+    "Chronic kidney disease",
+    "Hemolytic anemias (sickle cell, thalassemia)",
+    "Pregnancy (plasma volume expands more than red cell mass)",
+    "Chronic inflammatory or autoimmune diseases"
+  ],
+  "causesOfLowSource": "NHLBI. Anemia. https://www.nhlbi.nih.gov/health/anemia",
+  "symptoms": {
+    "high": [
+      "Headache and dizziness",
+      "Flushed skin",
+      "Blurred vision",
+      "Fatigue",
+      "Itching after warm baths or showers",
+      "Increased risk of blood clots"
+    ],
+    "low": [
+      "Fatigue and weakness",
+      "Pale skin",
+      "Shortness of breath",
+      "Rapid heartbeat",
+      "Dizziness or lightheadedness",
+      "Cold hands and feet",
+      "Headaches"
+    ]
+  },
+  "symptomsSource": "NHLBI. Anemia — Symptoms. https://www.nhlbi.nih.gov/health/anemia/symptoms",
+  "citations": [
+    { "id": 1, "title": "Hematocrit Test", "source": "MedlinePlus, National Library of Medicine", "url": "https://medlineplus.gov/lab-tests/hematocrit-test/", "year": 2023 },
+    { "id": 2, "title": "Anemia", "source": "National Heart, Lung, and Blood Institute (NHLBI)", "url": "https://www.nhlbi.nih.gov/health/anemia", "year": 2023 },
+    { "id": 3, "title": "Polycythemia Vera", "source": "National Heart, Lung, and Blood Institute (NHLBI)", "url": "https://www.nhlbi.nih.gov/health/polycythemia-vera", "year": 2023 }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "markerSlug": "hdl-cholesterol",
+  "markerName": "HDL Cholesterol",
+  "alternateNames": ["HDL", "HDL-C", "high-density lipoprotein", "good cholesterol", "HDL cholesterol level"],
+  "whatItMeasures": "HDL (high-density lipoprotein) cholesterol carries excess cholesterol from the arteries and tissues back to the liver for removal; higher levels are associated with lower cardiovascular risk, which is why HDL is often called 'good' cholesterol.",
+  "whatItMeasuresSource": "NHLBI. Blood Cholesterol. https://www.nhlbi.nih.gov/health/blood-cholesterol",
+  "referenceRanges": [
+    { "population": "Adult males — low (high risk)", "min": null, "max": 40, "unit": "mg/dL", "source": "NHLBI. Blood Cholesterol. 2023.", "sourceUrl": "https://www.nhlbi.nih.gov/health/blood-cholesterol" },
+    { "population": "Adult females — low (high risk)", "min": null, "max": 50, "unit": "mg/dL", "source": "NHLBI. Blood Cholesterol. 2023.", "sourceUrl": "https://www.nhlbi.nih.gov/health/blood-cholesterol" },
+    { "population": "Adults — protective (low cardiovascular risk)", "min": 60, "max": null, "unit": "mg/dL", "source": "NHLBI. Blood Cholesterol. 2023.", "sourceUrl": "https://www.nhlbi.nih.gov/health/blood-cholesterol" }
+  ],
+  "causesOfHigh": [
+    "Regular aerobic exercise",
+    "Moderate alcohol consumption (association, not a recommendation)",
+    "Niacin (vitamin B3) supplementation",
+    "Certain medications (fibrates, CETP inhibitors)",
+    "Oestrogen (explains why premenopausal women tend to have higher HDL than men)"
+  ],
+  "causesOfHighSource": "NHLBI. Blood Cholesterol. https://www.nhlbi.nih.gov/health/blood-cholesterol",
+  "causesOfLow": [
+    "Physical inactivity",
+    "Smoking",
+    "Type 2 diabetes and insulin resistance",
+    "Obesity, particularly central (abdominal) obesity",
+    "Diet high in refined carbohydrates and trans fats",
+    "Metabolic syndrome",
+    "Certain medications (beta-blockers, anabolic steroids, progestins)",
+    "Genetic conditions (Tangier disease, familial hypoalphalipoproteinaemia)"
+  ],
+  "causesOfLowSource": "NHLBI. Blood Cholesterol — Causes. https://www.nhlbi.nih.gov/health/blood-cholesterol/causes",
+  "symptoms": {
+    "high": [
+      "High HDL generally causes no symptoms and is considered protective"
+    ],
+    "low": [
+      "Low HDL itself causes no direct symptoms",
+      "Increased risk of cardiovascular events (heart attack, stroke) over time",
+      "Associated with symptoms of metabolic syndrome: weight gain, fatigue, high blood pressure"
+    ]
+  },
+  "symptomsSource": "NHLBI. Blood Cholesterol. https://www.nhlbi.nih.gov/health/blood-cholesterol",
+  "citations": [
+    { "id": 1, "title": "Blood Cholesterol", "source": "National Heart, Lung, and Blood Institute (NHLBI)", "url": "https://www.nhlbi.nih.gov/health/blood-cholesterol", "year": 2023 },
+    { "id": 2, "title": "HDL: The Good Cholesterol", "source": "MedlinePlus, National Library of Medicine", "url": "https://medlineplus.gov/hdlgoodcholesterol.html", "year": 2023 },
+    { "id": 3, "title": "High cholesterol", "source": "NHS (National Health Service, UK)", "url": "https://www.nhs.uk/conditions/high-cholesterol/", "year": 2023 }
+  ]
+}

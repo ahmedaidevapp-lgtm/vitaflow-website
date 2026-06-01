@@ -1,0 +1,57 @@
+{
+  "markerSlug": "serum-iron",
+  "markerName": "Serum Iron",
+  "alternateNames": ["serum iron level", "blood iron test", "iron blood test", "Fe"],
+  "whatItMeasures": "Serum iron measures the amount of iron currently circulating in the blood bound to transferrin; it reflects the immediate iron supply available to cells but does not indicate total body iron stores the way ferritin does.",
+  "whatItMeasuresSource": "MedlinePlus, National Library of Medicine. https://medlineplus.gov/lab-tests/iron-tests/",
+  "referenceRanges": [
+    { "population": "Adult males (≥18 years)", "min": 65, "max": 176, "unit": "mcg/dL", "source": "Mayo Clinic Laboratories", "sourceUrl": "https://www.mayocliniclabs.com/test-catalog/overview/9279" },
+    { "population": "Adult females (≥18 years)", "min": 50, "max": 170, "unit": "mcg/dL", "source": "Mayo Clinic Laboratories", "sourceUrl": "https://www.mayocliniclabs.com/test-catalog/overview/9279" }
+  ],
+  "causesOfHigh": [
+    "Hereditary hemochromatosis (genetic iron overload)",
+    "Iron supplementation or overdose",
+    "Repeated blood transfusions",
+    "Liver disease (hepatitis, cirrhosis — releases stored iron)",
+    "Hemolytic anemia (red cell destruction releases iron)",
+    "Sideroblastic anemia",
+    "Thalassemia"
+  ],
+  "causesOfHighSource": "NHS. Haemochromatosis. https://www.nhs.uk/conditions/haemochromatosis/",
+  "causesOfLow": [
+    "Iron deficiency (dietary or from blood loss)",
+    "Iron deficiency anemia",
+    "Chronic inflammatory diseases (iron sequestered as acute-phase response)",
+    "Malabsorption disorders (celiac disease, Crohn's disease)",
+    "Pregnancy (increased iron demand)",
+    "Chronic kidney disease",
+    "Hypothyroidism"
+  ],
+  "causesOfLowSource": "WHO. Iron Deficiency Anaemia: Assessment, Prevention, and Control. 2001. https://www.who.int/publications/i/item/9241547014",
+  "symptoms": {
+    "high": [
+      "Often asymptomatic at mildly elevated levels",
+      "Joint pain",
+      "Fatigue and weakness",
+      "Abdominal pain",
+      "Skin bronzing or darkening (in chronic overload)",
+      "Liver enlargement"
+    ],
+    "low": [
+      "Fatigue and tiredness",
+      "Pale skin",
+      "Shortness of breath",
+      "Brittle nails and hair loss",
+      "Cold intolerance",
+      "Brain fog and poor concentration",
+      "Restless leg syndrome"
+    ]
+  },
+  "symptomsSource": "NHLBI. Iron-Deficiency Anemia. https://www.nhlbi.nih.gov/health/anemia/iron-deficiency-anemia",
+  "citations": [
+    { "id": 1, "title": "Iron Tests", "source": "MedlinePlus, National Library of Medicine", "url": "https://medlineplus.gov/lab-tests/iron-tests/", "year": 2023 },
+    { "id": 2, "title": "Iron Deficiency Anaemia: Assessment, Prevention, and Control", "source": "World Health Organization (WHO)", "url": "https://www.who.int/publications/i/item/9241547014", "year": 2001 },
+    { "id": 3, "title": "Iron-Deficiency Anemia", "source": "National Heart, Lung, and Blood Institute (NHLBI)", "url": "https://www.nhlbi.nih.gov/health/anemia/iron-deficiency-anemia", "year": 2023 },
+    { "id": 4, "title": "Haemochromatosis", "source": "NHS (National Health Service, UK)", "url": "https://www.nhs.uk/conditions/haemochromatosis/", "year": 2023 }
+  ]
+}

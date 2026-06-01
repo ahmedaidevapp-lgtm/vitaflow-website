@@ -1,0 +1,51 @@
+{
+  "markerSlug": "dhea-s",
+  "markerName": "DHEA-S (Dehydroepiandrosterone Sulfate)",
+  "alternateNames": ["DHEA-S", "DHEAS", "dehydroepiandrosterone sulfate", "DHEA sulfate"],
+  "whatItMeasures": "DHEA-S is the sulphated form of DHEA, an androgen precursor hormone produced mainly by the adrenal glands; it is the most abundant circulating steroid hormone in humans and serves as a reservoir for the production of sex hormones (testosterone and oestrogen) in peripheral tissues.",
+  "whatItMeasuresSource": "MedlinePlus, National Library of Medicine. https://medlineplus.gov/lab-tests/dhea-s-test/",
+  "referenceRanges": [
+    { "population": "Adult males (18–49 years)", "min": 70, "max": 490, "unit": "mcg/dL", "source": "Mayo Clinic Laboratories", "sourceUrl": "https://www.mayocliniclabs.com/test-catalog/overview/81294" },
+    { "population": "Adult males (≥50 years)", "min": 30, "max": 310, "unit": "mcg/dL", "source": "Mayo Clinic Laboratories", "sourceUrl": "https://www.mayocliniclabs.com/test-catalog/overview/81294" },
+    { "population": "Adult females (18–49 years)", "min": 45, "max": 270, "unit": "mcg/dL", "source": "Mayo Clinic Laboratories", "sourceUrl": "https://www.mayocliniclabs.com/test-catalog/overview/81294" },
+    { "population": "Adult females (≥50 years)", "min": 15, "max": 170, "unit": "mcg/dL", "source": "Mayo Clinic Laboratories", "sourceUrl": "https://www.mayocliniclabs.com/test-catalog/overview/81294" }
+  ],
+  "causesOfHigh": [
+    "Congenital adrenal hyperplasia (CAH) — excess adrenal androgen production",
+    "Adrenal tumours (adrenocortical carcinoma produces very high DHEA-S)",
+    "Polycystic ovary syndrome (PCOS) — in some women",
+    "Cushing's disease (ACTH-driven adrenal stimulation)",
+    "DHEA supplementation",
+    "Stress (ACTH stimulates adrenal production)"
+  ],
+  "causesOfHighSource": "MedlinePlus. DHEA-S Test. https://medlineplus.gov/lab-tests/dhea-s-test/",
+  "causesOfLow": [
+    "Addison's disease (primary adrenal insufficiency)",
+    "Hypopituitarism (reduced ACTH stimulation of the adrenals)",
+    "Normal ageing (DHEA-S naturally declines ~2% per year after the mid-20s)",
+    "Long-term corticosteroid therapy (suppresses adrenal function)",
+    "Anorexia nervosa and severe malnutrition",
+    "Type 2 diabetes"
+  ],
+  "causesOfLowSource": "MedlinePlus. DHEA-S Test. https://medlineplus.gov/lab-tests/dhea-s-test/",
+  "symptoms": {
+    "high": [
+      "In females: excess facial or body hair (hirsutism), acne, irregular periods, deepened voice, scalp hair thinning",
+      "In males: acne, aggression",
+      "Premature pubic hair development in children (adrenarche)"
+    ],
+    "low": [
+      "Fatigue and low energy",
+      "Reduced libido in both men and women",
+      "Mood changes: depression, reduced sense of wellbeing",
+      "Reduced muscle mass",
+      "Dry skin",
+      "Symptoms of adrenal insufficiency if DHEA-S is low alongside cortisol"
+    ]
+  },
+  "symptomsSource": "MedlinePlus. DHEA-S Test. https://medlineplus.gov/lab-tests/dhea-s-test/; NHS. Addison's disease. https://www.nhs.uk/conditions/addisons-disease/",
+  "citations": [
+    { "id": 1, "title": "DHEA-S Test", "source": "MedlinePlus, National Library of Medicine", "url": "https://medlineplus.gov/lab-tests/dhea-s-test/", "year": 2023 },
+    { "id": 2, "title": "Addison's disease", "source": "NHS (National Health Service, UK)", "url": "https://www.nhs.uk/conditions/addisons-disease/", "year": 2023 }
+  ]
+}

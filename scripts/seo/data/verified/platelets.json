@@ -1,0 +1,52 @@
+{
+  "markerSlug": "platelets",
+  "markerName": "Platelet Count",
+  "alternateNames": ["platelet count", "PLT", "thrombocyte count", "platelets"],
+  "whatItMeasures": "Platelets (thrombocytes) are small blood cells produced in the bone marrow that clump together to form clots and stop bleeding; the platelet count measures how many are present in a volume of blood.",
+  "whatItMeasuresSource": "MedlinePlus, National Library of Medicine. https://medlineplus.gov/lab-tests/platelet-count/",
+  "referenceRanges": [
+    { "population": "Adults (≥18 years)", "min": 150, "max": 400, "unit": "×10³/µL", "source": "Mayo Clinic Laboratories", "sourceUrl": "https://www.mayocliniclabs.com/test-catalog/overview/9237" }
+  ],
+  "causesOfHigh": [
+    "Reactive thrombocytosis (most common) — infection, inflammation, iron deficiency, post-surgery",
+    "Post-splenectomy (the spleen normally removes old platelets)",
+    "Essential thrombocythaemia (bone marrow disorder)",
+    "Polycythaemia vera",
+    "Iron deficiency anaemia",
+    "Inflammatory bowel disease"
+  ],
+  "causesOfHighSource": "MedlinePlus. Platelet Count. https://medlineplus.gov/lab-tests/platelet-count/",
+  "causesOfLow": [
+    "Immune thrombocytopenic purpura (ITP) — most common cause of isolated low platelets",
+    "Chemotherapy or radiation therapy",
+    "Bone marrow failure (aplastic anaemia, myelodysplastic syndrome, leukaemia)",
+    "Viral infections (HIV, hepatitis C, EBV)",
+    "Heparin-induced thrombocytopenia (HIT)",
+    "Disseminated intravascular coagulation (DIC)",
+    "Hypersplenism (enlarged spleen traps platelets)",
+    "Alcohol excess",
+    "Nutritional deficiencies (B12, folate)"
+  ],
+  "causesOfLowSource": "NHLBI. Immune Thrombocytopenia. https://www.nhlbi.nih.gov/health/immune-thrombocytopenia",
+  "symptoms": {
+    "high": [
+      "High platelets often cause no symptoms",
+      "In rare cases at very high counts: blood clots, stroke, or heart attack",
+      "Headache, dizziness, and burning pain in hands and feet (in essential thrombocythaemia)"
+    ],
+    "low": [
+      "Easy or excessive bruising",
+      "Tiny red or purple dots on skin (petechiae)",
+      "Prolonged bleeding from cuts or after procedures",
+      "Bleeding gums or nosebleeds",
+      "Blood in urine or stools",
+      "Unusually heavy menstrual periods",
+      "Spontaneous bleeding into joints or muscles (in severe cases)"
+    ]
+  },
+  "symptomsSource": "NHLBI. Immune Thrombocytopenia — Symptoms. https://www.nhlbi.nih.gov/health/immune-thrombocytopenia/symptoms",
+  "citations": [
+    { "id": 1, "title": "Platelet Count", "source": "MedlinePlus, National Library of Medicine", "url": "https://medlineplus.gov/lab-tests/platelet-count/", "year": 2023 },
+    { "id": 2, "title": "Immune Thrombocytopenia", "source": "National Heart, Lung, and Blood Institute (NHLBI)", "url": "https://www.nhlbi.nih.gov/health/immune-thrombocytopenia", "year": 2023 }
+  ]
+}

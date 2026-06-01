@@ -1,0 +1,46 @@
+{
+  "markerSlug": "homocysteine",
+  "markerName": "Homocysteine",
+  "alternateNames": ["homocysteine", "serum homocysteine", "plasma homocysteine", "total homocysteine"],
+  "whatItMeasures": "Homocysteine is an amino acid produced during the metabolism of methionine; it is normally recycled back to methionine (requiring vitamin B12 and folate) or converted to cysteine (requiring B6). Elevated blood levels are associated with increased cardiovascular disease risk and can indicate nutritional deficiencies.",
+  "whatItMeasuresSource": "MedlinePlus, National Library of Medicine. https://medlineplus.gov/lab-tests/homocysteine-test/",
+  "referenceRanges": [
+    { "population": "Adults — normal", "min": 5, "max": 15, "unit": "µmol/L", "source": "Mayo Clinic Laboratories", "sourceUrl": "https://www.mayocliniclabs.com/test-catalog/overview/80285" },
+    { "population": "Adults — borderline high", "min": 15, "max": 30, "unit": "µmol/L", "source": "Mayo Clinic Laboratories", "sourceUrl": "https://www.mayocliniclabs.com/test-catalog/overview/80285" },
+    { "population": "Adults — high", "min": 30, "max": 100, "unit": "µmol/L", "source": "Mayo Clinic Laboratories", "sourceUrl": "https://www.mayocliniclabs.com/test-catalog/overview/80285" },
+    { "population": "Adults — very high", "min": 100, "max": null, "unit": "µmol/L", "source": "Mayo Clinic Laboratories (seen in homocystinuria)", "sourceUrl": "https://www.mayocliniclabs.com/test-catalog/overview/80285" }
+  ],
+  "causesOfHigh": [
+    "Vitamin B12 deficiency (most common nutritional cause)",
+    "Folate deficiency",
+    "Vitamin B6 deficiency",
+    "Chronic kidney disease (reduced homocysteine clearance)",
+    "Hypothyroidism",
+    "Homocystinuria (rare inherited enzyme deficiency causing very high levels)",
+    "MTHFR gene variants (reduce folate metabolism efficiency)",
+    "Certain medications (methotrexate, phenytoin, carbamazepine)",
+    "Smoking",
+    "Older age"
+  ],
+  "causesOfHighSource": "MedlinePlus. Homocysteine Test. https://medlineplus.gov/lab-tests/homocysteine-test/",
+  "causesOfLow": [
+    "Low homocysteine is not a clinical concern",
+    "High folate, B12, or B6 intake lowers homocysteine"
+  ],
+  "causesOfLowSource": "MedlinePlus. Homocysteine Test. https://medlineplus.gov/lab-tests/homocysteine-test/",
+  "symptoms": {
+    "high": [
+      "Mildly elevated homocysteine typically causes no direct symptoms",
+      "In homocystinuria (very high levels): dislocated eye lenses, tall stature with long limbs, osteoporosis, blood clots, and intellectual disability",
+      "Elevated homocysteine is associated with increased long-term cardiovascular risk: heart attack and stroke",
+      "May be associated with increased dementia risk in older adults"
+    ],
+    "low": [
+      "Low homocysteine causes no symptoms"
+    ]
+  },
+  "symptomsSource": "MedlinePlus. Homocysteine Test. https://medlineplus.gov/lab-tests/homocysteine-test/",
+  "citations": [
+    { "id": 1, "title": "Homocysteine Test", "source": "MedlinePlus, National Library of Medicine", "url": "https://medlineplus.gov/lab-tests/homocysteine-test/", "year": 2023 }
+  ]
+}

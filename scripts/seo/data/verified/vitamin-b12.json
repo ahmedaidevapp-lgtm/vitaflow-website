@@ -1,0 +1,51 @@
+{
+  "markerSlug": "vitamin-b12",
+  "markerName": "Vitamin B12",
+  "alternateNames": ["vitamin B12", "cobalamin", "serum B12", "cyanocobalamin", "B12 level"],
+  "whatItMeasures": "Vitamin B12 (cobalamin) is a water-soluble vitamin essential for the formation of red blood cells, DNA synthesis, and the maintenance of the nervous system; this test measures the amount circulating in the blood.",
+  "whatItMeasuresSource": "MedlinePlus, National Library of Medicine. https://medlineplus.gov/lab-tests/vitamin-b12-test/",
+  "referenceRanges": [
+    { "population": "Adults (≥18 years)", "min": 200, "max": 900, "unit": "pg/mL", "source": "Mayo Clinic Laboratories", "sourceUrl": "https://www.mayocliniclabs.com/test-catalog/overview/8226" }
+  ],
+  "causesOfHigh": [
+    "Vitamin B12 supplementation or injection",
+    "Liver disease (hepatitis, cirrhosis — the liver stores B12 and releases it when damaged)",
+    "Myeloproliferative disorders (CML, polycythaemia vera)",
+    "Solid tumours (some cancers release B12-binding proteins)",
+    "Kidney disease"
+  ],
+  "causesOfHighSource": "MedlinePlus. Vitamin B12 Test. https://medlineplus.gov/lab-tests/vitamin-b12-test/",
+  "causesOfLow": [
+    "Vegan or strict vegetarian diet (B12 is found almost exclusively in animal products)",
+    "Pernicious anaemia (autoimmune condition destroying intrinsic factor needed for B12 absorption — most common cause in older adults)",
+    "Gastric surgery or atrophic gastritis (reduced intrinsic factor production)",
+    "Malabsorption disorders (celiac disease, Crohn's disease)",
+    "Metformin use (long-term use impairs B12 absorption)",
+    "Older age (reduced stomach acid impairs absorption)",
+    "Proton pump inhibitor (PPI) long-term use"
+  ],
+  "causesOfLowSource": "NHS. Vitamin B12 or folate deficiency anaemia. https://www.nhs.uk/conditions/vitamin-b12-or-folate-deficiency-anaemia/",
+  "symptoms": {
+    "high": [
+      "High B12 from supplementation typically causes no symptoms",
+      "Very high levels from liver or blood disorders may be associated with symptoms of those conditions"
+    ],
+    "low": [
+      "Fatigue and weakness",
+      "Numbness or tingling in hands and feet (peripheral neuropathy)",
+      "Difficulty walking and balance problems",
+      "Sore and inflamed tongue (glossitis)",
+      "Mouth ulcers",
+      "Pale or slightly yellow skin",
+      "Irritability and changes in mood",
+      "Memory problems and cognitive decline",
+      "Blurred vision",
+      "Megaloblastic anaemia: shortness of breath, headache, rapid heartbeat"
+    ]
+  },
+  "symptomsSource": "NHS. Vitamin B12 or folate deficiency anaemia — symptoms. https://www.nhs.uk/conditions/vitamin-b12-or-folate-deficiency-anaemia/symptoms/",
+  "citations": [
+    { "id": 1, "title": "Vitamin B12 Test", "source": "MedlinePlus, National Library of Medicine", "url": "https://medlineplus.gov/lab-tests/vitamin-b12-test/", "year": 2023 },
+    { "id": 2, "title": "Vitamin B12 or folate deficiency anaemia", "source": "NHS (National Health Service, UK)", "url": "https://www.nhs.uk/conditions/vitamin-b12-or-folate-deficiency-anaemia/", "year": 2023 }
+  ]
+}

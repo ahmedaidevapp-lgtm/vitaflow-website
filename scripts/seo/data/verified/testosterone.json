@@ -1,0 +1,40 @@
+{
+  "markerSlug": "testosterone",
+  "markerName": "Testosterone (Total)",
+  "alternateNames": ["testosterone", "total testosterone", "serum testosterone", "T level"],
+  "whatItMeasures": "Total testosterone measures the combined amount of bound and free testosterone in the blood; it is the primary male sex hormone but is also present in women, playing roles in muscle mass, bone density, libido, mood, and energy in both sexes.",
+  "whatItMeasuresSource": "MedlinePlus, National Library of Medicine. https://medlineplus.gov/lab-tests/testosterone-levels-test/",
+  "referenceRanges": [
+    { "population": "Adult males (19–39 years)", "min": 300, "max": 1000, "unit": "ng/dL", "source": "Mayo Clinic Laboratories", "sourceUrl": "https://www.mayocliniclabs.com/test-catalog/overview/83519" },
+    { "population": "Adult males (40–59 years)", "min": 241, "max": 827, "unit": "ng/dL", "source": "Mayo Clinic Laboratories", "sourceUrl": "https://www.mayocliniclabs.com/test-catalog/overview/83519" },
+    { "population": "Adult females (19–49 years)", "min": 15, "max": 70, "unit": "ng/dL", "source": "Mayo Clinic Laboratories", "sourceUrl": "https://www.mayocliniclabs.com/test-catalog/overview/83519" },
+    { "population": "Adult females (≥50 years)", "min": 10, "max": 55, "unit": "ng/dL", "source": "Mayo Clinic Laboratories", "sourceUrl": "https://www.mayocliniclabs.com/test-catalog/overview/83519" }
+  ],
+  "causesOfHigh": [
+    "In males: anabolic steroid or testosterone therapy use, congenital adrenal hyperplasia, testicular or adrenal tumour",
+    "In females: polycystic ovary syndrome (PCOS) — most common cause of elevated testosterone in women; congenital adrenal hyperplasia; adrenal or ovarian tumour",
+    "Obesity (aromatisation of androgens in fat tissue)"
+  ],
+  "causesOfHighSource": "NHS. Polycystic ovary syndrome. https://www.nhs.uk/conditions/polycystic-ovary-syndrome-pcos/",
+  "causesOfLow": [
+    "In males: hypogonadism (primary — testicular failure, or secondary — pituitary/hypothalamic failure); ageing (natural decline after age 30); obesity; type 2 diabetes; chronic illness; opioid use; excess alcohol; anabolic steroid withdrawal",
+    "In females: menopause; premature ovarian insufficiency; adrenal insufficiency; oophorectomy"
+  ],
+  "causesOfLowSource": "NHS. Male hypogonadism. https://www.nhs.uk/conditions/male-hypogonadism/",
+  "symptoms": {
+    "high": [
+      "In males: acne, oily skin, aggression, testicular atrophy (from exogenous testosterone)",
+      "In females: acne, excess facial and body hair (hirsutism), irregular or absent periods, scalp hair thinning, deepened voice, clitoral enlargement"
+    ],
+    "low": [
+      "In males: low sex drive (libido), erectile dysfunction, reduced muscle mass and strength, increased body fat, fatigue and low mood, depression, reduced bone density, reduced beard and body hair growth",
+      "In females: low libido, fatigue, reduced bone density, mood changes, vaginal dryness"
+    ]
+  },
+  "symptomsSource": "NHS. Male hypogonadism — symptoms. https://www.nhs.uk/conditions/male-hypogonadism/symptoms/; NHS. PCOS — symptoms. https://www.nhs.uk/conditions/polycystic-ovary-syndrome-pcos/symptoms/",
+  "citations": [
+    { "id": 1, "title": "Testosterone Levels Test", "source": "MedlinePlus, National Library of Medicine", "url": "https://medlineplus.gov/lab-tests/testosterone-levels-test/", "year": 2023 },
+    { "id": 2, "title": "Male hypogonadism", "source": "NHS (National Health Service, UK)", "url": "https://www.nhs.uk/conditions/male-hypogonadism/", "year": 2023 },
+    { "id": 3, "title": "Polycystic ovary syndrome (PCOS)", "source": "NHS (National Health Service, UK)", "url": "https://www.nhs.uk/conditions/polycystic-ovary-syndrome-pcos/", "year": 2023 }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "markerSlug": "esr",
+  "markerName": "ESR (Erythrocyte Sedimentation Rate)",
+  "alternateNames": ["ESR", "erythrocyte sedimentation rate", "sed rate", "sedimentation rate", "Westergren ESR"],
+  "whatItMeasures": "ESR measures how quickly red blood cells settle to the bottom of a test tube over one hour; when inflammatory proteins coat red cells, they clump together and sink faster, so a raised ESR indicates the presence of inflammation, infection, or certain other conditions.",
+  "whatItMeasuresSource": "MedlinePlus, National Library of Medicine. https://medlineplus.gov/lab-tests/erythrocyte-sedimentation-rate-esr/",
+  "referenceRanges": [
+    { "population": "Adult males <50 years", "min": 0, "max": 15, "unit": "mm/hr", "source": "Mayo Clinic Laboratories (Westergren method)", "sourceUrl": "https://www.mayocliniclabs.com/test-catalog/overview/9387" },
+    { "population": "Adult females <50 years", "min": 0, "max": 20, "unit": "mm/hr", "source": "Mayo Clinic Laboratories (Westergren method)", "sourceUrl": "https://www.mayocliniclabs.com/test-catalog/overview/9387" },
+    { "population": "Adult males ≥50 years", "min": 0, "max": 20, "unit": "mm/hr", "source": "Mayo Clinic Laboratories (Westergren method)", "sourceUrl": "https://www.mayocliniclabs.com/test-catalog/overview/9387" },
+    { "population": "Adult females ≥50 years", "min": 0, "max": 30, "unit": "mm/hr", "source": "Mayo Clinic Laboratories (Westergren method)", "sourceUrl": "https://www.mayocliniclabs.com/test-catalog/overview/9387" }
+  ],
+  "causesOfHigh": [
+    "Autoimmune diseases (rheumatoid arthritis, lupus, vasculitis — ESR is used to monitor disease activity)",
+    "Bacterial infection and sepsis",
+    "Temporal arteritis (giant cell arteritis) — ESR is typically very high (>50 mm/hr)",
+    "Polymyalgia rheumatica",
+    "Multiple myeloma and other plasma cell disorders",
+    "Anaemia (red cells have less mass and settle faster)",
+    "Pregnancy (normal increase)",
+    "Kidney disease",
+    "Obesity",
+    "Older age"
+  ],
+  "causesOfHighSource": "MedlinePlus. Erythrocyte Sedimentation Rate. https://medlineplus.gov/lab-tests/erythrocyte-sedimentation-rate-esr/",
+  "causesOfLow": [
+    "Polycythaemia vera (too many red cells slows sedimentation)",
+    "Sickle cell disease (abnormally shaped cells do not stack and settle)",
+    "Congestive heart failure",
+    "Hypofibrinogenaemia (low fibrinogen reduces clumping)"
+  ],
+  "causesOfLowSource": "MedlinePlus. Erythrocyte Sedimentation Rate. https://medlineplus.gov/lab-tests/erythrocyte-sedimentation-rate-esr/",
+  "symptoms": {
+    "high": [
+      "ESR elevation itself causes no symptoms — it reflects an underlying process",
+      "Fatigue and malaise",
+      "Fever",
+      "Joint pain and stiffness (in inflammatory arthritis)",
+      "Muscle aches (in polymyalgia rheumatica)",
+      "Headache and jaw claudication (in temporal arteritis)"
+    ],
+    "low": [
+      "Low ESR typically causes no symptoms"
+    ]
+  },
+  "symptomsSource": "MedlinePlus. Erythrocyte Sedimentation Rate. https://medlineplus.gov/lab-tests/erythrocyte-sedimentation-rate-esr/",
+  "citations": [
+    { "id": 1, "title": "Erythrocyte Sedimentation Rate (ESR)", "source": "MedlinePlus, National Library of Medicine", "url": "https://medlineplus.gov/lab-tests/erythrocyte-sedimentation-rate-esr/", "year": 2023 }
+  ]
+}

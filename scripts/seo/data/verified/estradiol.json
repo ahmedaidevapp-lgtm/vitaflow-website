@@ -1,0 +1,54 @@
+{
+  "markerSlug": "estradiol",
+  "markerName": "Estradiol (E2)",
+  "alternateNames": ["estradiol", "E2", "oestradiol", "17β-estradiol", "estradiol level"],
+  "whatItMeasures": "Estradiol is the most potent and abundant form of oestrogen; it is produced mainly by the ovaries in women and in smaller amounts by the testes and adrenal glands in men. It is essential for female reproductive development, bone density, cardiovascular health, and mood regulation.",
+  "whatItMeasuresSource": "MedlinePlus, National Library of Medicine. https://medlineplus.gov/lab-tests/estrogen-levels-test/",
+  "referenceRanges": [
+    { "population": "Adult females — follicular phase (days 1–13)", "min": 30, "max": 100, "unit": "pg/mL", "source": "Mayo Clinic Laboratories", "sourceUrl": "https://www.mayocliniclabs.com/test-catalog/overview/81816" },
+    { "population": "Adult females — midcycle (ovulation)", "min": 100, "max": 300, "unit": "pg/mL", "source": "Mayo Clinic Laboratories", "sourceUrl": "https://www.mayocliniclabs.com/test-catalog/overview/81816" },
+    { "population": "Adult females — luteal phase (days 15–28)", "min": 50, "max": 150, "unit": "pg/mL", "source": "Mayo Clinic Laboratories", "sourceUrl": "https://www.mayocliniclabs.com/test-catalog/overview/81816" },
+    { "population": "Postmenopausal females", "min": 10, "max": 30, "unit": "pg/mL", "source": "Mayo Clinic Laboratories", "sourceUrl": "https://www.mayocliniclabs.com/test-catalog/overview/81816" },
+    { "population": "Adult males", "min": 10, "max": 40, "unit": "pg/mL", "source": "Mayo Clinic Laboratories", "sourceUrl": "https://www.mayocliniclabs.com/test-catalog/overview/81816" }
+  ],
+  "causesOfHigh": [
+    "In females: ovarian cysts, ovarian tumours, PCOS, early puberty",
+    "In males: obesity (aromatisation of testosterone to oestrogen in fat), liver cirrhosis, oestrogen-secreting tumour",
+    "Oestrogen therapy or hormonal contraceptive use",
+    "Hyperthyroidism"
+  ],
+  "causesOfHighSource": "MedlinePlus. Estrogen Levels Test. https://medlineplus.gov/lab-tests/estrogen-levels-test/",
+  "causesOfLow": [
+    "Menopause (natural decline as ovarian function ceases)",
+    "Premature ovarian insufficiency (POI)",
+    "Hypothalamic amenorrhoea (excessive exercise, very low body weight, or chronic stress suppress oestrogen)",
+    "Turner syndrome",
+    "Polycystic ovary syndrome (PCOS) — oestrogen may be low or normal",
+    "Hypopituitarism",
+    "Eating disorders (anorexia nervosa)"
+  ],
+  "causesOfLowSource": "NHS. Menopause. https://www.nhs.uk/conditions/menopause/",
+  "symptoms": {
+    "high": [
+      "In females: breast tenderness, bloating, irregular periods, headaches",
+      "In males: gynaecomastia (breast tissue growth), erectile dysfunction, reduced libido, infertility",
+      "Mood changes and irritability"
+    ],
+    "low": [
+      "Hot flushes and night sweats",
+      "Vaginal dryness and discomfort during sex",
+      "Irregular or absent periods",
+      "Mood changes, anxiety, and depression",
+      "Brain fog and difficulty concentrating",
+      "Reduced bone density (osteoporosis risk)",
+      "Dry skin and hair",
+      "Fatigue",
+      "In males: reduced libido and bone density"
+    ]
+  },
+  "symptomsSource": "NHS. Menopause — symptoms. https://www.nhs.uk/conditions/menopause/symptoms/",
+  "citations": [
+    { "id": 1, "title": "Estrogen Levels Test", "source": "MedlinePlus, National Library of Medicine", "url": "https://medlineplus.gov/lab-tests/estrogen-levels-test/", "year": 2023 },
+    { "id": 2, "title": "Menopause", "source": "NHS (National Health Service, UK)", "url": "https://www.nhs.uk/conditions/menopause/", "year": 2023 }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "markerSlug": "triglycerides",
+  "markerName": "Triglycerides",
+  "alternateNames": ["triglycerides", "serum triglycerides", "TG", "triacylglycerols"],
+  "whatItMeasures": "Triglycerides are the most common type of fat in the body; they are stored in fat cells and released for energy between meals. Blood triglycerides come from dietary fat and from excess calories (especially sugars) that the liver converts to fat, and elevated levels are a risk factor for heart disease and pancreatitis.",
+  "whatItMeasuresSource": "NHLBI. Blood Triglycerides. https://www.nhlbi.nih.gov/health/blood-cholesterol/triglycerides",
+  "referenceRanges": [
+    { "population": "Adults — normal", "min": null, "max": 150, "unit": "mg/dL", "source": "NHLBI. Blood Triglycerides. 2023.", "sourceUrl": "https://www.nhlbi.nih.gov/health/blood-cholesterol/triglycerides" },
+    { "population": "Adults — borderline high", "min": 150, "max": 199, "unit": "mg/dL", "source": "NHLBI. Blood Triglycerides. 2023.", "sourceUrl": "https://www.nhlbi.nih.gov/health/blood-cholesterol/triglycerides" },
+    { "population": "Adults — high", "min": 200, "max": 499, "unit": "mg/dL", "source": "NHLBI. Blood Triglycerides. 2023.", "sourceUrl": "https://www.nhlbi.nih.gov/health/blood-cholesterol/triglycerides" },
+    { "population": "Adults — very high", "min": 500, "max": null, "unit": "mg/dL", "source": "NHLBI. Blood Triglycerides. 2023.", "sourceUrl": "https://www.nhlbi.nih.gov/health/blood-cholesterol/triglycerides" }
+  ],
+  "causesOfHigh": [
+    "Diet high in refined carbohydrates, sugar, and alcohol",
+    "Obesity and excess abdominal fat",
+    "Type 2 diabetes and insulin resistance",
+    "Hypothyroidism",
+    "Kidney disease (nephrotic syndrome)",
+    "Liver disease",
+    "Familial hypertriglyceridaemia (genetic)",
+    "Certain medications (beta-blockers, corticosteroids, oestrogen, retinoids, antipsychotics)",
+    "Pregnancy"
+  ],
+  "causesOfHighSource": "NHLBI. Blood Triglycerides. https://www.nhlbi.nih.gov/health/blood-cholesterol/triglycerides",
+  "causesOfLow": [
+    "Low-fat diet",
+    "Hyperthyroidism",
+    "Malnutrition or malabsorption",
+    "Medication (fibrates, fish oil, niacin)",
+    "Rare genetic conditions (abetalipoproteinaemia)"
+  ],
+  "causesOfLowSource": "MedlinePlus. Triglycerides. https://medlineplus.gov/triglycerides.html",
+  "symptoms": {
+    "high": [
+      "Mildly to moderately elevated levels usually cause no symptoms",
+      "Very high levels (≥500 mg/dL) can cause acute pancreatitis: severe abdominal pain, nausea, vomiting",
+      "Eruptive xanthomas (small yellow-white fat deposits on skin) at very high levels",
+      "Lipaemia retinalis (milky appearance of retinal blood vessels) at extreme levels"
+    ],
+    "low": [
+      "Low triglycerides typically cause no symptoms"
+    ]
+  },
+  "symptomsSource": "NHLBI. Blood Triglycerides. https://www.nhlbi.nih.gov/health/blood-cholesterol/triglycerides",
+  "citations": [
+    { "id": 1, "title": "Blood Triglycerides", "source": "National Heart, Lung, and Blood Institute (NHLBI)", "url": "https://www.nhlbi.nih.gov/health/blood-cholesterol/triglycerides", "year": 2023 },
+    { "id": 2, "title": "Triglycerides", "source": "MedlinePlus, National Library of Medicine", "url": "https://medlineplus.gov/triglycerides.html", "year": 2023 },
+    { "id": 3, "title": "High cholesterol", "source": "NHS (National Health Service, UK)", "url": "https://www.nhs.uk/conditions/high-cholesterol/", "year": 2023 }
+  ]
+}

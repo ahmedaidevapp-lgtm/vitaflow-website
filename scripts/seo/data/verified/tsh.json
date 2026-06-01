@@ -1,0 +1,59 @@
+{
+  "markerSlug": "tsh",
+  "markerName": "TSH (Thyroid-Stimulating Hormone)",
+  "alternateNames": ["TSH", "thyrotropin", "thyroid stimulating hormone", "TSH level"],
+  "whatItMeasures": "TSH is a hormone produced by the pituitary gland that signals the thyroid to produce thyroid hormones; measuring TSH in the blood is the most sensitive first-line test for detecting both an underactive thyroid (hypothyroidism) and an overactive thyroid (hyperthyroidism).",
+  "whatItMeasuresSource": "MedlinePlus, National Library of Medicine. https://medlineplus.gov/lab-tests/tsh-thyroid-stimulating-hormone-test/",
+  "referenceRanges": [
+    { "population": "Adults (18–60 years)", "min": 0.4, "max": 4.0, "unit": "mIU/L", "source": "Mayo Clinic Laboratories", "sourceUrl": "https://www.mayocliniclabs.com/test-catalog/overview/57952" },
+    { "population": "Adults (>60 years)", "min": 0.4, "max": 4.5, "unit": "mIU/L", "source": "Mayo Clinic Laboratories", "sourceUrl": "https://www.mayocliniclabs.com/test-catalog/overview/57952" },
+    { "population": "Pregnant women (1st trimester)", "min": 0.1, "max": 2.5, "unit": "mIU/L", "source": "American Thyroid Association guidelines 2017", "sourceUrl": "https://www.thyroid.org/patient-thyroid-information/ct-for-patients/volume-10-issue-2/vol-10-issue-2-p-6-7/" }
+  ],
+  "causesOfHigh": [
+    "Hypothyroidism (underactive thyroid — Hashimoto's thyroiditis is the most common cause in developed countries)",
+    "Thyroid surgery or radioactive iodine treatment",
+    "Pituitary gland tumors (rare — TSH-secreting adenoma)",
+    "Recovery from non-thyroidal illness",
+    "Certain medications (lithium, amiodarone, interferon-alpha)",
+    "Iodine deficiency"
+  ],
+  "causesOfHighSource": "NHLBI. Hypothyroidism. https://www.nhlbi.nih.gov/health/hypothyroidism; NHS. Underactive thyroid. https://www.nhs.uk/conditions/underactive-thyroid-hypothyroidism/",
+  "causesOfLow": [
+    "Hyperthyroidism (overactive thyroid — Graves' disease is the most common cause)",
+    "Toxic multinodular goiter",
+    "Excess thyroid hormone medication",
+    "Pituitary gland damage or disease (secondary hypothyroidism — TSH is low despite underactive thyroid)",
+    "Certain medications (corticosteroids, dopamine agonists)",
+    "Pregnancy (hCG has mild TSH-like activity, suppressing TSH in the first trimester)"
+  ],
+  "causesOfLowSource": "NHS. Overactive thyroid. https://www.nhs.uk/conditions/overactive-thyroid-hyperthyroidism/",
+  "symptoms": {
+    "high": [
+      "Fatigue and sluggishness",
+      "Weight gain despite normal eating",
+      "Cold intolerance",
+      "Constipation",
+      "Dry skin and hair, hair loss",
+      "Slow heart rate (bradycardia)",
+      "Depression and cognitive slowing",
+      "Puffy face and swollen legs"
+    ],
+    "low": [
+      "Unintentional weight loss",
+      "Rapid or irregular heartbeat (palpitations)",
+      "Heat intolerance and excessive sweating",
+      "Nervousness, anxiety, or irritability",
+      "Tremor (fine shaking of the hands)",
+      "Increased frequency of bowel movements",
+      "Goiter (enlarged thyroid)",
+      "Bulging eyes (in Graves' disease)"
+    ]
+  },
+  "symptomsSource": "NHS. Underactive thyroid — symptoms. https://www.nhs.uk/conditions/underactive-thyroid-hypothyroidism/symptoms/; NHS. Overactive thyroid — symptoms. https://www.nhs.uk/conditions/overactive-thyroid-hyperthyroidism/symptoms/",
+  "citations": [
+    { "id": 1, "title": "TSH (Thyroid-Stimulating Hormone) Test", "source": "MedlinePlus, National Library of Medicine", "url": "https://medlineplus.gov/lab-tests/tsh-thyroid-stimulating-hormone-test/", "year": 2023 },
+    { "id": 2, "title": "Underactive thyroid (hypothyroidism)", "source": "NHS (National Health Service, UK)", "url": "https://www.nhs.uk/conditions/underactive-thyroid-hypothyroidism/", "year": 2023 },
+    { "id": 3, "title": "Overactive thyroid (hyperthyroidism)", "source": "NHS (National Health Service, UK)", "url": "https://www.nhs.uk/conditions/overactive-thyroid-hyperthyroidism/", "year": 2023 },
+    { "id": 4, "title": "Guidelines of the American Thyroid Association for the Diagnosis and Management of Thyroid Disease During Pregnancy and the Postpartum", "source": "American Thyroid Association", "url": "https://www.thyroid.org/patient-thyroid-information/ct-for-patients/volume-10-issue-2/vol-10-issue-2-p-6-7/", "year": 2017 }
+  ]
+}

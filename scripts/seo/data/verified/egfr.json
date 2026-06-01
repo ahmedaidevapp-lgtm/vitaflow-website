@@ -1,0 +1,55 @@
+{
+  "markerSlug": "egfr",
+  "markerName": "eGFR (Estimated Glomerular Filtration Rate)",
+  "alternateNames": ["eGFR", "estimated GFR", "glomerular filtration rate", "kidney function test"],
+  "whatItMeasures": "eGFR is a calculated estimate of how many millilitres of blood the kidneys filter per minute per 1.73 m² of body surface area; it is derived from the serum creatinine level along with age, sex, and race, and is the primary measure used to stage chronic kidney disease.",
+  "whatItMeasuresSource": "National Kidney Foundation. About Chronic Kidney Disease. https://www.kidney.org/kidney-topics/chronic-kidney-disease-ckd",
+  "referenceRanges": [
+    { "population": "Adults — normal kidney function", "min": 90, "max": null, "unit": "mL/min/1.73m²", "source": "National Kidney Foundation. CKD Stages.", "sourceUrl": "https://www.kidney.org/kidney-topics/chronic-kidney-disease-ckd" },
+    { "population": "CKD Stage 1 (kidney damage, normal function)", "min": 90, "max": null, "unit": "mL/min/1.73m²", "source": "National Kidney Foundation", "sourceUrl": "https://www.kidney.org/kidney-topics/chronic-kidney-disease-ckd" },
+    { "population": "CKD Stage 2 (mildly reduced)", "min": 60, "max": 89, "unit": "mL/min/1.73m²", "source": "National Kidney Foundation", "sourceUrl": "https://www.kidney.org/kidney-topics/chronic-kidney-disease-ckd" },
+    { "population": "CKD Stage 3 (moderately reduced)", "min": 30, "max": 59, "unit": "mL/min/1.73m²", "source": "National Kidney Foundation", "sourceUrl": "https://www.kidney.org/kidney-topics/chronic-kidney-disease-ckd" },
+    { "population": "CKD Stage 4 (severely reduced)", "min": 15, "max": 29, "unit": "mL/min/1.73m²", "source": "National Kidney Foundation", "sourceUrl": "https://www.kidney.org/kidney-topics/chronic-kidney-disease-ckd" },
+    { "population": "CKD Stage 5 (kidney failure)", "min": null, "max": 15, "unit": "mL/min/1.73m²", "source": "National Kidney Foundation", "sourceUrl": "https://www.kidney.org/kidney-topics/chronic-kidney-disease-ckd" }
+  ],
+  "causesOfHigh": [
+    "eGFR above 90 mL/min/1.73m² is normal; values above 120 may reflect hyperfiltration",
+    "Pregnancy (physiological increase in kidney filtration)",
+    "Diabetes mellitus in early stages (hyperfiltration precedes kidney damage)",
+    "High protein intake"
+  ],
+  "causesOfHighSource": "National Kidney Foundation. https://www.kidney.org/kidney-topics/chronic-kidney-disease-ckd",
+  "causesOfLow": [
+    "Chronic kidney disease (diabetes and hypertension are the leading causes worldwide)",
+    "Acute kidney injury (dehydration, medication toxicity, obstruction)",
+    "Glomerulonephritis (inflammation of kidney filtering units)",
+    "Polycystic kidney disease",
+    "Recurrent kidney infections",
+    "Prolonged use of NSAIDs or certain antibiotics",
+    "Autoimmune diseases (lupus nephritis)",
+    "Aging (eGFR naturally declines after age 40)"
+  ],
+  "causesOfLowSource": "NHS. Chronic kidney disease — causes. https://www.nhs.uk/conditions/kidney-disease/causes/",
+  "symptoms": {
+    "high": [
+      "Hyperfiltration (high eGFR) typically has no symptoms",
+      "Monitoring is warranted in diabetes to detect early kidney involvement"
+    ],
+    "low": [
+      "Mild to moderate reduction often has no symptoms",
+      "Fatigue and weakness",
+      "Swelling of ankles, feet, or hands",
+      "Shortness of breath",
+      "Nausea and loss of appetite",
+      "Changes in urination (frequency, colour, foamy urine)",
+      "Itchy skin",
+      "High blood pressure (both a cause and symptom)"
+    ]
+  },
+  "symptomsSource": "NHS. Chronic kidney disease — symptoms. https://www.nhs.uk/conditions/kidney-disease/symptoms/",
+  "citations": [
+    { "id": 1, "title": "About Chronic Kidney Disease", "source": "National Kidney Foundation", "url": "https://www.kidney.org/kidney-topics/chronic-kidney-disease-ckd", "year": 2023 },
+    { "id": 2, "title": "Chronic kidney disease", "source": "NHS (National Health Service, UK)", "url": "https://www.nhs.uk/conditions/kidney-disease/", "year": 2023 },
+    { "id": 3, "title": "Estimated Glomerular Filtration Rate (eGFR)", "source": "MedlinePlus, National Library of Medicine", "url": "https://medlineplus.gov/lab-tests/estimated-glomerular-filtration-rate-egfr/", "year": 2023 }
+  ]
+}

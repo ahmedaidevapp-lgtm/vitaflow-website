@@ -1,0 +1,57 @@
+{
+  "markerSlug": "magnesium",
+  "markerName": "Magnesium",
+  "alternateNames": ["serum magnesium", "magnesium level", "Mg", "blood magnesium"],
+  "whatItMeasures": "Magnesium is a mineral involved in over 300 enzymatic reactions in the body, including energy production, protein synthesis, muscle contraction, nerve function, and blood glucose control; serum magnesium reflects the small fraction of total body magnesium in the blood.",
+  "whatItMeasuresSource": "MedlinePlus, National Library of Medicine. https://medlineplus.gov/lab-tests/magnesium-blood-test/",
+  "referenceRanges": [
+    { "population": "Adults (≥18 years)", "min": 1.7, "max": 2.2, "unit": "mg/dL", "source": "Mayo Clinic Laboratories", "sourceUrl": "https://www.mayocliniclabs.com/test-catalog/overview/8448" }
+  ],
+  "causesOfHigh": [
+    "Kidney failure (most common cause — kidneys cannot excrete excess magnesium)",
+    "Excessive magnesium supplementation or antacid use",
+    "Hypothyroidism",
+    "Addison's disease (adrenal insufficiency)",
+    "Dehydration",
+    "Use of magnesium-containing laxatives or medications"
+  ],
+  "causesOfHighSource": "MedlinePlus. Magnesium Blood Test. https://medlineplus.gov/lab-tests/magnesium-blood-test/",
+  "causesOfLow": [
+    "Poor dietary intake (common in Western diets low in nuts, seeds, and leafy greens)",
+    "Chronic alcohol use (increases urinary magnesium loss)",
+    "Type 2 diabetes (osmotic diuresis from high blood sugar depletes magnesium)",
+    "Malabsorption disorders (Crohn's disease, celiac disease)",
+    "Prolonged diarrhoea or vomiting",
+    "Proton pump inhibitor (PPI) long-term use",
+    "Diuretic medications (thiazides and loop diuretics increase urinary loss)",
+    "Chronic kidney disease with tubular loss",
+    "Pancreatitis"
+  ],
+  "causesOfLowSource": "NIH Office of Dietary Supplements. Magnesium Fact Sheet. https://ods.od.nih.gov/factsheets/Magnesium-HealthProfessional/",
+  "symptoms": {
+    "high": [
+      "Nausea and vomiting",
+      "Flushing and warmth",
+      "Low blood pressure",
+      "Muscle weakness",
+      "Decreased reflexes",
+      "Drowsiness and confusion",
+      "Cardiac arrhythmia in severe cases"
+    ],
+    "low": [
+      "Muscle twitches, cramps, and spasms",
+      "Tremor",
+      "Fatigue and weakness",
+      "Numbness and tingling",
+      "Irregular heartbeat (palpitations)",
+      "Nausea and loss of appetite",
+      "Personality changes and anxiety",
+      "Seizures in severe deficiency"
+    ]
+  },
+  "symptomsSource": "NIH Office of Dietary Supplements. Magnesium. https://ods.od.nih.gov/factsheets/Magnesium-HealthProfessional/",
+  "citations": [
+    { "id": 1, "title": "Magnesium Blood Test", "source": "MedlinePlus, National Library of Medicine", "url": "https://medlineplus.gov/lab-tests/magnesium-blood-test/", "year": 2023 },
+    { "id": 2, "title": "Magnesium — Fact Sheet for Health Professionals", "source": "NIH Office of Dietary Supplements", "url": "https://ods.od.nih.gov/factsheets/Magnesium-HealthProfessional/", "year": 2023 }
+  ]
+}

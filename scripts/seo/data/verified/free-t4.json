@@ -1,0 +1,54 @@
+{
+  "markerSlug": "free-t4",
+  "markerName": "Free T4 (Free Thyroxine)",
+  "alternateNames": ["free T4", "FT4", "free thyroxine", "thyroxine free"],
+  "whatItMeasures": "Free T4 measures the unbound, biologically active fraction of thyroxine — the main hormone produced by the thyroid gland — circulating in the blood; it is ordered alongside TSH to confirm hypothyroidism or hyperthyroidism and to assess pituitary-thyroid function.",
+  "whatItMeasuresSource": "MedlinePlus, National Library of Medicine. https://medlineplus.gov/lab-tests/t4-thyroxine-test/",
+  "referenceRanges": [
+    { "population": "Adults (≥18 years)", "min": 0.8, "max": 1.8, "unit": "ng/dL", "source": "Mayo Clinic Laboratories", "sourceUrl": "https://www.mayocliniclabs.com/test-catalog/overview/602865" }
+  ],
+  "causesOfHigh": [
+    "Hyperthyroidism (Graves' disease, toxic nodular goiter)",
+    "Thyroiditis (inflammatory release of stored thyroid hormone)",
+    "Excess thyroid hormone medication (levothyroxine overdose)",
+    "Acute psychiatric illness (transient elevation)",
+    "Certain medications (amiodarone, heparin)",
+    "Thyroid hormone resistance syndrome (rare)"
+  ],
+  "causesOfHighSource": "NHS. Overactive thyroid. https://www.nhs.uk/conditions/overactive-thyroid-hyperthyroidism/",
+  "causesOfLow": [
+    "Primary hypothyroidism (Hashimoto's thyroiditis, thyroid surgery, radioiodine)",
+    "Secondary hypothyroidism (pituitary gland failure to produce TSH)",
+    "Severe non-thyroidal illness (sick euthyroid syndrome)",
+    "Iodine deficiency",
+    "Certain medications (antithyroid drugs, lithium)"
+  ],
+  "causesOfLowSource": "NHS. Underactive thyroid. https://www.nhs.uk/conditions/underactive-thyroid-hypothyroidism/",
+  "symptoms": {
+    "high": [
+      "Rapid or irregular heartbeat",
+      "Weight loss despite normal or increased appetite",
+      "Heat intolerance and sweating",
+      "Nervousness and anxiety",
+      "Tremor",
+      "Diarrhea or frequent bowel movements",
+      "Insomnia"
+    ],
+    "low": [
+      "Fatigue and low energy",
+      "Weight gain",
+      "Cold intolerance",
+      "Constipation",
+      "Dry skin and hair",
+      "Depression",
+      "Slow heart rate",
+      "Memory problems and difficulty concentrating"
+    ]
+  },
+  "symptomsSource": "NHS. Hypothyroidism symptoms. https://www.nhs.uk/conditions/underactive-thyroid-hypothyroidism/symptoms/; NHS. Hyperthyroidism symptoms. https://www.nhs.uk/conditions/overactive-thyroid-hyperthyroidism/symptoms/",
+  "citations": [
+    { "id": 1, "title": "T4 (Thyroxine) Test", "source": "MedlinePlus, National Library of Medicine", "url": "https://medlineplus.gov/lab-tests/t4-thyroxine-test/", "year": 2023 },
+    { "id": 2, "title": "Underactive thyroid (hypothyroidism)", "source": "NHS (National Health Service, UK)", "url": "https://www.nhs.uk/conditions/underactive-thyroid-hypothyroidism/", "year": 2023 },
+    { "id": 3, "title": "Overactive thyroid (hyperthyroidism)", "source": "NHS (National Health Service, UK)", "url": "https://www.nhs.uk/conditions/overactive-thyroid-hyperthyroidism/", "year": 2023 }
+  ]
+}

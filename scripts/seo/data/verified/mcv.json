@@ -1,0 +1,52 @@
+{
+  "markerSlug": "mcv",
+  "markerName": "MCV (Mean Corpuscular Volume)",
+  "alternateNames": ["MCV", "mean corpuscular volume", "mean cell volume", "red cell size"],
+  "whatItMeasures": "MCV measures the average size of red blood cells; it helps classify the type of anaemia present — small red cells (low MCV) suggest iron deficiency, while large red cells (high MCV) suggest vitamin B12 or folate deficiency.",
+  "whatItMeasuresSource": "MedlinePlus, National Library of Medicine. https://medlineplus.gov/lab-tests/mean-corpuscular-volume-mcv/",
+  "referenceRanges": [
+    { "population": "Adults (≥18 years)", "min": 80, "max": 100, "unit": "fL (femtolitres)", "source": "Mayo Clinic Laboratories", "sourceUrl": "https://www.mayocliniclabs.com/test-catalog/overview/9262" }
+  ],
+  "causesOfHigh": [
+    "Vitamin B12 deficiency (most common cause of macrocytosis)",
+    "Folate deficiency",
+    "Alcohol use (directly toxic to red cell precursors)",
+    "Hypothyroidism",
+    "Liver disease",
+    "Certain medications (methotrexate, hydroxyurea, zidovudine)",
+    "Reticulocytosis (young red cells are larger)",
+    "Myelodysplastic syndrome"
+  ],
+  "causesOfHighSource": "MedlinePlus. MCV. https://medlineplus.gov/lab-tests/mean-corpuscular-volume-mcv/",
+  "causesOfLow": [
+    "Iron deficiency anaemia (most common cause of microcytosis worldwide)",
+    "Thalassaemia (genetic haemoglobin disorder producing small red cells)",
+    "Anaemia of chronic disease (in some cases)",
+    "Lead poisoning",
+    "Sideroblastic anaemia"
+  ],
+  "causesOfLowSource": "NHLBI. Iron-Deficiency Anemia. https://www.nhlbi.nih.gov/health/anemia/iron-deficiency-anemia",
+  "symptoms": {
+    "high": [
+      "Fatigue and weakness",
+      "Shortness of breath",
+      "Pale skin",
+      "Numbness or tingling in hands and feet (if caused by B12 deficiency)",
+      "Memory problems and cognitive changes (B12 deficiency)",
+      "Sore red tongue (glossitis)"
+    ],
+    "low": [
+      "Fatigue and tiredness",
+      "Pale skin",
+      "Shortness of breath on exertion",
+      "Brittle nails and hair loss",
+      "Cold intolerance",
+      "Restless leg syndrome"
+    ]
+  },
+  "symptomsSource": "NHLBI. Anemia — Symptoms. https://www.nhlbi.nih.gov/health/anemia/symptoms",
+  "citations": [
+    { "id": 1, "title": "Mean Corpuscular Volume (MCV)", "source": "MedlinePlus, National Library of Medicine", "url": "https://medlineplus.gov/lab-tests/mean-corpuscular-volume-mcv/", "year": 2023 },
+    { "id": 2, "title": "Iron-Deficiency Anemia", "source": "National Heart, Lung, and Blood Institute (NHLBI)", "url": "https://www.nhlbi.nih.gov/health/anemia/iron-deficiency-anemia", "year": 2023 }
+  ]
+}

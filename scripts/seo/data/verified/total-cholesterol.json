@@ -1,0 +1,48 @@
+{
+  "markerSlug": "total-cholesterol",
+  "markerName": "Total Cholesterol",
+  "alternateNames": ["total cholesterol", "serum cholesterol", "cholesterol level", "cholesterol test"],
+  "whatItMeasures": "Total cholesterol measures the combined amount of all cholesterol types in the blood — including LDL, HDL, and VLDL — and is used as part of a lipid panel to assess cardiovascular disease risk.",
+  "whatItMeasuresSource": "NHLBI. Blood Cholesterol. https://www.nhlbi.nih.gov/health/blood-cholesterol",
+  "referenceRanges": [
+    { "population": "Adults — desirable", "min": null, "max": 200, "unit": "mg/dL", "source": "NHLBI. Blood Cholesterol. 2023.", "sourceUrl": "https://www.nhlbi.nih.gov/health/blood-cholesterol" },
+    { "population": "Adults — borderline high", "min": 200, "max": 239, "unit": "mg/dL", "source": "NHLBI. Blood Cholesterol. 2023.", "sourceUrl": "https://www.nhlbi.nih.gov/health/blood-cholesterol" },
+    { "population": "Adults — high", "min": 240, "max": null, "unit": "mg/dL", "source": "NHLBI. Blood Cholesterol. 2023.", "sourceUrl": "https://www.nhlbi.nih.gov/health/blood-cholesterol" }
+  ],
+  "causesOfHigh": [
+    "Unhealthy diet high in saturated and trans fats",
+    "Lack of physical activity",
+    "Obesity and excess body weight",
+    "Familial hypercholesterolaemia (genetic)",
+    "Hypothyroidism",
+    "Type 2 diabetes",
+    "Chronic kidney disease",
+    "Certain medications (corticosteroids, retinoids, some beta-blockers)",
+    "Liver disease (cholestasis)"
+  ],
+  "causesOfHighSource": "NHLBI. Blood Cholesterol — Causes. https://www.nhlbi.nih.gov/health/blood-cholesterol/causes",
+  "causesOfLow": [
+    "Malnutrition or malabsorption",
+    "Hyperthyroidism",
+    "Liver failure (unable to synthesise cholesterol)",
+    "Certain rare genetic conditions (abetalipoproteinaemia)",
+    "Cholesterol-lowering medications (statins, ezetimibe)"
+  ],
+  "causesOfLowSource": "MedlinePlus. Cholesterol Levels. https://medlineplus.gov/cholesterol.html",
+  "symptoms": {
+    "high": [
+      "High cholesterol itself causes no symptoms",
+      "First sign is often a cardiovascular event: heart attack or stroke",
+      "Xanthomas (fatty deposits under the skin) in familial hypercholesterolaemia",
+      "Corneal arcus (grey ring around the iris) in severe genetic cases"
+    ],
+    "low": [
+      "Very low cholesterol is uncommon and may be associated with: depression, anxiety, haemorrhagic stroke risk (in extremely low levels)"
+    ]
+  },
+  "symptomsSource": "NHLBI. Blood Cholesterol — Symptoms. https://www.nhlbi.nih.gov/health/blood-cholesterol/symptoms",
+  "citations": [
+    { "id": 1, "title": "Blood Cholesterol", "source": "National Heart, Lung, and Blood Institute (NHLBI)", "url": "https://www.nhlbi.nih.gov/health/blood-cholesterol", "year": 2023 },
+    { "id": 2, "title": "High cholesterol", "source": "NHS (National Health Service, UK)", "url": "https://www.nhs.uk/conditions/high-cholesterol/", "year": 2023 }
+  ]
+}

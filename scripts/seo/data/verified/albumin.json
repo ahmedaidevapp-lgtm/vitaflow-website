@@ -1,0 +1,46 @@
+{
+  "markerSlug": "albumin",
+  "markerName": "Albumin",
+  "alternateNames": ["serum albumin", "albumin level", "blood albumin"],
+  "whatItMeasures": "Albumin is the most abundant protein in the blood, produced exclusively by the liver; it maintains fluid balance between blood vessels and tissues, transports hormones, drugs, and fatty acids, and its level reflects both nutritional status and liver synthetic function.",
+  "whatItMeasuresSource": "MedlinePlus, National Library of Medicine. https://medlineplus.gov/lab-tests/albumin-blood-test/",
+  "referenceRanges": [
+    { "population": "Adults (≥18 years)", "min": 3.4, "max": 5.4, "unit": "g/dL", "source": "Mayo Clinic Laboratories", "sourceUrl": "https://www.mayocliniclabs.com/test-catalog/overview/8354" }
+  ],
+  "causesOfHigh": [
+    "Dehydration (most common cause — concentrated blood elevates albumin)",
+    "High-protein diet combined with dehydration",
+    "Prolonged use of a tourniquet when drawing blood (spurious elevation)"
+  ],
+  "causesOfHighSource": "MedlinePlus. Albumin Blood Test. https://medlineplus.gov/lab-tests/albumin-blood-test/",
+  "causesOfLow": [
+    "Liver disease (cirrhosis, hepatitis — reduced albumin synthesis)",
+    "Malnutrition or prolonged fasting",
+    "Nephrotic syndrome (albumin lost in urine)",
+    "Inflammatory states (albumin is a negative acute-phase reactant — it falls with severe illness)",
+    "Inflammatory bowel disease and protein-losing enteropathy",
+    "Burns (major burns cause massive albumin loss)",
+    "Heart failure",
+    "Hypothyroidism"
+  ],
+  "causesOfLowSource": "NHS. Liver blood tests. https://www.nhs.uk/conditions/liver-disease/diagnosis/",
+  "symptoms": {
+    "high": [
+      "Symptoms of dehydration: thirst, dark urine, dry mouth",
+      "High albumin alone rarely causes symptoms"
+    ],
+    "low": [
+      "Oedema — swelling of the ankles, feet, or abdomen (ascites)",
+      "Fatigue and weakness",
+      "Muscle wasting and unintentional weight loss",
+      "Poor wound healing",
+      "Increased susceptibility to infections",
+      "Brittle nails and thinning hair"
+    ]
+  },
+  "symptomsSource": "NHS. Liver disease — symptoms. https://www.nhs.uk/conditions/liver-disease/symptoms/",
+  "citations": [
+    { "id": 1, "title": "Albumin Blood Test", "source": "MedlinePlus, National Library of Medicine", "url": "https://medlineplus.gov/lab-tests/albumin-blood-test/", "year": 2023 },
+    { "id": 2, "title": "Liver disease", "source": "NHS (National Health Service, UK)", "url": "https://www.nhs.uk/conditions/liver-disease/", "year": 2023 }
+  ]
+}

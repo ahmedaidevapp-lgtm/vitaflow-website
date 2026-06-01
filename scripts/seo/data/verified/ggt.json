@@ -1,0 +1,47 @@
+{
+  "markerSlug": "ggt",
+  "markerName": "GGT (Gamma-Glutamyl Transferase)",
+  "alternateNames": ["GGT", "gamma-glutamyl transferase", "gamma-GT", "GGTP"],
+  "whatItMeasures": "GGT is an enzyme found mainly in the liver and bile ducts; it is particularly sensitive to alcohol consumption and bile duct obstruction, and is often used to help interpret an elevated alkaline phosphatase result.",
+  "whatItMeasuresSource": "MedlinePlus, National Library of Medicine. https://medlineplus.gov/lab-tests/gamma-glutamyl-transferase-ggt-test/",
+  "referenceRanges": [
+    { "population": "Adult males (≥18 years)", "min": 8, "max": 61, "unit": "U/L", "source": "Mayo Clinic Laboratories", "sourceUrl": "https://www.mayocliniclabs.com/test-catalog/overview/8367" },
+    { "population": "Adult females (≥18 years)", "min": 5, "max": 36, "unit": "U/L", "source": "Mayo Clinic Laboratories", "sourceUrl": "https://www.mayocliniclabs.com/test-catalog/overview/8367" }
+  ],
+  "causesOfHigh": [
+    "Alcohol use — GGT is one of the most sensitive markers of heavy alcohol consumption",
+    "Nonalcoholic fatty liver disease (NAFLD)",
+    "Bile duct obstruction (gallstones, cholangitis)",
+    "Viral hepatitis",
+    "Certain medications (phenytoin, carbamazepine, barbiturates, statins)",
+    "Pancreatitis",
+    "Heart failure",
+    "Hyperthyroidism",
+    "Metabolic syndrome and obesity"
+  ],
+  "causesOfHighSource": "NHS. Liver blood tests. https://www.nhs.uk/conditions/liver-disease/diagnosis/",
+  "causesOfLow": [
+    "Low GGT is not clinically significant",
+    "Hypothyroidism (can reduce GGT production)",
+    "Low GGT with elevated alkaline phosphatase suggests a bone (rather than liver) source"
+  ],
+  "causesOfLowSource": "MedlinePlus. GGT Test. https://medlineplus.gov/lab-tests/gamma-glutamyl-transferase-ggt-test/",
+  "symptoms": {
+    "high": [
+      "Often no symptoms when mildly elevated",
+      "Fatigue",
+      "Nausea",
+      "Right upper abdominal pain or discomfort",
+      "Jaundice (yellowing of skin and eyes) in bile duct disease",
+      "Dark urine and pale stools"
+    ],
+    "low": [
+      "Low GGT causes no symptoms"
+    ]
+  },
+  "symptomsSource": "NHS. Liver disease — symptoms. https://www.nhs.uk/conditions/liver-disease/symptoms/",
+  "citations": [
+    { "id": 1, "title": "Gamma-Glutamyl Transferase (GGT) Test", "source": "MedlinePlus, National Library of Medicine", "url": "https://medlineplus.gov/lab-tests/gamma-glutamyl-transferase-ggt-test/", "year": 2023 },
+    { "id": 2, "title": "Liver disease", "source": "NHS (National Health Service, UK)", "url": "https://www.nhs.uk/conditions/liver-disease/", "year": 2023 }
+  ]
+}

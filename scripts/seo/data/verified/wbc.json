@@ -1,0 +1,55 @@
+{
+  "markerSlug": "wbc",
+  "markerName": "WBC (White Blood Cell Count)",
+  "alternateNames": ["WBC", "white blood cell count", "leukocyte count", "white cell count"],
+  "whatItMeasures": "The WBC count measures the total number of white blood cells (leukocytes) in a given volume of blood; white blood cells are produced in the bone marrow and are the primary cells of the immune system, so an abnormal count can indicate infection, inflammation, immune disorders, or bone marrow problems.",
+  "whatItMeasuresSource": "MedlinePlus, National Library of Medicine. https://medlineplus.gov/lab-tests/white-blood-count-wbc/",
+  "referenceRanges": [
+    { "population": "Adults (≥18 years)", "min": 4.5, "max": 11.0, "unit": "×10³/µL", "source": "Mayo Clinic Laboratories", "sourceUrl": "https://www.mayocliniclabs.com/test-catalog/overview/9235" }
+  ],
+  "causesOfHigh": [
+    "Bacterial infection (most common cause of elevated WBC)",
+    "Viral infection (usually causes a more modest rise)",
+    "Inflammatory conditions (rheumatoid arthritis, IBD, vasculitis)",
+    "Allergic reactions",
+    "Physical or emotional stress",
+    "Smoking",
+    "Corticosteroid medications",
+    "Leukaemia (abnormal overproduction of white blood cells)",
+    "Post-splenectomy (the spleen normally removes old WBCs)",
+    "Strenuous exercise (transient increase)"
+  ],
+  "causesOfHighSource": "MedlinePlus. White Blood Count. https://medlineplus.gov/lab-tests/white-blood-count-wbc/",
+  "causesOfLow": [
+    "Viral infections (HIV, hepatitis, influenza — can suppress bone marrow)",
+    "Bone marrow disorders (aplastic anaemia, myelodysplastic syndrome)",
+    "Autoimmune conditions attacking white blood cells (lupus)",
+    "Chemotherapy and radiation therapy",
+    "Certain medications (some antibiotics, antipsychotics, antiepileptics)",
+    "Nutritional deficiencies (vitamin B12, folate, copper)",
+    "Overwhelming severe infection (sepsis can paradoxically deplete WBCs)"
+  ],
+  "causesOfLowSource": "NHLBI. Aplastic Anemia. https://www.nhlbi.nih.gov/health/aplastic-anemia",
+  "symptoms": {
+    "high": [
+      "Fever and chills (in infection)",
+      "Fatigue and weakness",
+      "Night sweats (in leukaemia or lymphoma)",
+      "Swollen lymph nodes",
+      "Unexplained weight loss",
+      "Easy bruising or bleeding (when leukaemia affects platelet production)"
+    ],
+    "low": [
+      "Increased susceptibility to infections — frequent, severe, or unusual infections",
+      "Fever without obvious cause",
+      "Mouth ulcers",
+      "Fatigue",
+      "Slow wound healing"
+    ]
+  },
+  "symptomsSource": "NHLBI. Aplastic Anemia — Symptoms. https://www.nhlbi.nih.gov/health/aplastic-anemia/symptoms",
+  "citations": [
+    { "id": 1, "title": "White Blood Count (WBC)", "source": "MedlinePlus, National Library of Medicine", "url": "https://medlineplus.gov/lab-tests/white-blood-count-wbc/", "year": 2023 },
+    { "id": 2, "title": "Aplastic Anemia", "source": "National Heart, Lung, and Blood Institute (NHLBI)", "url": "https://www.nhlbi.nih.gov/health/aplastic-anemia", "year": 2023 }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "markerSlug": "tibc",
+  "markerName": "TIBC (Total Iron-Binding Capacity)",
+  "alternateNames": ["total iron-binding capacity", "TIBC", "transferrin capacity", "serum TIBC"],
+  "whatItMeasures": "TIBC measures the maximum amount of iron the blood can carry by quantifying the total capacity of transferrin — the protein that transports iron — to bind iron; it is used alongside serum iron and ferritin to diagnose iron deficiency or iron overload.",
+  "whatItMeasuresSource": "MedlinePlus, National Library of Medicine. https://medlineplus.gov/lab-tests/iron-tests/",
+  "referenceRanges": [
+    { "population": "Adults (males and females)", "min": 250, "max": 370, "unit": "mcg/dL", "source": "Mayo Clinic Laboratories", "sourceUrl": "https://www.mayocliniclabs.com/test-catalog/overview/9282" }
+  ],
+  "causesOfHigh": [
+    "Iron deficiency anemia (the body produces more transferrin when iron is scarce)",
+    "Pregnancy (especially in the third trimester)",
+    "Oral contraceptive use",
+    "Severe blood loss"
+  ],
+  "causesOfHighSource": "MedlinePlus. Iron Tests. https://medlineplus.gov/lab-tests/iron-tests/",
+  "causesOfLow": [
+    "Iron overload or hemochromatosis (transferrin is saturated)",
+    "Chronic inflammatory diseases (anemia of chronic disease)",
+    "Liver disease (reduced transferrin production)",
+    "Malnutrition or protein deficiency",
+    "Nephrotic syndrome (transferrin lost in urine)",
+    "Hypothyroidism"
+  ],
+  "causesOfLowSource": "MedlinePlus. Iron Tests. https://medlineplus.gov/lab-tests/iron-tests/",
+  "symptoms": {
+    "high": [
+      "Symptoms of the underlying iron deficiency: fatigue, pale skin, shortness of breath",
+      "Brittle nails and hair thinning",
+      "Restless leg syndrome",
+      "Cold hands and feet"
+    ],
+    "low": [
+      "Symptoms of iron overload: joint pain, fatigue, abdominal pain",
+      "Symptoms of liver disease: jaundice, abdominal swelling",
+      "Symptoms of chronic inflammation: fatigue, pain, swelling"
+    ]
+  },
+  "symptomsSource": "NHLBI. Iron-Deficiency Anemia. https://www.nhlbi.nih.gov/health/anemia/iron-deficiency-anemia",
+  "citations": [
+    { "id": 1, "title": "Iron Tests", "source": "MedlinePlus, National Library of Medicine", "url": "https://medlineplus.gov/lab-tests/iron-tests/", "year": 2023 },
+    { "id": 2, "title": "Iron-Deficiency Anemia", "source": "National Heart, Lung, and Blood Institute (NHLBI)", "url": "https://www.nhlbi.nih.gov/health/anemia/iron-deficiency-anemia", "year": 2023 },
+    { "id": 3, "title": "Haemochromatosis", "source": "NHS (National Health Service, UK)", "url": "https://www.nhs.uk/conditions/haemochromatosis/", "year": 2023 }
+  ]
+}

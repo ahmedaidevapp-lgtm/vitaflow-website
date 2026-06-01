@@ -1,0 +1,61 @@
+{
+  "markerSlug": "hemoglobin",
+  "markerName": "Hemoglobin",
+  "alternateNames": ["Hgb", "Hb", "hemoglobin level", "blood hemoglobin"],
+  "whatItMeasures": "Hemoglobin is the iron-containing protein inside red blood cells that carries oxygen from the lungs to the rest of the body and returns carbon dioxide back to the lungs; measuring it reflects the blood's oxygen-carrying capacity.",
+  "whatItMeasuresSource": "MedlinePlus, National Library of Medicine. https://medlineplus.gov/lab-tests/hemoglobin-test/",
+  "referenceRanges": [
+    { "population": "Adult males (≥18 years)", "min": 13.5, "max": 17.5, "unit": "g/dL", "source": "Mayo Clinic Laboratories", "sourceUrl": "https://www.mayocliniclabs.com/test-catalog/overview/9265" },
+    { "population": "Adult females (≥18 years, non-pregnant)", "min": 12.0, "max": 15.5, "unit": "g/dL", "source": "Mayo Clinic Laboratories", "sourceUrl": "https://www.mayocliniclabs.com/test-catalog/overview/9265" },
+    { "population": "Pregnant women", "min": 11.0, "max": 16.5, "unit": "g/dL", "source": "WHO. Haemoglobin concentrations for the diagnosis of anaemia. 2011.", "sourceUrl": "https://www.who.int/publications/i/item/9789241501378" },
+    { "population": "Children 6–12 years", "min": 11.5, "max": 15.5, "unit": "g/dL", "source": "WHO. Haemoglobin concentrations for the diagnosis of anaemia. 2011.", "sourceUrl": "https://www.who.int/publications/i/item/9789241501378" }
+  ],
+  "causesOfHigh": [
+    "Polycythemia vera (bone marrow disorder causing excess red blood cell production)",
+    "Living at high altitude (physiological adaptation to lower oxygen levels)",
+    "Chronic obstructive pulmonary disease (COPD) and other lung diseases",
+    "Heavy smoking (carbon monoxide displaces oxygen, stimulating more red cell production)",
+    "Severe dehydration (concentrated blood falsely raises hemoglobin)",
+    "Congenital heart disease",
+    "Use of anabolic steroids or erythropoiesis-stimulating agents"
+  ],
+  "causesOfHighSource": "NHLBI. Polycythemia Vera. https://www.nhlbi.nih.gov/health/polycythemia-vera",
+  "causesOfLow": [
+    "Iron deficiency anemia (most common cause worldwide)",
+    "Vitamin B12 or folate deficiency anemia",
+    "Chronic kidney disease (reduced erythropoietin production)",
+    "Bone marrow disorders (aplastic anemia, myelodysplastic syndrome)",
+    "Chronic inflammatory diseases (rheumatoid arthritis, IBD)",
+    "Acute or chronic blood loss (surgery, heavy menstruation, GI bleeding)",
+    "Hemolytic anemias (sickle cell disease, thalassemia)",
+    "Pregnancy (dilutional effect of increased plasma volume)"
+  ],
+  "causesOfLowSource": "NHLBI. Anemia. https://www.nhlbi.nih.gov/health/anemia",
+  "symptoms": {
+    "high": [
+      "Headache and dizziness",
+      "Flushed or ruddy skin appearance",
+      "Blurred or double vision",
+      "Itching (especially after a warm shower)",
+      "Fatigue and weakness",
+      "Enlarged spleen (fullness on the left side)"
+    ],
+    "low": [
+      "Fatigue and weakness",
+      "Shortness of breath, especially during activity",
+      "Pale or yellowish skin",
+      "Rapid or irregular heartbeat",
+      "Chest pain",
+      "Cold hands and feet",
+      "Dizziness or lightheadedness",
+      "Headaches"
+    ]
+  },
+  "symptomsSource": "NHLBI. Anemia — Symptoms. https://www.nhlbi.nih.gov/health/anemia/symptoms",
+  "citations": [
+    { "id": 1, "title": "Hemoglobin Test", "source": "MedlinePlus, National Library of Medicine", "url": "https://medlineplus.gov/lab-tests/hemoglobin-test/", "year": 2023 },
+    { "id": 2, "title": "Haemoglobin Concentrations for the Diagnosis of Anaemia and Assessment of Severity", "source": "World Health Organization (WHO)", "url": "https://www.who.int/publications/i/item/9789241501378", "year": 2011 },
+    { "id": 3, "title": "Anemia", "source": "National Heart, Lung, and Blood Institute (NHLBI)", "url": "https://www.nhlbi.nih.gov/health/anemia", "year": 2023 },
+    { "id": 4, "title": "Polycythemia Vera", "source": "National Heart, Lung, and Blood Institute (NHLBI)", "url": "https://www.nhlbi.nih.gov/health/polycythemia-vera", "year": 2023 }
+  ]
+}

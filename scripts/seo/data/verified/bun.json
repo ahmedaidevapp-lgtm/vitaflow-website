@@ -1,0 +1,50 @@
+{
+  "markerSlug": "bun",
+  "markerName": "BUN (Blood Urea Nitrogen)",
+  "alternateNames": ["BUN", "blood urea nitrogen", "urea nitrogen", "serum urea nitrogen"],
+  "whatItMeasures": "BUN measures the amount of urea nitrogen in the blood; urea is a waste product formed in the liver when protein is broken down and is excreted by the kidneys, so BUN reflects both kidney filtration function and protein metabolism.",
+  "whatItMeasuresSource": "MedlinePlus, National Library of Medicine. https://medlineplus.gov/lab-tests/blood-urea-nitrogen-bun-test/",
+  "referenceRanges": [
+    { "population": "Adults (18–60 years)", "min": 7, "max": 20, "unit": "mg/dL", "source": "Mayo Clinic Laboratories", "sourceUrl": "https://www.mayocliniclabs.com/test-catalog/overview/8508" },
+    { "population": "Adults (>60 years)", "min": 8, "max": 23, "unit": "mg/dL", "source": "Mayo Clinic Laboratories", "sourceUrl": "https://www.mayocliniclabs.com/test-catalog/overview/8508" }
+  ],
+  "causesOfHigh": [
+    "Dehydration (most common cause of mildly elevated BUN — reduced kidney blood flow concentrates urea)",
+    "Chronic kidney disease",
+    "Acute kidney injury",
+    "High protein diet",
+    "Gastrointestinal bleeding (blood protein is digested and absorbed, raising BUN)",
+    "Heart failure (reduced kidney perfusion)",
+    "Certain medications (corticosteroids, tetracyclines)",
+    "Severe infection or fever (increased protein breakdown)"
+  ],
+  "causesOfHighSource": "NHS. Chronic kidney disease. https://www.nhs.uk/conditions/kidney-disease/",
+  "causesOfLow": [
+    "Low protein diet or malnutrition",
+    "Liver disease (impaired urea synthesis)",
+    "Overhydration",
+    "Pregnancy (increased plasma volume and kidney filtration)",
+    "Celiac disease (malabsorption reduces protein availability)"
+  ],
+  "causesOfLowSource": "MedlinePlus. Blood Urea Nitrogen Test. https://medlineplus.gov/lab-tests/blood-urea-nitrogen-bun-test/",
+  "symptoms": {
+    "high": [
+      "Often no symptoms when mildly elevated",
+      "Fatigue and weakness",
+      "Nausea and vomiting",
+      "Loss of appetite",
+      "Swelling in legs and ankles",
+      "Confusion or difficulty concentrating (in severe uraemia)",
+      "Decreased or altered urination"
+    ],
+    "low": [
+      "Low BUN typically causes no direct symptoms",
+      "Symptoms of malnutrition if the cause is inadequate protein intake"
+    ]
+  },
+  "symptomsSource": "NHS. Chronic kidney disease — symptoms. https://www.nhs.uk/conditions/kidney-disease/symptoms/",
+  "citations": [
+    { "id": 1, "title": "Blood Urea Nitrogen (BUN) Test", "source": "MedlinePlus, National Library of Medicine", "url": "https://medlineplus.gov/lab-tests/blood-urea-nitrogen-bun-test/", "year": 2023 },
+    { "id": 2, "title": "Chronic kidney disease", "source": "NHS (National Health Service, UK)", "url": "https://www.nhs.uk/conditions/kidney-disease/", "year": 2023 }
+  ]
+}

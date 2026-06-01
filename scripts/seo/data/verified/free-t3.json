@@ -1,0 +1,53 @@
+{
+  "markerSlug": "free-t3",
+  "markerName": "Free T3 (Free Triiodothyronine)",
+  "alternateNames": ["free T3", "FT3", "free triiodothyronine", "triiodothyronine free"],
+  "whatItMeasures": "Free T3 measures the unbound, active form of triiodothyronine — the most biologically potent thyroid hormone — in the blood; most T3 is converted from T4 in peripheral tissues, and this test helps assess thyroid function when TSH and T4 results are inconclusive.",
+  "whatItMeasuresSource": "MedlinePlus, National Library of Medicine. https://medlineplus.gov/lab-tests/t3-test/",
+  "referenceRanges": [
+    { "population": "Adults (≥18 years)", "min": 2.3, "max": 4.2, "unit": "pg/mL", "source": "Mayo Clinic Laboratories", "sourceUrl": "https://www.mayocliniclabs.com/test-catalog/overview/602869" }
+  ],
+  "causesOfHigh": [
+    "Hyperthyroidism (Graves' disease, toxic nodular goiter)",
+    "T3 thyrotoxicosis (excess T3 with normal T4)",
+    "Excess thyroid hormone medication",
+    "Thyroiditis (subacute or postpartum)",
+    "Certain medications (amiodarone in early stages)"
+  ],
+  "causesOfHighSource": "NHS. Overactive thyroid. https://www.nhs.uk/conditions/overactive-thyroid-hyperthyroidism/",
+  "causesOfLow": [
+    "Hypothyroidism (primary or secondary)",
+    "Severe non-thyroidal illness (sick euthyroid syndrome — T4-to-T3 conversion is impaired)",
+    "Starvation or severe calorie restriction",
+    "Chronic liver or kidney disease (impaired T4-to-T3 conversion)",
+    "Selenium deficiency (selenium is required for the enzyme that converts T4 to T3)"
+  ],
+  "causesOfLowSource": "NHS. Underactive thyroid. https://www.nhs.uk/conditions/underactive-thyroid-hypothyroidism/",
+  "symptoms": {
+    "high": [
+      "Rapid or irregular heartbeat",
+      "Weight loss",
+      "Heat intolerance and excessive sweating",
+      "Anxiety and nervousness",
+      "Tremor",
+      "Frequent bowel movements",
+      "Muscle weakness"
+    ],
+    "low": [
+      "Fatigue and sluggishness",
+      "Weight gain",
+      "Cold intolerance",
+      "Constipation",
+      "Brain fog and difficulty concentrating",
+      "Depression",
+      "Dry skin and hair loss",
+      "Slow reflexes"
+    ]
+  },
+  "symptomsSource": "NHS. Hypothyroidism symptoms. https://www.nhs.uk/conditions/underactive-thyroid-hypothyroidism/symptoms/",
+  "citations": [
+    { "id": 1, "title": "T3 Test", "source": "MedlinePlus, National Library of Medicine", "url": "https://medlineplus.gov/lab-tests/t3-test/", "year": 2023 },
+    { "id": 2, "title": "Underactive thyroid (hypothyroidism)", "source": "NHS (National Health Service, UK)", "url": "https://www.nhs.uk/conditions/underactive-thyroid-hypothyroidism/", "year": 2023 },
+    { "id": 3, "title": "Overactive thyroid (hyperthyroidism)", "source": "NHS (National Health Service, UK)", "url": "https://www.nhs.uk/conditions/overactive-thyroid-hyperthyroidism/", "year": 2023 }
+  ]
+}

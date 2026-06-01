@@ -1,0 +1,55 @@
+{
+  "markerSlug": "vitamin-d",
+  "markerName": "Vitamin D (25-hydroxyvitamin D)",
+  "alternateNames": ["vitamin D", "25-OH vitamin D", "25-hydroxyvitamin D", "calcidiol", "vitamin D3 level"],
+  "whatItMeasures": "The 25-hydroxyvitamin D test measures the main circulating form of vitamin D in the blood, reflecting total vitamin D status from both sun exposure and dietary intake; vitamin D is essential for calcium absorption, bone health, and immune function.",
+  "whatItMeasuresSource": "MedlinePlus, National Library of Medicine. https://medlineplus.gov/lab-tests/vitamin-d-test/",
+  "referenceRanges": [
+    { "population": "Adults — deficient", "min": null, "max": 20, "unit": "ng/mL", "source": "Endocrine Society Clinical Practice Guideline 2011", "sourceUrl": "https://academic.oup.com/jcem/article/96/7/1911/2833671" },
+    { "population": "Adults — insufficient", "min": 20, "max": 29, "unit": "ng/mL", "source": "Endocrine Society Clinical Practice Guideline 2011", "sourceUrl": "https://academic.oup.com/jcem/article/96/7/1911/2833671" },
+    { "population": "Adults — sufficient", "min": 30, "max": 100, "unit": "ng/mL", "source": "Endocrine Society Clinical Practice Guideline 2011", "sourceUrl": "https://academic.oup.com/jcem/article/96/7/1911/2833671" },
+    { "population": "Adults — potentially toxic", "min": 100, "max": null, "unit": "ng/mL", "source": "Endocrine Society Clinical Practice Guideline 2011", "sourceUrl": "https://academic.oup.com/jcem/article/96/7/1911/2833671" }
+  ],
+  "causesOfHigh": [
+    "Excessive vitamin D supplementation (most common cause of toxicity)",
+    "Granulomatous diseases (sarcoidosis, tuberculosis, histoplasmosis — these convert vitamin D to its active form without normal regulation)",
+    "Certain lymphomas",
+    "Primary hyperparathyroidism (rare)"
+  ],
+  "causesOfHighSource": "Endocrine Society. Evaluation, Treatment, and Prevention of Vitamin D Deficiency. 2011. https://academic.oup.com/jcem/article/96/7/1911/2833671",
+  "causesOfLow": [
+    "Insufficient sun exposure (key source of vitamin D)",
+    "Darker skin pigmentation (melanin reduces skin synthesis)",
+    "Older age (skin synthesis declines with age)",
+    "Obesity (vitamin D is fat-soluble and sequestered in adipose tissue)",
+    "Malabsorption disorders (celiac disease, Crohn's disease, cystic fibrosis)",
+    "Chronic kidney disease (impaired conversion to active vitamin D)",
+    "Liver disease",
+    "Vegan diet without supplementation",
+    "Certain medications (corticosteroids, antiepileptics, cholestyramine)"
+  ],
+  "causesOfLowSource": "Endocrine Society. Evaluation, Treatment, and Prevention of Vitamin D Deficiency. 2011. https://academic.oup.com/jcem/article/96/7/1911/2833671",
+  "symptoms": {
+    "high": [
+      "Nausea and vomiting",
+      "Weakness and fatigue",
+      "Frequent urination and excessive thirst",
+      "Kidney stones (from hypercalcaemia caused by excess vitamin D)",
+      "Confusion and disorientation in severe cases"
+    ],
+    "low": [
+      "Bone pain and tenderness (particularly in adults: osteomalacia)",
+      "Muscle weakness and cramps",
+      "Fatigue",
+      "Low mood and depression",
+      "Frequent infections (vitamin D supports immune function)",
+      "In severe deficiency in children: rickets (bowed legs, soft skull bones)"
+    ]
+  },
+  "symptomsSource": "NHS. Vitamin D deficiency. https://www.nhs.uk/conditions/vitamins-and-minerals/vitamin-d/",
+  "citations": [
+    { "id": 1, "title": "Vitamin D Test", "source": "MedlinePlus, National Library of Medicine", "url": "https://medlineplus.gov/lab-tests/vitamin-d-test/", "year": 2023 },
+    { "id": 2, "title": "Evaluation, Treatment, and Prevention of Vitamin D Deficiency: an Endocrine Society Clinical Practice Guideline", "source": "Endocrine Society / Journal of Clinical Endocrinology & Metabolism", "url": "https://academic.oup.com/jcem/article/96/7/1911/2833671", "year": 2011 },
+    { "id": 3, "title": "Vitamin D", "source": "NHS (National Health Service, UK)", "url": "https://www.nhs.uk/conditions/vitamins-and-minerals/vitamin-d/", "year": 2023 }
+  ]
+}

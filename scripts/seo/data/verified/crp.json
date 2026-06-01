@@ -1,0 +1,50 @@
+{
+  "markerSlug": "crp",
+  "markerName": "CRP (C-Reactive Protein)",
+  "alternateNames": ["CRP", "C-reactive protein", "high-sensitivity CRP", "hs-CRP", "hsCRP"],
+  "whatItMeasures": "CRP is a protein produced by the liver in response to inflammation; it rises rapidly within hours of tissue injury or infection, making it a sensitive but non-specific marker of acute and chronic inflammation used to detect infection, monitor inflammatory diseases, and assess cardiovascular risk.",
+  "whatItMeasuresSource": "MedlinePlus, National Library of Medicine. https://medlineplus.gov/lab-tests/c-reactive-protein-crp-test/",
+  "referenceRanges": [
+    { "population": "Standard CRP — adults (normal)", "min": null, "max": 10.0, "unit": "mg/L", "source": "Mayo Clinic Laboratories", "sourceUrl": "https://www.mayocliniclabs.com/test-catalog/overview/9731" },
+    { "population": "High-sensitivity CRP (hs-CRP) — low cardiovascular risk", "min": null, "max": 1.0, "unit": "mg/L", "source": "American Heart Association / CDC. Circulation. 2003.", "sourceUrl": "https://www.ahajournals.org/doi/10.1161/01.CIR.0000053730.47739.85" },
+    { "population": "High-sensitivity CRP — average cardiovascular risk", "min": 1.0, "max": 3.0, "unit": "mg/L", "source": "American Heart Association / CDC. Circulation. 2003.", "sourceUrl": "https://www.ahajournals.org/doi/10.1161/01.CIR.0000053730.47739.85" },
+    { "population": "High-sensitivity CRP — high cardiovascular risk", "min": 3.0, "max": null, "unit": "mg/L", "source": "American Heart Association / CDC. Circulation. 2003.", "sourceUrl": "https://www.ahajournals.org/doi/10.1161/01.CIR.0000053730.47739.85" }
+  ],
+  "causesOfHigh": [
+    "Bacterial infection (CRP rises sharply — often to >100 mg/L in severe bacterial sepsis)",
+    "Viral infection (usually causes a milder rise than bacterial infection)",
+    "Autoimmune and inflammatory diseases (rheumatoid arthritis, lupus, IBD, vasculitis)",
+    "Tissue injury (heart attack, surgery, burns, trauma)",
+    "Obesity and metabolic syndrome (chronic low-grade elevation)",
+    "Smoking",
+    "Cancer",
+    "Acute pancreatitis",
+    "Organ transplant rejection"
+  ],
+  "causesOfHighSource": "NHS. C-reactive protein (CRP) test. https://www.nhs.uk/conditions/c-reactive-protein-crp-test/",
+  "causesOfLow": [
+    "Low CRP is normal and desirable",
+    "Regular physical activity is associated with lower baseline CRP",
+    "Statins and aspirin can lower CRP",
+    "Very low CRP may be seen in liver failure (reduced production)"
+  ],
+  "causesOfLowSource": "MedlinePlus. C-Reactive Protein Test. https://medlineplus.gov/lab-tests/c-reactive-protein-crp-test/",
+  "symptoms": {
+    "high": [
+      "CRP elevation itself causes no symptoms — it is a marker of an underlying process",
+      "Fever and chills (in infection)",
+      "Fatigue and malaise",
+      "Pain, swelling, and warmth at sites of inflammation",
+      "Chest pain or joint pain depending on the underlying cause"
+    ],
+    "low": [
+      "Low CRP causes no symptoms"
+    ]
+  },
+  "symptomsSource": "NHS. C-reactive protein (CRP) test. https://www.nhs.uk/conditions/c-reactive-protein-crp-test/",
+  "citations": [
+    { "id": 1, "title": "C-Reactive Protein (CRP) Test", "source": "MedlinePlus, National Library of Medicine", "url": "https://medlineplus.gov/lab-tests/c-reactive-protein-crp-test/", "year": 2023 },
+    { "id": 2, "title": "C-reactive protein (CRP) test", "source": "NHS (National Health Service, UK)", "url": "https://www.nhs.uk/conditions/c-reactive-protein-crp-test/", "year": 2023 },
+    { "id": 3, "title": "Markers of Inflammation and Cardiovascular Disease", "source": "American Heart Association / Centers for Disease Control. Circulation.", "url": "https://www.ahajournals.org/doi/10.1161/01.CIR.0000053730.47739.85", "year": 2003 }
+  ]
+}

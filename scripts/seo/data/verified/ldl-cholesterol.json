@@ -1,0 +1,53 @@
+{
+  "markerSlug": "ldl-cholesterol",
+  "markerName": "LDL Cholesterol",
+  "alternateNames": ["LDL", "LDL-C", "low-density lipoprotein", "bad cholesterol", "LDL cholesterol level"],
+  "whatItMeasures": "LDL (low-density lipoprotein) cholesterol carries cholesterol from the liver to cells throughout the body; excess LDL can deposit in artery walls, forming plaques that narrow arteries and increase the risk of heart attack and stroke.",
+  "whatItMeasuresSource": "NHLBI. Blood Cholesterol. https://www.nhlbi.nih.gov/health/blood-cholesterol",
+  "referenceRanges": [
+    { "population": "Adults — optimal", "min": null, "max": 100, "unit": "mg/dL", "source": "NHLBI. Blood Cholesterol. 2023.", "sourceUrl": "https://www.nhlbi.nih.gov/health/blood-cholesterol" },
+    { "population": "Adults — near optimal", "min": 100, "max": 129, "unit": "mg/dL", "source": "NHLBI. Blood Cholesterol. 2023.", "sourceUrl": "https://www.nhlbi.nih.gov/health/blood-cholesterol" },
+    { "population": "Adults — borderline high", "min": 130, "max": 159, "unit": "mg/dL", "source": "NHLBI. Blood Cholesterol. 2023.", "sourceUrl": "https://www.nhlbi.nih.gov/health/blood-cholesterol" },
+    { "population": "Adults — high", "min": 160, "max": 189, "unit": "mg/dL", "source": "NHLBI. Blood Cholesterol. 2023.", "sourceUrl": "https://www.nhlbi.nih.gov/health/blood-cholesterol" },
+    { "population": "Adults — very high", "min": 190, "max": null, "unit": "mg/dL", "source": "NHLBI. Blood Cholesterol. 2023.", "sourceUrl": "https://www.nhlbi.nih.gov/health/blood-cholesterol" }
+  ],
+  "causesOfHigh": [
+    "Diet high in saturated fat and trans fat",
+    "Familial hypercholesterolaemia (genetic — most common cause of very high LDL)",
+    "Sedentary lifestyle",
+    "Obesity",
+    "Hypothyroidism",
+    "Type 2 diabetes",
+    "Chronic kidney disease",
+    "Obstructive liver disease",
+    "Certain medications (corticosteroids, progestins, anabolic steroids)"
+  ],
+  "causesOfHighSource": "NHLBI. Blood Cholesterol — Causes. https://www.nhlbi.nih.gov/health/blood-cholesterol/causes",
+  "causesOfLow": [
+    "Statin or other cholesterol-lowering medications",
+    "Malnutrition",
+    "Hyperthyroidism",
+    "Liver failure",
+    "Rare genetic conditions (hypobetalipoproteinaemia, abetalipoproteinaemia)"
+  ],
+  "causesOfLowSource": "MedlinePlus. LDL Cholesterol. https://medlineplus.gov/ldlthebadcholesterol.html",
+  "symptoms": {
+    "high": [
+      "High LDL itself causes no symptoms",
+      "Xanthomas (yellowish fat deposits in tendons or under skin) in familial hypercholesterolaemia",
+      "Xanthelasmas (yellowish plaques on the eyelids)",
+      "Corneal arcus in severe genetic forms",
+      "Heart attack or stroke may be the first clinical sign of long-term elevated LDL"
+    ],
+    "low": [
+      "Very low LDL caused by medication is generally safe and symptom-free",
+      "Extremely low LDL from rare genetic causes may be associated with fat-soluble vitamin deficiency and neurological symptoms"
+    ]
+  },
+  "symptomsSource": "NHLBI. Blood Cholesterol — Symptoms. https://www.nhlbi.nih.gov/health/blood-cholesterol/symptoms",
+  "citations": [
+    { "id": 1, "title": "Blood Cholesterol", "source": "National Heart, Lung, and Blood Institute (NHLBI)", "url": "https://www.nhlbi.nih.gov/health/blood-cholesterol", "year": 2023 },
+    { "id": 2, "title": "LDL: The Bad Cholesterol", "source": "MedlinePlus, National Library of Medicine", "url": "https://medlineplus.gov/ldlthebadcholesterol.html", "year": 2023 },
+    { "id": 3, "title": "High cholesterol", "source": "NHS (National Health Service, UK)", "url": "https://www.nhs.uk/conditions/high-cholesterol/", "year": 2023 }
+  ]
+}

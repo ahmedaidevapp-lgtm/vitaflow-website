@@ -1,0 +1,50 @@
+{
+  "markerSlug": "lymphocytes",
+  "markerName": "Lymphocytes",
+  "alternateNames": ["lymphocytes", "lymphocyte count", "absolute lymphocyte count", "ALC"],
+  "whatItMeasures": "Lymphocytes are white blood cells that coordinate the adaptive immune response; they include B cells (which make antibodies), T cells (which attack infected or cancerous cells), and NK cells, and the lymphocyte count reflects immune system activity and health.",
+  "whatItMeasuresSource": "MedlinePlus, National Library of Medicine. https://medlineplus.gov/lab-tests/differential-blood-count/",
+  "referenceRanges": [
+    { "population": "Adults (≥18 years) — absolute count", "min": 1.0, "max": 4.8, "unit": "×10³/µL", "source": "Mayo Clinic Laboratories", "sourceUrl": "https://www.mayocliniclabs.com/test-catalog/overview/9234" },
+    { "population": "Adults — percentage of WBC", "min": 20, "max": 40, "unit": "%", "source": "Mayo Clinic Laboratories", "sourceUrl": "https://www.mayocliniclabs.com/test-catalog/overview/9234" }
+  ],
+  "causesOfHigh": [
+    "Viral infections (EBV/mononucleosis, CMV, hepatitis, pertussis)",
+    "Chronic lymphocytic leukaemia (CLL) — most common cause of very high lymphocytes in adults over 50",
+    "Other lymphomas and lymphoproliferative disorders",
+    "Autoimmune diseases (multiple sclerosis, Graves' disease)",
+    "Stress response (adrenaline release)",
+    "After splenectomy"
+  ],
+  "causesOfHighSource": "MedlinePlus. Differential Blood Count. https://medlineplus.gov/lab-tests/differential-blood-count/",
+  "causesOfLow": [
+    "HIV/AIDS (CD4 T-cell depletion is the hallmark)",
+    "Chemotherapy and radiation",
+    "High-dose corticosteroid use",
+    "Autoimmune conditions (lupus, rheumatoid arthritis)",
+    "Severe acute infections (sepsis)",
+    "Bone marrow failure",
+    "Severe malnutrition",
+    "Congenital immunodeficiency syndromes"
+  ],
+  "causesOfLowSource": "MedlinePlus. Differential Blood Count. https://medlineplus.gov/lab-tests/differential-blood-count/",
+  "symptoms": {
+    "high": [
+      "Often no symptoms at mildly elevated levels",
+      "Swollen lymph nodes",
+      "Fatigue",
+      "Night sweats and fever (in lymphoma)",
+      "Symptoms of the underlying viral infection: sore throat, rash, fatigue"
+    ],
+    "low": [
+      "Frequent infections, especially viral and fungal",
+      "Slow recovery from illness",
+      "Fatigue",
+      "Symptoms of the underlying cause (e.g., weight loss in HIV or malignancy)"
+    ]
+  },
+  "symptomsSource": "MedlinePlus. Differential Blood Count. https://medlineplus.gov/lab-tests/differential-blood-count/",
+  "citations": [
+    { "id": 1, "title": "Differential Blood Count", "source": "MedlinePlus, National Library of Medicine", "url": "https://medlineplus.gov/lab-tests/differential-blood-count/", "year": 2023 }
+  ]
+}

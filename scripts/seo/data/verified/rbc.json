@@ -1,0 +1,39 @@
+{
+  "markerSlug": "rbc",
+  "markerName": "RBC (Red Blood Cell Count)",
+  "alternateNames": ["RBC", "red blood cell count", "erythrocyte count", "red cell count"],
+  "whatItMeasures": "The RBC count measures the number of red blood cells (erythrocytes) in a given volume of blood; red blood cells carry oxygen via haemoglobin, and an abnormal count indicates anaemia or polycythaemia.",
+  "whatItMeasuresSource": "MedlinePlus, National Library of Medicine. https://medlineplus.gov/lab-tests/red-blood-cell-rbc-count/",
+  "referenceRanges": [
+    { "population": "Adult males (≥18 years)", "min": 4.5, "max": 5.5, "unit": "×10⁶/µL", "source": "Mayo Clinic Laboratories", "sourceUrl": "https://www.mayocliniclabs.com/test-catalog/overview/9260" },
+    { "population": "Adult females (≥18 years)", "min": 4.0, "max": 5.0, "unit": "×10⁶/µL", "source": "Mayo Clinic Laboratories", "sourceUrl": "https://www.mayocliniclabs.com/test-catalog/overview/9260" }
+  ],
+  "causesOfHigh": [
+    "Polycythaemia vera",
+    "Living at high altitude",
+    "Dehydration",
+    "Chronic lung disease (COPD)",
+    "Heavy smoking",
+    "Congenital heart disease"
+  ],
+  "causesOfHighSource": "NHLBI. Polycythemia Vera. https://www.nhlbi.nih.gov/health/polycythemia-vera",
+  "causesOfLow": [
+    "Iron deficiency anaemia",
+    "Vitamin B12 or folate deficiency",
+    "Bone marrow failure or aplastic anaemia",
+    "Chronic kidney disease (low erythropoietin)",
+    "Haemolytic anaemias (sickle cell, thalassemia)",
+    "Acute or chronic blood loss",
+    "Chronic inflammatory disease"
+  ],
+  "causesOfLowSource": "NHLBI. Anemia. https://www.nhlbi.nih.gov/health/anemia",
+  "symptoms": {
+    "high": ["Headache", "Dizziness", "Flushed skin", "Fatigue", "Blurred vision", "Increased clotting risk"],
+    "low": ["Fatigue and weakness", "Pale skin", "Shortness of breath", "Rapid heartbeat", "Dizziness", "Cold extremities", "Headaches"]
+  },
+  "symptomsSource": "NHLBI. Anemia — Symptoms. https://www.nhlbi.nih.gov/health/anemia/symptoms",
+  "citations": [
+    { "id": 1, "title": "Red Blood Cell (RBC) Count", "source": "MedlinePlus, National Library of Medicine", "url": "https://medlineplus.gov/lab-tests/red-blood-cell-rbc-count/", "year": 2023 },
+    { "id": 2, "title": "Anemia", "source": "National Heart, Lung, and Blood Institute (NHLBI)", "url": "https://www.nhlbi.nih.gov/health/anemia", "year": 2023 }
+  ]
+}

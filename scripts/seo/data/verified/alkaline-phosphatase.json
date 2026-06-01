@@ -1,0 +1,49 @@
+{
+  "markerSlug": "alkaline-phosphatase",
+  "markerName": "Alkaline Phosphatase (ALP)",
+  "alternateNames": ["ALP", "alkaline phosphatase", "alk phos", "serum alkaline phosphatase"],
+  "whatItMeasures": "Alkaline phosphatase is an enzyme present in the liver, bones, kidneys, and intestines; elevated levels can indicate liver disease, bile duct obstruction, or bone disorders, and GGT is often ordered alongside it to help identify whether an elevated ALP originates from the liver or bone.",
+  "whatItMeasuresSource": "MedlinePlus, National Library of Medicine. https://medlineplus.gov/lab-tests/alkaline-phosphatase-alp-test/",
+  "referenceRanges": [
+    { "population": "Adults (18–50 years)", "min": 44, "max": 147, "unit": "U/L", "source": "Mayo Clinic Laboratories", "sourceUrl": "https://www.mayocliniclabs.com/test-catalog/overview/8363" },
+    { "population": "Adults (>50 years)", "min": 44, "max": 185, "unit": "U/L", "source": "Mayo Clinic Laboratories", "sourceUrl": "https://www.mayocliniclabs.com/test-catalog/overview/8363" },
+    { "population": "Children and adolescents (growing bone raises ALP)", "min": 54, "max": 369, "unit": "U/L", "source": "Mayo Clinic Laboratories — note: ranges vary significantly by age", "sourceUrl": "https://www.mayocliniclabs.com/test-catalog/overview/8363" }
+  ],
+  "causesOfHigh": [
+    "Bile duct obstruction (gallstones, cholangitis, primary biliary cholangitis)",
+    "Liver disease (hepatitis, cirrhosis, NAFLD)",
+    "Bone disorders with increased bone turnover: Paget's disease of bone, bone metastases, healing fractures",
+    "Hyperparathyroidism (elevated PTH stimulates bone turnover)",
+    "Vitamin D deficiency (can elevate ALP through increased bone turnover)",
+    "Pregnancy (placenta produces ALP, especially in the third trimester — this is normal)",
+    "Certain medications (phenytoin, allopurinol)"
+  ],
+  "causesOfHighSource": "NHS. Liver blood tests. https://www.nhs.uk/conditions/liver-disease/diagnosis/",
+  "causesOfLow": [
+    "Hypothyroidism",
+    "Pernicious anemia",
+    "Zinc deficiency",
+    "Hypophosphatasia (rare inherited condition causing very low ALP)"
+  ],
+  "causesOfLowSource": "MedlinePlus. ALP Test. https://medlineplus.gov/lab-tests/alkaline-phosphatase-alp-test/",
+  "symptoms": {
+    "high": [
+      "Often asymptomatic when mildly elevated",
+      "Jaundice and itchy skin (in bile duct obstruction)",
+      "Right upper abdominal pain",
+      "Bone pain or tenderness",
+      "Fatigue",
+      "Dark urine and pale stools"
+    ],
+    "low": [
+      "Bone pain and frequent fractures (in hypophosphatasia)",
+      "Tooth loss at a young age",
+      "Fatigue (if associated with hypothyroidism)"
+    ]
+  },
+  "symptomsSource": "NHS. Liver disease — symptoms. https://www.nhs.uk/conditions/liver-disease/symptoms/",
+  "citations": [
+    { "id": 1, "title": "Alkaline Phosphatase (ALP) Test", "source": "MedlinePlus, National Library of Medicine", "url": "https://medlineplus.gov/lab-tests/alkaline-phosphatase-alp-test/", "year": 2023 },
+    { "id": 2, "title": "Liver disease", "source": "NHS (National Health Service, UK)", "url": "https://www.nhs.uk/conditions/liver-disease/", "year": 2023 }
+  ]
+}
