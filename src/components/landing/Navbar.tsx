@@ -15,6 +15,7 @@ const Navbar = () => {
         <div className="hidden md:flex items-center gap-8 text-sm font-medium text-slate2">
           <a href="/#features" className="hover:text-navy transition-smooth">Features</a>
           <a href="/#how" className="hover:text-navy transition-smooth">How it works</a>
+          <a href="/biomarkers" className="hover:text-navy transition-smooth">Lab Tests</a>
           <Link to="/privacy" className="hover:text-navy transition-smooth">Privacy</Link>
         </div>
         <div className="flex items-center">

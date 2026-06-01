@@ -24,6 +24,7 @@ const Footer = () => {
           © {new Date().getFullYear()} VitaFlow. Educational insights for personal wellness.
         </p>
         <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-sm font-medium text-slate3">
+          <a href="/biomarkers" className="hover:text-navy transition-smooth">Lab Tests</a>
           <Link to="/privacy" className="hover:text-navy transition-smooth">Privacy</Link>
           <Link to="/privacy/fr" className="hover:text-navy transition-smooth">Confidentialité</Link>
           <Link to="/terms" className="hover:text-navy transition-smooth">Terms</Link>

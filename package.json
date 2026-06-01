@@ -16,7 +16,8 @@
     "seo:check:all": "npx tsx scripts/seo/quality-gate.ts --all",
     "seo:render": "npx tsx scripts/seo/render.ts",
     "seo:approve": "npx tsx scripts/seo/approve.ts",
-    "seo:list": "npx tsx scripts/seo/approve.ts --list"
+    "seo:list": "npx tsx scripts/seo/approve.ts --list",
+    "seo:index": "npx tsx scripts/seo/render-index.ts"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
