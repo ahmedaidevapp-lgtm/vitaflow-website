@@ -1,0 +1,64 @@
+# VitaFlow
+
+> VitaFlow is a blood test tracking app that turns lab reports into plain-language insights and tracks biomarker trends over time.
+
+VitaFlow helps individuals understand their blood test results through clear, educational explanations. It is available on iOS and is designed for personal wellness — not medical diagnosis. Users can upload lab reports, track biomarker trends across visits, and receive AI-powered plain-language summaries.
+
+## Main pages
+
+- [Home](https://vitaflow-app.com/): Landing page with product overview, features, and App Store download.
+- [Privacy Policy](https://vitaflow-app.com/privacy): How VitaFlow collects, stores, and protects user data.
+- [Terms of Service](https://vitaflow-app.com/terms): Terms governing use of the VitaFlow app and website.
+- [Lab Test Library](https://vitaflow-app.com/biomarkers): Educational reference pages for all supported blood biomarkers.
+
+## Biomarker reference pages
+
+Each page explains what the biomarker measures, its normal reference range, what high or low values may indicate, and how it fits into overall health monitoring.
+
+- [Albumin](https://vitaflow-app.com/biomarkers/albumin)
+- [Alkaline Phosphatase (ALP)](https://vitaflow-app.com/biomarkers/alkaline-phosphatase)
+- [ALT (Alanine Aminotransferase)](https://vitaflow-app.com/biomarkers/alt)
+- [AST (Aspartate Aminotransferase)](https://vitaflow-app.com/biomarkers/ast)
+- [Bilirubin (Total)](https://vitaflow-app.com/biomarkers/bilirubin-total)
+- [BUN (Blood Urea Nitrogen)](https://vitaflow-app.com/biomarkers/bun)
+- [Calcium](https://vitaflow-app.com/biomarkers/calcium)
+- [Cortisol](https://vitaflow-app.com/biomarkers/cortisol)
+- [Creatinine](https://vitaflow-app.com/biomarkers/creatinine)
+- [CRP (C-Reactive Protein)](https://vitaflow-app.com/biomarkers/crp)
+- [DHEA-S](https://vitaflow-app.com/biomarkers/dhea-s)
+- [eGFR (Estimated Glomerular Filtration Rate)](https://vitaflow-app.com/biomarkers/egfr)
+- [ESR (Erythrocyte Sedimentation Rate)](https://vitaflow-app.com/biomarkers/esr)
+- [Estradiol](https://vitaflow-app.com/biomarkers/estradiol)
+- [Ferritin](https://vitaflow-app.com/biomarkers/ferritin)
+- [Folate](https://vitaflow-app.com/biomarkers/folate)
+- [Free T3](https://vitaflow-app.com/biomarkers/free-t3)
+- [Free T4](https://vitaflow-app.com/biomarkers/free-t4)
+- [GGT (Gamma-Glutamyl Transferase)](https://vitaflow-app.com/biomarkers/ggt)
+- [Glucose](https://vitaflow-app.com/biomarkers/glucose)
+- [HbA1c](https://vitaflow-app.com/biomarkers/hba1c)
+- [HDL Cholesterol](https://vitaflow-app.com/biomarkers/hdl-cholesterol)
+- [Hematocrit](https://vitaflow-app.com/biomarkers/hematocrit)
+- [Hemoglobin](https://vitaflow-app.com/biomarkers/hemoglobin)
+- [Homocysteine](https://vitaflow-app.com/biomarkers/homocysteine)
+- [Insulin](https://vitaflow-app.com/biomarkers/insulin)
+- [LDL Cholesterol](https://vitaflow-app.com/biomarkers/ldl-cholesterol)
+- [Lymphocytes](https://vitaflow-app.com/biomarkers/lymphocytes)
+- [Magnesium](https://vitaflow-app.com/biomarkers/magnesium)
+- [MCV (Mean Corpuscular Volume)](https://vitaflow-app.com/biomarkers/mcv)
+- [Neutrophils](https://vitaflow-app.com/biomarkers/neutrophils)
+- [Platelets](https://vitaflow-app.com/biomarkers/platelets)
+- [RBC (Red Blood Cell Count)](https://vitaflow-app.com/biomarkers/rbc)
+- [Serum Iron](https://vitaflow-app.com/biomarkers/serum-iron)
+- [Testosterone](https://vitaflow-app.com/biomarkers/testosterone)
+- [TIBC (Total Iron Binding Capacity)](https://vitaflow-app.com/biomarkers/tibc)
+- [Total Cholesterol](https://vitaflow-app.com/biomarkers/total-cholesterol)
+- [Triglycerides](https://vitaflow-app.com/biomarkers/triglycerides)
+- [TSH (Thyroid-Stimulating Hormone)](https://vitaflow-app.com/biomarkers/tsh)
+- [Uric Acid](https://vitaflow-app.com/biomarkers/uric-acid)
+- [Vitamin B12](https://vitaflow-app.com/biomarkers/vitamin-b12)
+- [Vitamin D](https://vitaflow-app.com/biomarkers/vitamin-d)
+- [WBC (White Blood Cell Count)](https://vitaflow-app.com/biomarkers/wbc)
+
+## About
+
+VitaFlow is built for personal wellness and education. It does not provide medical diagnosis or treatment recommendations. Users should consult a qualified healthcare professional for medical decisions.

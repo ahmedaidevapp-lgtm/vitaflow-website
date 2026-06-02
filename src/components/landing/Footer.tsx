@@ -14,11 +14,16 @@ const Footer = () => {
   return (
     <footer className="border-t border-border bg-background">
       <div className="container py-10 flex flex-col md:flex-row items-center justify-between gap-4">
-        <div className="flex items-center gap-2 font-bold text-navy">
-          <span className="grid place-items-center w-7 h-7 rounded-lg bg-gradient-brand">
-            <Activity className="w-3.5 h-3.5 text-primary-foreground" strokeWidth={2.5} />
-          </span>
-          VitaFlow
+        <div className="flex flex-col gap-1">
+          <div className="flex items-center gap-2 font-bold text-navy">
+            <span className="grid place-items-center w-7 h-7 rounded-lg bg-gradient-brand">
+              <Activity className="w-3.5 h-3.5 text-primary-foreground" strokeWidth={2.5} />
+            </span>
+            VitaFlow
+          </div>
+          <p className="text-xs text-slate3 font-normal max-w-[220px]">
+            A blood test tracking app that turns lab reports into plain-language insights and tracks biomarker trends over time.
+          </p>
         </div>
         <p className="text-sm text-slate3 font-medium">
           © {new Date().getFullYear()} VitaFlow. Educational insights for personal wellness.
