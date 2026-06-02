@@ -66,7 +66,7 @@ const Hero = () => {
               Understand your health better, and set your improvement plan in one place.
             </h1>
             <p className="mt-6 text-lg md:text-xl text-slate3 max-w-2xl leading-relaxed font-normal">
-              VitaFlow transforms complex lab reports into clear, educational insights so you can
+              VitaFlow, the blood test tracking app, transforms complex lab reports into clear, educational insights so you can
               track trends, understand what changed, and take smarter next steps for your wellness.
             </p>
             <div className="mt-9">
