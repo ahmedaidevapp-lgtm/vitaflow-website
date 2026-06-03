@@ -16,7 +16,7 @@ const Footer = () => {
         <div className="flex flex-col gap-1">
           <div className="flex items-center gap-2 font-bold text-white">
             <img src="/AppStore-1024.png" alt="Serumo logo" className="w-7 h-7 rounded-lg shadow-soft" />
-            <span>Serum</span><span className="text-emerald-500">o</span>
+            <span><span>Serum</span><span className="text-emerald-500">o</span></span>
           </div>
           <p className="text-xs text-slate3 font-normal max-w-[220px]">
             A blood test tracking app that turns lab reports into plain-language insights and tracks biomarker trends over time.

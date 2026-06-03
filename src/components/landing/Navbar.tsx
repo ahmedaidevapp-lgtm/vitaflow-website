@@ -7,7 +7,7 @@ const Navbar = () => {
       <nav className="container flex items-center justify-between h-16">
         <Link to="/" className="flex items-center gap-2 font-bold text-lg tracking-tight text-navy">
           <img src="/AppStore-1024.png" alt="Serumo logo" className="w-8 h-8 rounded-xl shadow-soft" />
-          <span>Serum</span><span className="text-emerald-500">o</span>
+          <span><span>Serum</span><span className="text-emerald-500">o</span></span>
         </Link>
         <div className="hidden md:flex items-center gap-8 text-sm font-medium text-slate2">
           <a href="/#features" className="hover:text-navy transition-smooth">Features</a>
