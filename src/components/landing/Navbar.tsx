@@ -1,16 +1,13 @@
 import AppStoreBadge from "@/components/landing/AppStoreBadge";
-import { Droplet } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
     <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-xl bg-background/70 border-b border-border/60">
       <nav className="container flex items-center justify-between h-16">
-        <Link to="/" className="flex items-center gap-2 font-bold text-lg tracking-tight text-navy">
-          <span className="grid place-items-center w-8 h-8 rounded-xl bg-gradient-brand shadow-soft">
-            <Droplet className="w-4 h-4 text-primary-foreground" strokeWidth={2.5} />
-          </span>
-          Serumo
+        <Link to="/" className="flex items-center gap-2 font-bold text-lg tracking-tight text-white">
+          <img src="/AppStore-1024.png" alt="Serumo logo" className="w-8 h-8 rounded-xl shadow-soft" />
+          <span>Serum</span><span className="text-emerald-500">o</span>
         </Link>
         <div className="hidden md:flex items-center gap-8 text-sm font-medium text-slate2">
           <a href="/#features" className="hover:text-navy transition-smooth">Features</a>

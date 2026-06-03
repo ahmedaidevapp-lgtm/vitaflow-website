@@ -88,6 +88,12 @@ function buildMedicalWebPageSchema(marker: MarkerEntry, verified: VerifiedData, 
       '@type': 'Organization',
       name: SITE_NAME,
       url: SITE_DOMAIN,
+      logo: {
+        '@type': 'ImageObject',
+        url: `${SITE_DOMAIN}/AppStore-1024.png`,
+        width: 1024,
+        height: 1024,
+      },
     },
     dateModified: new Date().toISOString().split('T')[0],
     inLanguage: 'en-US',
@@ -222,8 +228,14 @@ function buildHtml(
   <meta property="og:url" content="${esc(canonicalUrl)}">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="${esc(SITE_NAME)}">
+  <meta property="og:image" content="${SITE_DOMAIN}/AppStore-1024.png">
+  <meta property="og:image:width" content="1024">
+  <meta property="og:image:height" content="1024">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:image" content="${SITE_DOMAIN}/AppStore-1024.png">
   <meta name="robots" content="index, follow">
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" href="/AppStore-1024.png">
+  <link rel="apple-touch-icon" href="/AppStore-1024.png">
   <script type="application/ld+json">${JSON.stringify(medicalSchema, null, 2)}</script>
   <script type="application/ld+json">${JSON.stringify(faqSchema, null, 2)}</script>
   <style>
@@ -562,7 +574,7 @@ function buildHtml(
   <!-- Navigation -->
   <nav class="nav">
     <a href="${esc(SITE_DOMAIN)}" class="nav-logo">
-      <img src="/favicon.svg" alt="Serumo logo"><span class="nav-wordmark">Serumo</span>
+      <img src="/AppStore-1024.png" alt="Serumo logo"><span class="nav-wordmark">Serum<span>o</span></span>
     </a>
     <div class="nav-links">
       <a href="${esc(SITE_DOMAIN)}/biomarkers">Lab Tests</a>

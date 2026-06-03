@@ -84,7 +84,7 @@ function buildIndexHtml(published: MarkerEntry[]): string {
     name: pageTitle,
     description: metaDesc,
     url: `${SITE_DOMAIN}/biomarkers`,
-    publisher: { '@type': 'Organization', name: SITE_NAME, url: SITE_DOMAIN },
+    publisher: { '@type': 'Organization', name: SITE_NAME, url: SITE_DOMAIN, logo: { '@type': 'ImageObject', url: `${SITE_DOMAIN}/AppStore-1024.png`, width: 1024, height: 1024 } },
   }, null, 2);
 
   return `<!DOCTYPE html>
@@ -99,8 +99,14 @@ function buildIndexHtml(published: MarkerEntry[]): string {
   <meta property="og:description" content="${esc(metaDesc)}">
   <meta property="og:url" content="${SITE_DOMAIN}/biomarkers">
   <meta property="og:type" content="website">
+  <meta property="og:image" content="${SITE_DOMAIN}/AppStore-1024.png">
+  <meta property="og:image:width" content="1024">
+  <meta property="og:image:height" content="1024">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:image" content="${SITE_DOMAIN}/AppStore-1024.png">
   <meta name="robots" content="index, follow">
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" href="/AppStore-1024.png">
+  <link rel="apple-touch-icon" href="/AppStore-1024.png">
   <script type="application/ld+json">${schema}</script>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -146,7 +152,7 @@ function buildIndexHtml(published: MarkerEntry[]): string {
 
   <nav class="nav">
     <a href="${SITE_DOMAIN}" class="nav-logo">
-      <img src="/favicon.svg" alt="Serumo logo"><span class="nav-wordmark">Serumo</span>
+      <img src="/AppStore-1024.png" alt="Serumo logo"><span class="nav-wordmark">Serum<span>o</span></span>
     </a>
     <div class="nav-links">
       <a href="${SITE_DOMAIN}">Home</a>

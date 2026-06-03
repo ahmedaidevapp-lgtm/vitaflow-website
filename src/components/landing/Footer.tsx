@@ -1,4 +1,3 @@
-import { Droplet } from "lucide-react";
 import { Link } from "react-router-dom";
 import {
   Dialog,
@@ -15,11 +14,9 @@ const Footer = () => {
     <footer className="border-t border-border bg-background">
       <div className="container py-10 flex flex-col md:flex-row items-center justify-between gap-4">
         <div className="flex flex-col gap-1">
-          <div className="flex items-center gap-2 font-bold text-navy">
-            <span className="grid place-items-center w-7 h-7 rounded-lg bg-gradient-brand">
-              <Droplet className="w-3.5 h-3.5 text-primary-foreground" strokeWidth={2.5} />
-            </span>
-            Serumo
+          <div className="flex items-center gap-2 font-bold text-white">
+            <img src="/AppStore-1024.png" alt="Serumo logo" className="w-7 h-7 rounded-lg shadow-soft" />
+            <span>Serum</span><span className="text-emerald-500">o</span>
           </div>
           <p className="text-xs text-slate3 font-normal max-w-[220px]">
             A blood test tracking app that turns lab reports into plain-language insights and tracks biomarker trends over time.
