@@ -12,7 +12,7 @@ const Privacy = () => {
             ← Back to home
           </Link>
         </p>
-        <h1 className="text-3xl md:text-4xl font-extrabold text-navy tracking-tight">VitaFlow - Privacy Policy</h1>
+        <h1 className="text-3xl md:text-4xl font-extrabold text-navy tracking-tight">Serumo - Privacy Policy</h1>
         <p className="mt-4 text-sm text-slate3">
           Effective date: 15 April 2026
           <br />
@@ -37,12 +37,12 @@ const Privacy = () => {
               <strong>Support contact:</strong> ahmed@amantechdev.com
             </p>
             <p className="mt-4">
-              VitaFlow (&quot;we,&quot; &quot;us,&quot; or &quot;the Service&quot;) is a mobile application that helps users organize,
+              Serumo (&quot;we,&quot; &quot;us,&quot; or &quot;the Service&quot;) is a mobile application that helps users organize,
               visualize, and understand laboratory test results over time for personal wellness and educational purposes
               only.
             </p>
             <p className="mt-4">
-              VitaFlow is not a medical device and does not provide medical advice, diagnosis, or treatment. It is not
+              Serumo is not a medical device and does not provide medical advice, diagnosis, or treatment. It is not
               represented as certified under HIPAA, GDPR conformance, or similar frameworks unless separately and
               expressly documented.
             </p>
@@ -57,7 +57,7 @@ const Privacy = () => {
             <p>This Privacy Policy applies to:</p>
             <ul>
               <li>
-                The VitaFlow mobile app on iOS and Android (bundle/package identifier:{" "}
+                The Serumo mobile app on iOS and Android (bundle/package identifier:{" "}
                 <code>com.vitalcheck.app</code>)
               </li>
               <li>
@@ -145,7 +145,7 @@ const Privacy = () => {
             </p>
             <p className="mt-4">
               We receive the identity token and limited account information needed to authenticate you and create or
-              access your VitaFlow account. We do not receive your Google or Apple account password.
+              access your Serumo account. We do not receive your Google or Apple account password.
             </p>
           </section>
 
@@ -197,7 +197,7 @@ const Privacy = () => {
 
             <h3>6.2 AI processing providers (OpenAI and/or Microsoft Azure OpenAI)</h3>
             <p>
-              Depending on configuration, VitaFlow uses <strong>OpenAI&apos;s API</strong> and/or{" "}
+              Depending on configuration, Serumo uses <strong>OpenAI&apos;s API</strong> and/or{" "}
               <strong>Microsoft Azure OpenAI Service</strong> (hosted large language models) for the same categories of processing.
               References below include both providers&apos; commercial terms where applicable.
             </p>
@@ -234,7 +234,7 @@ const Privacy = () => {
               products), enable <code>store: false</code> where the API supports it, and minimize what is sent per request.
             </p>
             <p className="mt-4">
-              Before any personal or health-related content is sent to these providers, VitaFlow presents an in-app disclosure and requests
+              Before any personal or health-related content is sent to these providers, Serumo presents an in-app disclosure and requests
               your permission. <strong>That choice is stored per health profile</strong> (and recorded on our servers for auditability when the app is
               online): if you use several profiles, you may accept or decline separately for each. If you decline for the active profile,
               AI-dependent features for that profile will be unavailable, but other non-AI app functions remain accessible.
@@ -280,7 +280,7 @@ const Privacy = () => {
 
             <h3>6.4 Expo / React Native Ecosystem</h3>
             <p>
-              VitaFlow is built with Expo/React Native and may rely on platform services from Apple/Google and related
+              Serumo is built with Expo/React Native and may rely on platform services from Apple/Google and related
               SDK infrastructure.
             </p>
             <p className="mt-4">
@@ -368,7 +368,7 @@ const Privacy = () => {
               <li>Lodge a complaint with a supervisory authority</li>
             </ul>
             <p className="mt-4">
-              VitaFlow supports <strong>deleting individual health profiles</strong>, <strong>account deletion</strong>, and data export through authenticated features and/or by contacting support. If you track others under your account, requests may require clarifying whether they concern one profile or the whole account.
+              Serumo supports <strong>deleting individual health profiles</strong>, <strong>account deletion</strong>, and data export through authenticated features and/or by contacting support. If you track others under your account, requests may require clarifying whether they concern one profile or the whole account.
             </p>
             <p className="mt-4">
               For help, contact:{" "}
@@ -378,7 +378,7 @@ const Privacy = () => {
 
           <section>
             <h2>10.1 In-App Consent for Third-Party AI Processing</h2>
-            <p>When a feature requires third-party AI processing, VitaFlow shows an in-app notice that:</p>
+            <p>When a feature requires third-party AI processing, Serumo shows an in-app notice that:</p>
             <ul>
               <li>
                 Explains what categories of data may be sent (report text/images, marker context, optional profile personalization, and — for
@@ -397,7 +397,7 @@ const Privacy = () => {
           <section>
             <h2>11. Children&apos;s Privacy</h2>
             <p>
-              VitaFlow is not directed to children under 16 (or the minimum age required by your jurisdiction). If we
+              Serumo is not directed to children under 16 (or the minimum age required by your jurisdiction). If we
               learn we collected personal data from a child in violation of law, we will take steps to delete it.
             </p>
           </section>
@@ -405,7 +405,7 @@ const Privacy = () => {
           <section>
             <h2>12. Automated Processing</h2>
             <p>
-              VitaFlow uses automated processing (including machine-learning-based parsing, optional translation, and narrative helpers described in Section 6.2) to structure uploaded lab information and generate educational summaries. This does not constitute medical diagnosis or treatment.
+              Serumo uses automated processing (including machine-learning-based parsing, optional translation, and narrative helpers described in Section 6.2) to structure uploaded lab information and generate educational summaries. This does not constitute medical diagnosis or treatment.
             </p>
             <p className="mt-4">
               We do not use solely automated decision-making that produces legal or similarly significant effects in the
@@ -434,7 +434,7 @@ const Privacy = () => {
               the CNDP (Commission Nationale de controle de la protection des Donnees a caractere Personnel).
             </p>
             <p className="mt-4">
-              Because VitaFlow may process laboratory and health-related information, this data is treated as sensitive
+              Because Serumo may process laboratory and health-related information, this data is treated as sensitive
               personal data and is processed only for the purposes described in this Policy and to provide the Service
               requested by the user.
             </p>

@@ -70,7 +70,7 @@ function loadVerifiedData(slug: string): VerifiedData {
 }
 
 function buildSystemPrompt(verified: VerifiedData): string {
-  return `You are a medical content writer producing patient-facing educational content for VitaFlow, a lab results tracking app. This content is classified as YMYL (Your Money or Your Life) health content and must meet Google's E-E-A-T standards.
+  return `You are a medical content writer producing patient-facing educational content for Serumo, a lab results tracking app. This content is classified as YMYL (Your Money or Your Life) health content and must meet Google's E-E-A-T standards.
 
 ABSOLUTE CONSTRAINTS — FOLLOW EVERY ONE WITHOUT EXCEPTION:
 

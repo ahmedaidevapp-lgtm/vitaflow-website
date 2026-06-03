@@ -16,9 +16,9 @@ const PROJECT_ROOT = join(__dirname, '..', '..');
 const PUBLIC_BIOMARKERS = join(PROJECT_ROOT, 'public', 'biomarkers');
 const DATA_DIR = join(__dirname, 'data');
 
-const SITE_DOMAIN = 'https://vitaflow-app.com';
+const SITE_DOMAIN = 'https://getserumo.com';
 const APP_STORE_URL = 'https://apps.apple.com/us/app/vitaflow-health/id6762191392#information';
-const SITE_NAME = 'VitaFlow';
+const SITE_NAME = 'Serumo';
 
 const COLORS = {
   navy: '#0F172A',
@@ -146,7 +146,7 @@ function buildIndexHtml(published: MarkerEntry[]): string {
 
   <nav class="nav">
     <a href="${SITE_DOMAIN}" class="nav-logo">
-      <img src="/favicon.svg" alt="VitaFlow logo"><span class="nav-wordmark">Vita<span>Flow</span></span>
+      <img src="/favicon.svg" alt="Serumo logo"><span class="nav-wordmark">Serumo</span>
     </a>
     <div class="nav-links">
       <a href="${SITE_DOMAIN}">Home</a>

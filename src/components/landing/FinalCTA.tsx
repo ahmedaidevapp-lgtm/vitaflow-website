@@ -13,7 +13,7 @@ const FinalCTA = () => {
               Ready to understand your labs with confidence?
             </h2>
             <p className="mt-5 text-lg text-primary-foreground/90 font-normal">
-              VitaFlow is a blood test tracking app that turns lab reports into plain-language insights and tracks biomarker trends over time.
+              Serumo is a blood test tracking app that turns lab reports into plain-language insights and tracks biomarker trends over time.
             </p>
             <div className="mt-9 flex justify-center">
               <AppStoreBadge className="inline-flex rounded-lg bg-background/95 p-1.5 shadow-soft ring-1 ring-primary-foreground/10" />

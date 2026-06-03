@@ -1,4 +1,4 @@
-import { Activity } from "lucide-react";
+import { Droplet } from "lucide-react";
 import { Link } from "react-router-dom";
 import {
   Dialog,
@@ -17,16 +17,16 @@ const Footer = () => {
         <div className="flex flex-col gap-1">
           <div className="flex items-center gap-2 font-bold text-navy">
             <span className="grid place-items-center w-7 h-7 rounded-lg bg-gradient-brand">
-              <Activity className="w-3.5 h-3.5 text-primary-foreground" strokeWidth={2.5} />
+              <Droplet className="w-3.5 h-3.5 text-primary-foreground" strokeWidth={2.5} />
             </span>
-            VitaFlow
+            Serumo
           </div>
           <p className="text-xs text-slate3 font-normal max-w-[220px]">
             A blood test tracking app that turns lab reports into plain-language insights and tracks biomarker trends over time.
           </p>
         </div>
         <p className="text-sm text-slate3 font-medium">
-          © {new Date().getFullYear()} VitaFlow. Educational insights for personal wellness.
+          © {new Date().getFullYear()} Serumo. Educational insights for personal wellness.
         </p>
         <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-sm font-medium text-slate3">
           <a href="/biomarkers" className="hover:text-navy transition-smooth">Lab Tests</a>

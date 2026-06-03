@@ -22,9 +22,9 @@ const PENDING_DIR = join(__dirname, 'output', 'pending');
 const DATA_DIR = join(__dirname, 'data');
 
 // Brand constants
-const SITE_DOMAIN = 'https://vitaflow-app.com';
+const SITE_DOMAIN = 'https://getserumo.com';
 const APP_STORE_URL = 'https://apps.apple.com/us/app/vitaflow-health/id6762191392#information';
-const SITE_NAME = 'VitaFlow';
+const SITE_NAME = 'Serumo';
 
 // Colors from index.css
 const COLORS = {
@@ -562,7 +562,7 @@ function buildHtml(
   <!-- Navigation -->
   <nav class="nav">
     <a href="${esc(SITE_DOMAIN)}" class="nav-logo">
-      <img src="/favicon.svg" alt="VitaFlow logo"><span class="nav-wordmark">Vita<span>Flow</span></span>
+      <img src="/favicon.svg" alt="Serumo logo"><span class="nav-wordmark">Serumo</span>
     </a>
     <div class="nav-links">
       <a href="${esc(SITE_DOMAIN)}/biomarkers">Lab Tests</a>
@@ -644,10 +644,10 @@ function buildHtml(
     <section class="section cta-section">
       <h2>Track Your ${esc(verified.markerName)} Over Time</h2>
       <p>
-        A single lab result is a snapshot. VitaFlow lets you log every result, visualize trends,
+        A single lab result is a snapshot. Serumo lets you log every result, visualize trends,
         and understand what changes in your ${esc(verified.markerName).toLowerCase()} level mean for your health over months and years.
       </p>
-      <a href="${esc(APP_STORE_URL)}" class="cta-btn" target="_blank" rel="noopener" aria-label="Download VitaFlow on the App Store">
+      <a href="${esc(APP_STORE_URL)}" class="cta-btn" target="_blank" rel="noopener" aria-label="Download Serumo on the App Store">
         <img src="/app-store-badge.svg" alt="Download on the App Store">
       </a>
       <span class="cta-sub">Free download &bull; iOS &bull; No subscription required</span>

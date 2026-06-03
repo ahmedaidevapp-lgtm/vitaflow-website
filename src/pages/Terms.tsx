@@ -12,7 +12,7 @@ const Terms = () => {
             ← Back to home
           </Link>
         </p>
-        <h1 className="text-3xl md:text-4xl font-extrabold text-navy tracking-tight">VitaFlow — Terms of Service</h1>
+        <h1 className="text-3xl md:text-4xl font-extrabold text-navy tracking-tight">Serumo — Terms of Service</h1>
         <p className="mt-4 text-sm text-slate3">
           Effective date: 20 April 2026
           <br />
@@ -21,7 +21,7 @@ const Terms = () => {
 
         <div className="mt-12 space-y-10 text-[15px] md:text-base leading-relaxed text-slate2 [&_h2]:text-navy [&_h2]:text-xl [&_h2]:font-bold [&_h2]:tracking-tight [&_h2]:mb-3 [&_h3]:text-navy [&_h3]:text-base [&_h3]:font-semibold [&_h3]:mt-6 [&_h3]:mb-2 [&_strong]:text-navy [&_strong]:font-semibold [&_ul]:list-disc [&_ul]:pl-5 [&_ul]:space-y-2 [&_a]:text-primary-dark [&_a]:underline [&_a]:underline-offset-2 hover:[&_a]:text-primary">
           <p>
-            These Terms of Service (&quot;Terms&quot;) govern your use of the VitaFlow mobile application and related
+            These Terms of Service (&quot;Terms&quot;) govern your use of the Serumo mobile application and related
             services (collectively, the &quot;Service&quot;) offered by Amandev Technologies (&quot;we,&quot;
             &quot;us,&quot; or &quot;our&quot;). By creating an account or using the Service, you agree to these
             Terms.
@@ -30,7 +30,7 @@ const Terms = () => {
           <section>
             <h2>1. The Service</h2>
             <p>
-              VitaFlow helps you organize, visualize, and understand laboratory test results over time for{" "}
+              Serumo helps you organize, visualize, and understand laboratory test results over time for{" "}
               <strong>personal wellness and educational purposes only</strong>. The Service does{" "}
               <strong>not</strong> provide medical advice, diagnosis, or treatment. Nothing in the app replaces the
               judgment of a qualified healthcare professional.
@@ -73,7 +73,7 @@ const Terms = () => {
             <p>
               You retain rights to the lab reports and information you upload. To operate the Service, you grant us a
               limited license to process, store, encrypt, and display your content as described in our{" "}
-              <a href="https://vitaflow-app.com/privacy" target="_blank" rel="noopener noreferrer">
+              <a href="https://getserumo.com/privacy" target="_blank" rel="noopener noreferrer">
                 Privacy Policy
               </a>
               .
@@ -185,8 +185,8 @@ const Terms = () => {
             </p>
             <p className="mt-4">
               Current Terms of Service are available at:{" "}
-              <a href="https://vitaflow-app.com/terms" target="_blank" rel="noopener noreferrer">
-                <strong>https://vitaflow-app.com/terms</strong>
+              <a href="https://getserumo.com/terms" target="_blank" rel="noopener noreferrer">
+                <strong>https://getserumo.com/terms</strong>
               </a>
             </p>
           </section>

@@ -14,7 +14,7 @@ const TrustBlock = () => {
                 Educational insights, not medical advice
               </h3>
               <p className="mt-3 text-slate2 leading-relaxed font-normal">
-                VitaFlow helps you understand your lab data for personal wellness and education.
+                Serumo helps you understand your lab data for personal wellness and education.
                 It does not provide diagnosis or treatment. Always consult a qualified healthcare
                 professional for medical decisions.
               </p>

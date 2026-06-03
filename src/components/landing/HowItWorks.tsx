@@ -2,7 +2,7 @@ import { Upload, Sparkles, TrendingUp } from "lucide-react";
 
 const steps = [
   { icon: Upload, title: "Upload your report", desc: "Add your blood test PDF or image in seconds." },
-  { icon: Sparkles, title: "Get clear insights", desc: "VitaFlow explains every marker in plain language." },
+  { icon: Sparkles, title: "Get clear insights", desc: "Serumo explains every marker in plain language." },
   { icon: TrendingUp, title: "See your trends", desc: "Track how your markers change between visits." },
 ];
 

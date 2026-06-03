@@ -1,5 +1,5 @@
 import AppStoreBadge from "@/components/landing/AppStoreBadge";
-import { Activity } from "lucide-react";
+import { Droplet } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
@@ -8,9 +8,9 @@ const Navbar = () => {
       <nav className="container flex items-center justify-between h-16">
         <Link to="/" className="flex items-center gap-2 font-bold text-lg tracking-tight text-navy">
           <span className="grid place-items-center w-8 h-8 rounded-xl bg-gradient-brand shadow-soft">
-            <Activity className="w-4 h-4 text-primary-foreground" strokeWidth={2.5} />
+            <Droplet className="w-4 h-4 text-primary-foreground" strokeWidth={2.5} />
           </span>
-          VitaFlow
+          Serumo
         </Link>
         <div className="hidden md:flex items-center gap-8 text-sm font-medium text-slate2">
           <a href="/#features" className="hover:text-navy transition-smooth">Features</a>
