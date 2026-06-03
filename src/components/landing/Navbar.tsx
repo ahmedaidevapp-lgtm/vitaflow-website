@@ -5,7 +5,7 @@ const Navbar = () => {
   return (
     <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-xl bg-background/70 border-b border-border/60">
       <nav className="container flex items-center justify-between h-16">
-        <Link to="/" className="flex items-center gap-2 font-bold text-lg tracking-tight text-white">
+        <Link to="/" className="flex items-center gap-2 font-bold text-lg tracking-tight text-navy">
           <img src="/AppStore-1024.png" alt="Serumo logo" className="w-8 h-8 rounded-xl shadow-soft" />
           <span>Serum</span><span className="text-emerald-500">o</span>
         </Link>
