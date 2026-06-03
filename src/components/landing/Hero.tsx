@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 
 const SLIDES = [
   {
-    src: "/hero-dashboard.png",
+    src: "/hero-dashboard.png?v=2",
     alt: "Serumo+ home: welcome back, report summaries, and latest lab report.",
     width: 1198,
     height: 1531,
