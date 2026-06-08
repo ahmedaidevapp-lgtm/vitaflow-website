@@ -83,7 +83,7 @@ function buildIndexHtml(published: MarkerEntry[]): string {
     '@type': 'CollectionPage',
     name: pageTitle,
     description: metaDesc,
-    url: `${SITE_DOMAIN}/biomarkers`,
+    url: `${SITE_DOMAIN}/biomarkers/`,
     publisher: { '@type': 'Organization', name: SITE_NAME, url: SITE_DOMAIN, logo: { '@type': 'ImageObject', url: `${SITE_DOMAIN}/AppStore-1024.png`, width: 1024, height: 1024 } },
   }, null, 2);
 
@@ -94,10 +94,10 @@ function buildIndexHtml(published: MarkerEntry[]): string {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>${esc(pageTitle)}</title>
   <meta name="description" content="${esc(metaDesc)}">
-  <link rel="canonical" href="${SITE_DOMAIN}/biomarkers">
+  <link rel="canonical" href="${SITE_DOMAIN}/biomarkers/">
   <meta property="og:title" content="${esc(pageTitle)}">
   <meta property="og:description" content="${esc(metaDesc)}">
-  <meta property="og:url" content="${SITE_DOMAIN}/biomarkers">
+  <meta property="og:url" content="${SITE_DOMAIN}/biomarkers/">
   <meta property="og:type" content="website">
   <meta property="og:image" content="${SITE_DOMAIN}/AppStore-1024.png">
   <meta property="og:image:width" content="1024">

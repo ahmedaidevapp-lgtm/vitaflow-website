@@ -67,7 +67,7 @@ function buildMedicalWebPageSchema(marker: MarkerEntry, verified: VerifiedData, 
     '@type': 'MedicalWebPage',
     name: pageTitle,
     description: metaDesc,
-    url: `${SITE_DOMAIN}/biomarkers/${marker.slug}`,
+    url: `${SITE_DOMAIN}/biomarkers/${marker.slug}/`,
     about: {
       '@type': 'MedicalTest',
       name: verified.markerName,
@@ -211,7 +211,7 @@ function buildHtml(
 ): string {
   const pageTitle = buildPageTitle(marker, verified);
   const metaDesc = buildMetaDescription(verified);
-  const canonicalUrl = `${SITE_DOMAIN}/biomarkers/${marker.slug}`;
+  const canonicalUrl = `${SITE_DOMAIN}/biomarkers/${marker.slug}/`;
   const medicalSchema = buildMedicalWebPageSchema(marker, verified, pageTitle, metaDesc);
   const faqSchema = buildFaqPageSchema(generated.faqs);
 
