@@ -47,7 +47,7 @@ const FinalCTA = () => {
         </a>
 
         <div className="mt-[18px] text-[13px] text-slate3">
-          ★★★★★ 5.0 · Free to start · iPhone &amp; iPad
+          ★★★★★ 5.0 · Free to start · iPhone
         </div>
       </div>
     </section>
