@@ -1,6 +1,7 @@
 import Navbar from "@/components/landing/Navbar";
 import Hero from "@/components/landing/Hero";
 import ValueProps from "@/components/landing/ValueProps";
+import BeforeAfter from "@/components/landing/BeforeAfter";
 import Features from "@/components/landing/Features";
 import HowItWorks from "@/components/landing/HowItWorks";
 import TrustBlock from "@/components/landing/TrustBlock";
@@ -13,6 +14,7 @@ const Index = () => {
       <Navbar />
       <Hero />
       <ValueProps />
+      <BeforeAfter />
       <Features />
       <HowItWorks />
       <TrustBlock />

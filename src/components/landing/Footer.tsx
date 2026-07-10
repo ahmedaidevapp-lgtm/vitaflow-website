@@ -11,21 +11,29 @@ const SUPPORT_EMAIL = "ahmed@amantechdev.com";
 
 const Footer = () => {
   return (
-    <footer className="border-t border-border bg-background">
-      <div className="container py-10 flex flex-col md:flex-row items-center justify-between gap-4">
+    <footer className="border-t border-border bg-white">
+      <div className="container py-[30px] flex flex-col md:flex-row items-center justify-between gap-4">
+
+        {/* Logo + tagline */}
         <div className="flex flex-col gap-1">
-          <div className="flex items-center gap-2 font-bold text-navy">
-            <img src="/AppStore-1024.png" alt="Serumo logo" className="w-7 h-7 rounded-lg shadow-soft" />
-            <span><span>Serum</span><span className="text-emerald-500">o</span></span>
+          <div className="flex items-center gap-2.5">
+            <div className="w-[22px] h-[22px] rounded-[7px] bg-primary flex items-center justify-center shrink-0">
+              <div className="w-2.5 h-[2.5px] rounded-sm bg-white" />
+            </div>
+            <span className="font-display font-bold text-navy text-[15px] tracking-[-0.01em]">Serumo</span>
           </div>
-          <p className="text-xs text-slate3 font-normal max-w-[220px]">
+          <p className="text-[12px] text-slate2 max-w-[220px] leading-relaxed">
             A blood test tracking app that turns lab reports into plain-language insights and tracks biomarker trends over time.
           </p>
         </div>
-        <p className="text-sm text-slate3 font-medium">
+
+        {/* Copyright */}
+        <p className="text-sm text-slate2 font-medium">
           © {new Date().getFullYear()} Serumo. Educational insights for personal wellness.
         </p>
-        <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-sm font-medium text-slate3">
+
+        {/* Nav links */}
+        <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-sm font-medium text-slate1">
           <a href="/biomarkers" className="hover:text-navy transition-smooth">Lab Tests</a>
           <Link to="/privacy" className="hover:text-navy transition-smooth">Privacy</Link>
           <Link to="/privacy/fr" className="hover:text-navy transition-smooth">Confidentialité</Link>
@@ -41,13 +49,13 @@ const Footer = () => {
             </DialogTrigger>
             <DialogContent className="sm:max-w-md">
               <DialogHeader>
-                <DialogTitle className="text-navy">Contact</DialogTitle>
+                <DialogTitle className="text-navy font-display">Contact</DialogTitle>
               </DialogHeader>
-              <p className="text-slate2 text-base leading-relaxed pt-1">
+              <p className="text-slate1 text-base leading-relaxed pt-1">
                 Support:{" "}
                 <a
                   href={`mailto:${SUPPORT_EMAIL}`}
-                  className="text-primary-dark font-medium underline underline-offset-2 hover:text-primary"
+                  className="text-primary font-medium underline underline-offset-2 hover:text-primary-dark"
                 >
                   {SUPPORT_EMAIL}
                 </a>
@@ -55,6 +63,7 @@ const Footer = () => {
             </DialogContent>
           </Dialog>
         </div>
+
       </div>
     </footer>
   );

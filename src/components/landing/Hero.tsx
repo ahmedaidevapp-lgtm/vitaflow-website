@@ -1,13 +1,14 @@
 import { useCallback, useState } from "react";
-import AppStoreBadge from "@/components/landing/AppStoreBadge";
-import { ChevronLeft, ChevronRight, ShieldCheck, TrendingUp, Sparkles } from "lucide-react";
+import { ChevronLeft, ChevronRight, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+
+const APP_STORE_HREF = "https://apps.apple.com/us/app/vitaflow-health/id6762191392#information";
 
 const SLIDES = [
   {
     src: "/hero-dashboard.png?v=2",
-    alt: "Serumo+ home: welcome back, report summaries, and latest lab report.",
+    alt: "Serumo home: welcome back, report summaries, and latest lab report.",
     width: 1198,
     height: 1531,
     caption: "Home",
@@ -35,131 +36,171 @@ const SLIDES = [
   },
 ] as const;
 
+const StarRating = () => (
+  <svg viewBox="0 0 110 20" className="w-24 h-[17px]" aria-hidden>
+    <g fill="#F5A623">
+      {[0, 22, 44, 66, 88].map((x) => (
+        <path key={x} d={`M${x + 10} 1l2.7 5.6 6.1.9-4.4 4.3 1 6.1-5.4-2.9-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z`} />
+      ))}
+    </g>
+  </svg>
+);
+
+const AppleLogo = ({ className }: { className?: string }) => (
+  <svg viewBox="0 0 384 512" className={className} fill="currentColor" aria-hidden>
+    <path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z" />
+  </svg>
+);
+
 const Hero = () => {
   const [index, setIndex] = useState(0);
   const count = SLIDES.length;
 
-  const goPrev = useCallback(() => {
-    setIndex((i) => (i - 1 + count) % count);
-  }, [count]);
-
-  const goNext = useCallback(() => {
-    setIndex((i) => (i + 1) % count);
-  }, [count]);
+  const goPrev = useCallback(() => setIndex((i) => (i - 1 + count) % count), [count]);
+  const goNext = useCallback(() => setIndex((i) => (i + 1) % count), [count]);
 
   const slide = SLIDES[index];
 
   return (
-    <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 bg-gradient-hero overflow-hidden">
-      {/* Decorative blobs */}
-      <div className="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-primary/10 blur-3xl" aria-hidden />
-      <div className="absolute top-40 -left-32 w-96 h-96 rounded-full bg-info/10 blur-3xl" aria-hidden />
+    <section
+      className="relative overflow-hidden pt-28 pb-[68px] md:pt-[60px] md:pb-[68px]"
+      style={{
+        background:
+          "radial-gradient(900px 500px at 78% 0%, hsl(152 45% 93%), rgba(231,246,239,0) 60%), linear-gradient(180deg, hsl(150 44% 96%), #ffffff)",
+      }}
+    >
+      <div className="container">
+        <div className="grid lg:grid-cols-[1fr_0.8fr] gap-6 items-center">
 
-      <div className="container relative">
-        <div className="grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
-          <div className="lg:col-span-7 animate-fade-up">
-            <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-primary-light text-primary-dark text-xs font-semibold mb-6">
-              <Sparkles className="w-3.5 h-3.5" />
-              AI-powered lab insights
-            </span>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-navy leading-[1.05] tracking-tight">
-              Understand your health better, and set your improvement plan in one place.
-            </h1>
-            <p className="mt-6 text-lg md:text-xl text-slate3 max-w-2xl leading-relaxed font-normal">
-              Serumo, the blood test tracking app, transforms complex lab reports into clear, educational insights so you can
-              track trends, understand what changed, and take smarter next steps for your wellness.
-            </p>
-            <div className="mt-9">
-              <AppStoreBadge />
+          {/* ── Left: copy ── */}
+          <div className="animate-fade-up">
+            {/* Availability badge */}
+            <div className="inline-flex items-center gap-2 bg-primary-light border border-greenBorder px-[13px] py-[6px] rounded-full text-[13px] font-semibold text-primary mb-[26px]">
+              <span className="w-[7px] h-[7px] rounded-full bg-mint shrink-0" />
+              Available now on iOS
             </div>
-            <div className="mt-10 flex flex-wrap gap-x-8 gap-y-3 text-sm font-medium text-slate2">
-              <span className="inline-flex items-center gap-2"><ShieldCheck className="w-4 h-4 text-primary" /> Encrypted, private by default</span>
-              <span className="inline-flex items-center gap-2"><TrendingUp className="w-4 h-4 text-primary" /> Trends across visits</span>
+
+            <h1 className="font-display font-bold text-[52px] sm:text-[60px] leading-[1.02] tracking-[-0.03em] text-navy mb-[22px]">
+              Understand your health.<br />
+              <span className="text-primary">Serumo explains it.</span>
+            </h1>
+
+            <p className="text-[19px] leading-[1.55] text-slate1 max-w-[470px] mb-[34px]">
+              Upload any lab report and watch a wall of numbers become plain-language explanations,
+              a personal improvement plan, and a health story that grows with every visit.
+            </p>
+
+            {/* App Store badge */}
+            <div className="flex items-center gap-[18px]">
+              <a
+                href={APP_STORE_HREF}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-3 bg-navy text-white px-[26px] py-[14px] rounded-[14px] shadow-[0_12px_30px_-8px_hsl(214_47%_12%/0.45),0_0_0_1px_rgba(255,255,255,0.06)_inset] hover:-translate-y-0.5 hover:shadow-[0_18px_38px_-8px_hsl(214_47%_12%/0.55)] transition-smooth"
+                aria-label="Download on the App Store"
+              >
+                <AppleLogo className="w-[26px] h-[26px] shrink-0" />
+                <div className="leading-[1.12]">
+                  <div className="text-[11px] font-medium text-slate3">Download on the</div>
+                  <div className="font-display text-[20px] font-bold tracking-[-0.01em]">App Store</div>
+                </div>
+              </a>
+
+              {/* Social proof */}
+              <div className="leading-[1.5]">
+                <div className="flex items-center gap-1.5">
+                  <StarRating />
+                  <span className="text-[13.5px] font-bold text-navy">4.8</span>
+                </div>
+                <div className="text-[12.5px] text-slate2">Free to start · iPhone &amp; iPad</div>
+              </div>
             </div>
           </div>
 
-          {/* App screenshots carousel */}
+          {/* ── Right: phone frame + carousel ── */}
           <div
-            className="lg:col-span-5 animate-fade-up"
+            className="flex justify-center animate-fade-up"
             style={{ animationDelay: "120ms" }}
-            role="region"
-            aria-roledescription="carousel"
-            aria-label="App screenshots"
           >
-            <div className="relative mx-auto max-w-sm">
+            {/* Phone outer shell */}
+            <div
+              className="relative animate-float"
+              style={{ width: 290 }}
+            >
               <div
-                className="pointer-events-none absolute -inset-[12%] rounded-[2.75rem] bg-[radial-gradient(ellipse_at_50%_40%,hsl(160_84%_39%/0.14),transparent_62%)] blur-2xl"
-                aria-hidden
-              />
+                className="w-full rounded-[44px] bg-navy p-[11px] shadow-phone"
+              >
+                {/* Phone inner screen */}
+                <div className="bg-[#F6FBF8] rounded-[34px] overflow-hidden">
+                  {/* Status bar spacer */}
+                  <div className="h-8" />
 
-              <div className="relative animate-float">
-                <div className="relative rounded-[2rem] bg-gradient-to-br from-slate-300/90 via-slate-100/95 to-slate-200/90 p-px shadow-[0_36px_72px_-24px_rgba(15,23,42,0.22),0_12px_28px_-12px_rgba(15,23,42,0.1),0_0_0_1px_rgba(15,23,42,0.04)]">
-                  <div className="rounded-[1.9375rem] bg-gradient-to-b from-white via-white to-slate-50/90 p-2.5 sm:p-3 ring-1 ring-inset ring-white/80">
-                    <div className="overflow-hidden rounded-[1.375rem] border border-slate-200/95 bg-slate-50/40 shadow-[inset_0_1px_0_rgba(255,255,255,0.95),inset_0_0_0_1px_rgba(15,23,42,0.03)]">
-                      <div className="relative overflow-hidden rounded-[1.25rem] ring-1 ring-slate-900/[0.05]">
-                        <div className="relative flex min-h-[22rem] items-center justify-center bg-white sm:min-h-[26rem] md:min-h-[28rem]">
-                          <img
-                            key={slide.src}
-                            src={slide.src}
-                            alt={slide.alt}
-                            width={slide.width}
-                            height={slide.height}
-                            className="max-h-[22rem] w-full object-contain object-center select-none sm:max-h-[26rem] md:max-h-[28rem]"
-                            loading={index === 0 ? "eager" : "lazy"}
-                            decoding="async"
-                            draggable={false}
-                          />
-                          <Button
-                            type="button"
-                            variant="outline"
-                            size="icon"
-                            onClick={goPrev}
-                            className="absolute left-2 top-1/2 z-20 h-9 w-9 -translate-y-1/2 rounded-full border-slate-200/95 bg-white/95 shadow-md backdrop-blur-sm transition-smooth hover:bg-white hover:shadow-lg sm:left-2.5 sm:h-10 sm:w-10"
-                            aria-label="Previous screenshot"
-                          >
-                            <ChevronLeft className="h-4 w-4 text-navy sm:h-5 sm:w-5" strokeWidth={2} />
-                          </Button>
-                          <Button
-                            type="button"
-                            variant="outline"
-                            size="icon"
-                            onClick={goNext}
-                            className="absolute right-2 top-1/2 z-20 h-9 w-9 -translate-y-1/2 rounded-full border-slate-200/95 bg-white/95 shadow-md backdrop-blur-sm transition-smooth hover:bg-white hover:shadow-lg sm:right-2.5 sm:h-10 sm:w-10"
-                            aria-label="Next screenshot"
-                          >
-                            <ChevronRight className="h-4 w-4 text-navy sm:h-5 sm:w-5" strokeWidth={2} />
-                          </Button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="mt-4 flex flex-col items-center gap-2">
-                  <p className="text-xs font-medium text-slate3" aria-live="polite">
-                    {slide.caption}
-                  </p>
-                  <div className="flex items-center justify-center gap-2">
-                    {SLIDES.map((s, i) => (
-                      <button
-                        key={s.src}
-                        type="button"
-                        onClick={() => setIndex(i)}
-                        className={cn(
-                          "h-2 rounded-full transition-all duration-300",
-                          i === index
-                            ? "w-7 bg-primary"
-                            : "w-2 bg-slate-300 hover:bg-slate-400",
-                        )}
-                        aria-label={`Show ${s.caption} screenshot`}
-                        aria-current={i === index ? "true" : undefined}
+                  {/* Carousel area */}
+                  <div
+                    className="relative overflow-hidden"
+                    role="region"
+                    aria-roledescription="carousel"
+                    aria-label="App screenshots"
+                    style={{ minHeight: 460 }}
+                  >
+                    <div className="relative flex items-center justify-center" style={{ minHeight: 460 }}>
+                      <img
+                        key={slide.src}
+                        src={slide.src}
+                        alt={slide.alt}
+                        width={slide.width}
+                        height={slide.height}
+                        className="w-full object-contain object-top select-none"
+                        style={{ maxHeight: 460 }}
+                        loading={index === 0 ? "eager" : "lazy"}
+                        decoding="async"
+                        draggable={false}
                       />
-                    ))}
+
+                      <Button
+                        type="button"
+                        variant="outline"
+                        size="icon"
+                        onClick={goPrev}
+                        className="absolute left-1.5 top-1/2 z-20 h-8 w-8 -translate-y-1/2 rounded-full border-white/60 bg-white/90 shadow-md backdrop-blur-sm hover:bg-white"
+                        aria-label="Previous screenshot"
+                      >
+                        <ChevronLeft className="h-4 w-4 text-navy" strokeWidth={2} />
+                      </Button>
+                      <Button
+                        type="button"
+                        variant="outline"
+                        size="icon"
+                        onClick={goNext}
+                        className="absolute right-1.5 top-1/2 z-20 h-8 w-8 -translate-y-1/2 rounded-full border-white/60 bg-white/90 shadow-md backdrop-blur-sm hover:bg-white"
+                        aria-label="Next screenshot"
+                      >
+                        <ChevronRight className="h-4 w-4 text-navy" strokeWidth={2} />
+                      </Button>
+                    </div>
+
+                    {/* Dots */}
+                    <div className="flex items-center justify-center gap-1.5 py-3">
+                      {SLIDES.map((s, i) => (
+                        <button
+                          key={s.src}
+                          type="button"
+                          onClick={() => setIndex(i)}
+                          className={cn(
+                            "h-1.5 rounded-full transition-all duration-300",
+                            i === index ? "w-6 bg-primary" : "w-1.5 bg-slate-300 hover:bg-slate-400",
+                          )}
+                          aria-label={`Show ${s.caption} screenshot`}
+                          aria-current={i === index ? "true" : undefined}
+                        />
+                      ))}
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+
         </div>
       </div>
     </section>

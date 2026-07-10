@@ -1,23 +1,38 @@
-import AppStoreBadge from "@/components/landing/AppStoreBadge";
 import { Link } from "react-router-dom";
+
+const APP_STORE_HREF = "https://apps.apple.com/us/app/vitaflow-health/id6762191392#information";
 
 const Navbar = () => {
   return (
-    <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-xl bg-background/70 border-b border-border/60">
+    <header className="fixed top-0 inset-x-0 z-50 bg-white border-b border-border">
       <nav className="container flex items-center justify-between h-16">
-        <Link to="/" className="flex items-center gap-2 font-bold text-lg tracking-tight text-navy">
-          <img src="/AppStore-1024.png" alt="Serumo logo" className="w-8 h-8 rounded-xl shadow-soft" />
-          <span><span>Serum</span><span className="text-emerald-500">o</span></span>
+        {/* Logo */}
+        <Link to="/" className="flex items-center gap-2.5 select-none">
+          <div className="w-[30px] h-[30px] rounded-lg bg-navy flex items-center justify-center shrink-0">
+            <div className="w-3.5 h-[3px] rounded-sm bg-mint" />
+          </div>
+          <span className="font-display font-bold text-[21px] tracking-[-0.02em] text-navy leading-none">
+            Serumo
+          </span>
         </Link>
-        <div className="hidden md:flex items-center gap-8 text-sm font-medium text-slate2">
+
+        {/* Nav links */}
+        <div className="hidden md:flex items-center gap-7 text-[14.5px] font-medium text-slate1">
+          <a href="/#how" className="hover:text-navy transition-smooth">The journey</a>
           <a href="/#features" className="hover:text-navy transition-smooth">Features</a>
-          <a href="/#how" className="hover:text-navy transition-smooth">How it works</a>
           <a href="/biomarkers" className="hover:text-navy transition-smooth">Lab Tests</a>
           <Link to="/privacy" className="hover:text-navy transition-smooth">Privacy</Link>
         </div>
-        <div className="flex items-center">
-          <AppStoreBadge className="inline-flex [&_img]:h-9 sm:[&_img]:h-10" />
-        </div>
+
+        {/* CTA */}
+        <a
+          href={APP_STORE_HREF}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-primary hover:bg-primary-dark text-white text-sm font-semibold px-[18px] py-[9px] rounded-[9px] shadow-[0_4px_14px_-4px_hsl(160_82%_29%/0.5)] transition-smooth"
+        >
+          Get the app
+        </a>
       </nav>
     </header>
   );
