@@ -124,68 +124,72 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* ── Right: screenshot carousel ── */}
-          {/* Screenshots already include the phone hardware frame — no CSS wrapper needed */}
+          {/* ── Right: phone frame + carousel ── */}
           <div
             className="flex justify-center animate-fade-up"
             style={{ animationDelay: "120ms" }}
           >
-            <div
-              className="animate-float relative w-full max-w-[300px]"
-              role="region"
-              aria-roledescription="carousel"
-              aria-label="App screenshots"
-            >
-              {/* Screenshot image */}
-              <img
-                key={slide.src}
-                src={slide.src}
-                alt={slide.alt}
-                width={slide.width}
-                height={slide.height}
-                className="w-full h-auto block select-none drop-shadow-[0_30px_60px_rgba(15,27,45,0.35)]"
-                loading={index === 0 ? "eager" : "lazy"}
-                decoding="async"
-                draggable={false}
-              />
-
-              {/* Prev / Next — float over the screenshot */}
-              <Button
-                type="button"
-                variant="outline"
-                size="icon"
-                onClick={goPrev}
-                className="absolute left-2 top-1/2 z-20 h-9 w-9 -translate-y-1/2 rounded-full border-white/60 bg-white/85 shadow-md backdrop-blur-sm hover:bg-white"
-                aria-label="Previous screenshot"
-              >
-                <ChevronLeft className="h-4 w-4 text-navy" strokeWidth={2} />
-              </Button>
-              <Button
-                type="button"
-                variant="outline"
-                size="icon"
-                onClick={goNext}
-                className="absolute right-2 top-1/2 z-20 h-9 w-9 -translate-y-1/2 rounded-full border-white/60 bg-white/85 shadow-md backdrop-blur-sm hover:bg-white"
-                aria-label="Next screenshot"
-              >
-                <ChevronRight className="h-4 w-4 text-navy" strokeWidth={2} />
-              </Button>
-
-              {/* Dots */}
-              <div className="mt-4 flex items-center justify-center gap-2">
-                {SLIDES.map((s, i) => (
-                  <button
-                    key={s.src}
-                    type="button"
-                    onClick={() => setIndex(i)}
-                    className={cn(
-                      "h-1.5 rounded-full transition-all duration-300",
-                      i === index ? "w-6 bg-primary" : "w-1.5 bg-slate-300 hover:bg-slate-400",
-                    )}
-                    aria-label={`Show ${s.caption} screenshot`}
-                    aria-current={i === index ? "true" : undefined}
+            <div className="animate-float w-[290px]">
+              <div className="w-full rounded-[44px] bg-navy p-[11px] shadow-phone">
+                {/* Inner screen — aspect ratio matches actual screenshot dimensions (~878:1759 ≈ 1:2) */}
+                <div
+                  className="relative rounded-[34px] overflow-hidden"
+                  style={{ aspectRatio: "878 / 1759" }}
+                  role="region"
+                  aria-roledescription="carousel"
+                  aria-label="App screenshots"
+                >
+                  <img
+                    key={slide.src}
+                    src={slide.src}
+                    alt={slide.alt}
+                    width={slide.width}
+                    height={slide.height}
+                    className="absolute inset-0 w-full h-full object-cover object-top select-none"
+                    loading={index === 0 ? "eager" : "lazy"}
+                    decoding="async"
+                    draggable={false}
                   />
-                ))}
+
+                  {/* Prev / Next */}
+                  <Button
+                    type="button"
+                    variant="outline"
+                    size="icon"
+                    onClick={goPrev}
+                    className="absolute left-1.5 top-1/2 z-20 h-8 w-8 -translate-y-1/2 rounded-full border-white/60 bg-white/85 shadow-md backdrop-blur-sm hover:bg-white"
+                    aria-label="Previous screenshot"
+                  >
+                    <ChevronLeft className="h-4 w-4 text-navy" strokeWidth={2} />
+                  </Button>
+                  <Button
+                    type="button"
+                    variant="outline"
+                    size="icon"
+                    onClick={goNext}
+                    className="absolute right-1.5 top-1/2 z-20 h-8 w-8 -translate-y-1/2 rounded-full border-white/60 bg-white/85 shadow-md backdrop-blur-sm hover:bg-white"
+                    aria-label="Next screenshot"
+                  >
+                    <ChevronRight className="h-4 w-4 text-navy" strokeWidth={2} />
+                  </Button>
+
+                  {/* Dots */}
+                  <div className="absolute bottom-3 left-0 right-0 flex items-center justify-center gap-1.5">
+                    {SLIDES.map((s, i) => (
+                      <button
+                        key={s.src}
+                        type="button"
+                        onClick={() => setIndex(i)}
+                        className={cn(
+                          "h-1.5 rounded-full transition-all duration-300",
+                          i === index ? "w-6 bg-primary" : "w-1.5 bg-white/50 hover:bg-white/80",
+                        )}
+                        aria-label={`Show ${s.caption} screenshot`}
+                        aria-current={i === index ? "true" : undefined}
+                      />
+                    ))}
+                  </div>
+                </div>
               </div>
             </div>
           </div>
