@@ -2,7 +2,7 @@ const steps = [
   {
     tag: "STEP 1 · TODAY",
     title: "Drop in everything you have",
-    desc: "PDFs, photos of paper results, locked reports, or multiple files at once — from any lab, in any of 12+ languages. Serumo reads them all.",
+    desc: "PDFs, photos of paper results, locked reports, or multiple files at once — from any lab, in English, French, or Arabic. Serumo reads them all.",
     visual: (
       <div className="bg-navy border border-dashed border-[#33566E] rounded-xl p-4 flex items-center gap-3">
         <div className="w-9 h-9 rounded-[10px] bg-[#1D3A52] flex items-center justify-center text-tealLight text-lg font-bold shrink-0">

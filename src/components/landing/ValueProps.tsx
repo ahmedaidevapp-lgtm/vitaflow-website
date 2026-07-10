@@ -3,7 +3,7 @@ const ITEMS = [
   "Multi-file upload",
   "Locked PDFs",
   "Photo results",
-  "12+ languages",
+  "English, French & Arabic",
   "100% private",
 ];
 

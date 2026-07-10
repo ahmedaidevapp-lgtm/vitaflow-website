@@ -1,5 +1,5 @@
 import { useCallback, useState } from "react";
-import { ChevronLeft, ChevronRight, Sparkles } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
@@ -7,31 +7,38 @@ const APP_STORE_HREF = "https://apps.apple.com/us/app/vitaflow-health/id67621913
 
 const SLIDES = [
   {
-    src: "/hero-dashboard.png?v=2",
-    alt: "Serumo home: welcome back, report summaries, and latest lab report.",
-    width: 1198,
-    height: 1531,
+    src: "/home_page.png",
+    alt: "Serumo home screen: report overview, progress story, and latest markers.",
+    width: 390,
+    height: 844,
     caption: "Home",
   },
   {
-    src: "/hero-insights.png",
-    alt: "Insights view: markers that need attention and educational detail for each test.",
-    width: 1202,
-    height: 1386,
+    src: "/insights.png",
+    alt: "Insights screen: markers needing attention with suggested actions.",
+    width: 390,
+    height: 844,
     caption: "Insights",
   },
   {
-    src: "/hero-progress-story.png",
-    alt: "Progress story journal comparing reports and summarizing changes over time.",
-    width: 1193,
-    height: 1367,
-    caption: "Progress",
+    src: "/plans.png",
+    alt: "Plans screen: daily health plan and active improvement steps.",
+    width: 390,
+    height: 844,
+    caption: "Plans",
   },
   {
-    src: "/hero-trends.png",
-    alt: "Trends view: marker values and charts across lab reports by category.",
-    width: 1191,
-    height: 1776,
+    src: "/summary.png",
+    alt: "Summary screen: AI-generated plain-language overview of your lab results.",
+    width: 390,
+    height: 844,
+    caption: "Summary",
+  },
+  {
+    src: "/trends.png",
+    alt: "Trends screen: biomarker charts across multiple lab visits.",
+    width: 390,
+    height: 844,
     caption: "Trends",
   },
 ] as const;
@@ -63,7 +70,7 @@ const Hero = () => {
 
   return (
     <section
-      className="relative overflow-hidden pt-28 pb-[68px] md:pt-[60px] md:pb-[68px]"
+      className="relative overflow-hidden pt-28 pb-[68px] md:pt-[148px] md:pb-[68px]"
       style={{
         background:
           "radial-gradient(900px 500px at 78% 0%, hsl(152 45% 93%), rgba(231,246,239,0) 60%), linear-gradient(180deg, hsl(150 44% 96%), #ffffff)",
@@ -81,13 +88,13 @@ const Hero = () => {
             </div>
 
             <h1 className="font-display font-bold text-[52px] sm:text-[60px] leading-[1.02] tracking-[-0.03em] text-navy mb-[22px]">
-              Understand your health.<br />
-              <span className="text-primary">Serumo explains it.</span>
+              Your blood test has a story.<br />
+              <span className="text-primary">Serumo tells it.</span>
             </h1>
 
             <p className="text-[19px] leading-[1.55] text-slate1 max-w-[470px] mb-[34px]">
               Upload any lab report and watch a wall of numbers become plain-language explanations,
-              a personal improvement plan, and a health story that grows with every visit.
+              a personal improvement plan, and a health story that grows with every visit. Available in English, French &amp; Arabic.
             </p>
 
             {/* App Store badge */}
@@ -110,7 +117,7 @@ const Hero = () => {
               <div className="leading-[1.5]">
                 <div className="flex items-center gap-1.5">
                   <StarRating />
-                  <span className="text-[13.5px] font-bold text-navy">4.8</span>
+                  <span className="text-[13.5px] font-bold text-navy">5.0</span>
                 </div>
                 <div className="text-[12.5px] text-slate2">Free to start · iPhone &amp; iPad</div>
               </div>

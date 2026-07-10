@@ -17,9 +17,7 @@ const Footer = () => {
         {/* Logo + tagline */}
         <div className="flex flex-col gap-1">
           <div className="flex items-center gap-2.5">
-            <div className="w-[22px] h-[22px] rounded-[7px] bg-primary flex items-center justify-center shrink-0">
-              <div className="w-2.5 h-[2.5px] rounded-sm bg-white" />
-            </div>
+            <img src="/AppStore-1024.png" alt="Serumo logo" className="w-[22px] h-[22px] rounded-md shadow-soft shrink-0" />
             <span className="font-display font-bold text-navy text-[15px] tracking-[-0.01em]">Serumo</span>
           </div>
           <p className="text-[12px] text-slate2 max-w-[220px] leading-relaxed">

@@ -8,9 +8,7 @@ const Navbar = () => {
       <nav className="container flex items-center justify-between h-16">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2.5 select-none">
-          <div className="w-[30px] h-[30px] rounded-lg bg-navy flex items-center justify-center shrink-0">
-            <div className="w-3.5 h-[3px] rounded-sm bg-mint" />
-          </div>
+          <img src="/AppStore-1024.png" alt="Serumo logo" className="w-[30px] h-[30px] rounded-lg shadow-soft shrink-0" />
           <span className="font-display font-bold text-[21px] tracking-[-0.02em] text-navy leading-none">
             Serumo
           </span>

@@ -6,7 +6,7 @@ const features = [
   { icon: GitCompare, title: "Progress stories",          desc: "Compare your latest labs with previous results in one glance." },
   { icon: ListChecks, title: "Health logs & reminders",   desc: "Stay consistent with checklists and gentle reminders." },
   { icon: Layers,     title: "Multi-marker patterns",     desc: "Discover broader patterns across markers for a fuller picture." },
-  { icon: Globe2,     title: "12+ languages supported",   desc: "Built for a global audience with full multilingual support." },
+  { icon: Globe2,     title: "English, French & Arabic",   desc: "Full multilingual support across the app — pick your language and Serumo adapts." },
 ];
 
 const Features = () => {
