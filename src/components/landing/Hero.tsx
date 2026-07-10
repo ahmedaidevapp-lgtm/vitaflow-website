@@ -129,79 +129,67 @@ const Hero = () => {
             className="flex justify-center animate-fade-up"
             style={{ animationDelay: "120ms" }}
           >
-            {/* Phone outer shell */}
-            <div
-              className="relative animate-float"
-              style={{ width: 290 }}
-            >
-              <div
-                className="w-full rounded-[44px] bg-navy p-[11px] shadow-phone"
-              >
-                {/* Phone inner screen */}
-                <div className="bg-[#F6FBF8] rounded-[34px] overflow-hidden">
-                  {/* Status bar spacer */}
-                  <div className="h-8" />
+            {/* Phone outer shell — 290px wide, navy frame */}
+            <div className="animate-float w-[290px]">
+              <div className="w-full rounded-[44px] bg-navy p-[11px] shadow-phone">
+                {/* Inner screen — exact 390:844 aspect ratio of the screenshots */}
+                <div
+                  className="relative rounded-[34px] overflow-hidden"
+                  style={{ aspectRatio: "390 / 844" }}
+                  role="region"
+                  aria-roledescription="carousel"
+                  aria-label="App screenshots"
+                >
+                  {/* Screenshot fills the frame completely */}
+                  <img
+                    key={slide.src}
+                    src={slide.src}
+                    alt={slide.alt}
+                    width={slide.width}
+                    height={slide.height}
+                    className="absolute inset-0 w-full h-full object-cover object-top select-none"
+                    loading={index === 0 ? "eager" : "lazy"}
+                    decoding="async"
+                    draggable={false}
+                  />
 
-                  {/* Carousel area */}
-                  <div
-                    className="relative overflow-hidden"
-                    role="region"
-                    aria-roledescription="carousel"
-                    aria-label="App screenshots"
-                    style={{ minHeight: 460 }}
+                  {/* Prev / Next buttons */}
+                  <Button
+                    type="button"
+                    variant="outline"
+                    size="icon"
+                    onClick={goPrev}
+                    className="absolute left-1.5 top-1/2 z-20 h-8 w-8 -translate-y-1/2 rounded-full border-white/60 bg-white/80 shadow-md backdrop-blur-sm hover:bg-white"
+                    aria-label="Previous screenshot"
                   >
-                    <div className="relative flex items-center justify-center" style={{ minHeight: 460 }}>
-                      <img
-                        key={slide.src}
-                        src={slide.src}
-                        alt={slide.alt}
-                        width={slide.width}
-                        height={slide.height}
-                        className="w-full object-contain object-top select-none"
-                        style={{ maxHeight: 460 }}
-                        loading={index === 0 ? "eager" : "lazy"}
-                        decoding="async"
-                        draggable={false}
+                    <ChevronLeft className="h-4 w-4 text-navy" strokeWidth={2} />
+                  </Button>
+                  <Button
+                    type="button"
+                    variant="outline"
+                    size="icon"
+                    onClick={goNext}
+                    className="absolute right-1.5 top-1/2 z-20 h-8 w-8 -translate-y-1/2 rounded-full border-white/60 bg-white/80 shadow-md backdrop-blur-sm hover:bg-white"
+                    aria-label="Next screenshot"
+                  >
+                    <ChevronRight className="h-4 w-4 text-navy" strokeWidth={2} />
+                  </Button>
+
+                  {/* Dots — pinned to bottom of phone screen */}
+                  <div className="absolute bottom-3 left-0 right-0 flex items-center justify-center gap-1.5">
+                    {SLIDES.map((s, i) => (
+                      <button
+                        key={s.src}
+                        type="button"
+                        onClick={() => setIndex(i)}
+                        className={cn(
+                          "h-1.5 rounded-full transition-all duration-300",
+                          i === index ? "w-6 bg-primary" : "w-1.5 bg-white/60 hover:bg-white/80",
+                        )}
+                        aria-label={`Show ${s.caption} screenshot`}
+                        aria-current={i === index ? "true" : undefined}
                       />
-
-                      <Button
-                        type="button"
-                        variant="outline"
-                        size="icon"
-                        onClick={goPrev}
-                        className="absolute left-1.5 top-1/2 z-20 h-8 w-8 -translate-y-1/2 rounded-full border-white/60 bg-white/90 shadow-md backdrop-blur-sm hover:bg-white"
-                        aria-label="Previous screenshot"
-                      >
-                        <ChevronLeft className="h-4 w-4 text-navy" strokeWidth={2} />
-                      </Button>
-                      <Button
-                        type="button"
-                        variant="outline"
-                        size="icon"
-                        onClick={goNext}
-                        className="absolute right-1.5 top-1/2 z-20 h-8 w-8 -translate-y-1/2 rounded-full border-white/60 bg-white/90 shadow-md backdrop-blur-sm hover:bg-white"
-                        aria-label="Next screenshot"
-                      >
-                        <ChevronRight className="h-4 w-4 text-navy" strokeWidth={2} />
-                      </Button>
-                    </div>
-
-                    {/* Dots */}
-                    <div className="flex items-center justify-center gap-1.5 py-3">
-                      {SLIDES.map((s, i) => (
-                        <button
-                          key={s.src}
-                          type="button"
-                          onClick={() => setIndex(i)}
-                          className={cn(
-                            "h-1.5 rounded-full transition-all duration-300",
-                            i === index ? "w-6 bg-primary" : "w-1.5 bg-slate-300 hover:bg-slate-400",
-                          )}
-                          aria-label={`Show ${s.caption} screenshot`}
-                          aria-current={i === index ? "true" : undefined}
-                        />
-                      ))}
-                    </div>
+                    ))}
                   </div>
                 </div>
               </div>
