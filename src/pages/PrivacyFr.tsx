@@ -34,9 +34,9 @@ const PrivacyFr = () => {
             <p>
               <strong>Responsable du traitement :</strong> Amandev Technologies
               <br />
-              <strong>Contact confidentialité :</strong> ahmed@amantechdev.com
+              <strong>Contact confidentialité :</strong> ahmed@amandevtech.com
               <br />
-              <strong>Contact support :</strong> ahmed@amantechdev.com
+              <strong>Contact support :</strong> ahmed@amandevtech.com
             </p>
             <p className="mt-4">
               Serumo (&quot;nous&quot;, &quot;notre&quot;, ou le &quot;Service&quot;) est une application mobile qui aide les utilisateurs à organiser,
@@ -396,7 +396,7 @@ const PrivacyFr = () => {
             </p>
             <p className="mt-4">
               Pour toute aide :{" "}
-              <a href="mailto:ahmed@amantechdev.com">ahmed@amantechdev.com</a>
+              <a href="mailto:ahmed@amandevtech.com">ahmed@amandevtech.com</a>
             </p>
           </section>
 
@@ -452,7 +452,7 @@ const PrivacyFr = () => {
               <li>Nous ne vendons pas les données personnelles et ne les partageons pas pour de la publicité comportementale inter-contextes</li>
               <li>
                 Vous pouvez exercer vos droits éligibles en nous contactant :{" "}
-                <a href="mailto:ahmed@amantechdev.com">ahmed@amantechdev.com</a>
+                <a href="mailto:ahmed@amandevtech.com">ahmed@amandevtech.com</a>
               </li>
             </ul>
           </section>
@@ -473,7 +473,7 @@ const PrivacyFr = () => {
               Les utilisateurs situés au Maroc peuvent demander l&apos;accès, la correction, la mise à jour ou la suppression de leurs données
               personnelles, <strong>y compris lorsque les données sont organisées en profils de santé distincts sous un même compte</strong>, et exercer les
               autres droits prévus par la loi applicable, en contactant :{" "}
-              <a href="mailto:ahmed@amantechdev.com">ahmed@amantechdev.com</a>.
+              <a href="mailto:ahmed@amandevtech.com">ahmed@amandevtech.com</a>.
             </p>
             <p className="mt-4">
               Lorsque des données personnelles sont transférées hors du Maroc (y compris vers des prestataires utilisés pour l&apos;hébergement,
@@ -496,10 +496,10 @@ const PrivacyFr = () => {
             <h2>16. Contact</h2>
             <p>
               Demandes de confidentialité :{" "}
-              <a href="mailto:ahmed@amantechdev.com">ahmed@amantechdev.com</a>
+              <a href="mailto:ahmed@amandevtech.com">ahmed@amandevtech.com</a>
               <br />
               Support :{" "}
-              <a href="mailto:ahmed@amantechdev.com">ahmed@amantechdev.com</a>
+              <a href="mailto:ahmed@amandevtech.com">ahmed@amandevtech.com</a>
             </p>
           </section>
         </div>

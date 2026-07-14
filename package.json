@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && cp dist/index.html dist/404.html && mkdir -p dist/privacy/fr dist/terms && cp dist/index.html dist/privacy/index.html && cp dist/index.html dist/privacy/fr/index.html && cp dist/index.html dist/terms/index.html",
+    "build": "vite build && cp dist/index.html dist/404.html && mkdir -p dist/privacy/fr dist/terms dist/refund dist/pricing && cp dist/index.html dist/privacy/index.html && cp dist/index.html dist/privacy/fr/index.html && cp dist/index.html dist/terms/index.html && cp dist/index.html dist/refund/index.html && cp dist/index.html dist/pricing/index.html",
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
     "preview": "vite preview",

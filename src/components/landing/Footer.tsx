@@ -7,7 +7,7 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 
-const SUPPORT_EMAIL = "ahmed@amantechdev.com";
+const SUPPORT_EMAIL = "ahmed@amandevtech.com";
 
 const Footer = () => {
   return (
@@ -33,9 +33,11 @@ const Footer = () => {
         {/* Nav links */}
         <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-sm font-medium text-slate1">
           <a href="/biomarkers" className="hover:text-navy transition-smooth">Lab Tests</a>
+          <Link to="/pricing" className="hover:text-navy transition-smooth">Pricing</Link>
           <Link to="/privacy" className="hover:text-navy transition-smooth">Privacy</Link>
           <Link to="/privacy/fr" className="hover:text-navy transition-smooth">Confidentialité</Link>
           <Link to="/terms" className="hover:text-navy transition-smooth">Terms</Link>
+          <Link to="/refund" className="hover:text-navy transition-smooth">Refunds</Link>
           <Dialog>
             <DialogTrigger asChild>
               <button

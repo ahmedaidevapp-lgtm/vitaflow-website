@@ -16,13 +16,14 @@ const Terms = () => {
         <p className="mt-4 text-sm text-slate3">
           Effective date: 20 April 2026
           <br />
-          Last updated: 20 April 2026
+          Last updated: 14 July 2026
         </p>
 
         <div className="mt-12 space-y-10 text-[15px] md:text-base leading-relaxed text-slate2 [&_h2]:text-navy [&_h2]:text-xl [&_h2]:font-bold [&_h2]:tracking-tight [&_h2]:mb-3 [&_h3]:text-navy [&_h3]:text-base [&_h3]:font-semibold [&_h3]:mt-6 [&_h3]:mb-2 [&_strong]:text-navy [&_strong]:font-semibold [&_ul]:list-disc [&_ul]:pl-5 [&_ul]:space-y-2 [&_a]:text-primary-dark [&_a]:underline [&_a]:underline-offset-2 hover:[&_a]:text-primary">
           <p>
-            These Terms of Service (&quot;Terms&quot;) govern your use of the Serumo mobile application and related
-            services (collectively, the &quot;Service&quot;) offered by Amandev Technologies (&quot;we,&quot;
+            These Terms of Service (&quot;Terms&quot;) govern your use of the Serumo mobile and web applications and
+            related services (collectively, the &quot;Service&quot;) offered by{" "}
+            <strong>Amandev Technologies SARL AU</strong>, a company registered in Casablanca, Morocco (&quot;we,&quot;
             &quot;us,&quot; or &quot;our&quot;). By creating an account or using the Service, you agree to these
             Terms.
           </p>
@@ -83,13 +84,15 @@ const Terms = () => {
           <section>
             <h2>6. Subscriptions and payments</h2>
             <p>
-              Certain features require a paid auto-renewable subscription.
+              Certain features require a paid auto-renewable subscription. You may subscribe through Apple&apos;s App
+              Store, Google Play, or on the web via our website.
             </p>
 
             <h3>6.1 Subscription plans</h3>
             <p>
-              Available plans, durations, and prices are shown in-app at checkout and in the applicable store listing.
-              Prices may vary by country/region and applicable taxes.
+              Available plans, durations, and prices are shown at checkout, on our{" "}
+              <Link to="/pricing">pricing page</Link>, and in the applicable store listing. Prices may vary by
+              country/region and applicable taxes.
             </p>
 
             <h3>6.2 Billing and auto-renewal</h3>
@@ -111,6 +114,17 @@ const Terms = () => {
               If you subscribe through Google Play, billing and renewal are handled under Google Play&apos;s
               subscription terms and your Google account settings.
             </p>
+            <p className="mt-4">
+              If you subscribe on our website, your purchase is processed by our merchant of record,{" "}
+              <strong>Paddle</strong> (
+              <a href="https://www.paddle.com" target="_blank" rel="noopener noreferrer">
+                paddle.com
+              </a>
+              ), which handles checkout, billing, applicable taxes, and payment-related customer service. Web
+              subscriptions renew automatically at the end of each billing period until canceled. You can cancel at any
+              time from your account settings in the web app or via the link in your order confirmation and receipt
+              emails.
+            </p>
 
             <h3>6.3 Free trials and promotional offers</h3>
             <p>
@@ -121,16 +135,25 @@ const Terms = () => {
 
             <h3>6.4 Cancellation and refunds</h3>
             <p>
-              You can cancel at any time through the account settings of the platform used for purchase (App Store or
-              Google Play). Cancellation prevents future renewals, and access remains active until the end of the
-              current paid period. Refund requests are handled by the platform provider according to its refund
-              policies.
+              You can cancel at any time through the platform used for purchase. Cancellation prevents future renewals,
+              and access remains active until the end of the current paid period.
             </p>
+            <ul className="mt-4">
+              <li>
+                <strong>App Store / Google Play purchases:</strong> manage your subscription in your Apple ID or Google
+                account settings. Refund requests are handled by Apple or Google under their refund policies.
+              </li>
+              <li>
+                <strong>Web purchases:</strong> cancel from your account settings in the web app or via your receipt
+                emails. Refunds are governed by our <Link to="/refund">Refund Policy</Link>.
+              </li>
+            </ul>
 
             <h3>6.5 Price changes</h3>
             <p>
-              We may change subscription prices from time to time where permitted by law. Any changes are communicated
-              and applied by the platform provider under its rules.
+              We may change subscription prices from time to time where permitted by law. Changes are communicated in
+              advance and take effect at your next renewal, under the rules of the platform used for purchase (Apple,
+              Google, or Paddle). If you do not agree to a price change, you may cancel before it takes effect.
             </p>
           </section>
 
@@ -179,8 +202,8 @@ const Terms = () => {
             <h2>11. Contact</h2>
             <p>
               Questions about these Terms:{" "}
-              <a href="mailto:ahmed@amantechdev.com">
-                <strong>ahmed@amantechdev.com</strong>
+              <a href="mailto:ahmed@amandevtech.com">
+                <strong>ahmed@amandevtech.com</strong>
               </a>
             </p>
             <p className="mt-4">

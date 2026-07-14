@@ -19,6 +19,7 @@ const Navbar = () => {
           <a href="/#how" className="hover:text-navy transition-smooth">The journey</a>
           <a href="/#features" className="hover:text-navy transition-smooth">Features</a>
           <a href="/biomarkers" className="hover:text-navy transition-smooth">Lab Tests</a>
+          <Link to="/pricing" className="hover:text-navy transition-smooth">Pricing</Link>
           <Link to="/privacy" className="hover:text-navy transition-smooth">Privacy</Link>
         </div>
 
