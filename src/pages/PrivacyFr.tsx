@@ -18,7 +18,7 @@ const PrivacyFr = () => {
         <p className="mt-4 text-sm text-slate3">
           Date d&apos;effet : 15 avril 2026
           <br />
-          Dernière mise à jour : 12 mai 2026
+          Dernière mise à jour : 16 juillet 2026
         </p>
         <p className="mt-3 text-sm text-slate3">
           <Link to="/privacy" className="text-primary-dark underline underline-offset-2 hover:text-primary font-medium">
@@ -39,7 +39,7 @@ const PrivacyFr = () => {
               <strong>Contact support :</strong> ahmed@amandevtech.com
             </p>
             <p className="mt-4">
-              Serumo (&quot;nous&quot;, &quot;notre&quot;, ou le &quot;Service&quot;) est une application mobile qui aide les utilisateurs à organiser,
+              Serumo (&quot;nous&quot;, &quot;notre&quot;, ou le &quot;Service&quot;) est une application mobile et web qui aide les utilisateurs à organiser,
               visualiser et comprendre leurs résultats d&apos;analyses biologiques dans le temps, à des fins de bien-être personnel et
               d&apos;information uniquement.
             </p>
@@ -63,13 +63,20 @@ const PrivacyFr = () => {
                 <code>com.vitalcheck.app</code>)
               </li>
               <li>
+                L&apos;application web Serumo (<code>app.getserumo.com</code>), qui utilise la même API backend et les mêmes mesures de
+                sécurité que l&apos;application mobile
+              </li>
+              <li>
                 L&apos;API backend utilisée pour les comptes, l&apos;authentification, les téléversements, l&apos;extraction, le stockage et les
                 fonctionnalités associées
+              </li>
+              <li>
+                La réception de résultats déposés par des <strong>laboratoires d&apos;analyses partenaires</strong> à votre attention (voir section 3.5)
               </li>
             </ul>
             <p className="mt-4">
               Cette Politique ne s&apos;applique pas aux services tiers que vous utilisez de manière indépendante (par exemple portails de
-              laboratoires, fournisseurs e-mail, fabricants d&apos;appareils), sauf intégration directe décrite dans la présente Politique.
+              laboratoires tiers, fournisseurs e-mail, fabricants d&apos;appareils), sauf intégration directe décrite dans la présente Politique.
             </p>
           </section>
 
@@ -162,6 +169,28 @@ const PrivacyFr = () => {
             <p className="mt-4">
               Nous recevons le jeton d&apos;identité et des informations de compte limitées nécessaires pour vous authentifier et créer/accéder
               à votre compte Serumo. Nous ne recevons pas le mot de passe de votre compte Google ou Apple.
+            </p>
+
+            <h3>3.5 Résultats déposés par des laboratoires partenaires</h3>
+            <p>
+              Avec votre accord recueilli par le laboratoire, un <strong>laboratoire d&apos;analyses partenaire</strong> peut déposer un résultat à votre
+              attention sur Serumo au lieu de vous le remettre par un canal non sécurisé. Dans ce cas, nous recevons du laboratoire :
+            </p>
+            <ul>
+              <li>le fichier de résultat (stocké chiffré dès réception)</li>
+              <li>
+                votre identité de contact — nom (facultatif), numéro de téléphone et/ou adresse e-mail —{" "}
+                <strong>chiffrée champ par champ</strong> ; l&apos;e-mail fait l&apos;objet d&apos;un index aveugle (haché) permettant de rapprocher le dépôt de
+                votre compte sans déchiffrement
+              </li>
+            </ul>
+            <p className="mt-4">
+              Le résultat reste en <strong>dépôt temporaire</strong> jusqu&apos;à ce que vous le récupériez depuis votre compte (au moyen du code de retrait
+              remis par le laboratoire, ou du rapprochement par e-mail). À la récupération, le résultat intègre votre dossier — avec mention du
+              laboratoire émetteur — et <strong>la copie de dépôt est immédiatement supprimée</strong>. Un dépôt non récupéré est{" "}
+              <strong>automatiquement supprimé après 30 jours</strong>. Pour cette phase de dépôt, le laboratoire demeure responsable du traitement et
+              Serumo agit comme sous-traitant ; la récupération dans votre compte suit ensuite le circuit standard décrit dans la présente
+              Politique, y compris le consentement au traitement IA (section 6.2).
             </p>
           </section>
 
@@ -259,9 +288,13 @@ const PrivacyFr = () => {
             <p className="mt-4">
               Avant tout envoi de contenu personnel ou lié à la santé vers ces prestataires, Serumo affiche une information in-app et demande
               votre autorisation. <strong>Ce choix est conservé par profil de santé</strong> (et enregistré côté serveur à des fins de preuve lorsque
-              l&apos;application est en ligne) : si vous utilisez plusieurs profils, vous pouvez accepter ou refuser séparément pour chacun. En cas
-              de refus pour le profil actif, les fonctionnalités dépendantes de l&apos;IA pour ce profil ne seront pas disponibles, mais les autres
-              fonctions non IA resteront accessibles.
+              l&apos;application est en ligne) : si vous utilisez plusieurs profils, vous pouvez accepter ou refuser séparément pour chacun.
+            </p>
+            <p className="mt-4">
+              <strong>Le refus ne bloque pas le téléversement.</strong> Si vous choisissez « Pas maintenant », votre compte rendu est quand même
+              téléversé et <strong>stocké chiffré</strong> avec le statut « en attente d&apos;analyse » ; <strong>aucune donnée du document n&apos;est transmise au
+              prestataire IA</strong> et les autres fonctions non IA restent accessibles. Vous pouvez déclencher l&apos;analyse à tout moment par une
+              action dédiée (« Lancer l&apos;analyse IA »), précédée de la même information ; ce consentement différé est journalisé au même titre.
             </p>
             <p className="mt-4">Références :</p>
             <ul>
@@ -347,6 +380,11 @@ const PrivacyFr = () => {
                 des enregistrements sous-jacents, suppression du compte, ou absence de nécessité de conservation
               </li>
               <li>Fichiers téléversés et enregistrements associés : comme les données de santé ci-dessus (rattachés au profil propriétaire)</li>
+              <li>
+                Dépôts de laboratoires partenaires non récupérés : <strong>30 jours maximum</strong>, puis suppression automatique du fichier et des
+                coordonnées associées (seule une trace d&apos;audit sans fichier est conservée) ; la copie de dépôt est également supprimée dès la
+                récupération du résultat
+              </li>
               <li>Logs opérationnels/sécurité : pendant une période limitée nécessaire à la sécurité et à la conformité</li>
               <li>Exceptions de conservation légale : rétention plus longue lorsque la loi l&apos;impose</li>
             </ul>
@@ -416,10 +454,11 @@ const PrivacyFr = () => {
             </ul>
             <p className="mt-4">
               La notice concerne <strong>le profil de santé actif</strong> lors du téléversement ou du déclenchement de la fonctionnalité. Si vous ne donnez pas
-              votre autorisation pour ce profil, les fonctionnalités dépendantes de l&apos;IA restent indisponibles pour ce profil et{" "}
-              <strong>aucune</strong> charge utile de rapport de santé n&apos;est envoyée à ces prestataires pour celui-ci. Une <strong>trace d&apos;audit de consentement</strong>{" "}
-              est écrite côté serveur lorsque vous validez votre choix connecté (tentative au mieux si le réseau échoue après sauvegarde locale de
-              la préférence).
+              votre autorisation pour ce profil, vos comptes rendus sont <strong>quand même téléversés et stockés chiffrés</strong> (statut « en attente
+              d&apos;analyse ») mais les fonctionnalités dépendantes de l&apos;IA restent indisponibles pour ce profil et <strong>aucune</strong> charge utile de
+              rapport de santé n&apos;est envoyée à ces prestataires pour celui-ci. Vous pouvez lancer l&apos;analyse ultérieurement par une action
+              dédiée, précédée de la même notice. Une <strong>trace d&apos;audit de consentement</strong> est écrite côté serveur lorsque vous validez votre
+              choix connecté (tentative au mieux si le réseau échoue après sauvegarde locale de la préférence).
             </p>
           </section>
 
@@ -468,6 +507,12 @@ const PrivacyFr = () => {
               Étant donné que Serumo peut traiter des informations biologiques et de santé, ces données sont traitées comme des données
               personnelles sensibles et utilisées uniquement pour les finalités décrites dans la présente Politique et pour fournir le Service
               demandé par l&apos;utilisateur.
+            </p>
+            <p className="mt-4">
+              Lorsqu&apos;un <strong>laboratoire d&apos;analyses partenaire</strong> dépose un résultat à votre attention (section 3.5), le laboratoire demeure
+              responsable du traitement pour cette communication — il recueille votre consentement et vous remet le code de retrait — et Serumo
+              agit comme sous-traitant pour la phase de dépôt (30 jours maximum, données chiffrées, suppression automatique). Vous pouvez exercer
+              vos droits sur un dépôt non récupéré auprès du laboratoire ou en nous contactant.
             </p>
             <p className="mt-4">
               Les utilisateurs situés au Maroc peuvent demander l&apos;accès, la correction, la mise à jour ou la suppression de leurs données

@@ -16,7 +16,7 @@ const Privacy = () => {
         <p className="mt-4 text-sm text-slate3">
           Effective date: 15 April 2026
           <br />
-          Last updated: 12 May 2026
+          Last updated: 16 July 2026
         </p>
         <p className="mt-3 text-sm text-slate3">
           <span className="font-medium text-navy">English</span>
@@ -37,9 +37,9 @@ const Privacy = () => {
               <strong>Support contact:</strong> ahmed@amandevtech.com
             </p>
             <p className="mt-4">
-              Serumo (&quot;we,&quot; &quot;us,&quot; or &quot;the Service&quot;) is a mobile application that helps users organize,
-              visualize, and understand laboratory test results over time for personal wellness and educational purposes
-              only.
+              Serumo (&quot;we,&quot; &quot;us,&quot; or &quot;the Service&quot;) is a mobile and web application that helps users
+              organize, visualize, and understand laboratory test results over time for personal wellness and educational
+              purposes only.
             </p>
             <p className="mt-4">
               Serumo is not a medical device and does not provide medical advice, diagnosis, or treatment. It is not
@@ -61,12 +61,19 @@ const Privacy = () => {
                 <code>com.vitalcheck.app</code>)
               </li>
               <li>
+                The Serumo web app (<code>app.getserumo.com</code>), which uses the same backend API and the same
+                security measures as the mobile app
+              </li>
+              <li>
                 The backend API used for accounts, authentication, uploads, parsing, storage, and related features
+              </li>
+              <li>
+                Receiving results that <strong>partner laboratories</strong> deposit for you (see Section 3.5)
               </li>
             </ul>
             <p className="mt-4">
-              This Policy does not apply to third-party services you use independently (for example, laboratory portals,
-              email providers, or device manufacturers), except where directly integrated as described in this Policy.
+              This Policy does not apply to third-party services you use independently (for example, third-party laboratory
+              portals, email providers, or device manufacturers), except where directly integrated as described in this Policy.
             </p>
           </section>
 
@@ -146,6 +153,28 @@ const Privacy = () => {
             <p className="mt-4">
               We receive the identity token and limited account information needed to authenticate you and create or
               access your Serumo account. We do not receive your Google or Apple account password.
+            </p>
+
+            <h3>3.5 Results Deposited by Partner Laboratories</h3>
+            <p>
+              With your consent collected by the laboratory, a <strong>partner medical laboratory</strong> may deposit a result for
+              you on Serumo instead of handing it over through an insecure channel. In that case we receive from the laboratory:
+            </p>
+            <ul>
+              <li>the result file (stored encrypted on receipt)</li>
+              <li>
+                your contact identity — name (optional), phone number and/or email address —{" "}
+                <strong>encrypted field by field</strong>; the email is additionally blind-indexed (hashed) so the deposit can be
+                matched to your account without decryption
+              </li>
+            </ul>
+            <p className="mt-4">
+              The result stays in a <strong>temporary staging area</strong> until you claim it from your account (using the pickup code
+              the laboratory gives you, or the email match). On claim, the result joins your records — labeled with the issuing
+              laboratory — and <strong>the staged copy is deleted immediately</strong>. An unclaimed deposit is{" "}
+              <strong>automatically deleted after 30 days</strong>. For the staging phase, the laboratory remains the data controller
+              and Serumo acts as its processor; after you claim the result, it follows the standard flow described in this Policy,
+              including the AI-processing consent (Section 6.2).
             </p>
           </section>
 
@@ -236,8 +265,13 @@ const Privacy = () => {
             <p className="mt-4">
               Before any personal or health-related content is sent to these providers, Serumo presents an in-app disclosure and requests
               your permission. <strong>That choice is stored per health profile</strong> (and recorded on our servers for auditability when the app is
-              online): if you use several profiles, you may accept or decline separately for each. If you decline for the active profile,
-              AI-dependent features for that profile will be unavailable, but other non-AI app functions remain accessible.
+              online): if you use several profiles, you may accept or decline separately for each.
+            </p>
+            <p className="mt-4">
+              <strong>Declining does not block uploads.</strong> If you choose &quot;Not now,&quot; your report is still uploaded and{" "}
+              <strong>stored encrypted</strong> with an &quot;awaiting analysis&quot; status; <strong>no report content is sent to the AI
+              provider</strong>, and other non-AI functions remain accessible. You can start the analysis at any time through a dedicated
+              action (&quot;Start AI analysis&quot;) preceded by the same disclosure; that deferred consent is logged in the same way.
             </p>
             <p className="mt-4">References:</p>
             <ul>
@@ -328,6 +362,10 @@ const Privacy = () => {
                 delete your account, or retention is no longer required
               </li>
               <li>Uploaded files and related records: same as health data above (scoped to the profile that owns them)</li>
+              <li>
+                Unclaimed partner-laboratory deposits: <strong>30 days maximum</strong>, then the file and associated contact details are
+                automatically deleted (only a file-less audit record is kept); the staged copy is also deleted as soon as you claim the result
+              </li>
               <li>Operational/security logs: for a limited period necessary for security and compliance</li>
               <li>Legal hold exceptions: longer retention where legally required</li>
             </ul>
@@ -390,7 +428,12 @@ const Privacy = () => {
               <li>Requests your <strong>explicit</strong> permission before transmission</li>
             </ul>
             <p className="mt-4">
-              The notice applies to <strong>the health profile that is active when you upload or start the feature</strong>. If you do not grant permission for that profile, AI-dependent features remain unavailable for that profile and <strong>no</strong> health-report payload is sent to those providers for it. A <strong>server-side consent audit record</strong> is written when you submit your choice while signed in (best-effort if the network fails after you have already saved your preference locally).
+              The notice applies to <strong>the health profile that is active when you upload or start the feature</strong>. If you do not grant
+              permission for that profile, your reports are <strong>still uploaded and stored encrypted</strong> (&quot;awaiting analysis&quot; status),
+              but AI-dependent features remain unavailable for that profile and <strong>no</strong> health-report payload is sent to those providers
+              for it. You can start the analysis later through a dedicated action preceded by the same notice. A{" "}
+              <strong>server-side consent audit record</strong> is written when you submit your choice while signed in (best-effort if the network
+              fails after you have already saved your preference locally).
             </p>
           </section>
 
@@ -437,6 +480,12 @@ const Privacy = () => {
               Because Serumo may process laboratory and health-related information, this data is treated as sensitive
               personal data and is processed only for the purposes described in this Policy and to provide the Service
               requested by the user.
+            </p>
+            <p className="mt-4">
+              Where a <strong>partner laboratory</strong> deposits a result for you (Section 3.5), the laboratory remains the data
+              controller for that communication — it collects your consent and hands you the pickup code — and Serumo acts as its
+              processor for the staging phase (30 days maximum, encrypted data, automatic deletion). You can exercise your rights over
+              an unclaimed deposit with the laboratory or by contacting us.
             </p>
             <p className="mt-4">
               Users in Morocco may request access, correction, updating, or deletion of their personal data,{" "}
