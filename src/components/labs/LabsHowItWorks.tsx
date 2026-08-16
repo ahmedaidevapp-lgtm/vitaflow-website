@@ -1,95 +1,80 @@
 import { useT } from "@/i18n/context";
 
-type StepCopy = ReturnType<typeof useT>["ios"]["how"]["steps"][number];
+type StepCopy = ReturnType<typeof useT>["labs"]["how"]["steps"][number];
 
-/** Each step gets a distinct visual; index-aligned with the `ios.how.steps` copy. */
+/** Each step gets a distinct visual; index-aligned with the `how.steps` copy. */
 const renderVisual = (step: StepCopy, index: number) => {
   switch (index) {
-    // 1 — drop in your files
+    // 1 — the lab deposits a PDF
     case 0:
       return (
         <div className="bg-navy border border-dashed border-[#33566E] rounded-xl p-4 flex items-center gap-3">
           <div className="w-9 h-9 rounded-[10px] bg-[#1D3A52] flex items-center justify-center text-tealLight text-lg font-bold shrink-0">
             ＋
           </div>
-          <div className="text-[12.5px] leading-[1.45] text-slate3 min-w-0" dir="ltr">
-            <div className="truncate">{step.visualPrimary}</div>
-            <div className="truncate">
-              {step.visualSecondary} <span className="text-mint">{step.visualExtra}</span>
+          <div className="text-[12.5px] leading-[1.45] text-slate3 min-w-0">
+            <div className="font-mono truncate" dir="ltr">
+              {step.visualPrimary}
             </div>
+            <div className="text-mint mt-0.5">{step.visualSecondary}</div>
           </div>
         </div>
       );
 
-    // 2 — the AI headline
+    // 2 — Serumo matches on the CIN
     case 1:
       return (
         <div
-          className="rounded-xl p-4 text-[12.5px] leading-[1.5] text-white"
+          className="rounded-xl p-4 text-white"
           style={{ background: "linear-gradient(135deg, hsl(160 82% 29%), hsl(195 82% 31%))" }}
         >
-          {step.visualPrimary}
+          <div className="flex items-center gap-2 text-[13px] font-bold">
+            <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-white/20 text-[11px] shrink-0">
+              ✓
+            </span>
+            {step.visualPrimary}
+          </div>
+          <div className="mt-1.5 text-[12.5px] leading-[1.5] text-white/85">
+            {step.visualSecondary}
+          </div>
         </div>
       );
 
-    // 3 — a marker explained
+    // 3 — the patient is notified
     case 2:
       return (
         <div className="bg-navy border border-darkBorder rounded-xl p-4">
-          <div className="text-[13px] font-bold text-white mb-1.5">{step.visualPrimary}</div>
-          <div className="text-[12px] leading-[1.5] text-slate3">{step.visualSecondary}</div>
-        </div>
-      );
-
-    // 4 — the improvement plan
-    case 3:
-      return (
-        <div className="bg-navy border border-darkBorder rounded-xl p-4 text-[12.5px] leading-[1.7] text-slate3">
-          <div>
-            <span className="text-mint me-1.5">✓</span>
+          <div className="rounded-[10px] bg-[#1D3A52] px-3 py-2.5 text-[12.5px] leading-[1.45] text-white">
             {step.visualPrimary}
           </div>
-          <div>
-            <span className="text-mint me-1.5">✓</span>
-            {step.visualSecondary}
-          </div>
-          <div>
-            <span className="text-[#33566E] me-1.5">○</span>
-            {step.visualExtra}
-          </div>
+          <div className="mt-2 text-[11.5px] text-slate3">{step.visualSecondary}</div>
         </div>
       );
 
-    // 5 — the progress story
+    // 4 — verified claim with a one-time code
     default:
       return (
-        <div className="bg-[rgba(15,27,45,0.55)] border border-[#1F5A42] rounded-xl p-4">
-          <svg viewBox="0 0 240 60" className="w-full h-12 block" aria-hidden>
-            <polyline
-              points="0,50 40,46 80,40 120,34 160,24 200,16 240,8"
-              fill="none"
-              stroke="hsl(153 61% 47%)"
-              strokeWidth={3}
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-            <circle cx={240} cy={8} r={4.5} fill="hsl(153 61% 47%)" />
-          </svg>
-          <div className="text-[11.5px] text-slate3 mt-2">
-            {step.visualPrimary} <span className="text-mint font-bold">{step.visualSecondary}</span>
+        <div className="bg-[rgba(15,27,45,0.55)] border border-[#1F5A42] rounded-xl p-4 text-center">
+          <div
+            className="font-mono text-[22px] font-bold tracking-[0.12em] text-mint"
+            dir="ltr"
+          >
+            {step.visualPrimary}
+          </div>
+          <div className="mt-2 text-[11.5px] leading-[1.45] text-slate3">
+            {step.visualSecondary}
           </div>
         </div>
       );
   }
 };
 
-const HowItWorks = () => {
-  const { how } = useT().ios;
+const LabsHowItWorks = () => {
+  const { how } = useT().labs;
 
   return (
     <section id="how" className="py-[74px] md:py-[90px] bg-navy">
       <div className="container">
-        {/* Header */}
         <div className="max-w-2xl mb-[52px]">
           <div className="text-[13px] font-bold tracking-[.08em] text-mint mb-3 uppercase">
             {how.eyebrow}
@@ -99,7 +84,6 @@ const HowItWorks = () => {
           </h2>
         </div>
 
-        {/* Rail + steps */}
         <div className="relative ps-[52px] md:ps-[84px]">
           {/* Vertical rail */}
           <div
@@ -124,7 +108,7 @@ const HowItWorks = () => {
 
                   <div
                     className={[
-                      "grid lg:grid-cols-[1fr_300px] gap-6 rounded-2xl border p-[26px] items-center",
+                      "grid lg:grid-cols-[1fr_280px] gap-6 rounded-2xl border p-[26px] items-center",
                       isLast
                         ? "border-[#1F5A42] bg-[linear-gradient(135deg,hsl(158_49%_14%),hsl(214_46%_16%))]"
                         : "border-darkBorder bg-darkCard",
@@ -151,4 +135,4 @@ const HowItWorks = () => {
   );
 };
 
-export default HowItWorks;
+export default LabsHowItWorks;

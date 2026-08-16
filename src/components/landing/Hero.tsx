@@ -1,46 +1,17 @@
 import { useCallback, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/i18n/context";
+import { APP_STORE_HREF } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 
-const APP_STORE_HREF = "https://apps.apple.com/us/app/vitaflow-health/id6762191392#information";
-
+/** Screenshot assets — captions and alt text come from the dictionary, index-aligned. */
 const SLIDES = [
-  {
-    src: "/home_page.png",
-    alt: "Serumo home screen: report overview, progress story, and latest markers.",
-    width: 878,
-    height: 1780,
-    caption: "Home",
-  },
-  {
-    src: "/insights.png",
-    alt: "Insights screen: markers needing attention with suggested actions.",
-    width: 878,
-    height: 1732,
-    caption: "Insights",
-  },
-  {
-    src: "/plans.png",
-    alt: "Plans screen: daily health plan and active improvement steps.",
-    width: 884,
-    height: 1730,
-    caption: "Plans",
-  },
-  {
-    src: "/summary.png",
-    alt: "Summary screen: AI-generated plain-language overview of your lab results.",
-    width: 880,
-    height: 1758,
-    caption: "Summary",
-  },
-  {
-    src: "/trends.png",
-    alt: "Trends screen: biomarker charts across multiple lab visits.",
-    width: 872,
-    height: 1756,
-    caption: "Trends",
-  },
+  { src: "/ios-home.png", width: 876, height: 1716 },
+  { src: "/ios-insights.png", width: 872, height: 1722 },
+  { src: "/ios-plans.png", width: 878, height: 1722 },
+  { src: "/ios-summary.png", width: 878, height: 1726 },
+  { src: "/ios-trends.png", width: 878, height: 1730 },
 ] as const;
 
 const StarRating = () => (
@@ -60,6 +31,8 @@ const AppleLogo = ({ className }: { className?: string }) => (
 );
 
 const Hero = () => {
+  const { t, isRtl } = useLanguage();
+  const { hero } = t.ios;
   const [index, setIndex] = useState(0);
   const count = SLIDES.length;
 
@@ -67,6 +40,7 @@ const Hero = () => {
   const goNext = useCallback(() => setIndex((i) => (i + 1) % count), [count]);
 
   const slide = SLIDES[index];
+  const slideCopy = hero.slides[index];
 
   return (
     <section
@@ -78,38 +52,38 @@ const Hero = () => {
     >
       <div className="container">
         <div className="grid lg:grid-cols-[1fr_0.8fr] gap-6 items-center">
-
           {/* ── Left: copy ── */}
           <div className="animate-fade-up">
-            {/* Availability badge */}
             <div className="inline-flex items-center gap-2 bg-primary-light border border-greenBorder px-[13px] py-[6px] rounded-full text-[13px] font-semibold text-primary mb-[26px]">
               <span className="w-[7px] h-[7px] rounded-full bg-mint shrink-0" />
-              Available now on iOS
+              {hero.badge}
             </div>
 
-            <h1 className="font-display font-bold text-[52px] sm:text-[60px] leading-[1.02] tracking-[-0.03em] text-navy mb-[22px]">
-              Your blood test has a story.<br />
-              <span className="text-primary">Serumo tells it.</span>
+            <h1 className="font-display font-bold text-[42px] sm:text-[60px] leading-[1.02] tracking-[-0.03em] text-navy mb-[22px]">
+              {hero.titleLead}
+              <br />
+              <span className="text-primary">{hero.titleAccent}</span>
             </h1>
 
             <p className="text-[19px] leading-[1.55] text-slate1 max-w-[470px] mb-[34px]">
-              Upload any lab report and watch a wall of numbers become plain-language explanations,
-              a personal improvement plan, and a health story that grows with every visit. Available in English, French &amp; Arabic.
+              {hero.subtitle}
             </p>
 
             {/* App Store badge */}
-            <div className="flex items-center gap-[18px]">
+            <div className="flex flex-wrap items-center gap-[18px]">
               <a
                 href={APP_STORE_HREF}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-3 bg-navy text-white px-[26px] py-[14px] rounded-[14px] shadow-[0_12px_30px_-8px_hsl(214_47%_12%/0.45),0_0_0_1px_rgba(255,255,255,0.06)_inset] hover:-translate-y-0.5 hover:shadow-[0_18px_38px_-8px_hsl(214_47%_12%/0.55)] transition-smooth"
-                aria-label="Download on the App Store"
+                aria-label={t.ios.cta.ariaDownload}
               >
                 <AppleLogo className="w-[26px] h-[26px] shrink-0" />
-                <div className="leading-[1.12]">
-                  <div className="text-[11px] font-medium text-slate3">Download on the</div>
-                  <div className="font-display text-[20px] font-bold tracking-[-0.01em]">App Store</div>
+                <div className="leading-[1.12] text-start">
+                  <div className="text-[11px] font-medium text-slate3">{hero.downloadOn}</div>
+                  <div className="font-display text-[20px] font-bold tracking-[-0.01em]">
+                    {hero.appStore}
+                  </div>
                 </div>
               </a>
 
@@ -117,32 +91,30 @@ const Hero = () => {
               <div className="leading-[1.5]">
                 <div className="flex items-center gap-1.5">
                   <StarRating />
-                  <span className="text-[13.5px] font-bold text-navy">5.0</span>
+                  <span className="text-[13.5px] font-bold text-navy">{hero.rating}</span>
                 </div>
-                <div className="text-[12.5px] text-slate2">Free to start · iPhone</div>
+                <div className="text-[12.5px] text-slate2">{hero.socialProof}</div>
               </div>
             </div>
           </div>
 
           {/* ── Right: phone frame + carousel ── */}
-          <div
-            className="flex justify-center animate-fade-up"
-            style={{ animationDelay: "120ms" }}
-          >
+          <div className="flex justify-center animate-fade-up" style={{ animationDelay: "120ms" }}>
             <div className="animate-float w-[290px]">
               <div className="w-full rounded-[44px] bg-navy p-[11px] shadow-phone">
-                {/* Inner screen — aspect ratio matches actual screenshot dimensions (~878:1759 ≈ 1:2) */}
+                {/* Inner screen — aspect ratio matches actual screenshot dimensions (~876:1722) */}
                 <div
                   className="relative rounded-[34px] overflow-hidden"
-                  style={{ aspectRatio: "878 / 1759" }}
+                  style={{ aspectRatio: "876 / 1722" }}
                   role="region"
                   aria-roledescription="carousel"
-                  aria-label="App screenshots"
+                  aria-label={hero.carouselLabel}
+                  dir="ltr"
                 >
                   <img
                     key={slide.src}
                     src={slide.src}
-                    alt={slide.alt}
+                    alt={slideCopy.alt}
                     width={slide.width}
                     height={slide.height}
                     className="absolute inset-0 w-full h-full object-cover object-top select-none"
@@ -156,9 +128,9 @@ const Hero = () => {
                     type="button"
                     variant="outline"
                     size="icon"
-                    onClick={goPrev}
+                    onClick={isRtl ? goNext : goPrev}
                     className="absolute left-1.5 top-1/2 z-20 h-8 w-8 -translate-y-1/2 rounded-full border-white/60 bg-white/85 shadow-md backdrop-blur-sm hover:bg-white"
-                    aria-label="Previous screenshot"
+                    aria-label={isRtl ? hero.nextSlide : hero.prevSlide}
                   >
                     <ChevronLeft className="h-4 w-4 text-navy" strokeWidth={2} />
                   </Button>
@@ -166,9 +138,9 @@ const Hero = () => {
                     type="button"
                     variant="outline"
                     size="icon"
-                    onClick={goNext}
+                    onClick={isRtl ? goPrev : goNext}
                     className="absolute right-1.5 top-1/2 z-20 h-8 w-8 -translate-y-1/2 rounded-full border-white/60 bg-white/85 shadow-md backdrop-blur-sm hover:bg-white"
-                    aria-label="Next screenshot"
+                    aria-label={isRtl ? hero.prevSlide : hero.nextSlide}
                   >
                     <ChevronRight className="h-4 w-4 text-navy" strokeWidth={2} />
                   </Button>
@@ -184,7 +156,7 @@ const Hero = () => {
                           "h-1.5 rounded-full transition-all duration-300",
                           i === index ? "w-6 bg-primary" : "w-1.5 bg-white/50 hover:bg-white/80",
                         )}
-                        aria-label={`Show ${s.caption} screenshot`}
+                        aria-label={`${hero.showSlide} — ${hero.slides[i].caption}`}
                         aria-current={i === index ? "true" : undefined}
                       />
                     ))}
@@ -193,7 +165,6 @@ const Hero = () => {
               </div>
             </div>
           </div>
-
         </div>
       </div>
     </section>
