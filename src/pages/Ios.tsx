@@ -8,7 +8,8 @@ import TrustBlock from "@/components/landing/TrustBlock";
 import FinalCTA from "@/components/landing/FinalCTA";
 import Footer from "@/components/landing/Footer";
 
-const Index = () => {
+/** Consumer-facing landing page for the Serumo iOS app. */
+const Ios = () => {
   return (
     <main className="min-h-screen bg-background">
       <Navbar />
@@ -24,4 +25,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default Ios;

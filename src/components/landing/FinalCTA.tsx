@@ -1,4 +1,5 @@
-const APP_STORE_HREF = "https://apps.apple.com/us/app/vitaflow-health/id6762191392#information";
+import { useT } from "@/i18n/context";
+import { APP_STORE_HREF } from "@/lib/constants";
 
 const AppleLogo = () => (
   <svg viewBox="0 0 384 512" className="w-[26px] h-[26px] fill-navy shrink-0" aria-hidden>
@@ -7,6 +8,8 @@ const AppleLogo = () => (
 );
 
 const FinalCTA = () => {
+  const { cta } = useT().ios;
+
   return (
     <section
       className="relative overflow-hidden py-[84px] text-center"
@@ -23,12 +26,11 @@ const FinalCTA = () => {
       />
 
       <div className="container relative">
-        <h2 className="font-display font-bold text-[48px] leading-[1.06] tracking-[-0.02em] text-white mb-4">
-          Start your health story today.
+        <h2 className="font-display font-bold text-[36px] sm:text-[48px] leading-[1.06] tracking-[-0.02em] text-white mb-4">
+          {cta.title}
         </h2>
-        <p className="text-[18px] leading-[1.5] text-slate3 max-w-[460px] mx-auto mb-[34px]">
-          Free to download. Serumo turns any lab report into plain-language insights, tracks your
-          biomarker trends, and builds your personal health story over time.
+        <p className="text-[18px] leading-[1.5] text-slate3 max-w-[500px] mx-auto mb-[34px]">
+          {cta.subtitle}
         </p>
 
         {/* Light badge */}
@@ -37,18 +39,18 @@ const FinalCTA = () => {
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-3 bg-white text-navy px-7 py-[15px] rounded-[14px] shadow-[0_16px_40px_-10px_hsl(153_61%_47%/0.4)] hover:-translate-y-0.5 hover:shadow-[0_20px_44px_-10px_hsl(153_61%_47%/0.5)] transition-smooth"
-          aria-label="Download Serumo on the App Store"
+          aria-label={cta.ariaDownload}
         >
           <AppleLogo />
-          <div className="leading-[1.12] text-left">
-            <div className="text-[11px] font-medium text-slate1">Download on the</div>
-            <div className="font-display text-[20px] font-bold tracking-[-0.01em]">App Store</div>
+          <div className="leading-[1.12] text-start">
+            <div className="text-[11px] font-medium text-slate1">{cta.downloadOn}</div>
+            <div className="font-display text-[20px] font-bold tracking-[-0.01em]">
+              {cta.appStore}
+            </div>
           </div>
         </a>
 
-        <div className="mt-[18px] text-[13px] text-slate3">
-          ★★★★★ 5.0 · Free to start · iPhone
-        </div>
+        <div className="mt-[18px] text-[13px] text-slate3">{cta.note}</div>
       </div>
     </section>
   );
