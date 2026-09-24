@@ -102,9 +102,9 @@ export const en: Dict = {
         },
         {
           tag: "STEP 2 · AUTOMATIC",
-          title: "Serumo matches on the CIN",
-          desc: "The CIN printed on the report is used to bind the document to the pre-registered patient. Unmatched documents go to a quarantine queue for manual binding.",
-          visualPrimary: "CIN recognised",
+          title: "Serumo matches on the phone number",
+          desc: "The phone number printed on the report is used to bind the document to the pre-registered patient. Unmatched documents go to a quarantine queue for manual binding.",
+          visualPrimary: "Phone number recognised",
           visualSecondary: "Automatic match with the pre-registered patient",
         },
         {
@@ -179,7 +179,7 @@ export const en: Dict = {
         },
         {
           title: "Quarantine queue",
-          desc: "Documents whose CIN could not be matched are held aside and bound manually.",
+          desc: "Documents whose phone number could not be matched are held aside and bound manually.",
         },
         {
           title: "“Your patients” view",

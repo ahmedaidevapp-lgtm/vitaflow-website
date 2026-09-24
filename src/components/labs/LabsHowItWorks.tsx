@@ -21,7 +21,7 @@ const renderVisual = (step: StepCopy, index: number) => {
         </div>
       );
 
-    // 2 — Serumo matches on the CIN
+    // 2 — Serumo matches on the phone number
     case 1:
       return (
         <div

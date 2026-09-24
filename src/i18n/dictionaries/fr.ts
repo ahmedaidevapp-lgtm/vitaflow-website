@@ -106,9 +106,9 @@ export const fr = {
         },
         {
           tag: "ÉTAPE 2 · AUTOMATIQUE",
-          title: "Serumo rapproche par le CIN",
-          desc: "Le CIN imprimé sur le compte rendu permet d'associer le document au patient pré-enregistré. Les documents non rapprochés partent en file de quarantaine pour association manuelle.",
-          visualPrimary: "CIN reconnu",
+          title: "Serumo rapproche par le numéro de téléphone",
+          desc: "Le numéro de téléphone imprimé sur le compte rendu permet d'associer le document au patient pré-enregistré. Les documents non rapprochés partent en file de quarantaine pour association manuelle.",
+          visualPrimary: "Numéro de téléphone reconnu",
           visualSecondary: "Rapprochement automatique avec le patient pré-enregistré",
         },
         {
@@ -183,7 +183,7 @@ export const fr = {
         },
         {
           title: "File de quarantaine",
-          desc: "Les documents dont le CIN n'a pas pu être rapproché sont isolés et associés manuellement.",
+          desc: "Les documents dont le numéro de téléphone n'a pas pu être rapproché sont isolés et associés manuellement.",
         },
         {
           title: "Vue « Vos patients »",
