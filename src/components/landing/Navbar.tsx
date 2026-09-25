@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { ChevronDown, Menu, X } from "lucide-react";
+import DemoCta from "@/components/demo/DemoCta";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import {
   DropdownMenu,
@@ -9,7 +10,6 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { useLanguage } from "@/i18n/context";
-import { PILOT_MAILTO } from "@/lib/constants";
 
 const Navbar = () => {
   const { t, isRtl } = useLanguage();
@@ -75,12 +75,9 @@ const Navbar = () => {
         <div className="flex items-center gap-2.5">
           <LanguageSwitcher />
 
-          <a
-            href={PILOT_MAILTO}
-            className="hidden sm:inline-flex bg-primary hover:bg-primary-dark text-white text-sm font-semibold px-[18px] py-[9px] rounded-[9px] shadow-[0_4px_14px_-4px_hsl(160_82%_29%/0.5)] transition-smooth"
-          >
+          <DemoCta className="hidden sm:inline-flex bg-primary hover:bg-primary-dark text-white text-sm font-semibold px-[18px] py-[9px] rounded-[9px] shadow-[0_4px_14px_-4px_hsl(160_82%_29%/0.5)] transition-smooth">
             {t.nav.cta}
-          </a>
+          </DemoCta>
 
           <button
             type="button"
@@ -124,13 +121,12 @@ const Navbar = () => {
                 </Link>
               ))}
             </div>
-            <a
-              href={PILOT_MAILTO}
-              onClick={() => setOpen(false)}
+            <DemoCta
+              onActivate={() => setOpen(false)}
               className="sm:hidden mt-3 inline-flex justify-center bg-primary hover:bg-primary-dark text-white text-sm font-semibold px-[18px] py-[11px] rounded-[9px] transition-smooth"
             >
               {t.nav.cta}
-            </a>
+            </DemoCta>
           </div>
         </div>
       )}

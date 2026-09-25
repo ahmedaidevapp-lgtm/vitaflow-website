@@ -13,3 +13,13 @@ export const LEGAL_CITY = "Casablanca, Maroc";
 export const PILOT_MAILTO = `mailto:${SUPPORT_EMAIL}?subject=${encodeURIComponent(
   "Serumo — demande de pilote laboratoire",
 )}`;
+
+/**
+ * Web3Forms endpoint + access key for the "request a demo" form. The site is a static
+ * build on GitHub Pages, so there is no server of our own to send mail from; Web3Forms
+ * forwards each submission to SUPPORT_EMAIL. The key is public by design — it only ever
+ * delivers to the address it was issued for, so it cannot be abused to mail anyone else.
+ */
+export const WEB3FORMS_ENDPOINT = "https://api.web3forms.com/submit";
+
+export const WEB3FORMS_ACCESS_KEY = import.meta.env.VITE_WEB3FORMS_KEY ?? "";

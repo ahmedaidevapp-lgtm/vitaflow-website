@@ -1,7 +1,7 @@
 import { ArrowRight } from "lucide-react";
+import DemoCta from "@/components/demo/DemoCta";
 import WebAppSlideshow from "@/components/labs/WebAppSlideshow";
 import { useT } from "@/i18n/context";
-import { PILOT_MAILTO } from "@/lib/constants";
 
 const LabsHero = () => {
   const t = useT();
@@ -36,13 +36,10 @@ const LabsHero = () => {
             </p>
 
             <div className="flex flex-wrap items-center gap-3">
-              <a
-                href={PILOT_MAILTO}
-                className="inline-flex items-center gap-2 bg-primary hover:bg-primary-dark text-white text-[15px] font-semibold px-[24px] py-[13px] rounded-[12px] shadow-[0_10px_26px_-8px_hsl(160_82%_29%/0.55)] hover:-translate-y-0.5 transition-smooth"
-              >
+              <DemoCta className="inline-flex items-center gap-2 bg-primary hover:bg-primary-dark text-white text-[15px] font-semibold px-[24px] py-[13px] rounded-[12px] shadow-[0_10px_26px_-8px_hsl(160_82%_29%/0.55)] hover:-translate-y-0.5 transition-smooth">
                 {hero.ctaPrimary}
                 <ArrowRight className="w-[18px] h-[18px] shrink-0 rtl:rotate-180" strokeWidth={2.25} aria-hidden />
-              </a>
+              </DemoCta>
 
               <a
                 href="#how"

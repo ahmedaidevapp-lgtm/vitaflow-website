@@ -1,6 +1,7 @@
-import { Mail } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import DemoCta from "@/components/demo/DemoCta";
 import { useT } from "@/i18n/context";
-import { PILOT_MAILTO, SUPPORT_EMAIL } from "@/lib/constants";
+import { SUPPORT_EMAIL } from "@/lib/constants";
 
 const LabsCTA = () => {
   const { cta } = useT().labs;
@@ -28,13 +29,12 @@ const LabsCTA = () => {
           {cta.subtitle}
         </p>
 
-        <a
-          href={PILOT_MAILTO}
+        <DemoCta
           className="inline-flex items-center gap-3 bg-white text-navy px-7 py-[15px] rounded-[14px] font-semibold shadow-[0_16px_40px_-10px_hsl(153_61%_47%/0.4)] hover:-translate-y-0.5 hover:shadow-[0_20px_44px_-10px_hsl(153_61%_47%/0.5)] transition-smooth"
         >
-          <Mail className="w-[20px] h-[20px] shrink-0" strokeWidth={2.25} aria-hidden />
           {cta.button}
-        </a>
+          <ArrowRight className="w-[19px] h-[19px] shrink-0 rtl:rotate-180" strokeWidth={2.25} aria-hidden />
+        </DemoCta>
 
         <p className="mt-5 font-mono text-[14px] text-white" dir="ltr">
           {SUPPORT_EMAIL}

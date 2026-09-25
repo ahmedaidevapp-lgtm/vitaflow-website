@@ -32,6 +32,10 @@ jobs:
 
       - name: Build
         run: npm run build
+        env:
+          # Web3Forms key for the demo-request form; the CTAs fall back to a
+          # mailto link when it is absent.
+          VITE_WEB3FORMS_KEY: ${{ secrets.WEB3FORMS_KEY }}
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3

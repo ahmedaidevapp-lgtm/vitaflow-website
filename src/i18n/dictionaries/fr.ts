@@ -226,9 +226,46 @@ export const fr = {
       title: "Lancez un pilote avec votre laboratoire.",
       subtitle:
         "Nous mettons en place un pilote encadré : quelques comptes rendus, un accès au portail, et un accompagnement pour vérifier que le rapprochement automatique fonctionne avec vos documents.",
-      button: "Écrire à l'équipe Serumo",
+      button: "Demander une démo",
       secondary: "Réponse sous deux jours ouvrés",
       legal: "Amandev Technologies SARL AU · Casablanca, Maroc",
+    },
+
+    demoForm: {
+      title: "Demander une démo",
+      subtitle:
+        "Dites-nous en deux minutes comment fonctionne votre laboratoire. Nous revenons vers vous sous deux jours ouvrés avec un créneau de démo.",
+      name: "Nom et prénom",
+      namePlaceholder: "Dr. Yasmine Benali",
+      lab: "Laboratoire",
+      labPlaceholder: "Laboratoire d'analyses Al Amal",
+      email: "E-mail professionnel",
+      emailPlaceholder: "vous@laboratoire.ma",
+      phone: "Téléphone",
+      phonePlaceholder: "+212 6 00 00 00 00",
+      phoneOptional: "facultatif",
+      city: "Ville",
+      cityPlaceholder: "Casablanca",
+      volume: "Comptes rendus par jour",
+      volumePlaceholder: "Choisissez une fourchette",
+      volumeOptions: ["Moins de 50", "50 à 200", "200 à 500", "Plus de 500"],
+      message: "Votre besoin",
+      messagePlaceholder:
+        "Parlez-nous de votre SIL, du format de vos comptes rendus, ou de ce que vous aimeriez voir pendant la démo.",
+      messageOptional: "facultatif",
+      submit: "Envoyer la demande",
+      submitting: "Envoi en cours…",
+      cancel: "Annuler",
+      successTitle: "Demande envoyée",
+      successBody:
+        "Merci. Votre demande est arrivée chez nous — nous revenons vers vous sous deux jours ouvrés.",
+      successClose: "Fermer",
+      errorTitle: "L'envoi a échoué",
+      errorBody: "Réessayez dans un instant, ou écrivez-nous directement :",
+      privacy:
+        "Vos coordonnées servent uniquement à répondre à cette demande. Aucune donnée patient ne doit figurer dans ce formulaire.",
+      fallback: "Vous préférez l'e-mail ?",
+      fallbackLink: "Écrivez-nous directement",
     },
   },
 

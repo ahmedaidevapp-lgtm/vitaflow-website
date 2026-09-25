@@ -222,9 +222,46 @@ export const en: Dict = {
       title: "Run a pilot with your laboratory.",
       subtitle:
         "We set up a supported pilot: a handful of reports, portal access, and hands-on help verifying that automatic matching works with your documents.",
-      button: "Email the Serumo team",
+      button: "Request a demo",
       secondary: "We reply within two business days",
       legal: "Amandev Technologies SARL AU · Casablanca, Morocco",
+    },
+
+    demoForm: {
+      title: "Request a demo",
+      subtitle:
+        "Tell us in two minutes how your laboratory runs. We come back within two business days with a demo slot.",
+      name: "Full name",
+      namePlaceholder: "Dr. Yasmine Benali",
+      lab: "Laboratory",
+      labPlaceholder: "Al Amal Clinical Laboratory",
+      email: "Work email",
+      emailPlaceholder: "you@laboratory.ma",
+      phone: "Phone",
+      phonePlaceholder: "+212 6 00 00 00 00",
+      phoneOptional: "optional",
+      city: "City",
+      cityPlaceholder: "Casablanca",
+      volume: "Reports per day",
+      volumePlaceholder: "Pick a range",
+      volumeOptions: ["Under 50", "50 to 200", "200 to 500", "Over 500"],
+      message: "What you need",
+      messagePlaceholder:
+        "Tell us about your LIS, the format of your reports, or what you would like to see during the demo.",
+      messageOptional: "optional",
+      submit: "Send request",
+      submitting: "Sending…",
+      cancel: "Cancel",
+      successTitle: "Request sent",
+      successBody:
+        "Thank you. Your request reached us — we will come back to you within two business days.",
+      successClose: "Close",
+      errorTitle: "Sending failed",
+      errorBody: "Try again in a moment, or email us directly:",
+      privacy:
+        "Your details are used only to answer this request. Never put patient data in this form.",
+      fallback: "Prefer email?",
+      fallbackLink: "Write to us directly",
     },
   },
 
