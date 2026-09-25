@@ -3,6 +3,12 @@ import { useLocation } from "react-router-dom";
 import { CalendarClock, X } from "lucide-react";
 import DemoCta from "@/components/demo/DemoCta";
 import { useDemoDialog } from "@/components/demo/DemoDialogProvider";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogTitle,
+} from "@/components/ui/dialog";
 import { useT } from "@/i18n/context";
 
 /** Time actually spent looking at the site before the invitation appears. */
@@ -34,9 +40,10 @@ const rememberDismissal = () => {
 };
 
 /**
- * A corner invitation offering a discovery call, shown once the visitor has spent
- * DELAY_MS actually looking at the page. Dismissing it is remembered across visits, and
- * anyone who already opened the demo form never sees it — they are past the ask.
+ * A centred invitation offering a discovery call, shown over a dimmed page once the
+ * visitor has spent DELAY_MS actually looking at it. Dismissing it is remembered across
+ * visits, and anyone who already opened the demo form never sees it — they are past the
+ * ask. Its CTA hands over to that same form.
  */
 const DiscoveryCallPopup = () => {
   const copy = useT().labs.discoveryPopup;
@@ -70,45 +77,49 @@ const DiscoveryCallPopup = () => {
   if (!eligible || !shown) return null;
 
   return (
-    <div
-      role="dialog"
-      aria-labelledby="discovery-popup-title"
-      className="fixed bottom-4 inset-x-4 sm:inset-x-auto sm:end-6 sm:bottom-6 z-40 sm:max-w-[368px] animate-fade-up"
-    >
-      <div className="relative rounded-[16px] border border-border bg-white p-5 pe-11 shadow-[0_24px_60px_-18px_hsl(214_47%_12%/0.35)]">
+    <Dialog open onOpenChange={dismiss}>
+      {/* The stock close button is a 16px icon labelled in English; this popup needs an
+          obvious, translated way out, so it is hidden in favour of the one below. */}
+      <DialogContent className="max-w-[460px] rounded-[18px] p-7 text-center [&>button]:hidden">
         <button
           type="button"
           onClick={dismiss}
           aria-label={copy.dismiss}
-          className="absolute top-3 end-3 inline-flex items-center justify-center w-8 h-8 rounded-[9px] text-slate3 hover:text-navy hover:bg-muted transition-smooth"
+          className="absolute top-3 end-3 inline-flex items-center justify-center w-9 h-9 rounded-[10px] text-slate3 hover:text-navy hover:bg-muted transition-smooth"
         >
-          <X className="w-[18px] h-[18px] shrink-0" strokeWidth={2.25} aria-hidden />
+          <X className="w-5 h-5 shrink-0" strokeWidth={2.25} aria-hidden />
         </button>
 
-        <div className="flex items-start gap-3">
-          <span className="inline-flex items-center justify-center w-10 h-10 shrink-0 rounded-[11px] bg-primary-light text-primary">
-            <CalendarClock className="w-[21px] h-[21px]" strokeWidth={2} aria-hidden />
-          </span>
+        <span className="mx-auto inline-flex items-center justify-center w-[52px] h-[52px] shrink-0 rounded-[15px] bg-primary-light text-primary">
+          <CalendarClock className="w-[26px] h-[26px]" strokeWidth={1.9} aria-hidden />
+        </span>
 
-          <div>
-            <h2
-              id="discovery-popup-title"
-              className="font-display font-bold text-[17px] leading-[1.25] tracking-[-0.01em] text-navy"
-            >
-              {copy.title}
-            </h2>
-            <p className="mt-[7px] text-[13.5px] leading-[1.5] text-slate1">{copy.body}</p>
+        <DialogTitle className="font-display font-bold text-[23px] leading-[1.2] tracking-[-0.02em] text-navy">
+          {copy.title}
+        </DialogTitle>
 
-            <DemoCta
-              onActivate={dismiss}
-              className="mt-[14px] inline-flex bg-primary hover:bg-primary-dark text-white text-[14px] font-semibold px-[18px] py-[9px] rounded-[10px] shadow-[0_4px_14px_-4px_hsl(160_82%_29%/0.5)] transition-smooth"
-            >
-              {copy.cta}
-            </DemoCta>
-          </div>
+        <DialogDescription className="text-[15px] leading-[1.55] text-slate1 max-w-[360px] mx-auto">
+          {copy.body}
+        </DialogDescription>
+
+        <div className="mt-1 flex flex-col items-center gap-3">
+          <DemoCta
+            onActivate={dismiss}
+            className="inline-flex justify-center bg-primary hover:bg-primary-dark text-white text-[15px] font-semibold px-7 py-[12px] rounded-[11px] shadow-[0_10px_26px_-8px_hsl(160_82%_29%/0.55)] hover:-translate-y-0.5 transition-smooth"
+          >
+            {copy.cta}
+          </DemoCta>
+
+          <button
+            type="button"
+            onClick={dismiss}
+            className="text-[13.5px] font-medium text-slate2 hover:text-navy transition-smooth"
+          >
+            {copy.later}
+          </button>
         </div>
-      </div>
-    </div>
+      </DialogContent>
+    </Dialog>
   );
 };
 

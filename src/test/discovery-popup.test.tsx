@@ -2,7 +2,14 @@ import { describe, expect, it, vi, beforeEach, afterEach } from "vitest";
 import { act, fireEvent, render, screen } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
 import DiscoveryCallPopup from "@/components/demo/DiscoveryCallPopup";
+import { DemoDialogProvider } from "@/components/demo/DemoDialogProvider";
 import LanguageProvider from "@/i18n/LanguageProvider";
+
+// A configured key is what makes the CTA open the form rather than a mail client.
+vi.mock("@/lib/constants", async (importOriginal) => ({
+  ...(await importOriginal<typeof import("@/lib/constants")>()),
+  WEB3FORMS_ACCESS_KEY: "test-key",
+}));
 
 const TITLE = "Envie d'un appel découverte ?";
 
@@ -69,5 +76,21 @@ describe("discovery call popup", () => {
     renderAt("/privacy");
     passSeconds(60);
     expect(screen.queryByText(TITLE)).not.toBeInTheDocument();
+  });
+
+  it("hands the visitor over to the demo form when they accept", () => {
+    render(
+      <LanguageProvider>
+        <MemoryRouter initialEntries={["/"]}>
+          <DemoDialogProvider>{null}</DemoDialogProvider>
+        </MemoryRouter>
+      </LanguageProvider>,
+    );
+    passSeconds(20);
+
+    fireEvent.click(screen.getByRole("button", { name: "Prendre contact" }));
+
+    expect(screen.queryByText(TITLE)).not.toBeInTheDocument();
+    expect(screen.getByLabelText(/Nom et prénom/)).toBeInTheDocument();
   });
 });

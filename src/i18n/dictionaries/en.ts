@@ -270,6 +270,7 @@ export const en: Dict = {
         "Get in touch and we will schedule a 20-minute call in the next few days to see whether Serumo belongs in your laboratory.",
       cta: "Get in touch",
       dismiss: "Dismiss this invitation",
+      later: "Maybe later",
     },
   },
 

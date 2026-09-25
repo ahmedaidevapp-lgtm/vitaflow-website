@@ -274,6 +274,7 @@ export const fr = {
         "Prenez contact et nous fixons un appel de 20 minutes dans les prochains jours pour voir si Serumo a sa place dans votre laboratoire.",
       cta: "Prendre contact",
       dismiss: "Fermer cette invitation",
+      later: "Peut-être plus tard",
     },
   },
 
