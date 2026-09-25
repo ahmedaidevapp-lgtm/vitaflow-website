@@ -267,6 +267,14 @@ export const fr = {
       fallback: "Vous préférez l'e-mail ?",
       fallbackLink: "Écrivez-nous directement",
     },
+
+    discoveryPopup: {
+      title: "Envie d'un appel découverte ?",
+      body:
+        "Prenez contact et nous fixons un appel de 20 minutes dans les prochains jours pour voir si Serumo a sa place dans votre laboratoire.",
+      cta: "Prendre contact",
+      dismiss: "Fermer cette invitation",
+    },
   },
 
   ios: {
