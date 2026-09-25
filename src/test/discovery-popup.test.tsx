@@ -29,10 +29,10 @@ describe("discovery call popup", () => {
 
   afterEach(() => vi.useRealTimers());
 
-  it("stays hidden until the visitor has spent 30 seconds on a marketing page", () => {
+  it("stays hidden until the visitor has spent 20 seconds on a marketing page", () => {
     renderAt("/");
 
-    passSeconds(29);
+    passSeconds(19);
     expect(screen.queryByText(TITLE)).not.toBeInTheDocument();
 
     passSeconds(1);
@@ -47,13 +47,13 @@ describe("discovery call popup", () => {
     expect(screen.queryByText(TITLE)).not.toBeInTheDocument();
 
     visibility.mockReturnValue("visible");
-    passSeconds(30);
+    passSeconds(20);
     expect(screen.getByText(TITLE)).toBeInTheDocument();
   });
 
   it("closes on the X and stays closed on the next visit", () => {
     renderAt("/");
-    passSeconds(30);
+    passSeconds(20);
 
     // fireEvent, not userEvent: user-event's own timer shimming deadlocks against the
     // fake clock this suite needs.

@@ -6,7 +6,7 @@ import { useDemoDialog } from "@/components/demo/DemoDialogProvider";
 import { useT } from "@/i18n/context";
 
 /** Time actually spent looking at the site before the invitation appears. */
-const DELAY_MS = 30_000;
+const DELAY_MS = 20_000;
 
 const STORAGE_KEY = "serumo.discoveryPopup.dismissed";
 
