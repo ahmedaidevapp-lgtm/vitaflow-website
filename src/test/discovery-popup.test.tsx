@@ -72,6 +72,27 @@ describe("discovery call popup", () => {
     expect(screen.queryByText(TITLE)).not.toBeInTheDocument();
   });
 
+  it("comes back once the dismissal is two days old", () => {
+    renderAt("/");
+    passSeconds(20);
+    fireEvent.click(screen.getByRole("button", { name: "Fermer cette invitation" }));
+
+    act(() => {
+      vi.setSystemTime(Date.now() + 2 * 24 * 60 * 60 * 1000 - 60_000);
+    });
+    const { unmount } = renderAt("/");
+    passSeconds(20);
+    expect(screen.queryByText(TITLE)).not.toBeInTheDocument();
+    unmount();
+
+    act(() => {
+      vi.setSystemTime(Date.now() + 60_000);
+    });
+    renderAt("/");
+    passSeconds(20);
+    expect(screen.getByText(TITLE)).toBeInTheDocument();
+  });
+
   it("never interrupts the legal pages", () => {
     renderAt("/privacy");
     passSeconds(60);

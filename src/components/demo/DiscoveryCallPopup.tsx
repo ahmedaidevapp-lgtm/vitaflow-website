@@ -16,6 +16,9 @@ const DELAY_MS = 20_000;
 
 const STORAGE_KEY = "serumo.discoveryPopup.dismissed";
 
+/** How long a dismissal holds before the invitation may come back. */
+const DISMISSAL_TTL_MS = 2 * 24 * 60 * 60 * 1000;
+
 /**
  * Sales invitations have no business interrupting someone who came to read the privacy
  * policy or the refund terms, so the popup is limited to the marketing pages.
@@ -24,7 +27,9 @@ const MARKETING_ROUTES = ["/", "/ios", "/pricing"];
 
 const wasDismissed = (): boolean => {
   try {
-    return window.localStorage.getItem(STORAGE_KEY) === "1";
+    // Holds the time of the dismissal. The old "1" flag reads as 1970, so it has expired.
+    const dismissedAt = Number(window.localStorage.getItem(STORAGE_KEY));
+    return dismissedAt > 0 && Date.now() - dismissedAt < DISMISSAL_TTL_MS;
   } catch {
     // localStorage throws in private modes — treat that as "not dismissed yet".
     return false;
@@ -33,7 +38,7 @@ const wasDismissed = (): boolean => {
 
 const rememberDismissal = () => {
   try {
-    window.localStorage.setItem(STORAGE_KEY, "1");
+    window.localStorage.setItem(STORAGE_KEY, String(Date.now()));
   } catch {
     // Not being able to remember is survivable; the popup simply returns next visit.
   }
@@ -42,8 +47,8 @@ const rememberDismissal = () => {
 /**
  * A centred invitation offering a discovery call, shown over a dimmed page once the
  * visitor has spent DELAY_MS actually looking at it. Dismissing it is remembered across
- * visits, and anyone who already opened the demo form never sees it — they are past the
- * ask. Its CTA hands over to that same form.
+ * visits for DISMISSAL_TTL_MS, and anyone who already opened the demo form never sees
+ * it — they are past the ask. Its CTA hands over to that same form.
  */
 const DiscoveryCallPopup = () => {
   const copy = useT().labs.discoveryPopup;
