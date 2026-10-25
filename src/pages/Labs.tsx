@@ -1,18 +1,33 @@
-import Navbar from "@/components/landing/Navbar";
-import Footer from "@/components/landing/Footer";
-import LabsHero from "@/components/labs/LabsHero";
-import LabsProblem from "@/components/labs/LabsProblem";
-import LabsHowItWorks from "@/components/labs/LabsHowItWorks";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import LabsBenefits from "@/components/labs/LabsBenefits";
-import LabsPortal from "@/components/labs/LabsPortal";
-import LabsTrust from "@/components/labs/LabsTrust";
 import LabsCTA from "@/components/labs/LabsCTA";
+import LabsHero from "@/components/labs/LabsHero";
+import LabsHowItWorks from "@/components/labs/LabsHowItWorks";
+import LabsPortal from "@/components/labs/LabsPortal";
+import LabsProblem from "@/components/labs/LabsProblem";
+import LabsTrust from "@/components/labs/LabsTrust";
+import { SiteLayout } from "@/components/site/layout";
 
 /** Home page — Serumo's B2B offering for Moroccan clinical laboratories. */
 const Labs = () => {
+  const { hash, key } = useLocation();
+
+  // Router links to "/#how" change the URL without scrolling, so scroll to the section on
+  // every navigation — keyed on `key`, so choosing the same section twice still works. A
+  // link to "/" itself (the overview) returns to the top. The frame's delay lets the menu
+  // that was clicked finish closing first.
+  useEffect(() => {
+    const frame = requestAnimationFrame(() => {
+      const target = hash ? document.getElementById(hash.slice(1)) : null;
+      if (target) target.scrollIntoView({ behavior: "smooth" });
+      else if (!hash && key !== "default") window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+    return () => cancelAnimationFrame(frame);
+  }, [hash, key]);
+
   return (
-    <main className="min-h-screen bg-background">
-      <Navbar />
+    <SiteLayout>
       <LabsHero />
       <LabsProblem />
       <LabsHowItWorks />
@@ -20,8 +35,7 @@ const Labs = () => {
       <LabsPortal />
       <LabsTrust />
       <LabsCTA />
-      <Footer />
-    </main>
+    </SiteLayout>
   );
 };
 

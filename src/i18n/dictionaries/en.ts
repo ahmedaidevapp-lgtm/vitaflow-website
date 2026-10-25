@@ -2,26 +2,23 @@ import type { Dict } from "../types";
 
 export const en: Dict = {
   nav: {
-    how: "How it works",
-    benefits: "Benefits",
-    portal: "The portal",
-    security: "Security",
-    ios: "iOS",
-    iosApp: "iOS app",
-    labTests: "Lab Tests",
+    pagesLabel: "Site pages",
+    labs: "Laboratories",
+    labsOverview: "Overview",
+    iosGroup: "iOS",
+    ios: "iOS app",
     pricing: "iOS pricing",
-    privacy: "Privacy",
+    labTests: "Lab Tests",
+    signIn: "Lab sign in",
     cta: "Book a demo",
     openMenu: "Open menu",
     closeMenu: "Close menu",
     languageLabel: "Language",
-    logoAlt: "Serumo logo",
   },
 
   footer: {
     tagline:
       "The patient-owned health record. Labs deposit reports; patients keep control of them.",
-    copyright: "Serumo. Educational insights for personal wellness.",
     forLabs: "For laboratories",
     ios: "iOS app",
     labTests: "Lab Tests",
@@ -37,46 +34,32 @@ export const en: Dict = {
 
   labs: {
     hero: {
-      badge: "For clinical laboratories in Morocco",
-      titleLead: "Give your patients their results,",
-      titleAccent: "in an app they own.",
+      product: " for labs",
+      titleLead: "From the lab to the ",
+      titleAccent: "patient",
+      titleTail: ", no detours.",
       subtitle:
-        "Serumo is a patient-owned health record. Your lab deposits the report; the patient claims it themselves, securely. No LIS integration, no development work on your side.",
-      ctaPrimary: "Request a pilot",
+        "Serumo gives your laboratory a delivery channel for reports: you deposit the PDF, the patient claims it in an app they own. No LIS integration, no development work on your side.",
+      ctaPrimary: "Book a demo",
       ctaSecondary: "See how it works",
       note: "Free for your patients · Works with any LIS",
-      showcase: {
-        label: "What your patients see",
-        demoNote: "Demo screenshots — fictitious data, no real patient.",
-        prev: "Previous screenshot",
-        next: "Next screenshot",
-        show: "Show screenshot",
-        slides: [
-          {
-            caption: "Home",
-            alt: "The Serumo app: patient dashboard showing the share of markers in range and the latest report.",
-          },
-          {
-            caption: "Trends",
-            alt: "The Serumo app: how one marker evolves across several reports, against its reference range.",
-          },
-          {
-            caption: "Health log",
-            alt: "The Serumo app: markers grouped by theme, each positioned against its reference range.",
-          },
-        ],
-      },
+      demoNote: "Demo screenshots — fictitious data, no real patient.",
+      shots: [
+        "The Serumo app: patient dashboard showing the share of markers in range and the latest report.",
+        "The Serumo app: how one marker evolves across several reports, against its reference range.",
+        "The Serumo app: markers grouped by theme, each positioned against its reference range.",
+      ],
     },
 
     problem: {
       eyebrow: "The problem",
       title: "Result delivery hasn't changed in twenty years.",
       intro:
-        "Your analysis is impeccable. It's the last metre — from the counter to the patient — that is still done by hand.",
+        "Your analysis is impeccable. It's the last metre, from the counter to the patient, that is still done by hand.",
       cards: [
         {
           title: "Patients lose their report",
-          desc: "Paper mislaid, PDF buried in an inbox. By the next visit the history is gone — and with it any biological baseline.",
+          desc: "Paper mislaid, PDF buried in an inbox. By the next visit the history is gone, and with it any biological baseline.",
         },
         {
           title: "No digital delivery channel",
@@ -104,7 +87,7 @@ export const en: Dict = {
           tag: "STEP 2 · AUTOMATIC",
           title: "Serumo matches on the phone number",
           desc: "The phone number printed on the report is used to bind the document to the pre-registered patient. Unmatched documents go to a quarantine queue for manual binding.",
-          visualPrimary: "Phone number recognised",
+          visualPrimary: "✓ Phone number recognised",
           visualSecondary: "Automatic match with the pre-registered patient",
         },
         {
@@ -130,7 +113,7 @@ export const en: Dict = {
       items: [
         {
           title: "Zero LIS integration",
-          desc: "No HL7, no API to build, no IT project. Your LIS sends a PDF — that's all.",
+          desc: "No HL7, no API to build, no IT project. Your LIS sends a PDF, that's all.",
         },
         {
           title: "Works with any LIS",
@@ -150,7 +133,7 @@ export const en: Dict = {
         },
         {
           title: "Minimal staff workflow",
-          desc: "One upload — or nothing at all if sending is automated. No new procedure for staff to adopt.",
+          desc: "One upload, or nothing at all if sending is automated. No new procedure for staff to adopt.",
         },
       ],
     },
@@ -160,6 +143,7 @@ export const en: Dict = {
       title: "Everything you need, in a browser.",
       intro:
         "The Serumo portal is a desktop web application designed for reception and admin staff. Nothing to install.",
+      imgAlt: "Serumo portal: the laboratory home page.",
       items: [
         {
           title: "Report upload",
@@ -219,12 +203,12 @@ export const en: Dict = {
     },
 
     cta: {
+      eyebrow: "Pilot",
       title: "Run a pilot with your laboratory.",
       subtitle:
         "We set up a supported pilot: a handful of reports, portal access, and hands-on help verifying that automatic matching works with your documents.",
       button: "Request a demo",
       secondary: "We reply within two business days",
-      legal: "Amandev Technologies SARL AU · Casablanca, Morocco",
     },
 
     demoForm: {
@@ -285,31 +269,11 @@ export const en: Dict = {
       appStore: "App Store",
       rating: "5.0",
       socialProof: "Free to start · iPhone",
-      carouselLabel: "App screenshots",
-      prevSlide: "Previous screenshot",
-      nextSlide: "Next screenshot",
-      showSlide: "Show screenshot",
-      slides: [
-        {
-          caption: "Home",
-          alt: "Serumo home screen: report overview, progress story, and latest markers.",
-        },
-        {
-          caption: "Insights",
-          alt: "Insights screen: markers needing attention with suggested actions.",
-        },
-        {
-          caption: "Plans",
-          alt: "Plans screen: daily health plan and active improvement steps.",
-        },
-        {
-          caption: "Summary",
-          alt: "Summary screen: AI-generated plain-language overview of your lab results.",
-        },
-        {
-          caption: "Trends",
-          alt: "Trends screen: biomarker charts across multiple lab visits.",
-        },
+      shots: [
+        "Serumo home screen: the share of markers in range, borderline and out-of-range counts, and the latest summary.",
+        "Report detail: each marker with its value, reference range and status.",
+        "Trends screen: fasting glucose across several reports, against its reference range.",
+        "Plans screen: a daily streak and a checklist of actions to improve one marker.",
       ],
     },
 
@@ -449,6 +413,8 @@ export const en: Dict = {
       "Serumo is free to start. Premium unlocks unlimited uploads, full insights, and personalized health plans — for you or your whole household. Subscribe in the app (App Store / Google Play) or on the web.",
     monthly: "Monthly",
     yearly: "Yearly",
+    currencyLabel: "Currency",
+    periodLabel: "Billing period",
     free: "Free",
     forever: "forever",
     premium: "Premium",
@@ -456,7 +422,7 @@ export const en: Dict = {
     perYear: "year",
     oneProfile: "1 profile",
     freeFeatures: [
-      "Upload and store lab reports",
+      "Upload and store one lab report",
       "Core biomarker tracking",
       "One AI report summary per profile",
     ],

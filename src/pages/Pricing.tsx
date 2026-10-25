@@ -1,8 +1,10 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import Footer from "@/components/landing/Footer";
-import Navbar from "@/components/landing/Navbar";
+import { HeroCard, Section, SiteLayout } from "@/components/site/layout";
+import Segmented from "@/components/site/Segmented";
+import { lead, sectionTitle } from "@/components/site/styles";
 import { useT } from "@/i18n/context";
+import { cn } from "@/lib/utils";
 
 type Currency = "USD" | "EUR" | "GBP" | "MAD";
 type Period = "monthly" | "yearly";
@@ -38,81 +40,72 @@ const Pricing = () => {
 
   const tierPrices = PRICES[currency][period];
 
-  return (
-    <div className="min-h-screen bg-background">
-      <Navbar />
-      <main className="container max-w-4xl pt-28 pb-16 md:pt-32 md:pb-24">
-        <p className="text-sm font-medium text-primary-dark mb-2">
-          <Link to="/" className="text-slate2 hover:text-navy transition-smooth">
-            {p.backHome}
-          </Link>
-        </p>
-        <h1 className="text-3xl md:text-4xl font-extrabold text-navy tracking-tight">{p.title}</h1>
-        <p className="mt-4 text-slate2 max-w-2xl leading-relaxed">{p.intro}</p>
+  const check = <span className="text-brand">✓</span>;
 
-        {/* Currency + billing period selectors */}
-        <div className="mt-8 flex flex-wrap items-center gap-4">
-          <div className="inline-flex rounded-[10px] border border-border bg-white p-1">
-            {CURRENCIES.map((c) => (
-              <button
-                key={c}
-                type="button"
-                onClick={() => setCurrency(c)}
-                className={`px-3.5 py-1.5 rounded-[7px] text-sm font-semibold transition-smooth ${
-                  currency === c ? "bg-primary text-white" : "text-slate1 hover:text-navy"
-                }`}
-              >
-                {c}
-              </button>
-            ))}
-          </div>
-          <div className="inline-flex rounded-[10px] border border-border bg-white p-1">
-            {(["monthly", "yearly"] as const).map((per) => (
-              <button
-                key={per}
-                type="button"
-                onClick={() => setPeriod(per)}
-                className={`px-3.5 py-1.5 rounded-[7px] text-sm font-semibold transition-smooth ${
-                  period === per ? "bg-primary text-white" : "text-slate1 hover:text-navy"
-                }`}
-              >
-                {per === "monthly" ? p.monthly : p.yearly}
-              </button>
-            ))}
+  return (
+    <SiteLayout>
+      <HeroCard>
+        <div className="mx-auto max-w-[calc(56rem+5.5rem)] px-5 pb-14 pt-8 sm:px-11 md:pt-12">
+          <p className="mb-6 text-[13px]">
+            <Link to="/" className="text-ink-subtle no-underline transition-colors hover:text-ink">
+              {p.backHome}
+            </Link>
+          </p>
+          <h1 className={sectionTitle}>{p.title}</h1>
+          <p className={cn(lead, "mt-5 max-w-2xl")}>{p.intro}</p>
+
+          <div className="mt-9 flex flex-wrap items-center gap-3">
+            <Segmented<Currency>
+              label={p.currencyLabel}
+              value={currency}
+              onChange={setCurrency}
+              options={CURRENCIES.map((c) => ({ value: c, label: c }))}
+            />
+            <Segmented<Period>
+              label={p.periodLabel}
+              value={period}
+              onChange={setPeriod}
+              options={[
+                { value: "monthly", label: p.monthly },
+                { value: "yearly", label: p.yearly },
+              ]}
+            />
           </div>
         </div>
+      </HeroCard>
 
+      <Section className="max-w-[calc(56rem+4rem)] pt-10">
         {/* Free vs Premium */}
-        <div className="mt-8 grid gap-6 md:grid-cols-2">
-          <div className="rounded-2xl border border-border bg-white p-7 shadow-soft">
-            <h2 className="font-display text-xl font-bold text-navy">{p.free}</h2>
-            <p className="mt-2 text-3xl font-extrabold text-navy">
+        <div className="grid gap-3.5 md:grid-cols-2">
+          <div className="rounded-[24px] bg-white p-8">
+            <h2 className="text-[13px] font-medium uppercase tracking-[0.2em] text-ink-subtle">{p.free}</h2>
+            <p className="mt-4 text-[40px] font-light tracking-[-0.04em]">
               <span dir="ltr">{formatPrice(0, currency)}</span>
-              <span className="text-sm font-medium text-slate3"> {p.forever}</span>
+              <span className="text-[13px] tracking-normal text-ink-faint"> {p.forever}</span>
             </p>
-            <ul className="mt-5 space-y-2.5 text-[15px] text-slate2">
+            <ul className="mt-6 space-y-2.5 text-[14px] text-ink-muted">
               {p.freeFeatures.map((f) => (
-                <li key={f} className="flex gap-2">
-                  <span className="text-primary font-bold">✓</span>
+                <li key={f} className="flex gap-2.5">
+                  {check}
                   {f}
                 </li>
               ))}
             </ul>
           </div>
 
-          <div className="rounded-2xl border-2 border-primary bg-white p-7 shadow-soft">
-            <h2 className="font-display text-xl font-bold text-navy">{p.premium}</h2>
-            <p className="mt-2 text-3xl font-extrabold text-navy">
+          <div className="rounded-[24px] bg-ink p-8 text-white">
+            <h2 className="text-[13px] font-medium uppercase tracking-[0.2em] text-ink-faint">{p.premium}</h2>
+            <p className="mt-4 text-[40px] font-light tracking-[-0.04em]">
               <span dir="ltr">{formatPrice(tierPrices[0], currency)}</span>
-              <span className="text-sm font-medium text-slate3">
+              <span className="text-[13px] tracking-normal text-ink-faint">
                 {" "}
                 / {period === "monthly" ? p.perMonth : p.perYear} · {p.oneProfile}
               </span>
             </p>
-            <ul className="mt-5 space-y-2.5 text-[15px] text-slate2">
+            <ul className="mt-6 space-y-2.5 text-[14px] text-[#bdbdba]">
               {p.premiumFeatures.map((f) => (
-                <li key={f} className="flex gap-2">
-                  <span className="text-primary font-bold">✓</span>
+                <li key={f} className="flex gap-2.5">
+                  <span className="text-white">✓</span>
                   {f}
                 </li>
               ))}
@@ -121,55 +114,54 @@ const Pricing = () => {
         </div>
 
         {/* Household bundles */}
-        <h2 className="mt-12 font-display text-xl font-bold text-navy">{p.bundlesTitle}</h2>
-        <p className="mt-2 text-slate2 text-[15px]">{p.bundlesIntro}</p>
-        <div className="mt-5 overflow-x-auto rounded-2xl border border-border bg-white shadow-soft">
-          <table className="w-full text-start text-[15px]">
-            <thead>
-              <tr className="border-b border-border text-navy">
-                <th className="px-5 py-3.5 font-semibold text-start">{p.tableProfiles}</th>
-                <th className="px-5 py-3.5 font-semibold text-start">
-                  {period === "monthly" ? p.tablePerMonth : p.tablePerYear}
-                </th>
-                {period === "yearly" && (
-                  <th className="px-5 py-3.5 font-semibold text-start">{p.tableApproxMonth}</th>
-                )}
-              </tr>
-            </thead>
-            <tbody className="text-slate2">
-              {tierPrices.map((price, i) => (
-                <tr key={i} className={i < tierPrices.length - 1 ? "border-b border-border" : ""}>
-                  <td className="px-5 py-3.5 font-medium text-navy">
-                    {i + 1} {i === 0 ? p.profileSingular : p.profilePlural}
-                  </td>
-                  <td className="px-5 py-3.5" dir="ltr">
-                    {formatPrice(price, currency)}
-                  </td>
-                  {period === "yearly" && (
-                    <td className="px-5 py-3.5" dir="ltr">
-                      {formatPrice(Math.round((price / 12) * 100) / 100, currency)}
-                    </td>
-                  )}
+        <div className="mt-3.5 rounded-[24px] bg-white p-8">
+          <h2 className="text-[22px] font-medium tracking-[-0.025em]">{p.bundlesTitle}</h2>
+          <p className="mt-2 text-[14px] leading-[1.65] text-ink-muted">{p.bundlesIntro}</p>
+          <div className="mt-6 overflow-x-auto">
+            <table className="w-full text-start text-[14px]">
+              <thead>
+                <tr className="border-b border-line text-[12px] text-ink-subtle">
+                  <th className="py-3 pe-5 text-start font-normal">{p.tableProfiles}</th>
+                  <th className="py-3 pe-5 text-start font-normal">
+                    {period === "monthly" ? p.tablePerMonth : p.tablePerYear}
+                  </th>
+                  {period === "yearly" && <th className="py-3 text-start font-normal">{p.tableApproxMonth}</th>}
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+              <tbody className="text-ink-muted">
+                {tierPrices.map((price, i) => (
+                  <tr key={i} className={i < tierPrices.length - 1 ? "border-b border-line" : ""}>
+                    <td className="py-3.5 pe-5 font-medium text-ink">
+                      {i + 1} {i === 0 ? p.profileSingular : p.profilePlural}
+                    </td>
+                    <td className="py-3.5 pe-5" dir="ltr">
+                      {formatPrice(price, currency)}
+                    </td>
+                    {period === "yearly" && (
+                      <td className="py-3.5" dir="ltr">
+                        {formatPrice(Math.round((price / 12) * 100) / 100, currency)}
+                      </td>
+                    )}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </div>
 
-        <p className="mt-6 text-sm text-slate3 leading-relaxed max-w-2xl">
+        <p className="mt-8 max-w-2xl text-[12.5px] leading-[1.65] text-ink-subtle">
           {p.disclaimerLead}{" "}
-          <Link to="/terms" className="underline underline-offset-2 text-primary-dark hover:text-primary">
+          <Link to="/terms" className="text-ink underline underline-offset-2 hover:text-ink-muted">
             {p.termsLink}
           </Link>{" "}
           {p.and}{" "}
-          <Link to="/refund" className="underline underline-offset-2 text-primary-dark hover:text-primary">
+          <Link to="/refund" className="text-ink underline underline-offset-2 hover:text-ink-muted">
             {p.refundLink}
           </Link>
           .
         </p>
-      </main>
-      <Footer />
-    </div>
+      </Section>
+    </SiteLayout>
   );
 };
 

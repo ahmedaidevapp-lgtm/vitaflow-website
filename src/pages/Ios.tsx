@@ -1,28 +1,23 @@
-import Navbar from "@/components/landing/Navbar";
-import Hero from "@/components/landing/Hero";
-import ValueProps from "@/components/landing/ValueProps";
-import BeforeAfter from "@/components/landing/BeforeAfter";
-import Features from "@/components/landing/Features";
-import HowItWorks from "@/components/landing/HowItWorks";
-import TrustBlock from "@/components/landing/TrustBlock";
-import FinalCTA from "@/components/landing/FinalCTA";
-import Footer from "@/components/landing/Footer";
+import IosBeforeAfter from "@/components/ios/IosBeforeAfter";
+import IosCTA from "@/components/ios/IosCTA";
+import IosFeatures from "@/components/ios/IosFeatures";
+import IosHero from "@/components/ios/IosHero";
+import IosHowItWorks from "@/components/ios/IosHowItWorks";
+import IosTrust from "@/components/ios/IosTrust";
+import IosValueProps from "@/components/ios/IosValueProps";
+import { SiteLayout } from "@/components/site/layout";
 
 /** Consumer-facing landing page for the Serumo iOS app. */
-const Ios = () => {
-  return (
-    <main className="min-h-screen bg-background">
-      <Navbar />
-      <Hero />
-      <ValueProps />
-      <BeforeAfter />
-      <Features />
-      <HowItWorks />
-      <TrustBlock />
-      <FinalCTA />
-      <Footer />
-    </main>
-  );
-};
+const Ios = () => (
+  <SiteLayout>
+    <IosHero />
+    <IosValueProps />
+    <IosBeforeAfter />
+    <IosFeatures />
+    <IosHowItWorks />
+    <IosTrust />
+    <IosCTA />
+  </SiteLayout>
+);
 
 export default Ios;

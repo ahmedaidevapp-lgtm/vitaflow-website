@@ -2,86 +2,55 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Serumo Design System — serumo-2a palette
-   All colors MUST be HSL.
-   Headings: Space Grotesk  |  Body: IBM Plex Sans
+/* Serumo design system
+   A warm neutral page (canvas) carrying white rounded cards, near-black ink, and one
+   green accent used sparingly. All colors MUST be HSL.
+   Type: Geist (Latin) with IBM Plex Sans Arabic for Arabic glyphs.
 */
 
 @layer base {
   :root {
+    --canvas: 60 3% 94%;         /* #efefee — page background */
+    --ink: 0 0% 8%;              /* #141414 — headings, primary buttons */
+    --ink-muted: 60 2% 37%;      /* #5f5f5c — body copy */
+    --ink-subtle: 60 1% 53%;     /* #8a8a87 — eyebrows, secondary text */
+    --ink-faint: 60 2% 64%;      /* #a5a5a2 — ordinals, footnotes */
+    --mist: 60 5% 96%;           /* #f5f5f4 — soft fills inside cards */
+    --line: 60 5% 92%;           /* #ececea — dividers inside cards */
+    --line-strong: 60 3% 87%;    /* #dededc — dividers on the canvas, field borders */
+    --brand: 157 85% 29%;        /* #0b8a5a — the one accent */
+    --brand-soft: 152 39% 93%;   /* #e6f5ee */
+    /* Fills behind white text: a shade deeper than --brand, which is just short of
+       4.5:1 contrast with white at small sizes. */
+    --brand-strong: 157 85% 27%; /* #0a7f53 — 5:1 with white */
+    --brand-stronger: 158 86% 23%; /* #086c47 — hover */
+
+    /* shadcn/ui tokens, mapped onto the palette above */
     --background: 0 0% 100%;
-    --foreground: 214 47% 12%;
-
+    --foreground: var(--ink);
     --card: 0 0% 100%;
-    --card-foreground: 214 47% 12%;
-
+    --card-foreground: var(--ink);
     --popover: 0 0% 100%;
-    --popover-foreground: 214 47% 12%;
-
-    /* Brand greens — serumo-2a */
-    --primary: 160 82% 29%;      /* #0E8C64 */
+    --popover-foreground: var(--ink);
+    --primary: var(--ink);
     --primary-foreground: 0 0% 100%;
-    --primary-dark: 160 82% 21%; /* deeper green */
-    --primary-light: 150 44% 96%; /* #F2FAF6 very light green tint */
-
-    /* Mint accent */
-    --mint: 153 61% 47%;         /* #2BC48A */
-
-    /* Teal accent */
-    --teal: 195 82% 31%;         /* #0E6F8E */
-    --teal-light: 198 58% 48%;   /* #33A6C4 */
-
-    --secondary: 150 44% 96%;    /* #F2FAF6 */
-    --secondary-foreground: 214 47% 12%;
-
-    --muted: 207 27% 93%;        /* #EAEFF3 */
-    --muted-foreground: 207 16% 58%; /* #8496A5 */
-
-    --accent: 150 44% 96%;
-    --accent-foreground: 160 82% 21%;
-
+    --secondary: var(--mist);
+    --secondary-foreground: var(--ink);
+    --muted: var(--mist);
+    --muted-foreground: var(--ink-subtle);
+    --accent: var(--mist);
+    --accent-foreground: var(--ink);
     --destructive: 0 73% 51%;
     --destructive-foreground: 0 0% 100%;
-
     --warning: 38 92% 50%;
     --warning-foreground: 26 83% 14%;
-
     --info: 217 91% 60%;
     --info-foreground: 0 0% 100%;
+    --border: var(--line);
+    --input: var(--line-strong);
+    --ring: var(--ink);
 
-    --border: 207 27% 93%;       /* #EAEFF3 */
-    --input: 207 27% 93%;
-    --ring: 160 82% 29%;
-
-    /* Semantic palette */
-    --navy: 214 47% 12%;         /* #0F1B2D */
-    --slate-1: 209 16% 42%;      /* #5A6B7B */
-    --slate-2: 207 16% 58%;      /* #8496A5 */
-    --slate-3: 207 21% 68%;      /* #9DB0BF */
-    --inactive: 207 27% 75%;
-
-    /* Dark section palette */
-    --dark-card: 214 46% 16%;    /* #16263B */
-    --dark-border: 209 36% 21%;  /* #223649 */
-    --green-border: 148 46% 85%; /* #C9EBD9 */
-    --green-tint: 152 45% 93%;   /* #E7F6EF */
-
-    --radius: 0.875rem;
-
-    /* Gradients */
-    --gradient-hero: linear-gradient(180deg, hsl(150 44% 96%) 0%, hsl(0 0% 100%) 100%);
-    --gradient-brand: linear-gradient(135deg, hsl(160 82% 29%) 0%, hsl(195 82% 31%) 100%);
-    --gradient-soft: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(150 44% 96%) 100%);
-    --gradient-dark: linear-gradient(135deg, hsl(214 47% 12%) 30%, hsl(158 49% 14%) 100%);
-
-    /* Shadows */
-    --shadow-soft: 0 1px 2px 0 hsl(214 47% 12% / 0.04), 0 1px 3px 0 hsl(214 47% 12% / 0.06);
-    --shadow-card: 0 4px 12px -2px hsl(214 47% 12% / 0.06), 0 2px 6px -1px hsl(214 47% 12% / 0.04);
-    --shadow-elevated: 0 20px 40px -12px hsl(160 82% 29% / 0.22), 0 8px 16px -8px hsl(214 47% 12% / 0.08);
-    --shadow-glow: 0 0 60px hsl(160 82% 29% / 0.28);
-    --shadow-phone: 0 30px 60px -22px hsl(214 47% 12% / 0.45);
-
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --radius: 1rem;
   }
 }
 
@@ -91,49 +60,30 @@
   }
 
   html {
-    font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, "Segoe UI",
-      Roboto, "Helvetica Neue", Arial, sans-serif;
+    scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
   }
 
   body {
-    @apply bg-background text-foreground;
-    font-feature-settings: "ss01", "cv01", "cv11";
+    @apply bg-canvas font-sans text-ink;
   }
 
-  h1, h2, h3, h4 {
-    font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
-    letter-spacing: -0.02em;
+  :focus-visible {
+    outline: 2px solid hsl(var(--ink));
+    outline-offset: 3px;
   }
-}
 
-@layer utilities {
-  .bg-gradient-hero  { background: var(--gradient-hero); }
-  .bg-gradient-brand { background: var(--gradient-brand); }
-  .bg-gradient-soft  { background: var(--gradient-soft); }
-  .bg-gradient-dark  { background: var(--gradient-dark); }
-  .shadow-soft     { box-shadow: var(--shadow-soft); }
-  .shadow-card     { box-shadow: var(--shadow-card); }
-  .shadow-elevated { box-shadow: var(--shadow-elevated); }
-  .shadow-glow     { box-shadow: var(--shadow-glow); }
-  .shadow-phone    { box-shadow: var(--shadow-phone); }
-  .transition-smooth { transition: var(--transition-smooth); }
+  /* Tracking breaks the joins between Arabic letters, so it is dropped in RTL — this
+     also neutralises the wide uppercase eyebrows, which have no meaning in Arabic. */
+  [dir="rtl"] * {
+    letter-spacing: 0 !important;
+  }
 
-  @keyframes float {
-    0%, 100% { transform: translateY(0px); }
-    50%       { transform: translateY(-12px); }
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
   }
-  @keyframes fade-up {
-    from { opacity: 0; transform: translateY(16px); }
-    to   { opacity: 1; transform: translateY(0); }
-  }
-  @keyframes pulse-ring {
-    0%   { transform: scale(0.95); opacity: 0.7; }
-    100% { transform: scale(1.4);  opacity: 0; }
-  }
-  .animate-float      { animation: float 6s ease-in-out infinite; }
-  .animate-fade-up    { animation: fade-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) both; }
-  .animate-pulse-ring { animation: pulse-ring 2.4s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
 }

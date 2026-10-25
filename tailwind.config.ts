@@ -13,9 +13,14 @@ export default {
       },
     },
     extend: {
+      screens: {
+        // Narrowest width at which the nav's page pill fits, centred, between its neighbours.
+        wide: "1240px",
+      },
       fontFamily: {
-        display: ["'Space Grotesk'", "-apple-system", "BlinkMacSystemFont", "sans-serif"],
-        sans: ["'IBM Plex Sans'", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "sans-serif"],
+        // Geist has no Arabic glyphs, so Arabic text falls through to IBM Plex Sans Arabic.
+        sans: ["Geist", "'IBM Plex Sans Arabic'", "system-ui", "-apple-system", "Segoe UI", "Roboto", "sans-serif"],
+        mono: ["'Geist Mono'", "ui-monospace", "SFMono-Regular", "Menlo", "monospace"],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -23,18 +28,25 @@ export default {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
-        navy: "hsl(var(--navy))",
-        slate1: "hsl(var(--slate-1))",
-        slate2: "hsl(var(--slate-2))",
-        slate3: "hsl(var(--slate-3))",
-        inactive: "hsl(var(--inactive))",
-        mint: "hsl(var(--mint))",
-        teal: "hsl(var(--teal))",
-        tealLight: "hsl(var(--teal-light))",
-        darkCard: "hsl(var(--dark-card))",
-        darkBorder: "hsl(var(--dark-border))",
-        greenBorder: "hsl(var(--green-border))",
-        greenTint: "hsl(var(--green-tint))",
+        // Serumo palette — a warm neutral page with white cards and one green accent.
+        canvas: "hsl(var(--canvas))",
+        ink: {
+          DEFAULT: "hsl(var(--ink))",
+          muted: "hsl(var(--ink-muted))",
+          subtle: "hsl(var(--ink-subtle))",
+          faint: "hsl(var(--ink-faint))",
+        },
+        mist: "hsl(var(--mist))",
+        line: {
+          DEFAULT: "hsl(var(--line))",
+          strong: "hsl(var(--line-strong))",
+        },
+        brand: {
+          DEFAULT: "hsl(var(--brand))",
+          soft: "hsl(var(--brand-soft))",
+          strong: "hsl(var(--brand-strong))",
+          stronger: "hsl(var(--brand-stronger))",
+        },
         warning: {
           DEFAULT: "hsl(var(--warning))",
           foreground: "hsl(var(--warning-foreground))",
@@ -46,8 +58,6 @@ export default {
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
-          dark: "hsl(var(--primary-dark))",
-          light: "hsl(var(--primary-light))",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
@@ -98,11 +108,19 @@ export default {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        float: {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-10px)" },
+        },
+        "fade-up": {
+          from: { opacity: "0", transform: "translateY(16px)" },
+          to: { opacity: "1", transform: "translateY(0)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        float: "float 6s ease-in-out infinite",
+        float: "float 7s ease-in-out infinite",
         "fade-up": "fade-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) both",
       },
     },

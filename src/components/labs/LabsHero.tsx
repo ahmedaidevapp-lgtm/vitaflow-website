@@ -1,64 +1,71 @@
-import { ArrowRight } from "lucide-react";
 import DemoCta from "@/components/demo/DemoCta";
-import WebAppSlideshow from "@/components/labs/WebAppSlideshow";
+import { HeroCard } from "@/components/site/layout";
+import ScreenFan from "@/components/site/ScreenFan";
+import { pillPrimary, pillSecondary } from "@/components/site/styles";
 import { useT } from "@/i18n/context";
+
+/** The patient web app; alt text comes from the dictionary, index-aligned. */
+const SHOTS = [
+  { src: "/webapp-home.png", width: 2368, height: 1234 },
+  { src: "/webapp-trends.png", width: 2356, height: 1390 },
+  { src: "/webapp-health-log.png", width: 2372, height: 1382 },
+];
 
 const LabsHero = () => {
   const t = useT();
-  const { hero } = t.labs;
+  const { hero, how } = t.labs;
+  // The badge previews step 3 of the flow: the notification the patient receives.
+  const notification = how.steps[2];
 
   return (
-    <section
-      className="relative overflow-hidden pt-28 pb-[68px] md:pt-[148px] md:pb-[68px]"
-      style={{
-        background:
-          "radial-gradient(900px 500px at 78% 0%, hsl(152 45% 93%), rgba(231,246,239,0) 60%), linear-gradient(180deg, hsl(150 44% 96%), #ffffff)",
-      }}
-    >
-      <div className="container">
-        {/* Landscape screenshots need real width, so the visual column is the wider one. */}
-        <div className="grid lg:grid-cols-[0.95fr_1.05fr] gap-10 lg:gap-8 items-center">
-          {/* ── Copy ── */}
-          <div className="animate-fade-up">
-            <div className="inline-flex items-center gap-2 bg-primary-light border border-greenBorder px-[13px] py-[6px] rounded-full text-[13px] font-semibold text-primary mb-[26px]">
-              <span className="w-[7px] h-[7px] rounded-full bg-mint shrink-0" />
-              {hero.badge}
-            </div>
-
-            <h1 className="font-display font-bold text-[40px] sm:text-[52px] leading-[1.04] tracking-[-0.03em] text-navy mb-[22px]">
-              {hero.titleLead}
-              <br />
-              <span className="text-primary">{hero.titleAccent}</span>
-            </h1>
-
-            <p className="text-[18px] leading-[1.55] text-slate1 max-w-[520px] mb-[34px]">
-              {hero.subtitle}
-            </p>
-
-            <div className="flex flex-wrap items-center gap-3">
-              <DemoCta className="inline-flex items-center gap-2 bg-primary hover:bg-primary-dark text-white text-[15px] font-semibold px-[24px] py-[13px] rounded-[12px] shadow-[0_10px_26px_-8px_hsl(160_82%_29%/0.55)] hover:-translate-y-0.5 transition-smooth">
-                {hero.ctaPrimary}
-                <ArrowRight className="w-[18px] h-[18px] shrink-0 rtl:rotate-180" strokeWidth={2.25} aria-hidden />
-              </DemoCta>
-
-              <a
-                href="#how"
-                className="inline-flex items-center bg-white border border-border hover:border-greenBorder text-navy text-[15px] font-semibold px-[22px] py-[13px] rounded-[12px] shadow-soft transition-smooth"
-              >
-                {hero.ctaSecondary}
-              </a>
-            </div>
-
-            <p className="mt-[18px] text-[13px] text-slate2 font-medium">{hero.note}</p>
-          </div>
-
-          {/* ── Patient web-app showcase ── */}
-          <div className="flex justify-center lg:justify-end animate-fade-up" style={{ animationDelay: "120ms" }}>
-            <WebAppSlideshow />
-          </div>
+    <HeroCard className="lg:min-h-[780px]">
+      <div className="relative z-10 max-w-[600px] px-5 pb-10 pt-10 sm:px-11 lg:pb-[110px] lg:pe-11 lg:ps-[clamp(32px,7vw,100px)] lg:pt-[72px]">
+        <h1 className="mb-[30px] font-normal">
+          <span className="mb-7 block text-[11px] font-medium uppercase tracking-[0.42em] text-ink">
+            Serumo{hero.product}
+          </span>
+          <span className="block text-[clamp(40px,5.2vw,70px)] font-light leading-[1.04] tracking-[-0.045em]">
+            {hero.titleLead}
+            <span className="font-semibold text-brand">{hero.titleAccent}</span>
+            {hero.titleTail}
+          </span>
+        </h1>
+        <p className="mb-10 max-w-[470px] text-pretty text-[14px] leading-[1.7] text-ink-muted lg:mb-14">
+          {hero.subtitle}
+        </p>
+        <div className="flex flex-wrap items-center gap-2.5">
+          <DemoCta className={pillPrimary}>{hero.ctaPrimary}</DemoCta>
+          <a href="#how" className={pillSecondary}>
+            {hero.ctaSecondary}
+          </a>
         </div>
+        <div className="mt-[22px] text-[12px] text-ink-faint">{hero.note}</div>
       </div>
-    </section>
+
+      <ScreenFan
+        variant="browser"
+        shots={SHOTS.map((shot, i) => ({ ...shot, alt: hero.shots[i] }))}
+        badge={
+          <div className="flex flex-col items-end gap-3">
+            <div className="flex items-center gap-3 rounded-full bg-white py-2.5 pe-[22px] ps-2.5 shadow-[0_20px_40px_-16px_rgba(20,20,20,.25)]">
+              <div className="flex h-[34px] w-[34px] flex-none items-center justify-center rounded-full bg-brand-soft">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" className="stroke-brand" strokeWidth={2.2} aria-hidden>
+                  <path d="M20 6 9 17l-5-5" />
+                </svg>
+              </div>
+              <div>
+                <div className="text-[13px] font-medium">{notification.visualPrimary}</div>
+                <div className="text-[11px] text-ink-subtle">{notification.visualSecondary}</div>
+              </div>
+            </div>
+            {/* Backed in white: it sits over the screenshots and must stay legible. */}
+            <div className="rounded-full bg-white/90 px-2.5 py-1 text-[10.5px] text-ink-subtle">
+              {hero.demoNote}
+            </div>
+          </div>
+        }
+      />
+    </HeroCard>
   );
 };
 

@@ -1,32 +1,31 @@
 import { Link } from "react-router-dom";
-import Footer from "@/components/landing/Footer";
-import Navbar from "@/components/landing/Navbar";
+import { HeroCard, SiteLayout } from "@/components/site/layout";
 
 const Privacy = () => {
   return (
-    <div className="min-h-screen bg-background">
-      <Navbar />
-      <article lang="en" dir="ltr" className="container max-w-3xl pt-28 pb-16 md:pt-32 md:pb-24">
-        <p className="text-sm font-medium text-primary-dark mb-2">
-          <Link to="/" className="text-slate2 hover:text-navy transition-smooth">
+    <SiteLayout>
+      <HeroCard>
+      <article lang="en" dir="ltr" className="mx-auto max-w-3xl px-5 pb-20 pt-8 sm:px-11 md:pt-12">
+        <p className="mb-6 text-[13px]">
+          <Link to="/" className="text-ink-subtle no-underline transition-colors hover:text-ink">
             ← Back to home
           </Link>
         </p>
-        <h1 className="text-3xl md:text-4xl font-extrabold text-navy tracking-tight">Serumo - Privacy Policy</h1>
-        <p className="mt-4 text-sm text-slate3">
+        <h1 className="text-balance text-[clamp(32px,4vw,48px)] font-light leading-[1.08] tracking-[-0.04em]">Serumo - Privacy Policy</h1>
+        <p className="mt-5 text-[13px] leading-[1.7] text-ink-subtle">
           Effective date: 15 April 2026
           <br />
           Last updated: 16 July 2026
         </p>
-        <p className="mt-3 text-sm text-slate3">
-          <span className="font-medium text-navy">English</span>
+        <p className="mt-3 text-[13px] text-ink-subtle">
+          <span className="font-medium text-ink">English</span>
           {" · "}
-          <Link to="/privacy/fr" className="text-primary-dark underline underline-offset-2 hover:text-primary font-medium">
+          <Link to="/privacy/fr" className="font-medium text-ink underline underline-offset-2 hover:text-ink-muted">
             Français
           </Link>
         </p>
 
-        <div className="mt-12 space-y-10 text-[15px] md:text-base leading-relaxed text-slate2 [&_h2]:text-navy [&_h2]:text-xl [&_h2]:font-bold [&_h2]:tracking-tight [&_h2]:mb-3 [&_h3]:text-navy [&_h3]:text-base [&_h3]:font-semibold [&_h3]:mt-6 [&_h3]:mb-2 [&_strong]:text-navy [&_strong]:font-semibold [&_ul]:list-disc [&_ul]:pl-5 [&_ul]:space-y-2 [&_a]:text-primary-dark [&_a]:underline [&_a]:underline-offset-2 hover:[&_a]:text-primary [&_code]:rounded [&_code]:bg-muted [&_code]:px-1.5 [&_code]:py-0.5 [&_code]:text-sm [&_code]:font-mono [&_code]:text-navy">
+        <div className="mt-12 space-y-10 text-[15px] md:text-base leading-[1.75] text-ink-muted [&_h2]:text-ink [&_h2]:text-[22px] [&_h2]:font-medium [&_h2]:tracking-[-0.025em] [&_h2]:mb-3 [&_h3]:text-ink [&_h3]:text-base [&_h3]:font-medium [&_h3]:mt-6 [&_h3]:mb-2 [&_strong]:text-ink [&_strong]:font-medium [&_ul]:list-disc [&_ul]:pl-5 [&_ul]:space-y-2 [&_a]:text-ink [&_a]:underline [&_a]:underline-offset-2 hover:[&_a]:text-ink-muted [&_code]:rounded [&_code]:bg-muted [&_code]:px-1.5 [&_code]:py-0.5 [&_code]:text-sm [&_code]:font-mono [&_code]:text-ink">
           <section>
             <h2>1. Who We Are</h2>
             <p>
@@ -523,8 +522,8 @@ const Privacy = () => {
           </section>
         </div>
       </article>
-      <Footer />
-    </div>
+      </HeroCard>
+    </SiteLayout>
   );
 };
 

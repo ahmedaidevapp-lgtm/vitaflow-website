@@ -24,7 +24,7 @@ describe("language defaults", () => {
   it("renders the labs home page in French by default", () => {
     renderWithLang(<Labs />);
     expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent(
-      "Remettez à vos patients leurs résultats",
+      "Du laboratoire au patient, sans détour.",
     );
     expect(document.documentElement.lang).toBe("fr");
     expect(document.documentElement.dir).toBe("ltr");

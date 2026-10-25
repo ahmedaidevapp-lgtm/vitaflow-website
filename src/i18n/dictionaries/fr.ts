@@ -6,26 +6,23 @@
  */
 export const fr = {
   nav: {
-    how: "Comment ça marche",
-    benefits: "Bénéfices",
-    portal: "Le portail",
-    security: "Sécurité",
-    ios: "iOS",
-    iosApp: "Application iOS",
-    labTests: "Analyses",
+    pagesLabel: "Pages du site",
+    labs: "Laboratoires",
+    labsOverview: "Vue d'ensemble",
+    iosGroup: "iOS",
+    ios: "Application iOS",
     pricing: "Tarifs iOS",
-    privacy: "Confidentialité",
+    labTests: "Analyses",
+    signIn: "Se connecter",
     cta: "Demander une démo",
     openMenu: "Ouvrir le menu",
     closeMenu: "Fermer le menu",
     languageLabel: "Langue",
-    logoAlt: "Logo Serumo",
   },
 
   footer: {
     tagline:
-      "Le carnet de santé détenu par le patient. Les laboratoires y déposent les comptes rendus ; les patients en gardent la maîtrise.",
-    copyright: "Serumo. Informations éducatives à visée de bien-être personnel.",
+      "Le dossier de santé détenu par le patient. Les laboratoires déposent les comptes rendus ; les patients en gardent le contrôle.",
     forLabs: "Pour les laboratoires",
     ios: "Application iOS",
     labTests: "Analyses",
@@ -41,50 +38,36 @@ export const fr = {
 
   labs: {
     hero: {
-      badge: "Pour les laboratoires d'analyses médicales au Maroc",
-      titleLead: "Remettez à vos patients leurs résultats,",
-      titleAccent: "dans une application qui leur appartient.",
+      product: " pour laboratoires",
+      titleLead: "Du laboratoire au ",
+      titleAccent: "patient",
+      titleTail: ", sans détour.",
       subtitle:
-        "Serumo est un carnet de santé détenu par le patient. Votre laboratoire dépose le compte rendu ; le patient le récupère lui-même, en toute sécurité. Aucune intégration SGL, aucun développement de votre côté.",
-      ctaPrimary: "Demander un pilote",
-      ctaSecondary: "Voir comment ça marche",
+        "Serumo donne à votre laboratoire un canal de remise des comptes rendus : vous déposez le PDF, le patient le récupère dans une application qui lui appartient. Aucune intégration SGL, aucun développement de votre côté.",
+      ctaPrimary: "Demander une démo",
+      ctaSecondary: "Voir le fonctionnement",
       note: "Gratuit pour vos patients · Compatible avec tout SGL",
-      showcase: {
-        label: "Ce que voient vos patients",
-        demoNote: "Captures de démonstration — données fictives, aucun patient réel.",
-        prev: "Capture précédente",
-        next: "Capture suivante",
-        show: "Afficher la capture",
-        slides: [
-          {
-            caption: "Accueil",
-            alt: "Application Serumo : tableau de bord patient avec la part de marqueurs dans la norme et le dernier compte rendu.",
-          },
-          {
-            caption: "Tendances",
-            alt: "Application Serumo : évolution d'un marqueur entre plusieurs comptes rendus, avec l'intervalle de référence.",
-          },
-          {
-            caption: "Journal de santé",
-            alt: "Application Serumo : marqueurs regroupés par thème, avec position par rapport à l'intervalle de référence.",
-          },
-        ],
-      },
+      demoNote: "Captures de démonstration — données fictives.",
+      shots: [
+        "Application Serumo : tableau de bord patient avec la part de marqueurs dans la norme et le dernier compte rendu.",
+        "Application Serumo : évolution d'un marqueur entre plusieurs comptes rendus, avec l'intervalle de référence.",
+        "Application Serumo : marqueurs regroupés par thème, avec position par rapport à l'intervalle de référence.",
+      ],
     },
 
     problem: {
-      eyebrow: "Le constat",
-      title: "La remise des résultats n'a pas changé depuis vingt ans.",
+      eyebrow: "Le problème",
+      title: "La remise des résultats n'a pas changé en vingt ans.",
       intro:
-        "Vos analyses sont irréprochables. C'est le dernier mètre — du comptoir jusqu'au patient — qui reste artisanal.",
+        "Votre analyse est irréprochable. C'est le dernier mètre, du comptoir au patient, qui se fait encore à la main.",
       cards: [
         {
           title: "Le patient perd son compte rendu",
-          desc: "Papier égaré, PDF enterré dans une boîte mail. À la visite suivante, l'historique est introuvable — et l'antériorité biologique avec.",
+          desc: "Papier égaré, PDF noyé dans une boîte mail. À la visite suivante, l'historique a disparu, et avec lui toute référence biologique.",
         },
         {
           title: "Aucun canal de remise numérique",
-          desc: "Une pièce jointe envoyée par e-mail n'est ni tracée, ni vérifiée, ni conservée sous une forme réellement exploitable par le patient.",
+          desc: "Une pièce jointe par e-mail n'est ni suivie, ni vérifiée, ni conservée sous une forme réellement exploitable par le patient.",
         },
         {
           title: "Pas de budget pour interfacer le SGL",
@@ -100,28 +83,28 @@ export const fr = {
         {
           tag: "ÉTAPE 1 · AU LABORATOIRE",
           title: "Déposez le compte rendu",
-          desc: "Téléversez le PDF depuis le portail web, ou laissez simplement votre SGL l'envoyer par e-mail à une adresse dédiée. Aucun connecteur à développer.",
+          desc: "Téléversez le PDF depuis le portail web, ou laissez simplement votre SGL l'envoyer à une adresse dédiée. Aucun connecteur à développer.",
           visualPrimary: "compte_rendu_2847.pdf",
-          visualSecondary: "Téléversement · ou envoi automatique par e-mail",
+          visualSecondary: "Téléversement · ou envoi e-mail automatique",
         },
         {
           tag: "ÉTAPE 2 · AUTOMATIQUE",
-          title: "Serumo rapproche par le numéro de téléphone",
-          desc: "Le numéro de téléphone imprimé sur le compte rendu permet d'associer le document au patient pré-enregistré. Les documents non rapprochés partent en file de quarantaine pour association manuelle.",
-          visualPrimary: "Numéro de téléphone reconnu",
-          visualSecondary: "Rapprochement automatique avec le patient pré-enregistré",
+          title: "Serumo rapproche par numéro de téléphone",
+          desc: "Le numéro imprimé sur le compte rendu associe le document au patient préenregistré. Les documents non rapprochés passent en file de quarantaine pour une association manuelle.",
+          visualPrimary: "✓ Numéro reconnu",
+          visualSecondary: "Rapprochement automatique avec le patient préenregistré",
         },
         {
           tag: "ÉTAPE 3 · IMMÉDIAT",
-          title: "Le patient est prévenu",
-          desc: "Une notification « votre résultat est disponible » part par e-mail et par WhatsApp, sur le canal que votre patient utilise déjà.",
-          visualPrimary: "Votre résultat est disponible",
+          title: "Le patient est notifié",
+          desc: "Une notification « votre résultat est prêt » part par e-mail et WhatsApp, sur le canal que votre patient utilise déjà.",
+          visualPrimary: "Votre résultat est prêt",
           visualSecondary: "E-mail · WhatsApp",
         },
         {
           tag: "ÉTAPE 4 · CÔTÉ PATIENT",
           title: "Récupération vérifiée",
-          desc: "Le patient saisit un code à usage unique au format XXXX-XXXX accompagné de sa date de naissance. Le compte rendu rejoint alors son dossier Serumo, définitivement.",
+          desc: "Le patient saisit un code à usage unique au format XXXX-XXXX avec sa date de naissance. Le compte rendu rejoint alors son dossier Serumo, définitivement.",
           visualPrimary: "7K2M-4QP8",
           visualSecondary: "Code à usage unique + date de naissance",
         },
@@ -129,12 +112,12 @@ export const fr = {
     },
 
     benefits: {
-      eyebrow: "Bénéfices",
-      title: "Conçu pour s'intégrer à votre organisation, pas l'inverse.",
+      eyebrow: "Avantages",
+      title: "Conçu pour s'adapter à votre fonctionnement, pas l'inverse.",
       items: [
         {
           title: "Zéro intégration SGL",
-          desc: "Pas d'HL7, pas d'API à développer, pas de projet informatique. Votre SGL envoie un PDF — c'est tout.",
+          desc: "Pas de HL7, pas d'API à développer, pas de projet informatique. Votre SGL envoie un PDF, c'est tout.",
         },
         {
           title: "Compatible avec tout SGL",
@@ -142,19 +125,19 @@ export const fr = {
         },
         {
           title: "Récupération vérifiée par le patient",
-          desc: "Code à usage unique et date de naissance : le compte rendu n'est délivré qu'à la bonne personne.",
+          desc: "Code à usage unique et date de naissance : le compte rendu n'est remis qu'à la bonne personne.",
         },
         {
           title: "Notification e-mail et WhatsApp",
-          desc: "Vos patients sont prévenus dès la validation, sur les canaux qu'ils consultent réellement.",
+          desc: "Vos patients sont alertés dès la validation des résultats, sur les canaux qu'ils consultent vraiment.",
         },
         {
           title: "Gratuit pour vos patients",
-          desc: "La consultation et la conservation des résultats dans Serumo ne coûtent rien au patient.",
+          desc: "Consulter et conserver ses résultats dans Serumo ne coûte rien au patient.",
         },
         {
-          title: "Charge de travail minimale",
-          desc: "Un téléversement — ou rien du tout si l'envoi est automatisé. Aucune nouvelle procédure à faire adopter au personnel.",
+          title: "Charge minimale pour l'équipe",
+          desc: "Un téléversement, ou rien du tout si l'envoi est automatisé. Aucune nouvelle procédure à adopter.",
         },
       ],
     },
@@ -163,27 +146,28 @@ export const fr = {
       eyebrow: "Le portail laboratoire",
       title: "Tout ce qu'il vous faut, dans un navigateur.",
       intro:
-        "Le portail Serumo est une application web pour poste fixe, pensée pour l'accueil et le secrétariat. Aucune installation.",
+        "Le portail Serumo est une application web pour poste fixe, pensée pour l'accueil et l'administration. Rien à installer.",
+      imgAlt: "Portail Serumo : page d'accueil du laboratoire.",
       items: [
         {
           title: "Téléversement des comptes rendus",
-          desc: "À l'unité ou en lot, depuis n'importe quel poste du laboratoire.",
+          desc: "Un par un ou par lots, depuis n'importe quel poste du laboratoire.",
         },
         {
-          title: "Suivi de remise et de récupération",
+          title: "Suivi des remises et récupérations",
           desc: "Statut par patient : déposé, notifié, récupéré. Vous savez qui a reçu quoi.",
         },
         {
-          title: "Réémission d'un code",
-          desc: "Un patient a perdu son code ? Régénérez-le en un clic depuis la fiche de remise.",
+          title: "Réémission de code",
+          desc: "Le patient a perdu son code ? Régénérez-le en un clic depuis la fiche de remise.",
         },
         {
-          title: "Pré-enregistrement des patients",
-          desc: "Enregistrez les commandes patients à l'accueil pour que le rapprochement automatique fonctionne.",
+          title: "Préenregistrement des patients",
+          desc: "Enregistrez les demandes à l'accueil pour que le rapprochement automatique fonctionne.",
         },
         {
           title: "File de quarantaine",
-          desc: "Les documents dont le numéro de téléphone n'a pas pu être rapproché sont isolés et associés manuellement.",
+          desc: "Les documents dont le numéro n'a pas pu être rapproché sont mis de côté et associés manuellement.",
         },
         {
           title: "Vue « Vos patients »",
@@ -195,22 +179,22 @@ export const fr = {
     trust: {
       eyebrow: "Confiance et conformité",
       title: "Les données appartiennent au patient.",
-      lead: "Serumo est un carnet de santé détenu par le patient. Votre laboratoire agit en qualité de contributeur, et non de responsable du traitement des données conservées dans le compte du patient.",
-      cardTitle: "Contributeur, pas responsable de traitement",
+      lead: "Serumo est un dossier de santé détenu par le patient. Votre laboratoire agit comme contributeur, et non comme responsable des données conservées dans le compte du patient.",
+      cardTitle: "Contributeur, pas responsable",
       cardDesc:
         "Vous déposez un compte rendu. Le patient décide de le récupérer, de le conserver et de le partager.",
       points: [
         {
-          title: "Chiffrement en transit et au repos",
-          desc: "Les comptes rendus et les données de santé sont chiffrés de bout en bout du stockage jusqu'à la consultation.",
+          title: "Chiffré en transit et au repos",
+          desc: "Les comptes rendus et données de santé sont chiffrés de bout en bout, du stockage à la consultation.",
         },
         {
           title: "Accès cloisonné par laboratoire",
-          desc: "Chaque établissement n'accède qu'à ses propres remises. Aucun accès transversal entre laboratoires.",
+          desc: "Chaque établissement n'accède qu'à ses propres remises. Aucun accès inter-laboratoires.",
         },
         {
           title: "Consentement explicite du patient",
-          desc: "Le patient vérifie son identité et accepte la prise en charge du document avant toute intégration à son dossier.",
+          desc: "Le patient vérifie son identité et accepte le document avant qu'il ne rejoigne son dossier.",
         },
         {
           title: "Conçu pour la loi 09-08",
@@ -219,16 +203,16 @@ export const fr = {
       ],
       noticeTitle: "Déclaration CNDP en cours",
       noticeBody:
-        "Serumo est conçu pour répondre aux exigences de la loi 09-08 relative à la protection des personnes physiques à l'égard du traitement des données à caractère personnel. La déclaration auprès de la CNDP est en cours d'instruction. Serumo ne revendique à ce jour aucune approbation, homologation ni certification.",
+        "Serumo est conçu pour répondre aux exigences de la loi 09-08 relative à la protection des personnes physiques à l'égard du traitement des données à caractère personnel. La déclaration auprès de la CNDP est en cours d'instruction. Serumo ne revendique à ce stade aucune approbation, autorisation ou certification.",
     },
 
     cta: {
+      eyebrow: "Pilote",
       title: "Lancez un pilote avec votre laboratoire.",
       subtitle:
-        "Nous mettons en place un pilote encadré : quelques comptes rendus, un accès au portail, et un accompagnement pour vérifier que le rapprochement automatique fonctionne avec vos documents.",
+        "Nous mettons en place un pilote accompagné : quelques comptes rendus, un accès au portail et une aide concrète pour vérifier que le rapprochement automatique fonctionne avec vos documents.",
       button: "Demander une démo",
       secondary: "Réponse sous deux jours ouvrés",
-      legal: "Amandev Technologies SARL AU · Casablanca, Maroc",
     },
 
     demoForm: {
@@ -289,31 +273,11 @@ export const fr = {
       appStore: "App Store",
       rating: "5.0",
       socialProof: "Gratuit au départ · iPhone",
-      carouselLabel: "Captures d'écran de l'application",
-      prevSlide: "Capture précédente",
-      nextSlide: "Capture suivante",
-      showSlide: "Afficher la capture",
-      slides: [
-        {
-          caption: "Accueil",
-          alt: "Écran d'accueil Serumo : aperçu du compte rendu, progression et derniers marqueurs.",
-        },
-        {
-          caption: "Analyses",
-          alt: "Écran Analyses : marqueurs nécessitant une attention et actions suggérées.",
-        },
-        {
-          caption: "Plans",
-          alt: "Écran Plans : plan santé quotidien et étapes d'amélioration en cours.",
-        },
-        {
-          caption: "Synthèse",
-          alt: "Écran Synthèse : résumé en langage clair de vos résultats, généré par IA.",
-        },
-        {
-          caption: "Tendances",
-          alt: "Écran Tendances : courbes de biomarqueurs sur plusieurs visites au laboratoire.",
-        },
+      shots: [
+        "Écran d'accueil Serumo : part des marqueurs dans la norme, marqueurs limites et hors norme, et dernière synthèse.",
+        "Détail d'un compte rendu : chaque marqueur avec sa valeur, son intervalle de référence et son statut.",
+        "Écran Tendances : évolution de la glycémie à jeun sur plusieurs bilans, avec l'intervalle de référence.",
+        "Écran Plans : une série de jours consécutifs et une liste d'actions pour améliorer un marqueur.",
       ],
     },
 
@@ -454,6 +418,8 @@ export const fr = {
       "Serumo est gratuit au départ. Premium débloque les imports illimités, l'intégralité des analyses et des plans santé personnalisés — pour vous ou pour tout votre foyer. L'abonnement se souscrit dans l'application (App Store / Google Play) ou sur le web.",
     monthly: "Mensuel",
     yearly: "Annuel",
+    currencyLabel: "Devise",
+    periodLabel: "Période de facturation",
     free: "Gratuit",
     forever: "pour toujours",
     premium: "Premium",
@@ -461,7 +427,7 @@ export const fr = {
     perYear: "an",
     oneProfile: "1 profil",
     freeFeatures: [
-      "Import et conservation des comptes rendus",
+      "Import et conservation d'un seul compte rendu",
       "Suivi des biomarqueurs essentiels",
       "Une synthèse IA par profil",
     ],

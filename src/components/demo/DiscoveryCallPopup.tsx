@@ -9,6 +9,7 @@ import {
   DialogDescription,
   DialogTitle,
 } from "@/components/ui/dialog";
+import { pillPrimary } from "@/components/site/styles";
 import { useT } from "@/i18n/context";
 
 /** Time actually spent looking at the site before the invitation appears. */
@@ -85,32 +86,32 @@ const DiscoveryCallPopup = () => {
     <Dialog open onOpenChange={dismiss}>
       {/* The stock close button is a 16px icon labelled in English; this popup needs an
           obvious, translated way out, so it is hidden in favour of the one below. */}
-      <DialogContent className="max-w-[460px] rounded-[18px] p-7 text-center [&>button]:hidden">
+      <DialogContent className="max-w-[460px] rounded-[24px] p-8 text-center [&>button]:hidden">
         <button
           type="button"
           onClick={dismiss}
           aria-label={copy.dismiss}
-          className="absolute top-3 end-3 inline-flex items-center justify-center w-9 h-9 rounded-[10px] text-slate3 hover:text-navy hover:bg-muted transition-smooth"
+          className="absolute end-3 top-3 inline-flex h-9 w-9 items-center justify-center rounded-full text-ink-faint transition-colors hover:bg-mist hover:text-ink"
         >
           <X className="w-5 h-5 shrink-0" strokeWidth={2.25} aria-hidden />
         </button>
 
-        <span className="mx-auto inline-flex items-center justify-center w-[52px] h-[52px] shrink-0 rounded-[15px] bg-primary-light text-primary">
+        <span className="mx-auto inline-flex h-[52px] w-[52px] shrink-0 items-center justify-center rounded-full bg-brand-soft text-brand">
           <CalendarClock className="w-[26px] h-[26px]" strokeWidth={1.9} aria-hidden />
         </span>
 
-        <DialogTitle className="font-display font-bold text-[23px] leading-[1.2] tracking-[-0.02em] text-navy">
+        <DialogTitle className="text-[26px] font-light leading-[1.15] tracking-[-0.035em]">
           {copy.title}
         </DialogTitle>
 
-        <DialogDescription className="text-[15px] leading-[1.55] text-slate1 max-w-[360px] mx-auto">
+        <DialogDescription className="mx-auto max-w-[360px] text-[14px] leading-[1.65] text-ink-muted">
           {copy.body}
         </DialogDescription>
 
         <div className="mt-1 flex flex-col items-center gap-3">
           <DemoCta
             onActivate={dismiss}
-            className="inline-flex justify-center bg-primary hover:bg-primary-dark text-white text-[15px] font-semibold px-7 py-[12px] rounded-[11px] shadow-[0_10px_26px_-8px_hsl(160_82%_29%/0.55)] hover:-translate-y-0.5 transition-smooth"
+            className={pillPrimary}
           >
             {copy.cta}
           </DemoCta>
@@ -118,7 +119,7 @@ const DiscoveryCallPopup = () => {
           <button
             type="button"
             onClick={dismiss}
-            className="text-[13.5px] font-medium text-slate2 hover:text-navy transition-smooth"
+            className="text-[13px] text-ink-subtle transition-colors hover:text-ink"
           >
             {copy.later}
           </button>

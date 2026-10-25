@@ -7,6 +7,7 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
+import { pillPrimary } from "@/components/site/styles";
 import { useLanguage } from "@/i18n/context";
 import {
   PILOT_MAILTO,
@@ -14,15 +15,16 @@ import {
   WEB3FORMS_ACCESS_KEY,
   WEB3FORMS_ENDPOINT,
 } from "@/lib/constants";
+import { cn } from "@/lib/utils";
 
 type Status = "idle" | "sending" | "success" | "error";
 
 const EMPTY = { name: "", lab: "", email: "", phone: "", city: "", volume: "", message: "" };
 
 const fieldClass =
-  "w-full rounded-[10px] border border-border bg-white px-3 py-[10px] text-[14.5px] text-navy placeholder:text-slate3 shadow-soft transition-smooth focus:border-greenBorder focus:outline-none focus:ring-2 focus:ring-primary/25";
+  "w-full rounded-[14px] border border-line-strong bg-white px-3.5 py-[11px] text-[14px] text-ink placeholder:text-ink-faint transition-colors focus:border-ink focus:outline-none";
 
-const labelClass = "block text-[13px] font-semibold text-navy mb-[6px]";
+const labelClass = "mb-[6px] block text-[13px] font-medium text-ink";
 
 type Props = {
   open: boolean;
@@ -91,26 +93,26 @@ const DemoRequestDialog = ({ open, onOpenChange }: Props) => {
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="max-w-[560px] max-h-[88vh] overflow-y-auto rounded-[16px]">
+      <DialogContent className="max-h-[88vh] max-w-[560px] overflow-y-auto rounded-[24px] p-7 sm:p-8">
         {status === "success" ? (
           <div className="py-4 text-center">
             <CheckCircle2
-              className="w-12 h-12 mx-auto text-primary mb-4"
+              className="mx-auto mb-4 h-12 w-12 text-brand"
               strokeWidth={1.75}
               aria-hidden
             />
             <DialogHeader>
-              <DialogTitle className="font-display text-[24px] tracking-[-0.02em] text-navy text-center">
+              <DialogTitle className="text-center text-[26px] font-light tracking-[-0.035em]">
                 {copy.successTitle}
               </DialogTitle>
-              <DialogDescription className="text-[15px] leading-[1.55] text-slate1 text-center">
+              <DialogDescription className="text-center text-[14px] leading-[1.65] text-ink-muted">
                 {copy.successBody}
               </DialogDescription>
             </DialogHeader>
             <button
               type="button"
               onClick={() => onOpenChange(false)}
-              className="mt-6 inline-flex bg-primary hover:bg-primary-dark text-white text-[15px] font-semibold px-6 py-[11px] rounded-[10px] transition-smooth"
+              className={cn(pillPrimary, "mt-6")}
             >
               {copy.successClose}
             </button>
@@ -118,10 +120,10 @@ const DemoRequestDialog = ({ open, onOpenChange }: Props) => {
         ) : (
           <>
             <DialogHeader>
-              <DialogTitle className="font-display text-[24px] tracking-[-0.02em] text-navy">
+              <DialogTitle className="text-[26px] font-light tracking-[-0.035em]">
                 {copy.title}
               </DialogTitle>
-              <DialogDescription className="text-[14.5px] leading-[1.55] text-slate1">
+              <DialogDescription className="text-[14px] leading-[1.65] text-ink-muted">
                 {copy.subtitle}
               </DialogDescription>
             </DialogHeader>
@@ -190,7 +192,7 @@ const DemoRequestDialog = ({ open, onOpenChange }: Props) => {
                 <div>
                   <label className={labelClass} htmlFor="demo-phone">
                     {copy.phone}{" "}
-                    <span className="font-normal text-slate3">({copy.phoneOptional})</span>
+                    <span className="font-normal text-ink-faint">({copy.phoneOptional})</span>
                   </label>
                   <input
                     id="demo-phone"
@@ -248,7 +250,7 @@ const DemoRequestDialog = ({ open, onOpenChange }: Props) => {
               <div>
                 <label className={labelClass} htmlFor="demo-message">
                   {copy.message}{" "}
-                  <span className="font-normal text-slate3">({copy.messageOptional})</span>
+                  <span className="font-normal text-ink-faint">({copy.messageOptional})</span>
                 </label>
                 <textarea
                   id="demo-message"
@@ -261,12 +263,12 @@ const DemoRequestDialog = ({ open, onOpenChange }: Props) => {
                 />
               </div>
 
-              <p className="text-[12.5px] leading-[1.5] text-slate2">{copy.privacy}</p>
+              <p className="text-[12.5px] leading-[1.55] text-ink-subtle">{copy.privacy}</p>
 
               {status === "error" && (
                 <div
                   role="alert"
-                  className="flex gap-2.5 rounded-[10px] border border-destructive/25 bg-destructive/5 p-3 text-[13px] leading-[1.5] text-navy"
+                  className="flex gap-2.5 rounded-[14px] border border-destructive/25 bg-destructive/5 p-3 text-[13px] leading-[1.5] text-ink"
                 >
                   <AlertTriangle
                     className="w-4 h-4 shrink-0 mt-[2px] text-destructive"
@@ -290,7 +292,7 @@ const DemoRequestDialog = ({ open, onOpenChange }: Props) => {
                 <button
                   type="submit"
                   disabled={status === "sending"}
-                  className="inline-flex items-center gap-2 bg-primary hover:bg-primary-dark disabled:opacity-60 disabled:hover:bg-primary text-white text-[15px] font-semibold px-6 py-[11px] rounded-[10px] shadow-[0_10px_26px_-8px_hsl(160_82%_29%/0.55)] transition-smooth"
+                  className={cn(pillPrimary, "disabled:opacity-60 disabled:hover:bg-brand-strong")}
                 >
                   {status === "sending" && (
                     <Loader2 className="w-4 h-4 shrink-0 animate-spin" strokeWidth={2.5} aria-hidden />
@@ -298,7 +300,7 @@ const DemoRequestDialog = ({ open, onOpenChange }: Props) => {
                   {status === "sending" ? copy.submitting : copy.submit}
                 </button>
 
-                <span className="text-[13px] text-slate2">
+                <span className="text-[13px] text-ink-subtle">
                   {copy.fallback}{" "}
                   <a href={PILOT_MAILTO} className="font-medium text-primary underline underline-offset-2">
                     {copy.fallbackLink}
