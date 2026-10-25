@@ -24,8 +24,9 @@ export const WEB3FORMS_ENDPOINT = "https://api.web3forms.com/submit";
 
 export const WEB3FORMS_ACCESS_KEY = import.meta.env.VITE_WEB3FORMS_KEY ?? "";
 
-/**
- * Where "Se connecter" sends laboratory staff. PLACEHOLDER until the lab portal's real
- * sign-in URL is confirmed — every sign-in link on the site reads this one value.
- */
-export const LAB_SIGN_IN_HREF = "https://app.getserumo.com/";
+/** Where each kind of user signs in; the nav's "Se connecter" menu offers all three. */
+export const SIGN_IN_HREFS = {
+  patient: "https://app.getserumo.com/",
+  lab: "https://app.getserumo.com/lab/login",
+  doctor: "https://app.getserumo.com/doctor/login",
+} as const;

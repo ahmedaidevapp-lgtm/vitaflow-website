@@ -11,7 +11,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { useT } from "@/i18n/context";
-import { LAB_SIGN_IN_HREF } from "@/lib/constants";
+import { SIGN_IN_HREFS } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 
 /** The wordmark, shared by the nav and the footer. */
@@ -84,6 +84,13 @@ const SiteNav = () => {
   const { pathname } = useLocation();
 
   const { labs } = t;
+
+  // Patients, laboratories and doctors each sign in to their own space.
+  const signInLinks = [
+    { href: SIGN_IN_HREFS.patient, label: t.nav.signInPatient },
+    { href: SIGN_IN_HREFS.lab, label: t.nav.signInLab },
+    { href: SIGN_IN_HREFS.doctor, label: t.nav.signInDoctor },
+  ];
 
   // The labs home page and its sections share one "Laboratoires" entry in the pill.
   const labsItems: MenuItem[] = [
@@ -177,9 +184,19 @@ const SiteNav = () => {
         <div className="flex items-center gap-3 sm:gap-6 wide:gap-3 wide:justify-self-end">
           <LanguageSwitcher className="wide:hidden" />
 
-          <a href={LAB_SIGN_IN_HREF} className={cn(pillOutline, "hidden sm:inline-flex")}>
-            {t.nav.signIn}
-          </a>
+          <DropdownMenu modal={false}>
+            <DropdownMenuTrigger className={cn(pillOutline, "hidden gap-1 outline-none sm:inline-flex")}>
+              {t.nav.signIn}
+              <ChevronDown className="h-3.5 w-3.5" strokeWidth={2.25} aria-hidden />
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="end" sideOffset={10} className="min-w-[200px] rounded-[18px] p-1.5">
+              {signInLinks.map((item) => (
+                <DropdownMenuItem key={item.href} asChild className="cursor-pointer rounded-full px-3.5 py-2 text-[13px]">
+                  <a href={item.href}>{item.label}</a>
+                </DropdownMenuItem>
+              ))}
+            </DropdownMenuContent>
+          </DropdownMenu>
           <DemoCta className={cn(pillPrimary, "hidden px-5 py-2.5 sm:inline-flex")}>{t.nav.cta}</DemoCta>
 
           <button
@@ -208,9 +225,12 @@ const SiteNav = () => {
             <DemoCta onActivate={close} className={pillPrimary}>
               {t.nav.cta}
             </DemoCta>
-            <a href={LAB_SIGN_IN_HREF} className={cn(pillOutline, "py-3")}>
-              {t.nav.signIn}
-            </a>
+            <div className="mt-3 px-1 text-[10.5px] uppercase tracking-[0.2em] text-ink-subtle">{t.nav.signIn}</div>
+            {signInLinks.map((item) => (
+              <a key={item.href} href={item.href} className={cn(pillOutline, "py-3")}>
+                {item.label}
+              </a>
+            ))}
           </div>
         </div>
       )}

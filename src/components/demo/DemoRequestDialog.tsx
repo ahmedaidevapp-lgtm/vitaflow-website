@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { AlertTriangle, CheckCircle2, Loader2 } from "lucide-react";
+import { AlertTriangle, CheckCircle2, ChevronDown, Loader2 } from "lucide-react";
 import {
   Dialog,
   DialogContent,
@@ -227,23 +227,37 @@ const DemoRequestDialog = ({ open, onOpenChange }: Props) => {
                   <label className={labelClass} htmlFor="demo-volume">
                     {copy.volume}
                   </label>
-                  <select
-                    id="demo-volume"
-                    name="volume"
-                    required
-                    className={fieldClass}
-                    value={values.volume}
-                    onChange={set("volume")}
-                  >
-                    <option value="" disabled>
-                      {copy.volumePlaceholder}
-                    </option>
-                    {copy.volumeOptions.map((option) => (
-                      <option key={option} value={option}>
-                        {option}
+                  {/* The native arrow is hidden in favour of the site's chevron, and the
+                      prompt is greyed like the other fields' placeholders until a range
+                      is picked. */}
+                  <div className="relative">
+                    <select
+                      id="demo-volume"
+                      name="volume"
+                      required
+                      className={cn(
+                        fieldClass,
+                        "cursor-pointer appearance-none pe-10",
+                        values.volume === "" && "text-ink-faint",
+                      )}
+                      value={values.volume}
+                      onChange={set("volume")}
+                    >
+                      <option value="" disabled>
+                        {copy.volumePlaceholder}
                       </option>
-                    ))}
-                  </select>
+                      {copy.volumeOptions.map((option) => (
+                        <option key={option} value={option} className="text-ink">
+                          {option}
+                        </option>
+                      ))}
+                    </select>
+                    <ChevronDown
+                      className="pointer-events-none absolute end-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-ink-subtle"
+                      strokeWidth={2}
+                      aria-hidden
+                    />
+                  </div>
                 </div>
               </div>
 
