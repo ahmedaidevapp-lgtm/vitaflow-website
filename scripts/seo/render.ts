@@ -16,29 +16,11 @@ import { readFileSync, writeFileSync, existsSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
 import type { PendingPage, VerifiedData, GeneratedContent, MarkerEntry, ReferenceRange, Citation, FAQ } from './types.js';
+import { APP_STORE_URL, BASE_CSS, FONT_LINKS, SITE_DOMAIN, SITE_NAME, siteFooter, siteNav } from './theme.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const PENDING_DIR = join(__dirname, 'output', 'pending');
 const DATA_DIR = join(__dirname, 'data');
-
-// Brand constants
-const SITE_DOMAIN = 'https://getserumo.com';
-const APP_STORE_URL = 'https://apps.apple.com/us/app/vitaflow-health/id6762191392#information';
-const SITE_NAME = 'Serumo';
-
-// Colors from index.css
-const COLORS = {
-  navy: '#0F172A',
-  primary: '#10B981',
-  primaryDark: '#059669',
-  primaryLight: '#D1FAE5',
-  slate1: '#334155',
-  slate2: '#475569',
-  slate3: '#64748B',
-  border: '#E2E8F0',
-  bg: '#F8FAFC',
-  white: '#FFFFFF',
-};
 
 function esc(str: string): string {
   return str
@@ -61,7 +43,13 @@ function buildMetaDescription(verified: VerifiedData): string {
   return `Learn what ${verified.markerName} measures, what normal levels look like, and what high or low results mean for your health. ${rangeStr} Reviewed against authoritative medical references.`;
 }
 
-function buildMedicalWebPageSchema(marker: MarkerEntry, verified: VerifiedData, pageTitle: string, metaDesc: string): object {
+function buildMedicalWebPageSchema(
+  marker: MarkerEntry,
+  verified: VerifiedData,
+  pageTitle: string,
+  metaDesc: string,
+  dateModified: string,
+): object {
   return {
     '@context': 'https://schema.org',
     '@type': 'MedicalWebPage',
@@ -95,7 +83,7 @@ function buildMedicalWebPageSchema(marker: MarkerEntry, verified: VerifiedData, 
         height: 1024,
       },
     },
-    dateModified: new Date().toISOString().split('T')[0],
+    dateModified,
     inLanguage: 'en-US',
   };
 }
@@ -172,7 +160,7 @@ function renderRelatedMarkers(slugs: string[]): string {
   if (related.length === 0) return '';
 
   const links = related.map((m) => `
-      <a href="${SITE_DOMAIN}/biomarkers/${esc(m.slug)}" class="related-link">
+      <a href="/biomarkers/${esc(m.slug)}/" class="related-link">
         <span class="related-category">${esc(m.category)}</span>
         <span class="related-name">${esc(m.name)}</span>
       </a>`).join('');
@@ -208,11 +196,12 @@ function buildHtml(
   marker: MarkerEntry,
   verified: VerifiedData,
   generated: GeneratedContent,
+  dateModified: string,
 ): string {
   const pageTitle = buildPageTitle(marker, verified);
   const metaDesc = buildMetaDescription(verified);
   const canonicalUrl = `${SITE_DOMAIN}/biomarkers/${marker.slug}/`;
-  const medicalSchema = buildMedicalWebPageSchema(marker, verified, pageTitle, metaDesc);
+  const medicalSchema = buildMedicalWebPageSchema(marker, verified, pageTitle, metaDesc, dateModified);
   const faqSchema = buildFaqPageSchema(generated.faqs);
 
   return `<!DOCTYPE html>
@@ -236,368 +225,118 @@ function buildHtml(
   <meta name="robots" content="index, follow">
   <link rel="icon" type="image/png" href="/AppStore-1024.png">
   <link rel="apple-touch-icon" href="/AppStore-1024.png">
+  ${FONT_LINKS}
   <script type="application/ld+json">${JSON.stringify(medicalSchema, null, 2)}</script>
   <script type="application/ld+json">${JSON.stringify(faqSchema, null, 2)}</script>
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { font-size: 16px; scroll-behavior: smooth; }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, sans-serif;
-      background: ${COLORS.bg};
-      color: ${COLORS.slate1};
-      line-height: 1.7;
-    }
-    a { color: ${COLORS.primary}; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-
-    /* Nav */
-    .nav {
-      background: ${COLORS.navy};
-      padding: 0 1.5rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 60px;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-    .nav-logo {
-      color: ${COLORS.white};
-      font-weight: 700;
-      font-size: 1.2rem;
-      letter-spacing: -0.02em;
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-      text-decoration: none;
-    }
-    .nav-logo img { width: 30px; height: 30px; border-radius: 7px; }
-    .nav-wordmark { display: inline; }
-    .nav-wordmark span { color: ${COLORS.primary}; }
-    .nav-links { display: flex; gap: 1.5rem; align-items: center; }
-    .nav-links a { color: #94A3B8; font-size: 0.9rem; }
-    .nav-links a:hover { color: ${COLORS.white}; text-decoration: none; }
-    .nav-cta {
-      background: ${COLORS.primary};
-      color: ${COLORS.white} !important;
-      padding: 0.4rem 1rem;
-      border-radius: 6px;
-      font-weight: 600;
-      font-size: 0.85rem;
-    }
-    .nav-cta:hover { background: ${COLORS.primaryDark}; text-decoration: none !important; }
-
-    /* Hero */
-    .hero {
-      background: linear-gradient(135deg, ${COLORS.navy} 0%, ${COLORS.slate1} 100%);
-      color: ${COLORS.white};
-      padding: 3.5rem 1.5rem 3rem;
-      text-align: center;
-    }
-    .hero-category {
-      display: inline-block;
-      background: rgba(16,185,129,0.2);
-      color: ${COLORS.primaryLight};
-      font-size: 0.78rem;
-      font-weight: 600;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      padding: 0.25rem 0.75rem;
-      border-radius: 999px;
-      margin-bottom: 1rem;
-    }
-    .hero h1 {
-      font-size: clamp(1.8rem, 4vw, 2.6rem);
-      font-weight: 800;
-      line-height: 1.2;
-      margin-bottom: 1.25rem;
-      letter-spacing: -0.02em;
-    }
-    .hero-intro {
-      max-width: 680px;
-      margin: 0 auto;
-      font-size: 1.05rem;
-      color: #CBD5E1;
-      line-height: 1.75;
-    }
-
-    /* Quick stat cards */
-    .stats-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      max-width: 860px;
-      margin: 2.5rem auto 0;
-      justify-content: center;
-    }
-    .stat-card {
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.12);
-      border-radius: 10px;
-      padding: 1rem 1.5rem;
-      text-align: center;
-      min-width: 160px;
-    }
-    .stat-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.06em; color: #94A3B8; margin-bottom: 0.3rem; }
-    .stat-value { font-size: 1.4rem; font-weight: 700; color: ${COLORS.white}; }
-    .stat-unit { font-size: 0.8rem; color: #94A3B8; margin-top: 0.2rem; }
+  <style>${BASE_CSS}
+    /* Quick-glance reference ranges */
+    .stats-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 36px; }
+    .stat-card { background: var(--mist); border-radius: 18px; padding: 16px 22px; min-width: 170px; }
+    .stat-label { font-size: 10.5px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ink-subtle); margin-bottom: 6px; }
+    .stat-value { font-size: 28px; font-weight: 300; letter-spacing: -0.03em; line-height: 1.2; }
+    .stat-unit { font-size: 12px; color: var(--ink-faint); }
 
     /* Content */
-    .content-wrapper {
-      max-width: 860px;
-      margin: 0 auto;
-      padding: 0 1.5rem;
-    }
-    .section {
-      background: ${COLORS.white};
-      border: 1px solid ${COLORS.border};
-      border-radius: 12px;
-      padding: 2rem;
-      margin: 1.5rem 0;
-    }
-    .section h2 {
-      font-size: 1.35rem;
-      font-weight: 700;
-      color: ${COLORS.navy};
-      margin-bottom: 1.25rem;
-      padding-bottom: 0.75rem;
-      border-bottom: 2px solid ${COLORS.primaryLight};
-    }
-    .section p { margin-bottom: 1rem; line-height: 1.75; }
+    .content-wrapper { max-width: 900px; margin: 0 auto; padding: 44px 16px 0; }
+    .section { background: #fff; border-radius: 24px; padding: 32px; margin-bottom: 14px; }
+    .section h2 { font-size: 22px; font-weight: 500; letter-spacing: -0.025em; line-height: 1.3; margin-bottom: 16px; }
+    .section p { margin-bottom: 14px; font-size: 15px; line-height: 1.75; color: var(--ink-muted); }
     .section p:last-child { margin-bottom: 0; }
-    .section ul, .section ol { padding-left: 1.5rem; }
-    .section li { margin-bottom: 0.5rem; }
+    .section ul, .section ol { padding-inline-start: 1.25rem; }
+    .section li { margin-bottom: 6px; font-size: 14.5px; color: var(--ink-muted); }
+    .note { margin-top: 16px; font-size: 13px; color: var(--ink-subtle); }
 
     /* Reference range table */
     .table-wrapper { overflow-x: auto; }
-    .ranges-table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 0.95rem;
-    }
-    .ranges-table th {
-      background: ${COLORS.navy};
-      color: ${COLORS.white};
-      padding: 0.65rem 1rem;
-      text-align: left;
-      font-weight: 600;
-    }
-    .ranges-table td {
-      padding: 0.65rem 1rem;
-      border-bottom: 1px solid ${COLORS.border};
-    }
+    .ranges-table { width: 100%; border-collapse: collapse; font-size: 14.5px; }
+    .ranges-table th { text-align: start; font-size: 12px; font-weight: 400; color: var(--ink-subtle); padding: 10px 16px 10px 0; border-bottom: 1px solid var(--line); }
+    .ranges-table td { padding: 12px 16px 12px 0; border-bottom: 1px solid var(--line); color: var(--ink-muted); }
     .ranges-table tr:last-child td { border-bottom: none; }
-    .ranges-table tr:nth-child(even) td { background: ${COLORS.bg}; }
-    .range-cell { font-weight: 600; color: ${COLORS.navy}; }
-    .table-source { font-size: 0.8rem; color: ${COLORS.slate3}; margin-top: 0.75rem; }
+    .range-cell { font-weight: 500; color: var(--ink) !important; white-space: nowrap; }
+    /* Sources often end in a long URL, which must wrap rather than widen the card. */
+    .section p.table-source, .table-source { font-size: 12.5px; color: var(--ink-faint); margin-top: 12px; overflow-wrap: anywhere; }
 
-    /* Causes */
-    .causes-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1.5rem;
-    }
-    @media (max-width: 600px) { .causes-grid { grid-template-columns: 1fr; } }
-    .causes-card {
-      border-radius: 8px;
-      padding: 1.25rem;
-    }
-    .causes-card.high {
-      background: #FFF7ED;
-      border: 1px solid #FED7AA;
-    }
-    .causes-card.low {
-      background: #EFF6FF;
-      border: 1px solid #BFDBFE;
-    }
-    .causes-card h3 {
-      font-size: 1rem;
-      font-weight: 700;
-      margin-bottom: 0.75rem;
-    }
-    .causes-card.high h3 { color: #C2410C; }
-    .causes-card.low h3 { color: #1D4ED8; }
-    .causes-card ul { padding-left: 1.25rem; }
-    .causes-card li { margin-bottom: 0.4rem; font-size: 0.95rem; }
-
-    /* Symptoms */
-    .symptoms-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1.5rem;
-    }
-    @media (max-width: 600px) { .symptoms-grid { grid-template-columns: 1fr; } }
-    .symptoms-card {
-      border-radius: 8px;
-      padding: 1.25rem;
-    }
-    .symptoms-card.high {
-      background: #FFF7ED;
-      border: 1px solid #FED7AA;
-    }
-    .symptoms-card.low {
-      background: #F0FDF4;
-      border: 1px solid #BBF7D0;
-    }
-    .symptoms-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 0.75rem; }
-    .symptoms-card.high h3 { color: #C2410C; }
-    .symptoms-card.low h3 { color: #15803D; }
-    .symptoms-card ul { padding-left: 1.25rem; }
-    .symptoms-card li { margin-bottom: 0.4rem; font-size: 0.95rem; }
+    /* High / low cards: a soft panel each, told apart by a coloured dot. */
+    .causes-grid, .symptoms-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 10px; }
+    @media (max-width: 640px) { .causes-grid, .symptoms-grid { grid-template-columns: minmax(0, 1fr); } }
+    .causes-card, .symptoms-card { background: var(--mist); border-radius: 18px; padding: 20px 22px; }
+    .causes-card h3, .symptoms-card h3 { display: flex; align-items: center; gap: 10px; font-size: 15px; font-weight: 500; margin-bottom: 10px; }
+    .causes-card h3::before, .symptoms-card h3::before { content: ''; width: 8px; height: 8px; border-radius: 50%; flex: none; }
+    .causes-card.high h3::before, .symptoms-card.high h3::before { background: #d97706; }
+    .causes-card.low h3::before, .symptoms-card.low h3::before { background: #2563eb; }
+    .causes-card li, .symptoms-card li { font-size: 14px; }
 
     /* FAQ */
-    .faq-item {
-      border: 1px solid ${COLORS.border};
-      border-radius: 8px;
-      margin-bottom: 0.75rem;
-      overflow: hidden;
-    }
+    .faq-item { background: var(--mist); border-radius: 18px; margin-bottom: 8px; overflow: hidden; }
     .faq-question {
-      padding: 1rem 1.25rem;
-      font-weight: 600;
-      cursor: pointer;
-      list-style: none;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: ${COLORS.bg};
-      font-size: 0.97rem;
+      display: flex; justify-content: space-between; align-items: center; gap: 16px;
+      padding: 16px 22px; font-size: 15px; font-weight: 500; cursor: pointer; list-style: none;
     }
     .faq-question::-webkit-details-marker { display: none; }
-    .faq-question::after {
-      content: '+';
-      font-size: 1.3rem;
-      color: ${COLORS.primary};
-      font-weight: 700;
-      flex-shrink: 0;
-      margin-left: 1rem;
-    }
+    .faq-question::after { content: '+'; font-size: 20px; font-weight: 300; color: var(--ink-subtle); flex-shrink: 0; }
     details[open] .faq-question::after { content: '−'; }
-    .faq-answer {
-      padding: 1rem 1.25rem;
-      background: ${COLORS.white};
-      border-top: 1px solid ${COLORS.border};
-      font-size: 0.95rem;
-      line-height: 1.75;
-    }
+    .faq-answer { padding: 0 22px 18px; }
+    .faq-answer p { font-size: 14.5px; }
 
-    /* CTA */
-    .cta-section {
-      background: linear-gradient(135deg, ${COLORS.navy} 0%, ${COLORS.slate1} 100%);
-      color: ${COLORS.white};
-      border-radius: 12px;
-      padding: 2.5rem 2rem;
-      text-align: center;
-      margin: 1.5rem 0;
-      border: none;
-    }
-    .cta-section h2 {
-      color: ${COLORS.white};
-      border-bottom-color: rgba(16,185,129,0.4);
-      font-size: 1.5rem;
-    }
-    .cta-section p { color: #CBD5E1; max-width: 560px; margin: 0 auto 1.5rem; }
-    .cta-btn {
-      display: inline-block;
-      transition: opacity 0.2s, transform 0.15s;
-    }
-    .cta-btn:hover { opacity: 0.88; transform: scale(1.03); text-decoration: none; }
-    .cta-btn img { height: 52px; width: auto; display: block; }
-    .cta-sub {
-      display: block;
-      margin-top: 0.75rem;
-      font-size: 0.82rem;
-      color: #64748B;
-    }
+    /* CTA — the site's closing card */
+    .cta-section { padding: clamp(40px, 6vw, 64px) clamp(24px, 5vw, 56px); }
+    .cta-section .eyebrow { margin-bottom: 20px; }
+    .cta-section h2 { font-size: clamp(30px, 4vw, 46px); font-weight: 300; letter-spacing: -0.045em; line-height: 1.05; margin-bottom: 18px; text-wrap: balance; }
+    .cta-section p { max-width: 560px; margin-bottom: 28px; }
+    .cta-btn { display: inline-block; transition: transform .15s; }
+    .cta-btn:hover { transform: translateY(-2px); }
+    .cta-btn img { height: 48px; width: auto; display: block; }
+    .cta-sub { display: block; margin-top: 14px; font-size: 12.5px; color: var(--ink-faint); }
 
     /* Related */
-    .related-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-      gap: 0.75rem;
-    }
+    .related-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 8px; }
     .related-link {
-      display: flex;
-      flex-direction: column;
-      padding: 0.85rem 1rem;
-      background: ${COLORS.bg};
-      border: 1px solid ${COLORS.border};
-      border-radius: 8px;
-      transition: border-color 0.15s, background 0.15s;
-      color: inherit;
+      display: flex; flex-direction: column; padding: 14px 18px; border-radius: 18px;
+      background: var(--mist); text-decoration: none; transition: background .15s;
     }
-    .related-link:hover { border-color: ${COLORS.primary}; background: ${COLORS.primaryLight}; text-decoration: none; }
-    .related-category { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.06em; color: ${COLORS.slate3}; margin-bottom: 0.25rem; }
-    .related-name { font-weight: 600; font-size: 0.93rem; color: ${COLORS.navy}; }
+    .related-link:hover { background: var(--line); }
+    .related-category { font-size: 10.5px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 4px; }
+    .related-name { font-size: 14.5px; font-weight: 500; }
 
     /* Citations */
-    .citations-list { padding-left: 1.5rem; }
-    .citations-list li { margin-bottom: 0.75rem; font-size: 0.88rem; line-height: 1.6; }
-    .cite-num { font-weight: 700; color: ${COLORS.navy}; margin-right: 0.5rem; }
-    .cite-body a { font-size: 0.82rem; color: ${COLORS.slate3}; word-break: break-all; }
+    .citations-list { padding-inline-start: 0 !important; list-style: none; }
+    .citations-list li { margin-bottom: 12px; font-size: 13.5px; line-height: 1.6; }
+    .cite-num { color: var(--ink-faint); margin-inline-end: 8px; }
+    .cite-body a { font-size: 12.5px; color: var(--ink-subtle); word-break: break-all; }
 
-    /* Disclaimer */
-    .disclaimer {
-      background: #FFFBEB;
-      border: 1px solid #FDE68A;
-      border-radius: 8px;
-      padding: 1rem 1.25rem;
-      font-size: 0.84rem;
-      color: #92400E;
-      line-height: 1.6;
-      margin: 1.5rem 0;
-    }
-    .disclaimer strong { display: block; margin-bottom: 0.25rem; }
-
-    /* Footer */
-    .footer {
-      background: ${COLORS.navy};
-      color: #64748B;
-      text-align: center;
-      padding: 2rem 1.5rem;
-      font-size: 0.85rem;
-      margin-top: 3rem;
-    }
-    .footer a { color: #94A3B8; }
-    .footer-links { display: flex; gap: 1.5rem; justify-content: center; margin-bottom: 1rem; }
+    /* Disclaimer — a plain notice, as on the React site */
+    .disclaimer { background: #fff; border-radius: 24px; padding: 22px 28px; font-size: 13px; line-height: 1.65; color: var(--ink-muted); }
+    .disclaimer strong { display: block; margin-bottom: 4px; font-weight: 500; color: var(--ink); }
 
     @media (max-width: 640px) {
-      .nav-links { display: none; }
-      .hero { padding: 2.5rem 1rem 2rem; }
-      .section { padding: 1.5rem 1rem; }
+      .content-wrapper { padding-top: 28px; }
+      .section { padding: 24px 20px; }
     }
   </style>
 </head>
 <body>
 
-  <!-- Navigation -->
-  <nav class="nav">
-    <a href="${esc(SITE_DOMAIN)}" class="nav-logo">
-      <img src="/AppStore-1024.png" alt="Serumo logo"><span class="nav-wordmark">Serum<span>o</span></span>
-    </a>
-    <div class="nav-links">
-      <a href="${esc(SITE_DOMAIN)}/biomarkers">Lab Tests</a>
-      <a href="${esc(APP_STORE_URL)}" class="nav-cta" target="_blank" rel="noopener">Download App</a>
-    </div>
-  </nav>
+  <div class="top">
+    <div class="top-card">
+      ${siteNav('labTests')}
 
-  <!-- Hero -->
-  <header class="hero">
-    <div class="hero-category">${esc(marker.category)}</div>
-    <h1>${esc(verified.markerName)}: Normal Range, What High &amp; Low Levels Mean</h1>
-    <p class="hero-intro">${esc(generated.intro)}</p>
+      <header class="page-header">
+        <div class="eyebrow">${esc(marker.category)}</div>
+        <h1>${esc(verified.markerName)}: Normal Range, What High &amp; Low Levels Mean</h1>
+        <p class="lead">${esc(generated.intro)}</p>
 
-    <!-- Quick-glance reference range stats -->
-    <div class="stats-row">
-      ${verified.referenceRanges.slice(0, 3).map((r) => `
-      <div class="stat-card">
-        <div class="stat-label">${esc(r.population)}</div>
-        <div class="stat-value">${r.min !== null ? r.min : '—'}–${r.max !== null ? r.max : '—'}</div>
-        <div class="stat-unit">${esc(r.unit)}</div>
-      </div>`).join('')}
+        <!-- Quick-glance reference range stats -->
+        <div class="stats-row">
+          ${verified.referenceRanges.slice(0, 3).map((r) => `
+          <div class="stat-card">
+            <div class="stat-label">${esc(r.population)}</div>
+            <div class="stat-value">${r.min !== null ? r.min : '—'}–${r.max !== null ? r.max : '—'}</div>
+            <div class="stat-unit">${esc(r.unit)}</div>
+          </div>`).join('')}
+        </div>
+      </header>
     </div>
-  </header>
+  </div>
 
   <main class="content-wrapper">
 
@@ -613,7 +352,7 @@ function buildHtml(
     <section class="section">
       <h2>Normal Reference Ranges for ${esc(verified.markerName)}</h2>
       ${renderReferenceRangesTable(verified.referenceRanges)}
-      <p style="margin-top:1rem; font-size:0.88rem; color:${COLORS.slate3};">
+      <p class="note">
         Reference ranges vary slightly between laboratories. Always compare your result against the ranges
         printed on your specific lab report, and discuss interpretation with your healthcare provider.
       </p>
@@ -654,6 +393,7 @@ function buildHtml(
 
     <!-- CTA -->
     <section class="section cta-section">
+      <div class="eyebrow">Serumo for iOS</div>
       <h2>Track Your ${esc(verified.markerName)} Over Time</h2>
       <p>
         A single lab result is a snapshot. Serumo lets you log every result, visualize trends,
@@ -683,19 +423,7 @@ function buildHtml(
 
   </main>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="footer-links">
-      <a href="${esc(SITE_DOMAIN)}">Home</a>
-      <a href="${esc(SITE_DOMAIN)}/biomarkers">Lab Tests</a>
-      <a href="${esc(SITE_DOMAIN)}/privacy">Privacy Policy</a>
-      <a href="${esc(SITE_DOMAIN)}/terms">Terms of Use</a>
-    </div>
-    <p>&copy; ${new Date().getFullYear()} ${esc(SITE_NAME)}. All rights reserved.</p>
-    <p style="margin-top:0.4rem; font-size:0.78rem;">
-      Content reviewed against Mayo Clinic Laboratories, NIH MedlinePlus, WHO, and NHS references.
-    </p>
-  </footer>
+  ${siteFooter('Content reviewed against Mayo Clinic Laboratories, NIH MedlinePlus, WHO, and NHS references. For informational purposes only — not medical advice.')}
 
 </body>
 </html>`;
@@ -713,7 +441,17 @@ function render(slug: string): void {
   }
 
   const page: PendingPage = JSON.parse(readFileSync(pendingPath, 'utf-8'));
-  const html = buildHtml(page.marker, page.verifiedData, page.generatedContent);
+
+  // dateModified tells search engines when the medical content last changed. Re-rendering
+  // an approved page (e.g. after a style change) keeps its approval date; only a new page
+  // gets today's.
+  const approvedPath = join(PENDING_DIR, `${slug}.approved.json`);
+  const approvedAt: string | undefined = existsSync(approvedPath)
+    ? JSON.parse(readFileSync(approvedPath, 'utf-8')).approvedAt
+    : undefined;
+  const dateModified = (approvedAt ?? new Date().toISOString()).split('T')[0];
+
+  const html = buildHtml(page.marker, page.verifiedData, page.generatedContent, dateModified);
 
   const outPath = join(PENDING_DIR, `${slug}.html`);
   writeFileSync(outPath, html);

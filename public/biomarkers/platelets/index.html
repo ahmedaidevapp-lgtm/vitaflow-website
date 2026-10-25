@@ -19,6 +19,10 @@
   <meta name="robots" content="index, follow">
   <link rel="icon" type="image/png" href="/AppStore-1024.png">
   <link rel="apple-touch-icon" href="/AppStore-1024.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <meta name="theme-color" content="#efefee">
   <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "MedicalWebPage",
@@ -115,365 +119,323 @@
   ]
 }</script>
   <style>
+    :root {
+      --canvas: #efefee;
+      --ink: #141414;
+      --ink-muted: #5f5f5c;
+      --ink-subtle: #8a8a87;
+      --ink-faint: #a5a5a2;
+      --mist: #f5f5f4;
+      --line: #ececea;
+      --line-strong: #dededc;
+      --brand: #0b8a5a;
+      --brand-strong: #0a7f53;
+      --brand-stronger: #086c47;
+      --brand-soft: #e6f5ee;
+    }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { font-size: 16px; scroll-behavior: smooth; }
+    html { font-size: 16px; scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
     body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, sans-serif;
-      background: #F8FAFC;
-      color: #334155;
+      font-family: Geist, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+      background: var(--canvas);
+      color: var(--ink);
       line-height: 1.7;
     }
-    a { color: #10B981; text-decoration: none; }
-    a:hover { text-decoration: underline; }
+    a { color: var(--ink); }
+    :focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 
-    /* Nav */
+    .eyebrow {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.36em;
+      text-transform: uppercase;
+      color: var(--ink-subtle);
+    }
+
+    /* Top card: nav and page header share one white card, as on the React site. */
+    .top { padding: 16px; }
+    .top-card {
+      background: #fff;
+      border-radius: 28px;
+      box-shadow: 0 1px 2px rgba(0,0,0,.04);
+      overflow: hidden;
+    }
     .nav {
-      background: #0F172A;
-      padding: 0 1.5rem;
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      height: 60px;
-      position: sticky;
-      top: 0;
-      z-index: 100;
+      gap: 24px;
+      padding: 28px 44px;
     }
     .nav-logo {
-      color: #FFFFFF;
-      font-weight: 700;
-      font-size: 1.2rem;
-      letter-spacing: -0.02em;
       display: flex;
       align-items: center;
-      gap: 0.6rem;
+      gap: 10px;
+      margin-inline-end: auto;
+      font-size: 16px;
+      font-weight: 500;
+      letter-spacing: -0.02em;
       text-decoration: none;
     }
-    .nav-logo img { width: 30px; height: 30px; border-radius: 7px; }
-    .nav-wordmark { display: inline; }
-    .nav-wordmark span { color: #10B981; }
-    .nav-links { display: flex; gap: 1.5rem; align-items: center; }
-    .nav-links a { color: #94A3B8; font-size: 0.9rem; }
-    .nav-links a:hover { color: #FFFFFF; text-decoration: none; }
-    .nav-cta {
-      background: #10B981;
-      color: #FFFFFF !important;
-      padding: 0.4rem 1rem;
-      border-radius: 6px;
-      font-weight: 600;
-      font-size: 0.85rem;
-    }
-    .nav-cta:hover { background: #059669; text-decoration: none !important; }
-
-    /* Hero */
-    .hero {
-      background: linear-gradient(135deg, #0F172A 0%, #334155 100%);
-      color: #FFFFFF;
-      padding: 3.5rem 1.5rem 3rem;
-      text-align: center;
-    }
-    .hero-category {
-      display: inline-block;
-      background: rgba(16,185,129,0.2);
-      color: #D1FAE5;
-      font-size: 0.78rem;
-      font-weight: 600;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      padding: 0.25rem 0.75rem;
+    .nav-logo img { width: 26px; height: 26px; border-radius: 7px; }
+    .nav-pill {
+      display: flex;
+      gap: 4px;
+      padding: 4px;
       border-radius: 999px;
-      margin-bottom: 1rem;
+      background: var(--ink);
+      margin-inline-end: auto;
     }
-    .hero h1 {
-      font-size: clamp(1.8rem, 4vw, 2.6rem);
-      font-weight: 800;
-      line-height: 1.2;
-      margin-bottom: 1.25rem;
-      letter-spacing: -0.02em;
+    .nav-pill a {
+      padding: 8px 16px;
+      border-radius: 999px;
+      font-size: 13px;
+      color: rgba(255,255,255,.7);
+      text-decoration: none;
+      white-space: nowrap;
+      transition: color .15s;
     }
-    .hero-intro {
+    .nav-pill a:hover { color: #fff; }
+    .nav-pill a[aria-current="page"] { background: #fff; color: var(--ink); }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      white-space: nowrap;
+      padding: 10px 20px;
+      border-radius: 999px;
+      background: var(--brand-strong);
+      color: #fff;
+      font-size: 13px;
+      text-decoration: none;
+      transition: background .15s;
+    }
+    .btn-primary:hover { background: var(--brand-stronger); }
+
+    .page-header { padding: 40px 44px 64px clamp(32px, 7vw, 100px); }
+    .page-header h1 {
+      font-size: clamp(34px, 4.6vw, 58px);
+      font-weight: 300;
+      line-height: 1.06;
+      letter-spacing: -0.045em;
+      margin: 24px 0 22px;
+      max-width: 900px;
+      text-wrap: balance;
+    }
+    .page-header .lead {
       max-width: 680px;
-      margin: 0 auto;
-      font-size: 1.05rem;
-      color: #CBD5E1;
+      font-size: 15px;
       line-height: 1.75;
+      color: var(--ink-muted);
     }
 
-    /* Quick stat cards */
-    .stats-row {
+    /* Footer, as on the React site. */
+    .footer {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 40px 32px 56px;
       display: flex;
       flex-wrap: wrap;
-      gap: 1rem;
-      max-width: 860px;
-      margin: 2.5rem auto 0;
+      gap: 24px 40px;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+    .footer-brand { max-width: 400px; }
+    .footer-brand .nav-logo { margin-bottom: 10px; }
+    .footer-brand .nav-logo img { width: 22px; height: 22px; border-radius: 6px; }
+    .footer-brand p { font-size: 13px; line-height: 1.6; color: var(--ink-subtle); }
+    .footer-links { display: flex; flex-wrap: wrap; gap: 12px 24px; font-size: 13px; }
+    .footer-links a { text-decoration: none; }
+    .footer-links a:hover { color: var(--ink-muted); }
+    .footer-legal { flex-basis: 100%; font-size: 12px; line-height: 1.6; color: var(--ink-faint); }
+
+    /* Narrow screens: the pill gives way to a menu button opening the same grouped
+       menu as the React site's. */
+    .nav-toggle {
+      display: none;
+      flex: none;
+      width: 36px;
+      height: 36px;
+      align-items: center;
       justify-content: center;
+      border-radius: 999px;
+      border: 1px solid var(--line-strong);
+      background: #fff;
+      color: var(--ink);
+      cursor: pointer;
     }
-    .stat-card {
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.12);
-      border-radius: 10px;
-      padding: 1rem 1.5rem;
-      text-align: center;
-      min-width: 160px;
+    .nav-toggle .icon-close { display: none; }
+    .nav-toggle[aria-expanded="true"] .icon-open { display: none; }
+    .nav-toggle[aria-expanded="true"] .icon-close { display: block; }
+    .menu { padding: 0 44px 24px; }
+    .menu-card { display: flex; flex-direction: column; gap: 8px; padding: 4px 4px 8px; border-radius: 22px; background: var(--ink); }
+    .menu-group { display: flex; flex-direction: column; }
+    .menu-group + .menu-group { border-top: 1px solid rgba(255,255,255,.1); padding-top: 8px; }
+    .menu-link { padding: 8px 16px; border-radius: 999px; font-size: 13px; color: rgba(255,255,255,.7); text-decoration: none; }
+    .menu-link:hover { color: #fff; }
+    .menu-link[aria-current="page"] { background: #fff; color: var(--ink); }
+    .menu-sections { display: flex; flex-direction: column; margin: 4px 0 8px 24px; padding-left: 12px; border-left: 1px solid rgba(255,255,255,.15); }
+    .menu-sections a { padding: 6px 0; font-size: 12.5px; color: rgba(255,255,255,.5); text-decoration: none; }
+    .menu-sections a:hover { color: #fff; }
+    .menu-label { padding: 4px 16px; font-size: 10.5px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,.4); }
+    @media (max-width: 900px) {
+      .nav-pill { display: none; }
+      .nav-toggle { display: inline-flex; }
     }
-    .stat-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.06em; color: #94A3B8; margin-bottom: 0.3rem; }
-    .stat-value { font-size: 1.4rem; font-weight: 700; color: #FFFFFF; }
-    .stat-unit { font-size: 0.8rem; color: #94A3B8; margin-top: 0.2rem; }
+    @media (min-width: 901px) {
+      .menu { display: none; }
+    }
+    @media (max-width: 640px) {
+      .top { padding: 16px; }
+      .nav { padding: 20px; gap: 12px; }
+      .menu { padding: 0 20px 20px; }
+      .page-header { padding: 24px 20px 40px; }
+      .footer { padding: 32px 16px 48px; }
+    }
+
+    /* Quick-glance reference ranges */
+    .stats-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 36px; }
+    .stat-card { background: var(--mist); border-radius: 18px; padding: 16px 22px; min-width: 170px; }
+    .stat-label { font-size: 10.5px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ink-subtle); margin-bottom: 6px; }
+    .stat-value { font-size: 28px; font-weight: 300; letter-spacing: -0.03em; line-height: 1.2; }
+    .stat-unit { font-size: 12px; color: var(--ink-faint); }
 
     /* Content */
-    .content-wrapper {
-      max-width: 860px;
-      margin: 0 auto;
-      padding: 0 1.5rem;
-    }
-    .section {
-      background: #FFFFFF;
-      border: 1px solid #E2E8F0;
-      border-radius: 12px;
-      padding: 2rem;
-      margin: 1.5rem 0;
-    }
-    .section h2 {
-      font-size: 1.35rem;
-      font-weight: 700;
-      color: #0F172A;
-      margin-bottom: 1.25rem;
-      padding-bottom: 0.75rem;
-      border-bottom: 2px solid #D1FAE5;
-    }
-    .section p { margin-bottom: 1rem; line-height: 1.75; }
+    .content-wrapper { max-width: 900px; margin: 0 auto; padding: 44px 16px 0; }
+    .section { background: #fff; border-radius: 24px; padding: 32px; margin-bottom: 14px; }
+    .section h2 { font-size: 22px; font-weight: 500; letter-spacing: -0.025em; line-height: 1.3; margin-bottom: 16px; }
+    .section p { margin-bottom: 14px; font-size: 15px; line-height: 1.75; color: var(--ink-muted); }
     .section p:last-child { margin-bottom: 0; }
-    .section ul, .section ol { padding-left: 1.5rem; }
-    .section li { margin-bottom: 0.5rem; }
+    .section ul, .section ol { padding-inline-start: 1.25rem; }
+    .section li { margin-bottom: 6px; font-size: 14.5px; color: var(--ink-muted); }
+    .note { margin-top: 16px; font-size: 13px; color: var(--ink-subtle); }
 
     /* Reference range table */
     .table-wrapper { overflow-x: auto; }
-    .ranges-table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 0.95rem;
-    }
-    .ranges-table th {
-      background: #0F172A;
-      color: #FFFFFF;
-      padding: 0.65rem 1rem;
-      text-align: left;
-      font-weight: 600;
-    }
-    .ranges-table td {
-      padding: 0.65rem 1rem;
-      border-bottom: 1px solid #E2E8F0;
-    }
+    .ranges-table { width: 100%; border-collapse: collapse; font-size: 14.5px; }
+    .ranges-table th { text-align: start; font-size: 12px; font-weight: 400; color: var(--ink-subtle); padding: 10px 16px 10px 0; border-bottom: 1px solid var(--line); }
+    .ranges-table td { padding: 12px 16px 12px 0; border-bottom: 1px solid var(--line); color: var(--ink-muted); }
     .ranges-table tr:last-child td { border-bottom: none; }
-    .ranges-table tr:nth-child(even) td { background: #F8FAFC; }
-    .range-cell { font-weight: 600; color: #0F172A; }
-    .table-source { font-size: 0.8rem; color: #64748B; margin-top: 0.75rem; }
+    .range-cell { font-weight: 500; color: var(--ink) !important; white-space: nowrap; }
+    /* Sources often end in a long URL, which must wrap rather than widen the card. */
+    .section p.table-source, .table-source { font-size: 12.5px; color: var(--ink-faint); margin-top: 12px; overflow-wrap: anywhere; }
 
-    /* Causes */
-    .causes-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1.5rem;
-    }
-    @media (max-width: 600px) { .causes-grid { grid-template-columns: 1fr; } }
-    .causes-card {
-      border-radius: 8px;
-      padding: 1.25rem;
-    }
-    .causes-card.high {
-      background: #FFF7ED;
-      border: 1px solid #FED7AA;
-    }
-    .causes-card.low {
-      background: #EFF6FF;
-      border: 1px solid #BFDBFE;
-    }
-    .causes-card h3 {
-      font-size: 1rem;
-      font-weight: 700;
-      margin-bottom: 0.75rem;
-    }
-    .causes-card.high h3 { color: #C2410C; }
-    .causes-card.low h3 { color: #1D4ED8; }
-    .causes-card ul { padding-left: 1.25rem; }
-    .causes-card li { margin-bottom: 0.4rem; font-size: 0.95rem; }
-
-    /* Symptoms */
-    .symptoms-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1.5rem;
-    }
-    @media (max-width: 600px) { .symptoms-grid { grid-template-columns: 1fr; } }
-    .symptoms-card {
-      border-radius: 8px;
-      padding: 1.25rem;
-    }
-    .symptoms-card.high {
-      background: #FFF7ED;
-      border: 1px solid #FED7AA;
-    }
-    .symptoms-card.low {
-      background: #F0FDF4;
-      border: 1px solid #BBF7D0;
-    }
-    .symptoms-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 0.75rem; }
-    .symptoms-card.high h3 { color: #C2410C; }
-    .symptoms-card.low h3 { color: #15803D; }
-    .symptoms-card ul { padding-left: 1.25rem; }
-    .symptoms-card li { margin-bottom: 0.4rem; font-size: 0.95rem; }
+    /* High / low cards: a soft panel each, told apart by a coloured dot. */
+    .causes-grid, .symptoms-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 10px; }
+    @media (max-width: 640px) { .causes-grid, .symptoms-grid { grid-template-columns: minmax(0, 1fr); } }
+    .causes-card, .symptoms-card { background: var(--mist); border-radius: 18px; padding: 20px 22px; }
+    .causes-card h3, .symptoms-card h3 { display: flex; align-items: center; gap: 10px; font-size: 15px; font-weight: 500; margin-bottom: 10px; }
+    .causes-card h3::before, .symptoms-card h3::before { content: ''; width: 8px; height: 8px; border-radius: 50%; flex: none; }
+    .causes-card.high h3::before, .symptoms-card.high h3::before { background: #d97706; }
+    .causes-card.low h3::before, .symptoms-card.low h3::before { background: #2563eb; }
+    .causes-card li, .symptoms-card li { font-size: 14px; }
 
     /* FAQ */
-    .faq-item {
-      border: 1px solid #E2E8F0;
-      border-radius: 8px;
-      margin-bottom: 0.75rem;
-      overflow: hidden;
-    }
+    .faq-item { background: var(--mist); border-radius: 18px; margin-bottom: 8px; overflow: hidden; }
     .faq-question {
-      padding: 1rem 1.25rem;
-      font-weight: 600;
-      cursor: pointer;
-      list-style: none;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: #F8FAFC;
-      font-size: 0.97rem;
+      display: flex; justify-content: space-between; align-items: center; gap: 16px;
+      padding: 16px 22px; font-size: 15px; font-weight: 500; cursor: pointer; list-style: none;
     }
     .faq-question::-webkit-details-marker { display: none; }
-    .faq-question::after {
-      content: '+';
-      font-size: 1.3rem;
-      color: #10B981;
-      font-weight: 700;
-      flex-shrink: 0;
-      margin-left: 1rem;
-    }
+    .faq-question::after { content: '+'; font-size: 20px; font-weight: 300; color: var(--ink-subtle); flex-shrink: 0; }
     details[open] .faq-question::after { content: '−'; }
-    .faq-answer {
-      padding: 1rem 1.25rem;
-      background: #FFFFFF;
-      border-top: 1px solid #E2E8F0;
-      font-size: 0.95rem;
-      line-height: 1.75;
-    }
+    .faq-answer { padding: 0 22px 18px; }
+    .faq-answer p { font-size: 14.5px; }
 
-    /* CTA */
-    .cta-section {
-      background: linear-gradient(135deg, #0F172A 0%, #334155 100%);
-      color: #FFFFFF;
-      border-radius: 12px;
-      padding: 2.5rem 2rem;
-      text-align: center;
-      margin: 1.5rem 0;
-      border: none;
-    }
-    .cta-section h2 {
-      color: #FFFFFF;
-      border-bottom-color: rgba(16,185,129,0.4);
-      font-size: 1.5rem;
-    }
-    .cta-section p { color: #CBD5E1; max-width: 560px; margin: 0 auto 1.5rem; }
-    .cta-btn {
-      display: inline-block;
-      transition: opacity 0.2s, transform 0.15s;
-    }
-    .cta-btn:hover { opacity: 0.88; transform: scale(1.03); text-decoration: none; }
-    .cta-btn img { height: 52px; width: auto; display: block; }
-    .cta-sub {
-      display: block;
-      margin-top: 0.75rem;
-      font-size: 0.82rem;
-      color: #64748B;
-    }
+    /* CTA — the site's closing card */
+    .cta-section { padding: clamp(40px, 6vw, 64px) clamp(24px, 5vw, 56px); }
+    .cta-section .eyebrow { margin-bottom: 20px; }
+    .cta-section h2 { font-size: clamp(30px, 4vw, 46px); font-weight: 300; letter-spacing: -0.045em; line-height: 1.05; margin-bottom: 18px; text-wrap: balance; }
+    .cta-section p { max-width: 560px; margin-bottom: 28px; }
+    .cta-btn { display: inline-block; transition: transform .15s; }
+    .cta-btn:hover { transform: translateY(-2px); }
+    .cta-btn img { height: 48px; width: auto; display: block; }
+    .cta-sub { display: block; margin-top: 14px; font-size: 12.5px; color: var(--ink-faint); }
 
     /* Related */
-    .related-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-      gap: 0.75rem;
-    }
+    .related-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 8px; }
     .related-link {
-      display: flex;
-      flex-direction: column;
-      padding: 0.85rem 1rem;
-      background: #F8FAFC;
-      border: 1px solid #E2E8F0;
-      border-radius: 8px;
-      transition: border-color 0.15s, background 0.15s;
-      color: inherit;
+      display: flex; flex-direction: column; padding: 14px 18px; border-radius: 18px;
+      background: var(--mist); text-decoration: none; transition: background .15s;
     }
-    .related-link:hover { border-color: #10B981; background: #D1FAE5; text-decoration: none; }
-    .related-category { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.06em; color: #64748B; margin-bottom: 0.25rem; }
-    .related-name { font-weight: 600; font-size: 0.93rem; color: #0F172A; }
+    .related-link:hover { background: var(--line); }
+    .related-category { font-size: 10.5px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 4px; }
+    .related-name { font-size: 14.5px; font-weight: 500; }
 
     /* Citations */
-    .citations-list { padding-left: 1.5rem; }
-    .citations-list li { margin-bottom: 0.75rem; font-size: 0.88rem; line-height: 1.6; }
-    .cite-num { font-weight: 700; color: #0F172A; margin-right: 0.5rem; }
-    .cite-body a { font-size: 0.82rem; color: #64748B; word-break: break-all; }
+    .citations-list { padding-inline-start: 0 !important; list-style: none; }
+    .citations-list li { margin-bottom: 12px; font-size: 13.5px; line-height: 1.6; }
+    .cite-num { color: var(--ink-faint); margin-inline-end: 8px; }
+    .cite-body a { font-size: 12.5px; color: var(--ink-subtle); word-break: break-all; }
 
-    /* Disclaimer */
-    .disclaimer {
-      background: #FFFBEB;
-      border: 1px solid #FDE68A;
-      border-radius: 8px;
-      padding: 1rem 1.25rem;
-      font-size: 0.84rem;
-      color: #92400E;
-      line-height: 1.6;
-      margin: 1.5rem 0;
-    }
-    .disclaimer strong { display: block; margin-bottom: 0.25rem; }
-
-    /* Footer */
-    .footer {
-      background: #0F172A;
-      color: #64748B;
-      text-align: center;
-      padding: 2rem 1.5rem;
-      font-size: 0.85rem;
-      margin-top: 3rem;
-    }
-    .footer a { color: #94A3B8; }
-    .footer-links { display: flex; gap: 1.5rem; justify-content: center; margin-bottom: 1rem; }
+    /* Disclaimer — a plain notice, as on the React site */
+    .disclaimer { background: #fff; border-radius: 24px; padding: 22px 28px; font-size: 13px; line-height: 1.65; color: var(--ink-muted); }
+    .disclaimer strong { display: block; margin-bottom: 4px; font-weight: 500; color: var(--ink); }
 
     @media (max-width: 640px) {
-      .nav-links { display: none; }
-      .hero { padding: 2.5rem 1rem 2rem; }
-      .section { padding: 1.5rem 1rem; }
+      .content-wrapper { padding-top: 28px; }
+      .section { padding: 24px 20px; }
     }
   </style>
 </head>
 <body>
 
-  <!-- Navigation -->
-  <nav class="nav">
-    <a href="https://getserumo.com" class="nav-logo">
-      <img src="/AppStore-1024.png" alt="Serumo logo"><span class="nav-wordmark">Serum<span>o</span></span>
-    </a>
-    <div class="nav-links">
-      <a href="https://getserumo.com/biomarkers/">Lab Tests</a>
-      <a href="https://apps.apple.com/us/app/vitaflow-health/id6762191392#information" class="nav-cta" target="_blank" rel="noopener">Download App</a>
-    </div>
-  </nav>
-
-  <!-- Hero -->
-  <header class="hero">
-    <div class="hero-category">CBC</div>
-    <h1>Platelet Count: Normal Range, What High &amp; Low Levels Mean</h1>
-    <p class="hero-intro">Your blood is doing quiet, remarkable work every second of the day — and platelets are one of the reasons you don&#39;t bleed every time you nick yourself shaving or bump your knee. A platelet count, sometimes labeled PLT or thrombocyte count on your lab report, tells you how many of these tiny clot-forming cells are circulating in your blood right now. Whether your number came back low, high, or perfectly in range, understanding what it means puts you in a much stronger position to have an informed conversation with your doctor.</p>
-
-    <!-- Quick-glance reference range stats -->
-    <div class="stats-row">
-      
-      <div class="stat-card">
-        <div class="stat-label">Adults (≥18 years)</div>
-        <div class="stat-value">150–400</div>
-        <div class="stat-unit">×10³/µL</div>
+  <div class="top">
+    <div class="top-card">
+      <nav class="nav">
+      <a href="/" class="nav-logo"><img src="/AppStore-1024.png" alt="" width="26" height="26">Serumo</a>
+      <div class="nav-pill">
+        <a href="/">For labs</a>
+        <a href="/ios">iOS app</a>
+        <a href="/biomarkers/" aria-current="page">Lab Tests</a>
+      </div>
+      <a href="https://apps.apple.com/us/app/vitaflow-health/id6762191392#information" class="btn-primary" target="_blank" rel="noopener">Download the app</a>
+      <button type="button" class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="site-menu" onclick="var open=this.getAttribute('aria-expanded')==='true';this.setAttribute('aria-expanded',String(!open));document.getElementById('site-menu').hidden=open;">
+        <svg class="icon-open" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        <svg class="icon-close" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </nav>
+    <div id="site-menu" class="menu" hidden>
+      <div class="menu-card">
+        <div class="menu-group">
+          <a href="/" class="menu-link">Laboratories</a>
+          <div class="menu-sections">
+            <a href="/#problem">The problem</a>
+            <a href="/#how">The flow</a>
+            <a href="/#benefits">Benefits</a>
+            <a href="/#portal">The lab portal</a>
+            <a href="/#trust">Trust and compliance</a>
+            <a href="/#contact">Pilot</a>
+          </div>
+        </div>
+        <div class="menu-group">
+          <div class="menu-label">iOS</div>
+          <a href="/ios" class="menu-link">iOS app</a>
+          <a href="/pricing" class="menu-link">iOS pricing</a>
+        </div>
+        <div class="menu-group">
+          <a href="/biomarkers/" class="menu-link" aria-current="page">Lab Tests</a>
+        </div>
       </div>
     </div>
-  </header>
+
+      <header class="page-header">
+        <div class="eyebrow">CBC</div>
+        <h1>Platelet Count: Normal Range, What High &amp; Low Levels Mean</h1>
+        <p class="lead">Your blood is doing quiet, remarkable work every second of the day — and platelets are one of the reasons you don&#39;t bleed every time you nick yourself shaving or bump your knee. A platelet count, sometimes labeled PLT or thrombocyte count on your lab report, tells you how many of these tiny clot-forming cells are circulating in your blood right now. Whether your number came back low, high, or perfectly in range, understanding what it means puts you in a much stronger position to have an informed conversation with your doctor.</p>
+
+        <!-- Quick-glance reference range stats -->
+        <div class="stats-row">
+          
+          <div class="stat-card">
+            <div class="stat-label">Adults (≥18 years)</div>
+            <div class="stat-value">150–400</div>
+            <div class="stat-unit">×10³/µL</div>
+          </div>
+        </div>
+      </header>
+    </div>
+  </div>
 
   <main class="content-wrapper">
 
@@ -514,7 +476,7 @@ A count below 150 ×10³/µL is called thrombocytopenia — a lower-than-normal 
       </table>
       <p class="table-source">Source: Mayo Clinic Laboratories</p>
     </div>
-      <p style="margin-top:1rem; font-size:0.88rem; color:#64748B;">
+      <p class="note">
         Reference ranges vary slightly between laboratories. Always compare your result against the ranges
         printed on your specific lab report, and discuss interpretation with your healthcare provider.
       </p>
@@ -625,6 +587,7 @@ A count below 150 ×10³/µL is called thrombocytopenia — a lower-than-normal 
 
     <!-- CTA -->
     <section class="section cta-section">
+      <div class="eyebrow">Serumo for iOS</div>
       <h2>Track Your Platelet Count Over Time</h2>
       <p>
         A single lab result is a snapshot. Serumo lets you log every result, visualize trends,
@@ -641,11 +604,11 @@ A count below 150 ×10³/µL is called thrombocytopenia — a lower-than-normal 
   <section class="section related-section">
     <h2>Related Lab Tests</h2>
     <div class="related-grid">
-      <a href="https://getserumo.com/biomarkers/wbc/" class="related-link">
+      <a href="/biomarkers/wbc/" class="related-link">
         <span class="related-category">CBC</span>
         <span class="related-name">WBC (White Blood Cell Count)</span>
       </a>
-      <a href="https://getserumo.com/biomarkers/rbc/" class="related-link">
+      <a href="/biomarkers/rbc/" class="related-link">
         <span class="related-category">CBC</span>
         <span class="related-name">RBC (Red Blood Cell Count)</span>
       </a>
@@ -688,18 +651,23 @@ A count below 150 ×10³/µL is called thrombocytopenia — a lower-than-normal 
 
   </main>
 
-  <!-- Footer -->
   <footer class="footer">
-    <div class="footer-links">
-      <a href="https://getserumo.com">Home</a>
-      <a href="https://getserumo.com/biomarkers/">Lab Tests</a>
-      <a href="https://getserumo.com/privacy">Privacy Policy</a>
-      <a href="https://getserumo.com/terms">Terms of Use</a>
+    <div class="footer-brand">
+      <a href="/" class="nav-logo"><img src="/AppStore-1024.png" alt="" width="22" height="22">Serumo</a>
+      <p>The patient-owned health record. Labs deposit reports; patients keep control of them.</p>
     </div>
-    <p>&copy; 2026 Serumo. All rights reserved.</p>
-    <p style="margin-top:0.4rem; font-size:0.78rem;">
-      Content reviewed against Mayo Clinic Laboratories, NIH MedlinePlus, WHO, and NHS references.
-    </p>
+    <div class="footer-links">
+      <a href="/">For laboratories</a>
+      <a href="/ios">iOS app</a>
+      <a href="/pricing">iOS pricing</a>
+      <a href="/biomarkers/">Lab Tests</a>
+      <a href="/privacy">Privacy</a>
+      <a href="/terms">Terms</a>
+    </div>
+    <div class="footer-legal">
+      &copy; 2026 Amandev Technologies SARL AU · Casablanca, Morocco<br>
+      Content reviewed against Mayo Clinic Laboratories, NIH MedlinePlus, WHO, and NHS references. For informational purposes only — not medical advice.
+    </div>
   </footer>
 
 </body>
