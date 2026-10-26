@@ -14,8 +14,11 @@ import { useT } from "@/i18n/context";
 import { SIGN_IN_HREFS } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 
-/** The wordmark, shared by the nav and the footer. */
-export const Wordmark = ({ size = 26 }: { size?: number }) => (
+/**
+ * The wordmark, shared by the nav and the footer. `compact` keeps only the icon on the
+ * narrowest phones, where the nav has no room for the name; screen readers still get it.
+ */
+export const Wordmark = ({ size = 26, compact = false }: { size?: number; compact?: boolean }) => (
   <span className="flex items-center gap-2.5">
     <img
       src="/AppStore-1024.png"
@@ -25,7 +28,9 @@ export const Wordmark = ({ size = 26 }: { size?: number }) => (
       className="shrink-0 rounded-[7px]"
       style={{ width: size, height: size }}
     />
-    <span className="text-[16px] font-medium tracking-[-0.02em]">Serumo</span>
+    <span className={cn("text-[16px] font-medium tracking-[-0.02em]", compact && "max-[359px]:sr-only")}>
+      Serumo
+    </span>
   </span>
 );
 
@@ -75,7 +80,8 @@ const PillMenu = ({ label, active, items }: { label: string; active: boolean; it
 /**
  * Top bar, rendered inside the white card at the top of every page. The page links only
  * fit, centred, beside the actions from `wide`; below that they move into the disclosure
- * panel, and below `sm` the sign-in link and demo CTA join them there.
+ * panel. Below `sm` the demo CTA and the language switch join them there, so sign-in
+ * stays in the bar.
  */
 const SiteNav = () => {
   const t = useT();
@@ -172,7 +178,7 @@ const SiteNav = () => {
       <nav className="flex items-center gap-3 px-5 py-5 sm:px-11 sm:py-7 wide:grid wide:grid-cols-[1fr_auto_1fr] wide:gap-6">
         <div className="me-auto flex items-center gap-6 wide:me-0 wide:justify-self-start">
           <Link to="/" className="no-underline">
-            <Wordmark />
+            <Wordmark compact />
           </Link>
           <LanguageSwitcher className="hidden wide:flex" />
         </div>
@@ -182,10 +188,11 @@ const SiteNav = () => {
         </div>
 
         <div className="flex items-center gap-3 sm:gap-6 wide:gap-3 wide:justify-self-end">
-          <LanguageSwitcher className="wide:hidden" />
+          {/* On phones the language switch moves into the menu, making room for sign-in. */}
+          <LanguageSwitcher className="hidden sm:flex wide:hidden" />
 
           <DropdownMenu modal={false}>
-            <DropdownMenuTrigger className={cn(pillOutline, "hidden gap-1 outline-none sm:inline-flex")}>
+            <DropdownMenuTrigger className={cn(pillOutline, "gap-1 px-3.5 outline-none sm:px-[18px]")}>
               {t.nav.signIn}
               <ChevronDown className="h-3.5 w-3.5" strokeWidth={2.25} aria-hidden />
             </DropdownMenuTrigger>
@@ -214,6 +221,7 @@ const SiteNav = () => {
 
       {open && (
         <div id="site-nav-panel" className="px-5 pb-6 sm:px-11 wide:hidden">
+          <LanguageSwitcher className="mb-4 w-fit sm:hidden" />
           <div
             role="group"
             aria-label={t.nav.pagesLabel}
@@ -225,12 +233,6 @@ const SiteNav = () => {
             <DemoCta onActivate={close} className={pillPrimary}>
               {t.nav.cta}
             </DemoCta>
-            <div className="mt-3 px-1 text-[10.5px] uppercase tracking-[0.2em] text-ink-subtle">{t.nav.signIn}</div>
-            {signInLinks.map((item) => (
-              <a key={item.href} href={item.href} className={cn(pillOutline, "py-3")}>
-                {item.label}
-              </a>
-            ))}
           </div>
         </div>
       )}
