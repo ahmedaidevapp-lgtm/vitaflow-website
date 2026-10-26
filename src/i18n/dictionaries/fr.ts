@@ -92,8 +92,8 @@ export const fr = {
         },
         {
           tag: "ÉTAPE 2 · AUTOMATIQUE",
-          title: "Serumo rapproche par numéro de téléphone",
-          desc: "Le numéro imprimé sur le compte rendu associe le document au patient préenregistré. Les documents non rapprochés passent en file de quarantaine pour une association manuelle.",
+          title: "Serumo reconnaît le patient",
+          desc: "Serumo lit le numéro de téléphone sur le compte rendu et l'envoie automatiquement au bon patient.",
           visualPrimary: "✓ Numéro reconnu",
           visualSecondary: "Rapprochement automatique avec le patient préenregistré",
         },
@@ -167,10 +167,6 @@ export const fr = {
         {
           title: "Préenregistrement des patients",
           desc: "Enregistrez les demandes à l'accueil pour que le rapprochement automatique fonctionne.",
-        },
-        {
-          title: "File de quarantaine",
-          desc: "Les documents dont le numéro n'a pas pu être rapproché sont mis de côté et associés manuellement.",
         },
         {
           title: "Vue « Vos patients »",

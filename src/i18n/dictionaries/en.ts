@@ -88,8 +88,8 @@ export const en: Dict = {
         },
         {
           tag: "STEP 2 · AUTOMATIC",
-          title: "Serumo matches on the phone number",
-          desc: "The phone number printed on the report is used to bind the document to the pre-registered patient. Unmatched documents go to a quarantine queue for manual binding.",
+          title: "Serumo finds the patient",
+          desc: "Serumo reads the phone number on the report and sends it to the right patient automatically.",
           visualPrimary: "✓ Phone number recognised",
           visualSecondary: "Automatic match with the pre-registered patient",
         },
@@ -163,10 +163,6 @@ export const en: Dict = {
         {
           title: "Patient pre-registration",
           desc: "Register patient orders at reception so that automatic matching works.",
-        },
-        {
-          title: "Quarantine queue",
-          desc: "Documents whose phone number could not be matched are held aside and bound manually.",
         },
         {
           title: "“Your patients” view",
