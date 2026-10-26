@@ -56,7 +56,7 @@ export const en: Dict = {
 
     problem: {
       eyebrow: "The problem",
-      title: "Result delivery hasn't changed in twenty years.",
+      title: "Between the lab and the patient, a link is missing.",
       intro:
         "Your analysis is impeccable. It's the last metre, from the counter to the patient, that is still done by hand.",
       cards: [
