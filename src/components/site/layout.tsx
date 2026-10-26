@@ -86,12 +86,12 @@ export const NumberedCards = ({
         key={item.title}
         className={cn(
           "rounded-[24px] bg-white",
-          rows ? "flex items-baseline gap-6 px-7 py-6" : large ? "px-[30px] pb-9 pt-8" : "px-7 pb-8 pt-7",
+          rows ? "flex items-baseline gap-6 px-7 py-6" : large ? "px-6 pb-7 pt-6 md:px-[30px] md:pb-9 md:pt-8" : "px-7 pb-8 pt-7",
           hover &&
             "transition-[transform,box-shadow] duration-300 hover:-translate-y-[3px] hover:shadow-[0_24px_48px_-24px_rgba(20,20,20,.22)]",
         )}
       >
-        <div className={cn("flex-none text-[12px] text-ink-faint", rows ? "w-6" : large ? "mb-14" : "mb-9")}>
+        <div className={cn("flex-none text-[12px] text-ink-faint", rows ? "w-6" : large ? "mb-5 md:mb-14" : "mb-9")}>
           {ordinal(i)}
         </div>
         <div>
