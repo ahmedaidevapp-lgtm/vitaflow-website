@@ -60,7 +60,7 @@ export const fr = {
 
     problem: {
       eyebrow: "Le problème",
-      title: "La remise des résultats n'a pas changé en vingt ans.",
+      title: "Entre le laboratoire et le patient, il manque un lien.",
       intro:
         "Votre analyse est irréprochable. C'est le dernier mètre, du comptoir au patient, qui se fait encore à la main.",
       cards: [
