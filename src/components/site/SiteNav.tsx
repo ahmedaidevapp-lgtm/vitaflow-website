@@ -109,7 +109,7 @@ const SiteNav = () => {
     { to: "/#contact", label: labs.cta.eyebrow },
   ];
 
-  // The consumer app and its pricing share one "iOS" entry.
+  // The consumer app and its pricing share one "Patients" entry.
   const iosItems: MenuItem[] = [
     { to: "/ios", label: t.nav.ios, current: pathname === "/ios" },
     { to: "/pricing", label: t.nav.pricing, current: pathname === "/pricing" },
@@ -126,14 +126,14 @@ const SiteNav = () => {
   const pillLinks = (
     <>
       <PillMenu label={t.nav.labs} active={pathname === "/"} items={labsItems} />
-      <PillMenu label={t.nav.iosGroup} active={iosItems.some((item) => item.current)} items={iosItems} />
+      <PillMenu label={t.nav.patientsGroup} active={iosItems.some((item) => item.current)} items={iosItems} />
       {labTestsLink()}
     </>
   );
 
   /**
    * The disclosure panel, in three groups split by hairlines: the labs page with its
-   * sections hanging off a thin rule beneath it, the iOS pages under a small label, and
+   * sections hanging off a thin rule beneath it, the patient pages under a small label, and
    * the lab tests guide.
    */
   const panelLinks = (
@@ -157,7 +157,7 @@ const SiteNav = () => {
       </div>
       <div className="flex flex-col border-t border-white/10 pt-2">
         <div className="px-4 pb-1 pt-1 text-[10.5px] uppercase tracking-[0.2em] text-white/40">
-          {t.nav.iosGroup}
+          {t.nav.patientsGroup}
         </div>
         {iosItems.map((item) => (
           <NavLink key={item.to} to={item.to} end onClick={close} className={pageLinkClass}>
