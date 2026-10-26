@@ -21,25 +21,34 @@ const FloatingSteps = ({ steps }: { steps: Step[] }) => {
   const [shown, setShown] = useState<boolean[]>(() => steps.map(() => false));
 
   useEffect(() => {
-    // Without an observer (old browsers, tests) or with reduced motion, show everything.
-    if (reducedMotion || typeof IntersectionObserver === "undefined") {
+    // With reduced motion, show everything.
+    if (reducedMotion) {
       setShown(Array.from({ length: count }, () => true));
       return;
     }
-    const observer = new IntersectionObserver(
-      (entries) => {
-        for (const entry of entries) {
-          if (!entry.isIntersecting) continue;
-          const index = refs.current.indexOf(entry.target as HTMLLIElement);
-          // Once in place a card stays put; scrolling back up must not replay it.
-          setShown((prev) => (prev[index] ? prev : prev.map((v, i) => (i === index ? true : v))));
-          observer.unobserve(entry.target);
-        }
-      },
-      { threshold: 0.2, rootMargin: "0px 0px -8% 0px" },
-    );
-    refs.current.forEach((el) => el && observer.observe(el));
-    return () => observer.disconnect();
+    // Reveal every card whose top has crossed the line near the bottom of the viewport —
+    // including any already scrolled past. Measuring on each scroll, rather than waiting
+    // for an IntersectionObserver entry, means a missed event (scroll restoration on
+    // reload, a fast jump, remounted cards) can never leave a card invisible.
+    let frame = 0;
+    const check = () => {
+      frame = 0;
+      const line = window.innerHeight * 0.9;
+      const reached = refs.current.map((el) => !!el && el.getBoundingClientRect().top < line);
+      // Once in place a card stays put; scrolling back up must not replay it.
+      setShown((prev) => (prev.some((v, i) => !v && reached[i]) ? prev.map((v, i) => v || reached[i]) : prev));
+    };
+    const schedule = () => {
+      if (!frame) frame = requestAnimationFrame(check);
+    };
+    schedule();
+    window.addEventListener("scroll", schedule, { passive: true });
+    window.addEventListener("resize", schedule);
+    return () => {
+      cancelAnimationFrame(frame);
+      window.removeEventListener("scroll", schedule);
+      window.removeEventListener("resize", schedule);
+    };
   }, [reducedMotion, count]);
 
   const dir = isRtl ? -1 : 1;
