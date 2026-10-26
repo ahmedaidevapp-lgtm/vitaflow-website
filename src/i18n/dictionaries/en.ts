@@ -47,6 +47,7 @@ export const en: Dict = {
       ctaSecondary: "See how it works",
       note: "Free for your patients · Works with any LIS",
       demoNote: "Demo screenshots — fictitious data, no real patient.",
+      notificationDetail: "Your patient picks whether to receive their results on WhatsApp or by email.",
       shots: [
         "The Serumo app: patient dashboard showing the share of markers in range and the latest report.",
         "The Serumo app: how one marker evolves across several reports, against its reference range.",

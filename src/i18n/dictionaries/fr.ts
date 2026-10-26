@@ -51,6 +51,7 @@ export const fr = {
       ctaSecondary: "Voir le fonctionnement",
       note: "Gratuit pour vos patients · Compatible avec tout SGL",
       demoNote: "Captures de démonstration — données fictives.",
+      notificationDetail: "Votre patient choisit de recevoir ses résultats par WhatsApp ou par e-mail.",
       shots: [
         "Application Serumo : tableau de bord patient avec la part de marqueurs dans la norme et le dernier compte rendu.",
         "Application Serumo : évolution d'un marqueur entre plusieurs comptes rendus, avec l'intervalle de référence.",
