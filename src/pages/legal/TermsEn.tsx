@@ -15,7 +15,7 @@ const Terms = () => {
         <p className="mt-5 text-[13px] leading-[1.7] text-ink-subtle">
           Effective date: 20 April 2026
           <br />
-          Last updated: 14 July 2026
+          Last updated: 4 November 2026
         </p>
 
         <div className="mt-12 space-y-10 text-[15px] md:text-base leading-[1.75] text-ink-muted [&_h2]:text-ink [&_h2]:text-[22px] [&_h2]:font-medium [&_h2]:tracking-[-0.025em] [&_h2]:mb-3 [&_h3]:text-ink [&_h3]:text-base [&_h3]:font-medium [&_h3]:mt-6 [&_h3]:mb-2 [&_strong]:text-ink [&_strong]:font-medium [&_ul]:list-disc [&_ul]:pl-5 [&_ul]:space-y-2 [&_a]:text-ink [&_a]:underline [&_a]:underline-offset-2 hover:[&_a]:text-ink-muted">
@@ -40,9 +40,9 @@ const Terms = () => {
           <section>
             <h2>2. Eligibility</h2>
             <p>
-              You must be able to form a binding contract in your jurisdiction and meet any minimum age required by
-              Apple, Google, or applicable law (typically at least <strong>16</strong> years old, or older where
-              required). Do not use the Service if you do not meet these requirements.
+              You must be able to form a binding contract in your jurisdiction and be at least <strong>18</strong> years old
+              to create an account. A child&apos;s data may only be managed in a profile created by their parent, the account
+              holder. Do not use the Service if you do not meet these requirements.
             </p>
           </section>
 

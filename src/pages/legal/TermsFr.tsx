@@ -18,7 +18,7 @@ const TermsFr = () => {
         <p className="mt-5 text-[13px] leading-[1.7] text-ink-subtle">
           Date d&apos;entrée en vigueur : 20 avril 2026
           <br />
-          Dernière mise à jour : 14 juillet 2026
+          Dernière mise à jour : 4 novembre 2026
         </p>
         <p className="mt-3 text-[13px] text-ink-subtle">
           <span className="font-medium text-ink">Français</span>
@@ -58,8 +58,8 @@ const TermsFr = () => {
             <h2>2. Conditions d&apos;accès</h2>
             <p>
               Vous devez être en capacité de conclure un contrat contraignant dans votre juridiction et
-              satisfaire à l&apos;âge minimum exigé par Apple, Google ou la loi applicable (généralement{" "}
-              <strong>16 ans</strong> révolus, ou davantage lorsque cela est requis). N&apos;utilisez pas
+              avoir au moins <strong>18 ans</strong> pour créer un compte. Les données d&apos;un enfant ne peuvent
+              être gérées que dans un profil créé par son parent, titulaire du compte. N&apos;utilisez pas
               le Service si vous ne remplissez pas ces conditions.
             </p>
           </section>

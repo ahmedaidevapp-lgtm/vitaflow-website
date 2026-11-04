@@ -1,7 +1,12 @@
 import { Link } from "react-router-dom";
 import { HeroCard, SiteLayout } from "@/components/site/layout";
 import LegalLanguageNotice from "@/components/legal/LegalLanguageNotice";
+import LegalTable from "@/components/legal/LegalTable";
 
+/**
+ * Reference text: it states, for the user, what the CNDP dossier (docs/cndp/dossier-2026-11 in the
+ * app repo, annexes 1, 3, 5, 6 and 10) declares. Change both together.
+ */
 const PrivacyFr = () => {
   return (
     <SiteLayout>
@@ -18,7 +23,7 @@ const PrivacyFr = () => {
         <p className="mt-5 text-[13px] leading-[1.7] text-ink-subtle">
           Date d&apos;effet : 15 avril 2026
           <br />
-          Dernière mise à jour : 16 juillet 2026
+          Dernière mise à jour : 4 novembre 2026
         </p>
         <p className="mt-3 text-[13px] text-ink-subtle">
           <Link to="/privacy" className="font-medium text-ink underline underline-offset-2 hover:text-ink-muted">
@@ -32,521 +37,351 @@ const PrivacyFr = () => {
 
         <div className="mt-12 space-y-10 text-[15px] md:text-base leading-[1.75] text-ink-muted [&_h2]:text-ink [&_h2]:text-[22px] [&_h2]:font-medium [&_h2]:tracking-[-0.025em] [&_h2]:mb-3 [&_h3]:text-ink [&_h3]:text-base [&_h3]:font-medium [&_h3]:mt-6 [&_h3]:mb-2 [&_strong]:text-ink [&_strong]:font-medium [&_ul]:list-disc [&_ul]:pl-5 [&_ul]:space-y-2 [&_a]:text-ink [&_a]:underline [&_a]:underline-offset-2 hover:[&_a]:text-ink-muted [&_code]:rounded [&_code]:bg-muted [&_code]:px-1.5 [&_code]:py-0.5 [&_code]:text-sm [&_code]:font-mono [&_code]:text-ink">
           <section>
-            <h2>1. Qui nous sommes</h2>
+            <h2>1. Responsable du traitement</h2>
             <p>
-              <strong>Responsable du traitement :</strong> Amandev Technologies
+              <strong>Amandev Technologies SARL AU</strong>, RC 726561 Casablanca
               <br />
-              <strong>Contact confidentialité :</strong> ahmed@amandevtech.com
+              236 bd Abdelmoumen, angle rue Pasquier, Imm. F8, 2e étage, bureau 6, Maârif, 20330 Casablanca, Maroc
               <br />
-              <strong>Contact support :</strong> ahmed@amandevtech.com
+              <strong>Protection des données :</strong> M. Ahmed El Ghazouani, gérant —{" "}
+              <a href="mailto:ahmed@amandevtech.com">ahmed@amandevtech.com</a>
             </p>
             <p className="mt-4">
-              Serumo (&quot;nous&quot;, &quot;notre&quot;, ou le &quot;Service&quot;) est une application mobile et web qui aide les utilisateurs à organiser,
-              visualiser et comprendre leurs résultats d&apos;analyses biologiques dans le temps, à des fins de bien-être personnel et
-              d&apos;information uniquement.
+              Serumo (anciennement « VitaFlow Health ») est une application mobile (iOS) et web (<code>app.getserumo.com</code>) qui vous
+              permet de conserver, comprendre et suivre vos résultats d&apos;analyses biologiques et ceux de vos proches, et qui permet à des
+              laboratoires d&apos;analyses partenaires de vous remettre un résultat de façon sécurisée.
             </p>
             <p className="mt-4">
-              Serumo n&apos;est pas un dispositif médical et ne fournit ni conseil médical, ni diagnostic, ni traitement. Le Service
-              n&apos;est pas présenté comme certifié conforme HIPAA, GDPR, ou à un cadre équivalent, sauf documentation expresse
-              distincte.
+              Serumo a une finalité de bien-être et d&apos;éducation. Ce n&apos;est pas un dispositif médical : le service ne pose pas de
+              diagnostic, ne prescrit pas et ne propose pas de traitement. Parlez de vos résultats à votre médecin.
             </p>
             <p className="mt-4">
-              La présente Politique de confidentialité explique comment nous collectons, utilisons, stockons, partageons et protégeons
-              les informations, y compris les informations de santé que vous choisissez de téléverser.
+              Le traitement est soumis à la loi n° 09-08 relative à la protection des personnes physiques à l&apos;égard du traitement des
+              données à caractère personnel. Une <strong>demande d&apos;autorisation préalable</strong> a été déposée auprès de la CNDP
+              (Commission Nationale de contrôle de la protection des Données à caractère Personnel) et est en cours d&apos;instruction ; sa
+              référence sera indiquée ici dès sa délivrance.
             </p>
           </section>
 
           <section>
-            <h2>2. Champ d&apos;application</h2>
-            <p>La présente Politique de confidentialité s&apos;applique à :</p>
-            <ul>
-              <li>
-                L&apos;application mobile Serumo sur iOS et Android (identifiant bundle/package :{" "}
-                <code>com.vitalcheck.app</code>)
-              </li>
-              <li>
-                L&apos;application web Serumo (<code>app.getserumo.com</code>), qui utilise la même API backend et les mêmes mesures de
-                sécurité que l&apos;application mobile
-              </li>
-              <li>
-                L&apos;API backend utilisée pour les comptes, l&apos;authentification, les téléversements, l&apos;extraction, le stockage et les
-                fonctionnalités associées
-              </li>
-              <li>
-                La réception de résultats déposés par des <strong>laboratoires d&apos;analyses partenaires</strong> à votre attention (voir section 3.5)
-              </li>
-            </ul>
+            <h2>2. Données que nous traitons</h2>
+            <LegalTable
+              head={["Catégorie", "Données", "Origine"]}
+              rows={[
+                [
+                  "Identification",
+                  "Nom et prénom, email, numéro de téléphone (connexion par code), ville, année de naissance ; date de naissance et numéro de CIN pour les patients des laboratoires partenaires uniquement",
+                  "Vous ; laboratoire partenaire",
+                ],
+                [
+                  <strong key="s">Données de santé</strong>,
+                  "Comptes rendus d’analyses (fichiers), valeurs, unités, intervalles de référence et dates ; antécédents que vous déclarez (maladies et traitements d’une liste fermée) ; groupe sanguin (facultatif) ; contrôles recommandés ; résumés éducatifs ; journal de santé",
+                  "Vous ; laboratoire partenaire",
+                ],
+                [
+                  "Mode de vie (facultatif)",
+                  "Sexe, taille, poids, habitudes (tabac, activité, alimentation), motif habituel des analyses, notes de personnalisation",
+                  "Vous",
+                ],
+                [
+                  "Techniques et journaux",
+                  "Identifiants internes, jetons de session, journaux d’accès (identifiants, adresse IP et navigateur hachés), preuves de consentement",
+                  "Service",
+                ],
+                ["Statistiques d’usage (sur accord)", "Identifiant pseudonyme, actions dans l’application, modèles d’adresse de page ; jamais ce que vous saisissez", "Service"],
+                ["Abonnement", "Statut et historique d’achats ; le paiement est géré par Apple ou Google", "Apple, Google"],
+              ]}
+            />
             <p className="mt-4">
-              Cette Politique ne s&apos;applique pas aux services tiers que vous utilisez de manière indépendante (par exemple portails de
-              laboratoires tiers, fournisseurs e-mail, fabricants d&apos;appareils), sauf intégration directe décrite dans la présente Politique.
+              Nous ne collectons pas de données génétiques ou biométriques, de géolocalisation, ni de coordonnées bancaires. Un compte rendu
+              que vous téléversez peut contenir d&apos;autres informations (en-tête du laboratoire, médecin prescripteur) : elles sont stockées
+              chiffrées avec le fichier.
+            </p>
+            <h3>Profils de vos proches</h3>
+            <p>
+              Un compte peut gérer jusqu&apos;à huit profils (vous-même, vos proches, vos enfants). Les données de chaque profil restent
+              séparées. En créant le profil d&apos;une autre personne, vous attestez être autorisé à gérer ses données ; cette attestation est
+              enregistrée.
             </p>
           </section>
 
           <section>
-            <h2>3. Informations que nous collectons</h2>
-            <p>Les données collectées dépendent des fonctionnalités que vous utilisez et des informations que vous choisissez de fournir.</p>
+            <h2>3. Pourquoi nous les traitons</h2>
+            <LegalTable
+              head={["Finalité", "Fondement"]}
+              rows={[
+                ["Créer et gérer votre compte et vos profils", "Votre consentement exprès au traitement de vos données de santé ; exécution du service demandé"],
+                ["Stocker vos comptes rendus de façon chiffrée", "Votre consentement exprès"],
+                ["Lire automatiquement vos comptes rendus et vous les expliquer (intelligence artificielle)", "Un consentement exprès distinct et préalable, que vous pouvez refuser sans perdre le service"],
+                ["Afficher l’évolution de vos résultats et des notes de contexte produites par des règles médicales relues (sans IA)", "Votre consentement exprès"],
+                ["Enregistrer vos antécédents de santé, à votre demande", "Un consentement exprès spécifique, par profil"],
+                ["Recommander des contrôles et, sur accord, envoyer des rappels par WhatsApp ou email (fonction pas encore active)", "Un consentement exprès séparé"],
+                ["Partager les résultats d’un profil avec le médecin de votre choix", "Votre initiative"],
+                ["Recevoir un résultat déposé par un laboratoire partenaire", "Contrat avec le laboratoire ; votre accord recueilli par le laboratoire"],
+                ["Sécuriser le service (authentification, journaux, prévention des abus, sauvegardes)", "Intérêt légitime et obligation de sécurité"],
+                ["Mesurer l’utilisation des fonctions pour améliorer Serumo", "Votre consentement (désactivé par défaut)"],
+                ["Gérer les abonnements", "Exécution du contrat"],
+              ]}
+            />
+            <p className="mt-4">
+              Vos données ne sont ni vendues, ni louées, ni utilisées à des fins publicitaires, et ne servent à entraîner aucun modèle
+              d&apos;intelligence artificielle.
+            </p>
+          </section>
 
-            <h3>3.1 Informations de compte et d&apos;identité</h3>
-            <ul>
-              <li>Adresse e-mail (inscription/connexion e-mail + mot de passe)</li>
-              <li>Nom affiché (si fourni)</li>
-              <li>
-                Données d&apos;authentification :
-                <ul className="mt-2 list-[circle]">
-                  <li>Empreinte (hash) de mot de passe (nous ne stockons pas les mots de passe en clair)</li>
-                  <li>
-                    Données d&apos;authentification tokenisées émises par des fournisseurs d&apos;identité pour la connexion sociale prise en
-                    charge
-                  </li>
-                </ul>
-              </li>
-              <li>Identifiant interne utilisateur/compte</li>
-              <li>Métadonnées de compte (par exemple dates de création et de mise à jour)</li>
-              <li>Langue/locale préférée (par exemple anglais, français, arabe)</li>
-            </ul>
-
-            <h3>3.1.1 Profils de santé (multi-profils)</h3>
+          <section>
+            <h2>4. Vos consentements</h2>
             <p>
-              Votre <strong>compte</strong> (identité de connexion) est distinct des <strong>profils de santé</strong> dans l&apos;application.
+              Chaque décision est enregistrée avec la version du texte qui vous a été montré, la date et le profil concerné. Vous pouvez
+              retirer chaque consentement à tout moment dans les réglages (Profil et réglages → Confidentialité), sans effet sur ce qui a été
+              fait avant le retrait.
             </p>
             <ul className="mt-4">
               <li>
-                Vous pouvez gérer <strong>jusqu&apos;à huit profils de santé actifs</strong> sur un même compte — par exemple vous-même et des proches
-                que vous aidez à suivre. Chaque profil comporte un libellé, une catégorie de lien familial optionnelle (par exemple
-                vous-même ou une personne dépendante) et des paramètres d&apos;affichage utilisés uniquement dans l&apos;application.
+                <strong>À l&apos;inscription</strong> : vous confirmez avoir 18 ans ou plus et vous acceptez que Serumo traite les données de
+                santé que vous ajoutez. Sans cet accord, aucun compte n&apos;est créé ; pour le retirer, supprimez votre compte.
               </li>
               <li>
-                <strong>
-                  Rapports biologiques, données structurées de marqueurs, entrées du journal de santé, récits de progression et contenus
-                  de bien-être associés sont rattachés à un seul profil.
-                </strong>{" "}
-                Les données ne sont pas fusionnées entre profils, y compris au sein d&apos;un même compte.
+                <strong>Analyse par l&apos;IA</strong> : avant la première analyse, et à chaque nouvelle version du texte, un écran vous explique
+                ce qui est envoyé à OpenAI aux États-Unis (section 6). <strong>Si vous refusez, rien n&apos;est envoyé</strong> : votre compte rendu
+                est quand même stocké chiffré et vous pouvez lancer l&apos;analyse plus tard.
               </li>
               <li>
-                Lorsque vous créez un profil pour une personne autre que vous-même, l&apos;application vous demande de{" "}
-                <strong>confirmer que vous avez l&apos;autorisation appropriée</strong> pour saisir et gérer ses informations sur votre compte ;
-                cette attestation est enregistrée à des fins de piste d&apos;audit.
+                <strong>Antécédents de santé</strong> (par profil), et séparément leur utilisation dans votre résumé personnalisé. Retirer le
+                premier accord supprime les antécédents du profil.
               </li>
               <li>
-                Après la connexion, l&apos;application envoie un <strong>identifiant de profil actif</strong> avec les requêtes API afin que le serveur
-                charge et enregistre le bon compartiment de données.
-              </li>
-            </ul>
-
-            <h3>3.2 Informations liées à la santé et au bien-être</h3>
-            <p>
-              Lorsque vous utilisez les fonctionnalités principales <strong>pour un profil de santé donné</strong>, nous pouvons traiter :
-            </p>
-            <ul>
-              <li>
-                Les fichiers de rapports biologiques téléversés (PDF/images), y compris les informations personnelles ou cliniques
-                visibles dans ces fichiers
+                <strong>Rappels</strong> par WhatsApp ou email. Les messages ne contiennent ni nom d&apos;examen, ni valeur, ni maladie. Arrêt par
+                « STOP », par le lien de désinscription ou dans les réglages.
               </li>
               <li>
-                Les données structurées extraites des rapports, y compris noms de marqueurs/tests, valeurs, unités, plages de référence,
-                statuts (par exemple bas/normal/élevé), indicateurs de confiance/relecture et dates de rapport
+                <strong>Statistiques d&apos;utilisation</strong> : désactivées par défaut, demandées une fois.
               </li>
-              <li>Les résumés éducatifs, analyses, checklists et avertissements générés à partir de vos rapports</li>
-              <li>Les comparaisons de progression entre rapports</li>
-              <li>Les entrées du journal de santé et les paramètres de checklist/rappels créés dans l&apos;application</li>
-            </ul>
-            <p className="mt-4">
-              Nous ne demandons pas d&apos;identifiants gouvernementaux, de numéros d&apos;assurance, ni de dossier médical complet, sauf si ces
-              informations figurent dans les fichiers que vous téléversez ou le texte que vous saisissez.
-            </p>
-
-            <h3>3.3 Informations techniques, d&apos;usage et de sécurité</h3>
-            <ul>
-              <li>Métadonnées des requêtes API (par exemple horodatage, contexte de requête, adresse IP, logs d&apos;erreur/sécurité)</li>
-              <li>Données de session et de jetons (flux access/refresh token)</li>
-              <li>Données locales de l&apos;application (par exemple langue préférée et stockage sécurisé de session)</li>
-              <li>Données locales de planification de notifications basées sur vos rappels/journal de santé</li>
-            </ul>
-
-            <h3>3.4 Connexion tierce optionnelle (Google et Apple)</h3>
-            <p>
-              Si vous choisissez « Continuer avec Google » ou « Continuer avec Apple », le flux de connexion est géré par le fournisseur
-              d&apos;identité choisi, selon ses propres conditions et sa politique de confidentialité.
-            </p>
-            <p className="mt-4">
-              Nous recevons le jeton d&apos;identité et des informations de compte limitées nécessaires pour vous authentifier et créer/accéder
-              à votre compte Serumo. Nous ne recevons pas le mot de passe de votre compte Google ou Apple.
-            </p>
-
-            <h3>3.5 Résultats déposés par des laboratoires partenaires</h3>
-            <p>
-              Avec votre accord recueilli par le laboratoire, un <strong>laboratoire d&apos;analyses partenaire</strong> peut déposer un résultat à votre
-              attention sur Serumo au lieu de vous le remettre par un canal non sécurisé. Dans ce cas, nous recevons du laboratoire :
-            </p>
-            <ul>
-              <li>le fichier de résultat (stocké chiffré dès réception)</li>
               <li>
-                votre identité de contact — nom (facultatif), numéro de téléphone et/ou adresse e-mail —{" "}
-                <strong>chiffrée champ par champ</strong> ; l&apos;e-mail fait l&apos;objet d&apos;un index aveugle (haché) permettant de rapprocher le dépôt de
-                votre compte sans déchiffrement
+                <strong>Emails d&apos;information</strong> (bienvenue, demande d&apos;avis) : case facultative à l&apos;inscription.
               </li>
-            </ul>
-            <p className="mt-4">
-              Le résultat reste en <strong>dépôt temporaire</strong> jusqu&apos;à ce que vous le récupériez depuis votre compte (au moyen du code de retrait
-              remis par le laboratoire, ou du rapprochement par e-mail). À la récupération, le résultat intègre votre dossier — avec mention du
-              laboratoire émetteur — et <strong>la copie de dépôt est immédiatement supprimée</strong>. Un dépôt non récupéré est{" "}
-              <strong>automatiquement supprimé après 30 jours</strong>. Pour cette phase de dépôt, le laboratoire demeure responsable du traitement et
-              Serumo agit comme sous-traitant ; la récupération dans votre compte suit ensuite le circuit standard décrit dans la présente
-              Politique, y compris le consentement au traitement IA (section 6.2).
-            </p>
-          </section>
-
-          <section>
-            <h2>4. Comment nous utilisons les informations</h2>
-            <p>Nous utilisons les données personnelles aux fins suivantes :</p>
-            <ul>
-              <li>
-                Fournir et exploiter le Service (création de compte, authentification, synchronisation, affichage rapports/tendances/journal
-                de santé)
-              </li>
-              <li>Traiter les téléversements (réception des fichiers, extraction du contenu biologique, stockage de copies chiffrées)</li>
-              <li>Générer du contenu éducatif (insights, résumés, comparaisons, orientation non diagnostique)</li>
-              <li>Localisation (traduction du contenu pris en charge dans la langue choisie)</li>
-              <li>Sécurité et fiabilité (prévention des abus, limitation de débit, débogage, supervision, intégrité du service)</li>
-              <li>Conformité légale (réponse aux obligations légales et protection des droits/sécurité)</li>
-            </ul>
-            <p className="mt-4">
-              Nous n&apos;utilisons pas le contenu de vos rapports téléversés pour entraîner nos propres modèles propriétaires, sauf information
-              préalable et recueil du consentement requis. Les prestataires IA tiers peuvent appliquer leurs propres politiques aux contenus
-              soumis via API, conformément à leurs conditions.
-            </p>
-          </section>
-
-          <section>
-            <h2>5. Bases légales (EEE/Royaume-Uni/Suisse et juridictions similaires)</h2>
-            <p>Selon votre lieu de résidence et la loi applicable, nous pouvons nous fonder sur :</p>
-            <ul>
-              <li>Le contrat (fourniture des fonctionnalités demandées)</li>
-              <li>L&apos;intérêt légitime (sécurité, prévention de la fraude, fiabilité)</li>
-              <li>Le consentement (lorsqu&apos;il est requis pour des traitements optionnels)</li>
-              <li>La base légale applicable aux données de santé/sensibles, incluant le consentement explicite lorsque nécessaire</li>
             </ul>
           </section>
 
           <section>
-            <h2>6. Partage des données et sous-traitants</h2>
+            <h2>5. Destinataires</h2>
             <p>
-              Nous ne vendons pas les données personnelles.
-              <br />
-              Nous ne partageons pas les données personnelles pour du profilage publicitaire.
+              Seules les personnes habilitées d&apos;Amandev Technologies accèdent à vos données, dans la limite de leurs fonctions. Nous
+              faisons appel aux sous-traitants suivants, qui agissent sur nos instructions et dans le cadre d&apos;un contrat :
             </p>
-            <p className="mt-4">Nous pouvons partager des données uniquement lorsque nécessaire avec :</p>
-
-            <h3>6.1 Fournisseurs d&apos;infrastructure et de service</h3>
-            <ul>
-              <li>Fournisseurs d&apos;hébergement cloud/API et de base de données</li>
-              <li>Infrastructure Redis gérée pour la file technique de traitement et le stockage de limitation de débit</li>
-              <li>Fournisseurs de stockage de fichiers utilisés pour le stockage chiffré des téléversements</li>
-              <li>Fournisseurs d&apos;outils sécurité/exploitation (par exemple TLS, DNS, sauvegardes, logs)</li>
+            <LegalTable
+              head={["Prestataire", "Rôle", "Données reçues", "Lieu de traitement"]}
+              rows={[
+                ["Railway Corporation", "Hébergement : serveurs, base de données, fichiers", "Toutes ; fichiers et données médicales chiffrés par nous (Railway n’a pas la clé)", "Pays-Bas (UE)"],
+                ["OpenAI, L.L.C.", "Lecture des comptes rendus, résumés éducatifs, traduction", "Texte du compte rendu sans vos identifiants ; image des pages d’un document scanné ; informations de personnalisation", <strong key="us">États-Unis</strong>],
+                ["GitHub, Inc.", "Sauvegardes", "Copie chiffrée de la base ; GitHub n’a pas la clé", "États-Unis"],
+                ["Functional Software, Inc. (Sentry)", "Erreurs techniques de l’application web", "Message d’erreur, page, navigateur ; ni adresse IP, ni identifiant, ni contenu", "États-Unis"],
+                ["WhatsApp LLC (Meta)", "Codes de connexion, avis « résultat disponible », rappels sur accord", "Téléphone, prénom, message neutre ; jamais de résultat", "États-Unis"],
+                ["RevenueCat, Inc.", "Gestion des abonnements", "Identifiant pseudonyme, historique d’achats", "États-Unis"],
+                ["Sendinblue SAS (Brevo)", "Emails et SMS transactionnels", "Email ou téléphone, prénom, message neutre ou code", "France (UE)"],
+                ["Mailgun Technologies, Inc. (Sinch)", "Réception des emails des laboratoires partenaires", "Compte rendu joint, relayé sans copie ; journal technique de 1 à 5 jours", "UE"],
+                ["PostHog, Inc.", "Statistiques d’utilisation, sur accord", "Identifiant pseudonyme, actions ; aucune donnée de santé", "Allemagne (UE)"],
+              ]}
+            />
+            <p className="mt-4">Autres destinataires, qui ne sont pas nos sous-traitants :</p>
+            <ul className="mt-2">
+              <li>
+                <strong>Laboratoires partenaires</strong> (Maroc) : ils déposent vos résultats ; ensuite, ils ne reçoivent que des statistiques
+                agrégées, jamais vos données personnelles.
+              </li>
+              <li>
+                <strong>Le médecin que vous choisissez</strong> (section 10) : les résultats d&apos;un profil, pendant 90 jours au plus, jusqu&apos;à ce
+                que vous révoquiez le partage.
+              </li>
+              <li>
+                <strong>Apple et Google</strong>, si vous choisissez « Se connecter avec Apple / Google » ou pour le paiement d&apos;un abonnement,
+                selon leurs propres conditions. Nous ne recevons ni votre mot de passe ni vos coordonnées bancaires.
+              </li>
+              <li>
+                Les autorités, lorsque la loi nous y oblige.
+              </li>
             </ul>
+            <p className="mt-4">
+              Aucune donnée de santé n&apos;est envoyée à Brevo, WhatsApp, Sentry, RevenueCat ou PostHog. Les sauvegardes et les fichiers
+              médicaux ne quittent nos serveurs que chiffrés.
+            </p>
+          </section>
 
-            <h3>6.2 Prestataires de traitement IA (OpenAI et/ou Microsoft Azure OpenAI)</h3>
+          <section>
+            <h2>6. Transferts hors du Maroc</h2>
             <p>
-              Selon la configuration, Serumo utilise les <strong>services API OpenAI</strong> et/ou <strong>Microsoft Azure OpenAI Service</strong> (modèles
-              d&apos;IA hébergés) pour les mêmes catégories de traitement. Les références contractuelles ci-dessous couvrent les deux fournisseurs
-              lorsque applicable.
+              <strong>Vers l&apos;Union européenne</strong> (Railway, Brevo, Mailgun, PostHog) : pays reconnus par la CNDP comme assurant une
+              protection suffisante des données (art. 43 de la loi 09-08). Railway, Mailgun et PostHog sont des sociétés américaines dont
+              l&apos;accès éventuel depuis les États-Unis (support, exploitation) ne porte que sur des données que nous avons chiffrées pour ce
+              qui concerne vos fichiers et données médicales.
             </p>
             <p className="mt-4">
-              Lorsque la fonctionnalité est activée pour votre compte et{" "}
-              <strong>uniquement après que vous ayez accordé une autorisation pour le profil de santé actif</strong>, nous pouvons transmettre des
-              données limitées pour :
+              <strong>Vers les États-Unis</strong>, qui ne figurent pas parmi ces pays :
             </p>
-            <ul>
+            <ul className="mt-2">
               <li>
-                <strong>Extraction de laboratoire</strong> — texte extrait du PDF/image téléversé et zones d&apos;image pertinentes pour l&apos;OCR / extraction
-                structurée des marqueurs
+                <strong>OpenAI</strong> : uniquement avec votre <strong>consentement exprès</strong>, donné sur l&apos;écran d&apos;analyse par l&apos;IA (art.
+                44). Avant envoi, votre nom, votre date de naissance, votre numéro de CIN, les numéros de dossier, votre téléphone, votre email
+                et votre adresse sont supprimés automatiquement du texte. Pour un document scanné ou une photo, l&apos;image des pages est
+                envoyée et peut contenir ces informations. OpenAI ne conserve pas ces données pour son propre usage (<code>store=false</code>) et
+                ne les utilise pas pour entraîner ses modèles.
               </li>
               <li>
-                <strong>Résumés éducatifs</strong> — contexte des marqueurs (noms, valeurs, unités, plages, date du rapport) et contexte de profil
-                facultatif pour des résumés et checklists en langage accessible
+                <strong>WhatsApp</strong> et <strong>RevenueCat</strong> : nécessaires à l&apos;exécution du service que vous demandez (code de connexion,
+                message, abonnement), avec des messages qui ne contiennent aucune donnée de santé.
               </li>
               <li>
-                <strong>Résumés personnalisés de rapport</strong> — résultats de marqueurs structurés et champs de personnalisation facultatifs que vous
-                avez fournis
-              </li>
-              <li>
-                <strong>Récits de progression</strong> — comparaison des valeurs de marqueurs entre deux rapports à des fins d&apos;explication bien-être
-              </li>
-              <li>
-                <strong>Explications de schémas multi-marqueurs</strong> — contexte de motifs groupés pour du contenu éducatif
-              </li>
-              <li>
-                <strong>Localisation</strong> — lorsque la langue de l&apos;application n&apos;est pas l&apos;anglais, de courts lots de chaînes déjà générées en anglais
-                (pouvant citer noms, valeurs, unités de marqueurs et formulations prudentes) peuvent être envoyés pour{" "}
-                <strong>traduction automatique</strong> vers la langue sélectionnée
+                <strong>GitHub</strong> et <strong>Sentry</strong> : garanties contractuelles et, pour GitHub, chiffrement des sauvegardes dont nous
+                gardons seuls la clé ; ces transferts font partie de notre demande d&apos;autorisation à la CNDP.
               </li>
             </ul>
             <p className="mt-4">
-              Par défaut, le contenu envoyé aux <strong>API OpenAI</strong> n&apos;est pas utilisé pour entraîner les modèles grand public d&apos;OpenAI ;{" "}
-              <strong>Azure OpenAI</strong> est encadré par les règles de traitement des données entreprise de Microsoft pour la configuration utilisée.
-              Nous utilisons des appels d&apos;API (pas les produits grand public de type chat), activons <code>store: false</code> lorsque l&apos;API le permet,
-              et minimisons les données par requête.
+              Nous avons demandé à OpenAI que le traitement de l&apos;IA soit effectué dans l&apos;UE et prévoyons de déplacer les sauvegardes vers un
+              stockage situé dans l&apos;UE. Toute modification de cette liste sera publiée ici et portée à la connaissance de la CNDP.
             </p>
-            <p className="mt-4">
-              Avant tout envoi de contenu personnel ou lié à la santé vers ces prestataires, Serumo affiche une information in-app et demande
-              votre autorisation. <strong>Ce choix est conservé par profil de santé</strong> (et enregistré côté serveur à des fins de preuve lorsque
-              l&apos;application est en ligne) : si vous utilisez plusieurs profils, vous pouvez accepter ou refuser séparément pour chacun.
-            </p>
-            <p className="mt-4">
-              <strong>Le refus ne bloque pas le téléversement.</strong> Si vous choisissez « Pas maintenant », votre compte rendu est quand même
-              téléversé et <strong>stocké chiffré</strong> avec le statut « en attente d&apos;analyse » ; <strong>aucune donnée du document n&apos;est transmise au
-              prestataire IA</strong> et les autres fonctions non IA restent accessibles. Vous pouvez déclencher l&apos;analyse à tout moment par une
-              action dédiée (« Lancer l&apos;analyse IA »), précédée de la même information ; ce consentement différé est journalisé au même titre.
-            </p>
-            <p className="mt-4">Références :</p>
-            <ul>
-              <li>
-                <a href="https://openai.com/policies/terms-of-use" target="_blank" rel="noopener noreferrer">
-                  https://openai.com/policies/terms-of-use
-                </a>
-              </li>
-              <li>
-                <a href="https://openai.com/policies/privacy-policy" target="_blank" rel="noopener noreferrer">
-                  https://openai.com/policies/privacy-policy
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://learn.microsoft.com/legal/cognitive-services/openai/data-privacy"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  https://learn.microsoft.com/legal/cognitive-services/openai/data-privacy
-                </a>
-              </li>
-            </ul>
+          </section>
 
-            <h3>6.3 Fournisseurs d&apos;identité</h3>
-            <p>Si vous choisissez la connexion sociale, les données d&apos;identité sont traitées par :</p>
+          <section>
+            <h2>7. Durées de conservation</h2>
+            <LegalTable
+              head={["Données", "Durée"]}
+              rows={[
+                ["Compte, profils, comptes rendus, résultats, antécédents", "Tant que vous utilisez le compte ; suppression automatique après 540 jours sans activité ; suppression immédiate si vous supprimez votre compte"],
+                ["Résultat déposé par un laboratoire et non récupéré (fichier, coordonnées, date de naissance, CIN, code)", "30 jours au plus, puis suppression ; la copie de dépôt est supprimée dès que vous récupérez le résultat"],
+                ["Documents reçus par email d’un laboratoire, en attente", "30 jours au plus"],
+                ["Messages HPRIM reçus des laboratoires (texte brut)", "30 jours ; les résultats déjà remis restent dans votre compte"],
+                ["Partage avec un médecin", "90 jours au plus, ou jusqu’à révocation"],
+                ["Contrôles clos, journal des rappels, historique des modifications du profil", "24 mois"],
+                ["Preuves de consentement", "Décision en vigueur : tant que le compte existe ; décisions remplacées : 24 mois"],
+                ["Codes de connexion par WhatsApp ou SMS", "24 heures"],
+                ["Sauvegardes chiffrées", "90 jours"],
+                ["Journal d’accès (identifiants uniquement, sans donnée de santé)", "6 ans, y compris après la suppression du compte"],
+              ]}
+            />
+            <p className="mt-4">
+              Après une suppression, une donnée peut subsister dans les sauvegardes chiffrées jusqu&apos;à leur expiration (90 jours au plus). En
+              cas d&apos;obligation légale ou de litige, une suppression peut être suspendue pour la durée strictement nécessaire.
+            </p>
+          </section>
+
+          <section>
+            <h2>8. Sécurité</h2>
             <ul>
-              <li>Google OAuth</li>
-              <li>Sign in with Apple</li>
+              <li>Connexions chiffrées (HTTPS/TLS) ; mots de passe hachés, jamais stockés en clair.</li>
+              <li>
+                <strong>Chiffrement dans l&apos;application (AES-256-GCM)</strong> des fichiers de comptes rendus, des noms d&apos;analyses, valeurs,
+                intervalles, résumés, antécédents, données d&apos;identité et de mode de vie, avec une clé détenue par Amandev Technologies, hors
+                de l&apos;hébergeur. Les recherches par email, téléphone ou CIN passent par des index aveugles, sans déchiffrement.
+              </li>
+              <li>Séparation stricte des données par compte et par profil, contrôlée par le serveur.</li>
+              <li>Journal des accès et des consentements ; sauvegardes chiffrées quotidiennes.</li>
+              <li>Aucun résultat ni information de santé dans les emails, SMS et messages WhatsApp.</li>
             </ul>
             <p className="mt-4">
-              Ces fournisseurs authentifient votre identité et nous transmettent les assertions tokenisées nécessaires à l&apos;accès au compte.
+              Aucun système n&apos;est infaillible. En cas de violation de données présentant un risque pour vous, nous vous en informerons ainsi
+              que la CNDP.
             </p>
+          </section>
 
-            <h3>6.4 Écosystème Expo / React Native</h3>
+          <section>
+            <h2>9. Vos droits</h2>
             <p>
-              Serumo est développée avec Expo/React Native et peut s&apos;appuyer sur des services plateforme Apple/Google et une infrastructure
-              SDK associée.
+              Vous disposez d&apos;un droit d&apos;<strong>accès</strong>, de <strong>rectification</strong>, d&apos;<strong>opposition</strong> pour motif légitime
+              et de <strong>retrait</strong> de vos consentements (loi 09-08, art. 7 à 9). Dans l&apos;application :
+            </p>
+            <ul className="mt-4">
+              <li>
+                <strong>Export</strong> de votre compte, de vos comptes rendus avec leurs résultats et de votre journal de santé ; les autres
+                données (antécédents, profils des proches, consentements, contrôles, partages) vous sont communiquées sur demande écrite.
+              </li>
+              <li>Modification de vos informations et correction d&apos;une valeur extraite d&apos;un compte rendu.</li>
+              <li>
+                <strong>Suppression</strong> immédiate d&apos;un compte rendu, d&apos;un antécédent, d&apos;un profil ou de votre compte entier.
+              </li>
+              <li>Retrait de chaque consentement et révocation d&apos;un partage avec un médecin.</li>
+            </ul>
+            <p className="mt-4">
+              Vous pouvez aussi écrire à <a href="mailto:ahmed@amandevtech.com">ahmed@amandevtech.com</a> ou à l&apos;adresse postale de la
+              section 1. Nous vérifions votre identité sans demander plus que nécessaire et répondons gratuitement sous 30 jours au plus. Le
+              titulaire d&apos;un compte exerce ces droits pour les profils qu&apos;il gère ; un proche peut aussi nous écrire directement.
             </p>
             <p className="mt-4">
-              Référence :{" "}
-              <a href="https://expo.dev/privacy" target="_blank" rel="noopener noreferrer">
-                https://expo.dev/privacy
+              Vous pouvez introduire une réclamation auprès de la CNDP (
+              <a href="https://www.cndp.ma" target="_blank" rel="noopener noreferrer">
+                www.cndp.ma
               </a>
+              ). Si une autre loi s&apos;applique à vous (par exemple le RGPD dans l&apos;UE), vous pouvez exercer les droits qu&apos;elle prévoit
+              auprès du même contact.
             </p>
-
-            <h3>6.5 Divulgations légales / sécurité</h3>
-            <p>Nous pouvons divulguer des données lorsque nécessaire pour :</p>
-            <ul>
-              <li>Respecter la loi ou une procédure légale</li>
-              <li>Protéger l&apos;intégrité et la sécurité du service</li>
-              <li>Protéger les utilisateurs, les droits et la sécurité publique</li>
-            </ul>
           </section>
 
           <section>
-            <h2>7. Transferts internationaux</h2>
+            <h2>10. Partage avec un médecin</h2>
             <p>
-              Vos données peuvent être traitées dans des juridictions où nos fournisseurs opèrent, y compris les <strong>États-Unis</strong> et d&apos;autres
-              régions où nos prestataires d&apos;hébergement, de base de données, de files techniques ou d&apos;IA exécutent l&apos;infrastructure.
-            </p>
-            <p className="mt-4">
-              Pour les utilisateurs au <strong>Maroc</strong>, le cadre de la <strong>Loi 09-08</strong> soumet certains transferts de données à caractère personnel
-              (y compris les données de santé) hors du Royaume à des <strong>exigences d&apos;autorisation préalable ou d&apos;adéquation</strong> (notamment les{" "}
-              <strong>articles 43 et 44</strong>), en complément des garanties techniques et contractuelles. Les transferts transfrontaliers sont décrits
-              dans notre <strong>dossier de demande d&apos;autorisation préalable auprès de la CNDP</strong> et le registre des sous-traitants ; nous ne nous
-              contentons pas d&apos;une formule générique lorsque des règles plus strictes s&apos;appliquent.
-            </p>
-            <p className="mt-4">
-              Pour tous les utilisateurs, nous appliquons des <strong>mesures techniques</strong> (chiffrement en transit, chiffrement applicatif au repos
-              lorsque configuré) et des <strong>mesures contractuelles</strong> avec les sous-traitants lorsque disponibles. L&apos;identité des principaux
-              prestataires et leur rôle figure dans la présente Politique (section 6) et dans nos annexes CNDP.
+              Vous pouvez partager les résultats d&apos;un profil avec le médecin de votre choix. Il reçoit un accès personnel protégé par mot de
+              passe à un instantané des résultats, pendant 90 jours au plus. Vous pouvez révoquer le partage à tout moment ; l&apos;accès est
+              alors coupé immédiatement.
             </p>
           </section>
 
           <section>
-            <h2>8. Conservation des données</h2>
-            <p>Nous conservons les données uniquement pendant la durée nécessaire aux finalités ci-dessus, notamment :</p>
-            <ul>
-              <li>Données de compte : tant que votre compte est actif</li>
-              <li>
-                Données de santé rattachées à un profil : jusqu&apos;à suppression du profil concerné (lorsque l&apos;application le propose), suppression
-                des enregistrements sous-jacents, suppression du compte, ou absence de nécessité de conservation
-              </li>
-              <li>Fichiers téléversés et enregistrements associés : comme les données de santé ci-dessus (rattachés au profil propriétaire)</li>
-              <li>
-                Dépôts de laboratoires partenaires non récupérés : <strong>30 jours maximum</strong>, puis suppression automatique du fichier et des
-                coordonnées associées (seule une trace d&apos;audit sans fichier est conservée) ; la copie de dépôt est également supprimée dès la
-                récupération du résultat
-              </li>
-              <li>Logs opérationnels/sécurité : pendant une période limitée nécessaire à la sécurité et à la conformité</li>
-              <li>Exceptions de conservation légale : rétention plus longue lorsque la loi l&apos;impose</li>
-            </ul>
-          </section>
-
-          <section>
-            <h2>9. Mesures de sécurité</h2>
-            <p>Nous mettons en place des mesures techniques et organisationnelles, notamment :</p>
-            <ul>
-              <li>HTTPS/TLS pour les données en transit</li>
-              <li>Hachage robuste des mots de passe (pas de stockage en clair)</li>
-              <li>
-                <strong>Chiffrement applicatif au repos</strong> pour les fichiers de laboratoire téléversés et les champs sensibles en base, selon{" "}
-                <strong>AES-256-GCM</strong> avec clé dédiée côté serveur — <strong>obligatoire dans notre environnement de production</strong> ; le développement local
-                peut fonctionner sans cette clé à des fins d&apos;ingénierie uniquement
-              </li>
-              <li>Application d&apos;une politique de chiffrement strict pour les données de santé et autres données sensibles</li>
-              <li>
-                Contrôle d&apos;accès scope, <strong>isolation par compte authentifié et compartimentation des données de santé par profil</strong> (appliquée côté
-                serveur)
-              </li>
-              <li>Techniques de blind index pour certaines opérations de recherche lorsque le chiffrement est activé</li>
-              <li>
-                Journalisation opérationnelle, supervision orientée anomalies, et <strong>piste d&apos;audit</strong> pour les actions sensibles (y compris
-                changements de profil actif et événements de consentement), dans les limites de conservation décrites à la section 8
-              </li>
-            </ul>
-            <p className="mt-4">Aucun système n&apos;est sécurisé à 100 %. Vous êtes responsable de la sécurité de votre appareil et de vos identifiants.</p>
-          </section>
-
-          <section>
-            <h2>10. Vos droits et vos choix</h2>
-            <p>Selon la loi applicable, vous pouvez disposer des droits suivants :</p>
-            <ul>
-              <li>Accéder à vos données personnelles</li>
-              <li>Corriger des données inexactes</li>
-              <li>Demander la suppression</li>
-              <li>Limiter ou vous opposer à certains traitements</li>
-              <li>Recevoir une exportation portable</li>
-              <li>Retirer votre consentement (lorsque le consentement est la base légale)</li>
-              <li>Introduire une réclamation auprès d&apos;une autorité de contrôle</li>
-            </ul>
-            <p className="mt-4">
-              Serumo permet la <strong>suppression de profils de santé individuels</strong>, la <strong>suppression de compte</strong> et l&apos;export de données via des
-              fonctionnalités authentifiées et/ou en contactant le support. Si vous suivez plusieurs personnes sous votre compte, une demande
-              peut nécessiter de préciser si elle vise un profil ou l&apos;intégralité du compte.
-            </p>
-            <p className="mt-4">
-              Pour toute aide :{" "}
-              <a href="mailto:ahmed@amandevtech.com">ahmed@amandevtech.com</a>
-            </p>
-          </section>
-
-          <section>
-            <h2>10.1 Consentement in-app pour le traitement IA tiers</h2>
-            <p>Lorsqu&apos;une fonctionnalité requiert un traitement IA tiers, Serumo affiche une notice in-app qui :</p>
-            <ul>
-              <li>
-                Explique quelles catégories de données peuvent être envoyées (texte/images de rapport, contexte des marqueurs, personnalisation
-                de profil facultative, et — pour les langues autres que l&apos;anglais — de courts lots de chaînes anglaises déjà générées, pouvant
-                reprendre vos résultats, pour <strong>traduction</strong>)
-              </li>
-              <li>
-                Identifie le ou les destinataires (<strong>services API OpenAI et/ou Microsoft Azure OpenAI</strong>, selon la configuration déployée)
-              </li>
-              <li>Demande votre autorisation <strong>expresse</strong> avant transmission</li>
-            </ul>
-            <p className="mt-4">
-              La notice concerne <strong>le profil de santé actif</strong> lors du téléversement ou du déclenchement de la fonctionnalité. Si vous ne donnez pas
-              votre autorisation pour ce profil, vos comptes rendus sont <strong>quand même téléversés et stockés chiffrés</strong> (statut « en attente
-              d&apos;analyse ») mais les fonctionnalités dépendantes de l&apos;IA restent indisponibles pour ce profil et <strong>aucune</strong> charge utile de
-              rapport de santé n&apos;est envoyée à ces prestataires pour celui-ci. Vous pouvez lancer l&apos;analyse ultérieurement par une action
-              dédiée, précédée de la même notice. Une <strong>trace d&apos;audit de consentement</strong> est écrite côté serveur lorsque vous validez votre
-              choix connecté (tentative au mieux si le réseau échoue après sauvegarde locale de la préférence).
-            </p>
-          </section>
-
-          <section>
-            <h2>11. Confidentialité des enfants</h2>
+            <h2>11. Résultats déposés par un laboratoire partenaire</h2>
             <p>
-              Serumo n&apos;est pas destinée aux enfants de moins de 16 ans (ou l&apos;âge minimum requis dans votre juridiction). Si nous apprenons que
-              nous avons collecté des données personnelles d&apos;un enfant en violation de la loi, nous prendrons des mesures pour les supprimer.
+              Avec votre accord recueilli au laboratoire, un laboratoire partenaire peut déposer votre résultat sur Serumo. Pour ce dépôt, le
+              laboratoire est responsable du traitement et Serumo agit pour son compte : le fichier et vos coordonnées sont stockés chiffrés,
+              vous recevez un message neutre (sans résultat) et vous récupérez le résultat avec le code remis par le laboratoire. Un dépôt
+              non récupéré est supprimé après 30 jours. Tant que vous ne l&apos;avez pas récupéré, vous pouvez exercer vos droits auprès du
+              laboratoire ou auprès de nous.
+            </p>
+            <p className="mt-4">
+              Une fois le résultat récupéré, il intègre votre compte et suit la présente politique. Il n&apos;est jamais envoyé à l&apos;IA avant votre
+              consentement.
             </p>
           </section>
 
           <section>
-            <h2>12. Traitements automatisés</h2>
+            <h2>12. Âge et enfants</h2>
             <p>
-              Serumo utilise des traitements automatisés (y compris des mécanismes de type machine learning, la traduction automatique optionnelle
-              et les aides narratives décrites à la section 6.2) pour structurer les informations biologiques téléversées et générer des résumés
-              éducatifs. Cela ne constitue pas un diagnostic ou un traitement médical.
-            </p>
-            <p className="mt-4">
-              Nous n&apos;utilisons pas de prise de décision exclusivement automatisée produisant des effets juridiques ou significatifs au sens du
-              RGPD.
+              Il faut avoir <strong>18 ans ou plus</strong> pour créer un compte. Les données d&apos;un enfant ne peuvent être enregistrées que dans un
+              profil créé et géré par son parent, titulaire du compte. Les profils d&apos;enfants ne reçoivent pas de rappels. Si nous apprenons
+              qu&apos;un mineur a créé un compte, nous le supprimons.
             </p>
           </section>
 
           <section>
-            <h2>13. Informations de confidentialité — États des États-Unis (dont Californie)</h2>
-            <p>Lorsque les lois étatiques américaines applicables s&apos;appliquent :</p>
-            <ul>
-              <li>Les catégories de données collectées et les finalités sont décrites aux sections 3 et 4</li>
-              <li>Nous ne vendons pas les données personnelles et ne les partageons pas pour de la publicité comportementale inter-contextes</li>
-              <li>
-                Vous pouvez exercer vos droits éligibles en nous contactant :{" "}
-                <a href="mailto:ahmed@amandevtech.com">ahmed@amandevtech.com</a>
-              </li>
-            </ul>
-          </section>
-
-          <section>
-            <h2>14. Notice de confidentialité spécifique au Maroc</h2>
+            <h2>13. Traitements automatisés</h2>
             <p>
-              Si vous êtes situé au Maroc, vos données personnelles sont traitées conformément à la Loi n° 09-08 relative à la protection des
-              personnes physiques à l&apos;égard du traitement des données à caractère personnel, sous le contrôle de la CNDP (Commission Nationale de
-              contrôle de la protection des Données à caractère Personnel).
-            </p>
-            <p className="mt-4">
-              Étant donné que Serumo peut traiter des informations biologiques et de santé, ces données sont traitées comme des données
-              personnelles sensibles et utilisées uniquement pour les finalités décrites dans la présente Politique et pour fournir le Service
-              demandé par l&apos;utilisateur.
-            </p>
-            <p className="mt-4">
-              Lorsqu&apos;un <strong>laboratoire d&apos;analyses partenaire</strong> dépose un résultat à votre attention (section 3.5), le laboratoire demeure
-              responsable du traitement pour cette communication — il recueille votre consentement et vous remet le code de retrait — et Serumo
-              agit comme sous-traitant pour la phase de dépôt (30 jours maximum, données chiffrées, suppression automatique). Vous pouvez exercer
-              vos droits sur un dépôt non récupéré auprès du laboratoire ou en nous contactant.
-            </p>
-            <p className="mt-4">
-              Les utilisateurs situés au Maroc peuvent demander l&apos;accès, la correction, la mise à jour ou la suppression de leurs données
-              personnelles, <strong>y compris lorsque les données sont organisées en profils de santé distincts sous un même compte</strong>, et exercer les
-              autres droits prévus par la loi applicable, en contactant :{" "}
-              <a href="mailto:ahmed@amandevtech.com">ahmed@amandevtech.com</a>.
-            </p>
-            <p className="mt-4">
-              Lorsque des données personnelles sont transférées hors du Maroc (y compris vers des prestataires utilisés pour l&apos;hébergement,
-              l&apos;infrastructure ou le traitement IA), nous combinons <strong>garanties techniques et contractuelles</strong> et{" "}
-              <strong>démarches réglementaires</strong> adaptées aux données sensibles et de santé — y compris, lorsque requis,{" "}
-              <strong>autorisation préalable ou instruction auprès de la CNDP</strong> et documentation dans notre dossier d&apos;autorisation (articles{" "}
-              <strong>43–44</strong> de la Loi 09-08 et pratique d&apos;encadrement).
+              L&apos;IA extrait les valeurs de vos comptes rendus et rédige des explications éducatives. Les notes de contexte liées à vos
+              antécédents sont produites par des règles relues par la conseillère médicale de Serumo, pas par l&apos;IA. Aucune décision
+              produisant des effets juridiques à votre égard n&apos;est prise sur ce fondement. Vous pouvez corriger toute valeur extraite.
             </p>
           </section>
 
           <section>
-            <h2>15. Modifications de la présente Politique</h2>
+            <h2>14. Site getserumo.com et stockage local</h2>
             <p>
-              Nous pouvons mettre à jour cette Politique de confidentialité périodiquement. Les mises à jour seront publiées avec une « Dernière
-              mise à jour » révisée et, lorsque requis, une information complémentaire sera fournie (par exemple notice in-app ou e-mail).
+              Le site getserumo.com n&apos;utilise ni cookie publicitaire ni outil de mesure d&apos;audience. Le formulaire de demande de démonstration
+              destiné aux laboratoires est transmis par le service Web3Forms à notre adresse email. Les applications conservent sur votre
+              appareil votre session, votre langue et vos préférences ; les statistiques d&apos;utilisation ne sont activées qu&apos;avec votre accord.
+            </p>
+          </section>
+
+          <section>
+            <h2>15. Modifications</h2>
+            <p>
+              Nous publions toute modification sur cette page avec une nouvelle date de mise à jour. Si elle change l&apos;usage de vos données
+              ou leurs destinataires, nous vous en informons dans l&apos;application et, lorsqu&apos;un consentement est nécessaire, nous vous le
+              redemandons.
             </p>
           </section>
 
           <section>
             <h2>16. Contact</h2>
             <p>
-              Demandes de confidentialité :{" "}
+              Amandev Technologies — protection des données :{" "}
               <a href="mailto:ahmed@amandevtech.com">ahmed@amandevtech.com</a>
               <br />
-              Support :{" "}
-              <a href="mailto:ahmed@amandevtech.com">ahmed@amandevtech.com</a>
+              236 bd Abdelmoumen, angle rue Pasquier, Imm. F8, 2e étage, bureau 6, Maârif, 20330 Casablanca, Maroc
             </p>
           </section>
         </div>
