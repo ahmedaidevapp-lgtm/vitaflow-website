@@ -151,7 +151,7 @@ const Privacy = () => {
               head={["Provider", "Role", "Data received", "Where processed"]}
               rows={[
                 ["Railway Corporation", "Hosting: servers, database, files", "All; files and medical data encrypted by us (Railway does not hold the key)", "Netherlands (EU)"],
-                ["OpenAI, L.L.C.", "Reading reports, educational summaries, translation", "Report text without your identifiers; page images of a scanned document; personalization details", <strong key="us">United States</strong>],
+                ["OpenAI OpCo, LLC", "Reading reports, educational summaries, translation", "Report text without your identifiers; page images of a scanned document; personalization details", <strong key="us">United States</strong>],
                 ["GitHub, Inc.", "Backups", "Encrypted copy of the database; GitHub does not hold the key", "United States"],
                 ["Functional Software, Inc. (Sentry)", "Technical errors in the web app", "Error message, page, browser; no IP address, identifier or content", "United States"],
                 ["WhatsApp LLC (Meta)", "Sign-in codes, “result available” notices, reminders with consent", "Phone, first name, neutral message; never a result", "United States"],

@@ -173,7 +173,7 @@ const PrivacyFr = () => {
               head={["Prestataire", "Rôle", "Données reçues", "Lieu de traitement"]}
               rows={[
                 ["Railway Corporation", "Hébergement : serveurs, base de données, fichiers", "Toutes ; fichiers et données médicales chiffrés par nous (Railway n’a pas la clé)", "Pays-Bas (UE)"],
-                ["OpenAI, L.L.C.", "Lecture des comptes rendus, résumés éducatifs, traduction", "Texte du compte rendu sans vos identifiants ; image des pages d’un document scanné ; informations de personnalisation", <strong key="us">États-Unis</strong>],
+                ["OpenAI OpCo, LLC", "Lecture des comptes rendus, résumés éducatifs, traduction", "Texte du compte rendu sans vos identifiants ; image des pages d’un document scanné ; informations de personnalisation", <strong key="us">États-Unis</strong>],
                 ["GitHub, Inc.", "Sauvegardes", "Copie chiffrée de la base ; GitHub n’a pas la clé", "États-Unis"],
                 ["Functional Software, Inc. (Sentry)", "Erreurs techniques de l’application web", "Message d’erreur, page, navigateur ; ni adresse IP, ni identifiant, ni contenu", "États-Unis"],
                 ["WhatsApp LLC (Meta)", "Codes de connexion, avis « résultat disponible », rappels sur accord", "Téléphone, prénom, message neutre ; jamais de résultat", "États-Unis"],
